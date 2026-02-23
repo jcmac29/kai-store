@@ -1,0 +1,31 @@
+{
+  "created": "2026-02-23",
+  "note": "Stripe Payment Links - direct checkout URLs, no JS required",
+  "links": {
+    "complete-bundle": "https://buy.stripe.com/4gM7sLgohbJCa3W0dOcEw00",
+    "solo-prompts": "https://buy.stripe.com/8x214neg9eVOcc49OocEw01",
+    "business-prompts": "https://buy.stripe.com/28E14nb3XeVO1xqe4EcEw02",
+    "dev-prompts": "https://buy.stripe.com/fZu3cv4Fz9BufogaSscEw03",
+    "marketing-prompts": "https://buy.stripe.com/5kQeVd9ZT2925NG6CccEw04",
+    "creator-prompts": "https://buy.stripe.com/bJe8wPeg93d6cc4e4EcEw05",
+    "freelancer-prompts": "https://buy.stripe.com/7sY28r6NH8xqb800dOcEw06",
+    "job-prompts": "https://buy.stripe.com/9B66oHdc5aFydg88KkcEw07",
+    "social-prompts": "https://buy.stripe.com/5kQ14nfkd5le8ZS3q0cEw08",
+    "real-estate-prompts": "https://buy.stripe.com/4gMcN5c814hagsk7GgcEw09",
+    "student-prompts": "https://buy.stripe.com/5kQ5kD4FzdRKfog6CccEw0a",
+    "finance-prompts": "https://buy.stripe.com/aFabJ1b3X6pi1xqd0AcEw0b",
+    "startup-prompts": "https://buy.stripe.com/fZu7sL1tnfZSb80f8IcEw0c",
+    "writer-prompts": "https://buy.stripe.com/3cI14n6NH3d6cc44u4cEw0d",
+    "ecommerce-prompts": "https://buy.stripe.com/00w5kD6NH00U6RKbWwcEw0e",
+    "manager-prompts": "https://buy.stripe.com/dRm6oHeg99Bufog6CccEw0f",
+    "life-os": "https://buy.stripe.com/6oU4gz7RLdRKgsk7GgcEw0g",
+    "budget-tracker": "https://buy.stripe.com/8x228r7RLcNGfogd0AcEw0h",
+    "second-brain": "https://buy.stripe.com/6oU6oHgoh8xq0tm7GgcEw0i",
+    "habit-tracker": "https://buy.stripe.com/00w7sL7RLcNGfoggcMcEw0j",
+    "client-tracker": "https://buy.stripe.com/14A7sL2xr9Bugsk8KkcEw0k",
+    "content-calendar": "https://buy.stripe.com/14AdR9dc500Ugskf8IcEw0l",
+    "keyboard-shortcuts": "https://buy.stripe.com/aFadR9c814hacc46CccEw0m",
+    "prompt-formulas": "https://buy.stripe.com/14AfZhc819Bu1xqaSscEw0n",
+    "ai-course": "https://buy.stripe.com/cNi6oHfkd4ha4JC9OocEw0o"
+  }
+}
