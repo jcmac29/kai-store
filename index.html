@@ -1366,8 +1366,89 @@
 
     <!-- Scripts -->
     <script src="https://js.stripe.com/v3/"></script>
-    <script src="js/stripe-config.js"></script>
-    <script src="js/checkout.js"></script>
+    <script>
+    // Inline Stripe Checkout - More reliable than external files
+    (function() {
+        const STRIPE_KEY = 'pk_live_51T3pwrFaSU6fEUF0oV1j2DROcuqBqC8mTF8pXlbkqogCEtZuV7AUY3WWEnFMIQns4iOJQY2td6DVBNNXRS0Xk1t500UoHpYpYe';
+
+        const PRICES = {
+            'business-prompts': 'price_1T3rnDFaSU6fEUF0Mx7jigib',
+            'creator-prompts': 'price_1T3rnDFaSU6fEUF0ROCCnmp0',
+            'dev-prompts': 'price_1T3rnEFaSU6fEUF0enTWKcyJ',
+            'marketing-prompts': 'price_1T3rnFFaSU6fEUF0eHktmnOE',
+            'freelancer-prompts': 'price_1T3rnFFaSU6fEUF0vjjN8zF7',
+            'solo-prompts': 'price_1T3rnGFaSU6fEUF0ebmwZqnC',
+            'job-prompts': 'price_1T3rnGFaSU6fEUF03y91LOtb',
+            'social-prompts': 'price_1T3rnHFaSU6fEUF0KeFpLvRO',
+            'real-estate-prompts': 'price_1T3rnIFaSU6fEUF0BtdNAROa',
+            'student-prompts': 'price_1T3rnIFaSU6fEUF08hE8pXxx',
+            'finance-prompts': 'price_1T3rnJFaSU6fEUF05VaWk3h4',
+            'startup-prompts': 'price_1T3rnKFaSU6fEUF0E3YUYE3U',
+            'writer-prompts': 'price_1T3rnKFaSU6fEUF08MZv5ORI',
+            'ecommerce-prompts': 'price_1T3rnLFaSU6fEUF0EQSKnFSS',
+            'manager-prompts': 'price_1T3rnMFaSU6fEUF0YOMlQ5xd',
+            'life-os': 'price_1T3rnMFaSU6fEUF0IvFWjklW',
+            'budget-tracker': 'price_1T3rnNFaSU6fEUF074BFtGIW',
+            'second-brain': 'price_1T3rnOFaSU6fEUF0LC9LxDN3',
+            'habit-tracker': 'price_1T3rnOFaSU6fEUF0p1aOiD94',
+            'client-tracker': 'price_1T3rnPFaSU6fEUF0a63RPGLP',
+            'content-calendar': 'price_1T3rnPFaSU6fEUF0YDSbMF80',
+            'keyboard-shortcuts': 'price_1T3rnQFaSU6fEUF0OMQtufxQ',
+            'prompt-formulas': 'price_1T3rnRFaSU6fEUF0iiehN07B',
+            'ai-course': 'price_1T3rnRFaSU6fEUF0Bwq5VgQ9',
+            'complete-bundle': 'price_1T3rnSFaSU6fEUF0rR83WBKm'
+        };
+
+        console.log('Kai Prompts: Initializing checkout...');
+
+        let stripe;
+        try {
+            stripe = Stripe(STRIPE_KEY);
+            console.log('Kai Prompts: Stripe loaded successfully');
+        } catch(e) {
+            console.error('Kai Prompts: Failed to load Stripe', e);
+            return;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('[data-product]');
+            console.log('Kai Prompts: Found ' + buttons.length + ' checkout buttons');
+
+            buttons.forEach(function(btn) {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const productKey = this.getAttribute('data-product');
+                    const priceId = PRICES[productKey];
+
+                    console.log('Kai Prompts: Clicked product:', productKey, 'Price ID:', priceId);
+
+                    if (!priceId) {
+                        alert('Product not found. Please try again.');
+                        return;
+                    }
+
+                    this.disabled = true;
+                    this.textContent = 'Loading...';
+
+                    stripe.redirectToCheckout({
+                        lineItems: [{ price: priceId, quantity: 1 }],
+                        mode: 'payment',
+                        successUrl: 'https://kaiprompts.com/success.html?product=' + productKey,
+                        cancelUrl: 'https://kaiprompts.com/'
+                    }).then(function(result) {
+                        if (result.error) {
+                            console.error('Stripe error:', result.error);
+                            alert('Checkout error: ' + result.error.message);
+                        }
+                    }).catch(function(err) {
+                        console.error('Checkout failed:', err);
+                        alert('Unable to start checkout. Please try again.');
+                    });
+                });
+            });
+        });
+    })();
+    </script>
     <script src="js/newsletter.js"></script>
 </body>
 </html>
