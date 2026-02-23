@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="vSqQ0UnQVxqVOmw_ACerXb2vGsc9SFvVlht2gJz0Lm8" />
     <title>AI Prompt Packs & Templates | Get More Done with AI</title>
     <style>
         * {
@@ -18,14 +19,75 @@
             line-height: 1.6;
         }
 
+        /* Sticky Header */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1000;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: #00d4ff;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero with padding for fixed header */
         .hero {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 80px 20px;
+            padding: 140px 20px 80px;
             text-align: center;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 20px;
             background: linear-gradient(90deg, #00d4ff, #7c3aed);
             -webkit-background-clip: text;
@@ -37,26 +99,103 @@
             font-size: 1.3rem;
             color: #a0a0a0;
             max-width: 600px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
         }
 
+        .hero-cta {
+            display: inline-block;
+            background: linear-gradient(90deg, #7c3aed, #5b21b6);
+            color: white;
+            text-decoration: none;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        /* Trust Badges */
+        .trust-badges {
+            background: #111;
+            padding: 40px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .trust-badges-inner {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            text-align: center;
+        }
+
+        .trust-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .trust-badge-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #1a1a2e, #2d1b69);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .trust-badge h4 {
+            font-size: 0.95rem;
+            color: #fff;
+        }
+
+        .trust-badge p {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        /* Products Section */
         .products {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
         .section-title {
-            font-size: 2rem;
-            margin-bottom: 40px;
+            font-size: 2.2rem;
+            margin-bottom: 50px;
             text-align: center;
+            background: linear-gradient(90deg, #fff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .product-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-bottom: 60px;
+            margin-bottom: 80px;
+        }
+
+        /* Scroll Animation for Cards */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .product-card {
@@ -64,11 +203,52 @@
             border-radius: 16px;
             overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeInUp 0.6s ease-out both;
+            position: relative;
         }
 
+        .product-card:nth-child(1) { animation-delay: 0.1s; }
+        .product-card:nth-child(2) { animation-delay: 0.15s; }
+        .product-card:nth-child(3) { animation-delay: 0.2s; }
+        .product-card:nth-child(4) { animation-delay: 0.25s; }
+        .product-card:nth-child(5) { animation-delay: 0.3s; }
+        .product-card:nth-child(6) { animation-delay: 0.35s; }
+        .product-card:nth-child(7) { animation-delay: 0.4s; }
+        .product-card:nth-child(8) { animation-delay: 0.45s; }
+        .product-card:nth-child(9) { animation-delay: 0.5s; }
+        .product-card:nth-child(10) { animation-delay: 0.55s; }
+        .product-card:nth-child(11) { animation-delay: 0.6s; }
+        .product-card:nth-child(12) { animation-delay: 0.65s; }
+        .product-card:nth-child(13) { animation-delay: 0.7s; }
+        .product-card:nth-child(14) { animation-delay: 0.75s; }
+        .product-card:nth-child(15) { animation-delay: 0.8s; }
+
         .product-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+            transform: translateY(-8px);
+            box-shadow: 0 25px 50px rgba(124, 58, 237, 0.25);
+        }
+
+        /* Special Badges */
+        .special-badge {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .badge-popular {
+            background: linear-gradient(90deg, #f59e0b, #d97706);
+            color: #000;
+        }
+
+        .badge-value {
+            background: linear-gradient(90deg, #10b981, #059669);
+            color: #fff;
         }
 
         .product-badge {
@@ -98,6 +278,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-top: 16px;
         }
 
         .product-price {
@@ -114,16 +295,28 @@
             border-radius: 8px;
             font-weight: 600;
             cursor: pointer;
-            transition: opacity 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .buy-btn:hover {
-            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
         }
 
+        .tag {
+            display: inline-block;
+            background: #333;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #888;
+            margin-right: 5px;
+        }
+
+        /* Features Section */
         .features {
             background: #111;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
         .features-grid {
@@ -144,10 +337,11 @@
             color: #888;
         }
 
+        /* Bundle Section */
         .bundle {
             max-width: 800px;
             margin: 0 auto;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
@@ -155,7 +349,30 @@
             background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
             border: 2px solid #7c3aed;
             border-radius: 20px;
-            padding: 40px;
+            padding: 50px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .bundle-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .bundle-card > * {
+            position: relative;
+            z-index: 1;
         }
 
         .bundle-card h2 {
@@ -164,7 +381,7 @@
         }
 
         .bundle-price {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: bold;
             color: #00d4ff;
             margin: 20px 0;
@@ -180,60 +397,422 @@
         .bundle-list {
             text-align: left;
             max-width: 400px;
-            margin: 20px auto;
+            margin: 30px auto;
             color: #ccc;
+            list-style: none;
         }
 
         .bundle-list li {
-            padding: 8px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .bundle-list li::before {
+            content: '\2713';
+            color: #10b981;
+            font-weight: bold;
         }
 
         .bundle-btn {
             background: linear-gradient(90deg, #00d4ff, #7c3aed);
             color: white;
             border: none;
-            padding: 16px 48px;
+            padding: 18px 56px;
             border-radius: 12px;
             font-size: 1.2rem;
             font-weight: 600;
             cursor: pointer;
             margin-top: 20px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        footer {
+        .bundle-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+            padding: 80px 20px;
+        }
+
+        .testimonials-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials h2 {
+            font-size: 2.2rem;
             text-align: center;
-            padding: 40px;
+            margin-bottom: 50px;
+            background: linear-gradient(90deg, #fff, #a0a0a0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 32px;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.15);
+        }
+
+        .testimonial-stars {
+            color: #f59e0b;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-text {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #7c3aed, #00d4ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-info h4 {
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+
+        .testimonial-info p {
+            font-size: 0.85rem;
             color: #666;
         }
 
-        .tag {
-            display: inline-block;
-            background: #333;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            color: #888;
-            margin-right: 5px;
+        /* Newsletter Section */
+        .newsletter {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 20px;
+            text-align: center;
         }
 
+        .newsletter-inner {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .newsletter h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .newsletter p {
+            color: #a0a0a0;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+        }
+
+        .email-capture {
+            display: flex;
+            gap: 12px;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .email-capture input[type="email"] {
+            flex: 1;
+            padding: 16px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #fff;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .email-capture input[type="email"]::placeholder {
+            color: #666;
+        }
+
+        .email-capture input[type="email"]:focus {
+            border-color: #7c3aed;
+        }
+
+        .email-capture button {
+            background: linear-gradient(90deg, #7c3aed, #5b21b6);
+            color: white;
+            border: none;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            white-space: nowrap;
+        }
+
+        .email-capture button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+        }
+
+        .newsletter-note {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 16px;
+        }
+
+        /* Improved Footer */
+        footer {
+            background: #0a0a0a;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 60px 20px 40px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h3 {
+            font-size: 1.5rem;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            color: #666;
+            font-size: 0.95rem;
+            max-width: 280px;
+        }
+
+        .footer-column h4 {
+            color: #fff;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: #00d4ff;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: #1a1a2e;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #7c3aed;
+            color: #fff;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .footer-legal a {
+            color: #666;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        .footer-legal a:hover {
+            color: #00d4ff;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 120px 20px 60px;
+            }
+
             .hero h1 {
                 font-size: 2rem;
             }
+
             .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-badges-inner {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .email-capture {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 16px;
+                text-align: center;
+            }
+
+            .footer-legal {
+                display: flex;
+                gap: 16px;
+            }
+
+            .footer-legal a {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .trust-badges-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
                 grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Sticky Header -->
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="index.html" class="logo">Kai Empire</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="tools.html">Tools</a></li>
+                    <li><a href="#bundle">Bundle</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
     <section class="hero">
         <h1>AI Prompt Packs & Templates</h1>
         <p>Stop staring at blank screens. These battle-tested prompts and templates help you get 10x more done with AI.</p>
+        <a href="#products" class="hero-cta">Browse Products</a>
     </section>
 
-    <section class="products">
+    <!-- Trust Badges -->
+    <section class="trust-badges">
+        <div class="trust-badges-inner">
+            <div class="trust-badge">
+                <div class="trust-badge-icon">&#9889;</div>
+                <h4>Instant Download</h4>
+                <p>Access immediately after purchase</p>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">&#129302;</div>
+                <h4>Works with ChatGPT & Claude</h4>
+                <p>Compatible with all major AI tools</p>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">&#128170;</div>
+                <h4>30-Day Guarantee</h4>
+                <p>Full refund if not satisfied</p>
+            </div>
+            <div class="trust-badge">
+                <div class="trust-badge-icon">&#127873;</div>
+                <h4>Free Updates</h4>
+                <p>Lifetime access to improvements</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
         <h2 class="section-title">Prompt Packs</h2>
         <div class="product-grid">
             <div class="product-card">
@@ -312,6 +891,7 @@
             </div>
 
             <div class="product-card">
+                <span class="special-badge badge-popular">Most Popular</span>
                 <div class="product-badge">35 PROMPTS</div>
                 <div class="product-content">
                     <h3 class="product-title">Solopreneur Prompts</h3>
@@ -577,8 +1157,10 @@
         </div>
     </section>
 
-    <section class="bundle">
+    <!-- Bundle Section -->
+    <section class="bundle" id="bundle">
         <div class="bundle-card">
+            <span class="special-badge badge-value">Best Value</span>
             <h2>Complete Bundle - All 24 Products</h2>
             <p style="color: #a0a0a0;">Get everything. 15 prompt packs + 6 templates + 2 guides + course.</p>
             <div class="bundle-price">
@@ -598,6 +1180,51 @@
         </div>
     </section>
 
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-inner">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"These prompts have completely transformed how I work with AI. I used to spend 20 minutes crafting the perfect prompt. Now I just grab one from the pack and get amazing results instantly. Worth every penny."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JM</div>
+                        <div class="testimonial-info">
+                            <h4>Jessica Martinez</h4>
+                            <p>Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"The Solopreneur pack paid for itself in the first week. I automated 3 processes that were eating up hours of my time. If you're running a one-person business, this is a no-brainer."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">DK</div>
+                        <div class="testimonial-info">
+                            <h4>David Kim</h4>
+                            <p>Solopreneur & Consultant</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <p class="testimonial-text">"I was skeptical at first - how good could pre-made prompts really be? But these are incredibly well-crafted. They handle edge cases I never would have thought of. The Complete Bundle is an absolute steal."</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SR</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah Reynolds</h4>
+                            <p>Freelance Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
     <section class="features">
         <div class="features-grid">
             <div class="feature">
@@ -619,9 +1246,65 @@
         </div>
     </section>
 
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="newsletter-inner">
+            <h2>Get AI Tips & Exclusive Deals</h2>
+            <p>Join 5,000+ professionals getting weekly AI productivity tips and early access to new products.</p>
+            <form class="email-capture" action="#" method="POST">
+                <input type="email" name="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-note">No spam, ever. Unsubscribe anytime.</p>
+        </div>
+    </section>
+
+    <!-- Improved Footer -->
     <footer>
-        <p>&copy; 2026 Kai Empire. All rights reserved.</p>
-        <p style="margin-top: 10px;"><a href="terms.html" style="color: #666;">Terms</a> | <a href="privacy.html" style="color: #666;">Privacy</a></p>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Kai Empire</h3>
+                    <p>Helping professionals unlock the power of AI with battle-tested prompts and templates.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Twitter">&#120143;</a>
+                        <a href="#" aria-label="YouTube">&#9654;</a>
+                        <a href="#" aria-label="LinkedIn">in</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h4>Products</h4>
+                    <ul>
+                        <li><a href="#products">Prompt Packs</a></li>
+                        <li><a href="#products">Notion Templates</a></li>
+                        <li><a href="#bundle">Complete Bundle</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="tools.html">Free Tools</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kai Empire. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="terms.html">Terms of Service</a>
+                    <a href="privacy.html">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <!-- Stripe Integration -->

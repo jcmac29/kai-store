@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download: Complete Bundle | Kai Empire</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 50%, #16213e 100%);
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        .success-badge {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed, #00d4ff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .header p {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+        }
+
+        .download-section {
+            padding: 60px 20px;
+        }
+
+        /* Category Cards */
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #333;
+        }
+
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #7c3aed, #00d4ff);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .category-header h2 {
+            color: #00d4ff;
+            font-size: 1.5rem;
+        }
+
+        .category-header span {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #1a1a2e;
+            border-radius: 14px;
+            padding: 24px;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .product-card:hover {
+            border-color: rgba(124, 58, 237, 0.5);
+            transform: translateY(-3px);
+        }
+
+        .product-card h4 {
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .product-card p {
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+        }
+
+        .product-downloads {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .download-btn {
+            background: linear-gradient(90deg, #7c3aed, #5b21b6);
+            color: white;
+            text-decoration: none;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            transition: opacity 0.3s, transform 0.3s;
+            display: inline-block;
+        }
+
+        .download-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        .download-btn.secondary {
+            background: rgba(124, 58, 237, 0.2);
+            border: 1px solid rgba(124, 58, 237, 0.5);
+        }
+
+        /* Download All Section */
+        .download-all-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
+            border: 2px solid #7c3aed;
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .download-all-section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .download-all-section p {
+            color: #a0a0a0;
+            margin-bottom: 25px;
+        }
+
+        .download-all-btn {
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            color: white;
+            border: none;
+            padding: 20px 50px;
+            border-radius: 14px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .download-all-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.4);
+        }
+
+        /* Quick Start */
+        .quick-start {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 50px;
+        }
+
+        .quick-start h3 {
+            color: #00d4ff;
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+        }
+
+        .quick-start ol {
+            padding-left: 20px;
+        }
+
+        .quick-start li {
+            color: #ccc;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .quick-start li:last-child {
+            border-bottom: none;
+        }
+
+        .quick-start li strong {
+            color: #fff;
+        }
+
+        /* Bonus Section */
+        .bonus-section {
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 35px;
+            margin-bottom: 50px;
+        }
+
+        .bonus-section h3 {
+            margin-bottom: 25px;
+            font-size: 1.4rem;
+            color: #22c55e;
+        }
+
+        .bonus-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .bonus-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: rgba(34, 197, 94, 0.1);
+            border-radius: 12px;
+        }
+
+        .bonus-icon {
+            color: #22c55e;
+            font-size: 1.5rem;
+        }
+
+        .bonus-item h4 {
+            margin-bottom: 5px;
+        }
+
+        .bonus-item p {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Support */
+        .support {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(124, 58, 237, 0.05);
+            border-radius: 16px;
+        }
+
+        .support h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .support p {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+
+        .support-email {
+            display: inline-block;
+            background: #1a1a2e;
+            padding: 15px 30px;
+            border-radius: 10px;
+            color: #00d4ff;
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            border-top: 1px solid #222;
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .category-header {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="success-badge">YOU'RE IN! PURCHASE CONFIRMED</div>
+            <h1>Complete Bundle</h1>
+            <p>All 24 products are yours. 375+ prompts, 6 Notion templates, guides, and the full course.</p>
+        </div>
+    </header>
+
+    <section class="download-section">
+        <div class="container">
+            <!-- Download All -->
+            <div class="download-all-section">
+                <h2>Download Everything</h2>
+                <p>Get all files in one organized ZIP file, or browse individual products below.</p>
+                <a href="#" class="download-all-btn">Download Complete Bundle (ZIP)</a>
+            </div>
+
+            <!-- Quick Start -->
+            <div class="quick-start">
+                <h3>Quick Start Guide</h3>
+                <ol>
+                    <li><strong>Download the bundle ZIP</strong> - Everything is organized by category in folders</li>
+                    <li><strong>Start with what you need most</strong> - Don't try to use everything at once</li>
+                    <li><strong>Pick 2-3 prompt packs</strong> - Master those before moving on</li>
+                    <li><strong>Set up Life OS</strong> - Use the Notion template to organize your life</li>
+                    <li><strong>Watch the course</strong> - Learn advanced techniques when you're ready</li>
+                </ol>
+            </div>
+
+            <!-- Prompt Packs -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon">&#128172;</div>
+                    <div>
+                        <h2>AI Prompt Packs</h2>
+                        <span>15 packs, 375+ prompts</span>
+                    </div>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <h4>Business Strategy Prompts</h4>
+                        <p>30 prompts for SWOT, planning, and strategy</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Content Creator Prompts</h4>
+                        <p>35 prompts for scripts, hooks, and calendars</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Developer Prompts</h4>
+                        <p>30 prompts for code, debug, and architecture</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Marketing Prompts</h4>
+                        <p>30 prompts for copy, ads, and campaigns</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Freelancer Prompts</h4>
+                        <p>25 prompts for proposals and clients</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Solopreneur Prompts</h4>
+                        <p>35 prompts for systems and automation</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Job Search Prompts</h4>
+                        <p>25 prompts for resumes and interviews</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Social Media Prompts</h4>
+                        <p>40 prompts for all platforms</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Real Estate Prompts</h4>
+                        <p>25 prompts for listings and sales</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Student Prompts</h4>
+                        <p>25 prompts for essays and study</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Personal Finance Prompts</h4>
+                        <p>25 prompts for budgets and investing</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Startup Founder Prompts</h4>
+                        <p>25 prompts for pitches and MVPs</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Writer Prompts</h4>
+                        <p>25 prompts for fiction and editing</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>E-Commerce Prompts</h4>
+                        <p>25 prompts for products and conversion</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Manager Prompts</h4>
+                        <p>25 prompts for teams and reviews</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                            <a href="#" class="download-btn secondary">TXT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notion Templates -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon">&#128196;</div>
+                    <div>
+                        <h2>Notion Templates</h2>
+                        <span>6 templates for productivity</span>
+                    </div>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <h4>Life OS Dashboard</h4>
+                        <p>All-in-one productivity system</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">Open in Notion</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Budget Tracker</h4>
+                        <p>Track income, expenses, savings</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">Open in Notion</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Second Brain</h4>
+                        <p>PARA method knowledge system</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">Open in Notion</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Habit Tracker</h4>
+                        <p>Daily tracking with streaks</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">Open in Notion</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Freelance Client Tracker</h4>
+                        <p>Clients, projects, invoices</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">Open in Notion</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Content Calendar</h4>
+                        <p>Plan and track all content</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">Open in Notion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Guides & Course -->
+            <div class="category">
+                <div class="category-header">
+                    <div class="category-icon">&#127891;</div>
+                    <div>
+                        <h2>Guides & Course</h2>
+                        <span>Learn advanced AI techniques</span>
+                    </div>
+                </div>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <h4>AI Keyboard Shortcuts</h4>
+                        <p>Master ChatGPT and Claude faster</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>Prompt Formulas Guide</h4>
+                        <p>The exact formulas that work</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">PDF</a>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <h4>AI Productivity Course</h4>
+                        <p>Complete video course</p>
+                        <div class="product-downloads">
+                            <a href="#" class="download-btn">Watch Course</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bonuses -->
+            <div class="bonus-section">
+                <h3>Your Bundle Bonuses</h3>
+                <div class="bonus-grid">
+                    <div class="bonus-item">
+                        <span class="bonus-icon">&#128260;</span>
+                        <div>
+                            <h4>Lifetime Updates</h4>
+                            <p>All future updates to every product, free forever</p>
+                        </div>
+                    </div>
+                    <div class="bonus-item">
+                        <span class="bonus-icon">&#128274;</span>
+                        <div>
+                            <h4>Priority Support</h4>
+                            <p>Get help within 24 hours via email</p>
+                        </div>
+                    </div>
+                    <div class="bonus-item">
+                        <span class="bonus-icon">&#127873;</span>
+                        <div>
+                            <h4>New Products</h4>
+                            <p>Access to new products added to the bundle</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Support -->
+            <div class="support">
+                <h3>Need Help?</h3>
+                <p>Questions about downloads, setup, or using the products? We're here to help.</p>
+                <a href="mailto:support@kaiempire.com" class="support-email">support@kaiempire.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Kai Empire. All rights reserved.</p>
+        <p style="margin-top: 10px;"><a href="../index.html">Back to Store</a> | <a href="mailto:support@kaiempire.com">Support</a></p>
+    </footer>
+</body>
+</html>
