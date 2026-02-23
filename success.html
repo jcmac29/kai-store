@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purchase Successful! | Kai Empire</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .success-container {
+            max-width: 600px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 60px 40px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .checkmark {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 40px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        p {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .download-section {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+
+        .download-section h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+        }
+
+        .download-btn {
+            background: linear-gradient(90deg, #7c3aed, #5b21b6);
+            color: white;
+            border: none;
+            padding: 16px 40px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+        }
+
+        .download-btn:hover {
+            opacity: 0.9;
+        }
+
+        .next-steps {
+            text-align: left;
+            margin-top: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
+
+        .next-steps h4 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+        }
+
+        .next-steps li {
+            padding: 8px 0;
+            color: #ccc;
+        }
+
+        .back-link {
+            color: #7c3aed;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-container">
+        <div class="checkmark">&#10003;</div>
+        <h1>You're In!</h1>
+        <p>Your purchase was successful. Check your email for the download link, or grab it right here.</p>
+
+        <div class="download-section">
+            <h3>Your Download</h3>
+            <p id="product-name">Your product is ready!</p>
+            <a href="#" class="download-btn" id="download-link">Download Now</a>
+        </div>
+
+        <div class="next-steps">
+            <h4>What's Next?</h4>
+            <ul>
+                <li>Download your product using the button above</li>
+                <li>Check your email for a receipt and backup link</li>
+                <li>Start using your new prompts/templates immediately</li>
+                <li>Questions? Reply to your receipt email</li>
+            </ul>
+        </div>
+
+        <a href="index.html" class="back-link">Back to Store</a>
+    </div>
+
+    <script>
+        // Get product from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const product = urlParams.get('product');
+
+        const productNames = {
+            'business-prompts': 'Business Strategy Prompts',
+            'creator-prompts': 'Content Creator Prompts',
+            'dev-prompts': 'Developer Prompts',
+            'marketing-prompts': 'Marketing Prompts',
+            'freelancer-prompts': 'Freelancer Prompts',
+            'solo-prompts': 'Solopreneur Prompts',
+            'job-prompts': 'Job Search Prompts',
+            'social-prompts': 'Social Media Prompts',
+            'real-estate-prompts': 'Real Estate Prompts',
+            'student-prompts': 'Student Prompts',
+            'finance-prompts': 'Personal Finance Prompts',
+            'startup-prompts': 'Startup Founder Prompts',
+            'writer-prompts': 'Writer Prompts',
+            'ecommerce-prompts': 'E-Commerce Prompts',
+            'manager-prompts': 'Manager Prompts',
+            'life-os': 'Life OS Dashboard',
+            'budget-tracker': 'Budget Tracker',
+            'second-brain': 'Second Brain',
+            'habit-tracker': 'Habit Tracker',
+            'client-tracker': 'Freelance Client Tracker',
+            'content-calendar': 'Content Calendar',
+            'keyboard-shortcuts': 'AI Keyboard Shortcuts',
+            'prompt-formulas': 'Prompt Formulas Guide',
+            'ai-course': 'AI Productivity Course',
+            'complete-bundle': 'Complete Bundle - All Products'
+        };
+
+        if (product && productNames[product]) {
+            document.getElementById('product-name').textContent = productNames[product];
+        }
+
+        // Track purchase in analytics
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'purchase_complete', {
+                'product': product
+            });
+        }
+    </script>
+</body>
+</html>
