@@ -1,0 +1,1965 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Business Idea Generator | Free Tool | Kai Prompts</title>
+    <meta name="description" content="Generate personalized AI business ideas based on your skills, interests, and budget. Get revenue models, tools needed, and first steps to start. Free tool from Kai Prompts.">
+    <meta name="keywords" content="AI business ideas, AI startup, business generator, AI side hustle, AI business model">
+    <link rel="canonical" href="https://kaiprompts.com/tools/business-generator/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Business Idea Generator | Free Tool">
+    <meta property="og:description" content="Generate personalized AI business ideas based on your skills, interests, and budget. Free tool from Kai Prompts.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kaiprompts.com/tools/business-generator/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AI Business Idea Generator | Free Tool">
+    <meta name="twitter:description" content="Generate personalized AI business ideas based on your skills, interests, and budget.">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XC558Y35N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4XC558Y35N');
+    </script>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AI Business Idea Generator",
+        "description": "Generate personalized AI business ideas based on your skills, interests, and budget.",
+        "url": "https://kaiprompts.com/tools/business-generator/",
+        "applicationCategory": "BusinessApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "Kai Prompts",
+            "url": "https://kaiprompts.com"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #09090b;
+            --bg-secondary: #18181b;
+            --bg-card: #1c1c1f;
+            --bg-card-hover: #27272a;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --accent-glow: rgba(139, 92, 246, 0.3);
+            --green: #22c55e;
+            --blue: #3b82f6;
+            --cyan: #00d4ff;
+            --orange: #f59e0b;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --border: #27272a;
+            --border-light: #3f3f46;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Animated gradient background */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--accent-light);
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent), var(--cyan));
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 2.75rem);
+            font-weight: 800;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 24px;
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--border-light);
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent), var(--blue));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        /* Form Elements */
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 0;
+        }
+
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .label-hint {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            display: block;
+            margin-top: 2px;
+        }
+
+        select, input[type="text"], textarea {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s;
+            appearance: none;
+        }
+
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 20px;
+            padding-right: 44px;
+            cursor: pointer;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        select:focus, input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+
+        select:hover, input:hover, textarea:hover {
+            border-color: var(--border-light);
+        }
+
+        /* Checkbox/Tag Selection */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 16px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .skill-tag:hover {
+            border-color: var(--accent);
+            background: rgba(139, 92, 246, 0.1);
+        }
+
+        .skill-tag.selected {
+            border-color: var(--accent);
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--accent-light);
+        }
+
+        .skill-tag input {
+            display: none;
+        }
+
+        /* Generate Button */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 18px 36px;
+            border: none;
+            border-radius: 14px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
+            color: white;
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 50px var(--accent-glow);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Loading Animation */
+        .loading-spinner {
+            width: 20px;
+            height: 20px;
+            border: 3px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Results Section */
+        .results-section {
+            display: none;
+        }
+
+        .results-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .idea-card {
+            background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
+            border: 2px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .idea-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--cyan), var(--accent));
+        }
+
+        .idea-number {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 36px;
+            height: 36px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .idea-title {
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+            padding-right: 50px;
+        }
+
+        .idea-tagline {
+            color: var(--accent-light);
+            font-size: 1rem;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .idea-section {
+            margin-bottom: 24px;
+        }
+
+        .idea-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .idea-section-title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--cyan);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .idea-section-content {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .idea-section-content ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .idea-section-content li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+        }
+
+        .idea-section-content li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .revenue-tag {
+            display: inline-block;
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--green);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .tool-tag {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--blue);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+
+        .step-item {
+            display: flex;
+            gap: 16px;
+            padding: 16px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+
+        .step-number {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .step-desc {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Email Capture */
+        .email-capture-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .email-capture-card h3 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .email-capture-card p {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .email-benefits {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .email-benefit {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .email-benefit-icon {
+            width: 20px;
+            height: 20px;
+            background: var(--green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 12px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .email-form input {
+            flex: 1;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+
+        .email-form input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .email-form button {
+            padding: 16px 28px;
+            border-radius: 12px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+
+        .email-form button:hover {
+            background: var(--accent-light);
+            transform: translateY(-2px);
+        }
+
+        .email-success {
+            display: none;
+            color: var(--green);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .email-success.active {
+            display: block;
+        }
+
+        /* Upsell Card */
+        .upsell-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 32px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .upsell-card h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .upsell-card p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .upsell-features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+
+        .upsell-feature {
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .upsell-price {
+            margin-bottom: 20px;
+        }
+
+        .upsell-price .original {
+            color: var(--text-muted);
+            text-decoration: line-through;
+            font-size: 1.1rem;
+            margin-right: 12px;
+        }
+
+        .upsell-price .current {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .upsell-price .savings {
+            display: block;
+            color: var(--green);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+
+        .btn-upsell {
+            background: linear-gradient(135deg, var(--cyan), var(--accent));
+            color: white;
+            padding: 16px 36px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .btn-upsell:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border);
+            margin-top: 60px;
+        }
+
+        footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--cyan);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 24px 16px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 24px;
+            }
+
+            .idea-card {
+                padding: 24px;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-benefits {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg"></div>
+
+    <div class="container">
+        <header>
+            <a href="../" class="back-link">
+                <span>&larr;</span> Back to Tools
+            </a>
+            <div class="badge">Free Tool</div>
+            <h1>AI Business Idea Generator</h1>
+            <p class="subtitle">Get personalized AI-powered business ideas based on your unique skills, interests, and resources. Start your entrepreneurial journey today.</p>
+        </header>
+
+        <!-- Input Form -->
+        <div class="card">
+            <h2 class="card-title">
+                <span class="card-icon">&#128161;</span>
+                Tell Us About Yourself
+            </h2>
+
+            <div class="form-grid">
+                <div class="form-group">
+                    <label>
+                        Your Background
+                        <span class="label-hint">What's your professional experience?</span>
+                    </label>
+                    <select id="background">
+                        <option value="">Select your background...</option>
+                        <option value="tech">Tech / Software</option>
+                        <option value="marketing">Marketing / Sales</option>
+                        <option value="design">Design / Creative</option>
+                        <option value="finance">Finance / Accounting</option>
+                        <option value="healthcare">Healthcare / Medical</option>
+                        <option value="education">Education / Teaching</option>
+                        <option value="legal">Legal / Consulting</option>
+                        <option value="trades">Trades / Services</option>
+                        <option value="retail">Retail / E-commerce</option>
+                        <option value="other">Other / General</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Budget to Start
+                        <span class="label-hint">How much can you invest initially?</span>
+                    </label>
+                    <select id="budget">
+                        <option value="">Select your budget...</option>
+                        <option value="0-100">$0 - $100 (Bootstrap)</option>
+                        <option value="100-500">$100 - $500 (Lean)</option>
+                        <option value="500-2000">$500 - $2,000 (Moderate)</option>
+                        <option value="2000-10000">$2,000 - $10,000 (Serious)</option>
+                        <option value="10000+">$10,000+ (Well-funded)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Time Available
+                        <span class="label-hint">Weekly hours you can dedicate</span>
+                    </label>
+                    <select id="timeAvailable">
+                        <option value="">Select time available...</option>
+                        <option value="5-10">5-10 hours (Side project)</option>
+                        <option value="10-20">10-20 hours (Part-time)</option>
+                        <option value="20-40">20-40 hours (Significant)</option>
+                        <option value="40+">40+ hours (Full-time)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Business Model Preference
+                        <span class="label-hint">How do you want to make money?</span>
+                    </label>
+                    <select id="modelPreference">
+                        <option value="">Select preference...</option>
+                        <option value="services">Services (Freelance/Agency)</option>
+                        <option value="products">Digital Products</option>
+                        <option value="saas">SaaS / Subscriptions</option>
+                        <option value="content">Content / Affiliate</option>
+                        <option value="any">Open to Anything</option>
+                    </select>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>
+                        Skills & Interests
+                        <span class="label-hint">Select all that apply</span>
+                    </label>
+                    <div class="skill-tags">
+                        <label class="skill-tag">
+                            <input type="checkbox" value="writing"> Writing
+                        </label>
+                        <label class="skill-tag">
+                            <input type="checkbox" value="coding"> Coding
+                        </label>
+                        <label class="skill-tag">
+                            <input type="checkbox" value="design"> Design
+                        </label>
+                        <label class="skill-tag">
+                            <input type="checkbox" value="video"> Video
+                        </label>
+                        <label class="skill-tag">
+                            <input type="checkbox" value="audio"> Audio/Podcasting
+                        </label>
+                        <label class="skill-tag">
+                            <input type="checkbox" value="social"> Social Media
+                        </label>
+                        <label class="skill-tag">
+                            <input type="checkbox" value="teaching"> Teaching
+                        </label>
+                        <label class="skill-tag">
+                            <input type="checkbox" value="data"> Data Analysis
+                        </label>
+                        <label class="skill-tag">
+                            <input type="checkbox" value="sales"> Sales
+                        </label>
+                        <label class="skill-tag">
+                            <input type="checkbox" value="automation"> Automation
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group full-width">
+                    <label>
+                        Additional Context (Optional)
+                        <span class="label-hint">Any specific interests, niches, or constraints?</span>
+                    </label>
+                    <textarea id="additionalContext" placeholder="E.g., I'm interested in the fitness industry, I have experience with Notion, I want to work with small businesses..."></textarea>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" id="generateBtn" onclick="generateIdeas()">
+                <span class="btn-text">Generate My Business Ideas</span>
+                <span class="loading-spinner" style="display: none;"></span>
+            </button>
+        </div>
+
+        <!-- Results Section -->
+        <div class="results-section" id="resultsSection">
+            <h2 style="text-align: center; margin-bottom: 32px; font-size: 1.75rem;">
+                Your Personalized AI Business Ideas
+            </h2>
+            <div id="ideasContainer"></div>
+
+            <!-- Email Capture -->
+            <div class="email-capture-card">
+                <h3>Want 10 More Ideas + Free Prompt Pack?</h3>
+                <p>Get 10 additional personalized business ideas and our exclusive AI Solopreneur Prompt Pack (20 prompts) delivered to your inbox.</p>
+
+                <div class="email-benefits">
+                    <div class="email-benefit">
+                        <span class="email-benefit-icon">&#10003;</span>
+                        <span>10 More Business Ideas</span>
+                    </div>
+                    <div class="email-benefit">
+                        <span class="email-benefit-icon">&#10003;</span>
+                        <span>Free Prompt Pack (20 prompts)</span>
+                    </div>
+                    <div class="email-benefit">
+                        <span class="email-benefit-icon">&#10003;</span>
+                        <span>Weekly AI Business Tips</span>
+                    </div>
+                </div>
+
+                <form class="email-form" id="emailForm" onsubmit="handleEmailSubmit(event)">
+                    <input type="email" id="emailInput" placeholder="Enter your email" required>
+                    <button type="submit">Get Free Pack</button>
+                </form>
+
+                <p class="email-success" id="emailSuccess">
+                    Check your inbox! Your bonus ideas and prompt pack are on the way.
+                </p>
+            </div>
+
+            <!-- Subtle Upsell -->
+            <div class="upsell-card">
+                <h3>Ready to Build Your AI Business?</h3>
+                <p>The Complete Bundle has everything you need: 375+ prompts for marketing, operations, content, and more.</p>
+
+                <div class="upsell-features">
+                    <span class="upsell-feature">375+ Prompts</span>
+                    <span class="upsell-feature">15 Prompt Packs</span>
+                    <span class="upsell-feature">6 Notion Templates</span>
+                    <span class="upsell-feature">AI Course</span>
+                    <span class="upsell-feature">Lifetime Updates</span>
+                </div>
+
+                <div class="upsell-price">
+                    <span class="original">$381</span>
+                    <span class="current">$97</span>
+                    <span class="savings">Save 75% - Limited Time</span>
+                </div>
+
+                <a href="../../#bundle" class="btn-upsell">
+                    Get The Complete Bundle
+                    <span>&rarr;</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made by <a href="../../">Kai Prompts</a> | <a href="../">More Free Tools</a></p>
+    </footer>
+
+    <script>
+        // Skill tag selection handling
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('click', function() {
+                this.classList.toggle('selected');
+            });
+        });
+
+        // Business idea templates based on inputs
+        const ideaDatabase = {
+            tech: {
+                services: [
+                    {
+                        title: "AI Automation Agency",
+                        tagline: "Help businesses automate repetitive tasks with AI",
+                        concept: "Build an agency that helps small-to-medium businesses identify and automate time-consuming tasks using AI tools like Zapier, Make, and ChatGPT. Focus on specific workflows like customer support, content creation, or data entry.",
+                        revenueModels: ["Monthly retainers ($500-$5,000)", "Project-based fees", "Setup + maintenance packages"],
+                        tools: ["ChatGPT/Claude API", "Zapier/Make", "Notion", "Slack"],
+                        steps: [
+                            { title: "Define your niche", desc: "Pick 2-3 specific automation use cases you can master (e.g., email automation, social media scheduling, CRM workflows)" },
+                            { title: "Create a portfolio", desc: "Build 3 sample automations and document the time/money savings. Offer free audits to get testimonials." },
+                            { title: "Outreach campaign", desc: "Reach out to 50 businesses on LinkedIn who could benefit from automation. Offer a free workflow audit." }
+                        ]
+                    },
+                    {
+                        title: "AI Code Review Service",
+                        tagline: "Offer AI-enhanced code audits for startups",
+                        concept: "Combine your coding expertise with AI tools to provide fast, thorough code reviews for startups and small dev teams. Use AI to scan for bugs, security issues, and optimization opportunities, then add your expert analysis.",
+                        revenueModels: ["Per-review pricing ($200-$1,000)", "Monthly subscriptions", "Priority support tiers"],
+                        tools: ["GitHub Copilot", "Claude/ChatGPT", "SonarQube", "Linear"],
+                        steps: [
+                            { title: "Build your review framework", desc: "Create a standardized checklist covering security, performance, maintainability, and best practices" },
+                            { title: "Offer beta reviews", desc: "Reach out to 10 startup CTOs on Twitter/LinkedIn offering free initial reviews for testimonials" },
+                            { title: "Package your service", desc: "Create 3 tiers: Quick Review, Deep Dive, and Ongoing Retainer with clear deliverables" }
+                        ]
+                    },
+                    {
+                        title: "Custom GPT Developer",
+                        tagline: "Build specialized AI assistants for businesses",
+                        concept: "Create custom GPTs and AI chatbots tailored to specific business needs. Help companies build internal knowledge bases, customer service bots, or specialized assistants for their industry.",
+                        revenueModels: ["Custom GPT development ($500-$3,000)", "Monthly maintenance", "Training & setup fees"],
+                        tools: ["OpenAI API", "Custom GPT Builder", "Vector databases", "Notion"],
+                        steps: [
+                            { title: "Master GPT building", desc: "Create 5 different custom GPTs showcasing various use cases (HR, sales, support, etc.)" },
+                            { title: "Document case studies", desc: "Write up how each GPT saves time/money with specific metrics" },
+                            { title: "Target specific industries", desc: "Pick 2 industries and create sample GPTs specifically for them to demonstrate expertise" }
+                        ]
+                    }
+                ],
+                products: [
+                    {
+                        title: "AI Prompt Templates for Developers",
+                        tagline: "Sell battle-tested prompts for coding tasks",
+                        concept: "Create and sell comprehensive prompt packs specifically designed for software developers. Cover debugging, code generation, documentation, testing, and architecture design.",
+                        revenueModels: ["One-time purchases ($19-$49)", "Bundle deals", "Notion template add-ons"],
+                        tools: ["Notion/Gumroad", "ChatGPT/Claude", "GitHub", "Lemon Squeezy"],
+                        steps: [
+                            { title: "Research pain points", desc: "Survey 20 developers about their biggest AI prompt struggles" },
+                            { title: "Create MVP pack", desc: "Build a pack of 25-30 tested prompts for the most common coding tasks" },
+                            { title: "Launch on ProductHunt", desc: "Prepare launch assets and reach out to dev communities for initial traction" }
+                        ]
+                    },
+                    {
+                        title: "No-Code AI App Templates",
+                        tagline: "Sell ready-to-deploy AI app templates",
+                        concept: "Build and sell templates for common AI applications using no-code tools. Help non-technical founders launch AI-powered products quickly.",
+                        revenueModels: ["Template sales ($49-$199)", "Customization services", "Video courses"],
+                        tools: ["Bubble", "Softr", "OpenAI API", "Airtable"],
+                        steps: [
+                            { title: "Identify 3 popular use cases", desc: "Research what AI apps people want to build (chatbots, content tools, data analyzers)" },
+                            { title: "Build polished templates", desc: "Create fully functional templates with documentation and setup guides" },
+                            { title: "Create demo videos", desc: "Record Loom walkthroughs showing the template in action and post on social media" }
+                        ]
+                    }
+                ],
+                saas: [
+                    {
+                        title: "AI Documentation Generator",
+                        tagline: "Auto-generate docs from codebases",
+                        concept: "Build a SaaS tool that connects to GitHub repos and automatically generates documentation using AI. Help dev teams maintain up-to-date docs without the manual work.",
+                        revenueModels: ["Monthly subscriptions ($29-$199)", "Per-repo pricing", "Team plans"],
+                        tools: ["GitHub API", "OpenAI API", "Vercel", "Stripe"],
+                        steps: [
+                            { title: "Build MVP", desc: "Create a simple tool that generates README files from code structure and comments" },
+                            { title: "Beta test with 10 teams", desc: "Offer free access to small dev teams in exchange for feedback and testimonials" },
+                            { title: "Add key features", desc: "Based on feedback, add API docs generation, changelog automation, and team collaboration" }
+                        ]
+                    }
+                ],
+                content: [
+                    {
+                        title: "AI Developer YouTube Channel",
+                        tagline: "Teach developers to leverage AI tools",
+                        concept: "Create a YouTube channel teaching developers how to use AI tools effectively. Cover code generation, debugging with AI, building AI features, and productivity hacks.",
+                        revenueModels: ["YouTube ads", "Sponsored content", "Course sales", "Affiliate commissions"],
+                        tools: ["Screen recording software", "YouTube", "ChatGPT/Copilot", "Notion"],
+                        steps: [
+                            { title: "Plan 10 video topics", desc: "Research trending AI+dev topics and outline your first 10 videos" },
+                            { title: "Create a consistent format", desc: "Design a template for your videos (intro, problem, solution, demo, outro)" },
+                            { title: "Publish weekly", desc: "Commit to publishing one video per week and promote on Twitter/Reddit dev communities" }
+                        ]
+                    }
+                ]
+            },
+            marketing: {
+                services: [
+                    {
+                        title: "AI Content Marketing Agency",
+                        tagline: "Scale content production with AI for clients",
+                        concept: "Build an agency that produces high-volume, quality content using AI tools. Offer blog posts, social media content, email sequences, and ad copy at scale while maintaining brand voice.",
+                        revenueModels: ["Monthly content retainers ($1,000-$10,000)", "Per-piece pricing", "Content strategy consulting"],
+                        tools: ["ChatGPT/Claude", "Jasper", "Canva", "Notion"],
+                        steps: [
+                            { title: "Create your process", desc: "Document your AI-assisted content workflow from brief to published piece" },
+                            { title: "Build sample content", desc: "Create a portfolio showing before/after and results from AI-assisted content" },
+                            { title: "Target growing startups", desc: "Reach out to seed-stage startups who need content but can't afford full teams" }
+                        ]
+                    },
+                    {
+                        title: "AI Ad Creative Service",
+                        tagline: "Generate high-converting ad variations at scale",
+                        concept: "Help e-commerce brands and agencies create dozens of ad variations quickly using AI. Test more creatives, find winners faster, and scale what works.",
+                        revenueModels: ["Per-campaign pricing", "Monthly creative subscriptions", "Performance bonuses"],
+                        tools: ["Midjourney/DALL-E", "ChatGPT", "Canva", "Meta Ads"],
+                        steps: [
+                            { title: "Master AI image generation", desc: "Learn to create consistent, brand-aligned visuals with Midjourney" },
+                            { title: "Create case study", desc: "Run a free campaign for one client and document the results meticulously" },
+                            { title: "Package your offer", desc: "Create a clear deliverable: X ad variations with Y copy options per month" }
+                        ]
+                    }
+                ],
+                products: [
+                    {
+                        title: "AI Marketing Prompt Library",
+                        tagline: "Comprehensive prompts for every marketing task",
+                        concept: "Create the ultimate prompt library for marketers covering copywriting, strategy, research, analytics, and campaign planning. Include templates and frameworks.",
+                        revenueModels: ["One-time purchase ($29-$79)", "Subscription updates", "Agency licenses"],
+                        tools: ["Notion", "Gumroad", "ChatGPT", "Lemon Squeezy"],
+                        steps: [
+                            { title: "Audit marketing tasks", desc: "List every marketing task that can be enhanced with AI prompts" },
+                            { title: "Test and refine", desc: "Create 50+ prompts and test each one multiple times for consistency" },
+                            { title: "Launch and iterate", desc: "Start with a smaller pack, gather feedback, and expand based on demand" }
+                        ]
+                    },
+                    {
+                        title: "Email Sequence Templates",
+                        tagline: "AI-powered email sequences that convert",
+                        concept: "Sell proven email sequence templates with AI customization guides. Help businesses create onboarding, sales, and retention sequences quickly.",
+                        revenueModels: ["Template packs ($39-$99)", "Industry-specific bundles", "Custom sequence services"],
+                        tools: ["Notion", "ConvertKit/Mailchimp", "ChatGPT", "Gumroad"],
+                        steps: [
+                            { title: "Research winning emails", desc: "Analyze 100+ high-performing email sequences and identify patterns" },
+                            { title: "Create customizable templates", desc: "Build 10 complete sequences with AI prompts for personalization" },
+                            { title: "Show results", desc: "Include case studies and benchmarks for open rates, clicks, and conversions" }
+                        ]
+                    }
+                ],
+                content: [
+                    {
+                        title: "AI Marketing Newsletter",
+                        tagline: "Weekly insights on AI marketing tools and tactics",
+                        concept: "Build a newsletter covering the latest AI tools, tactics, and case studies for marketers. Curate the best resources and add your expert analysis.",
+                        revenueModels: ["Sponsorships", "Premium tier", "Affiliate partnerships", "Course sales"],
+                        tools: ["Beehiiv/Substack", "ChatGPT", "Notion", "Twitter"],
+                        steps: [
+                            { title: "Define your angle", desc: "What makes your newsletter different? Focus on practical, tested tactics" },
+                            { title: "Build initial audience", desc: "Write 4 great issues and share everywhere. Aim for 500 subscribers in month 1" },
+                            { title: "Establish consistency", desc: "Commit to a weekly schedule and build systems to maintain quality" }
+                        ]
+                    }
+                ],
+                saas: [
+                    {
+                        title: "AI Social Media Scheduler",
+                        tagline: "Generate and schedule social content automatically",
+                        concept: "Build a tool that generates social media content ideas, writes posts, and schedules them. Focus on a specific platform or niche for differentiation.",
+                        revenueModels: ["Monthly subscriptions ($19-$99)", "Team plans", "Agency white-label"],
+                        tools: ["Social APIs", "OpenAI API", "Vercel", "PostgreSQL"],
+                        steps: [
+                            { title: "Pick one platform", desc: "Start with LinkedIn or Twitter only - don't try to do everything" },
+                            { title: "Build core features", desc: "Content generation, scheduling, and basic analytics" },
+                            { title: "Get 100 beta users", desc: "Offer free access for 3 months in exchange for feedback and testimonials" }
+                        ]
+                    }
+                ]
+            },
+            design: {
+                services: [
+                    {
+                        title: "AI-Assisted Brand Design Agency",
+                        tagline: "Faster branding with AI + human creativity",
+                        concept: "Offer brand identity services using AI for rapid iteration and ideation. Combine AI-generated concepts with professional design skills to deliver faster and more affordably.",
+                        revenueModels: ["Brand packages ($1,000-$10,000)", "Logo-only services", "Brand guidelines retainers"],
+                        tools: ["Midjourney", "Figma", "Adobe Suite", "Notion"],
+                        steps: [
+                            { title: "Define your process", desc: "Create a hybrid workflow that uses AI for exploration and human skill for refinement" },
+                            { title: "Build portfolio", desc: "Create 5 case studies showing your AI-assisted design process" },
+                            { title: "Target startups", desc: "Offer competitive pricing to early-stage startups who need quality on a budget" }
+                        ]
+                    },
+                    {
+                        title: "AI Product Image Service",
+                        tagline: "Generate product photos without photoshoots",
+                        concept: "Help e-commerce businesses create professional product images using AI. Generate lifestyle shots, different backgrounds, and variations without expensive photo shoots.",
+                        revenueModels: ["Per-image pricing", "Monthly packages", "Bulk discounts"],
+                        tools: ["Midjourney", "DALL-E", "Photoshop", "Lightroom"],
+                        steps: [
+                            { title: "Master product photography prompts", desc: "Learn to generate consistent, high-quality product images with AI" },
+                            { title: "Create comparison samples", desc: "Show AI-generated vs traditional photos with cost/time comparisons" },
+                            { title: "Partner with e-commerce platforms", desc: "Reach out to Shopify agencies and e-commerce consultants for referrals" }
+                        ]
+                    }
+                ],
+                products: [
+                    {
+                        title: "AI Design Prompt Packs",
+                        tagline: "Prompts for Midjourney, DALL-E, and more",
+                        concept: "Sell curated prompt packs for different design needs: logos, illustrations, product shots, social media graphics, and more.",
+                        revenueModels: ["Prompt packs ($19-$49)", "Mega bundles", "Style-specific collections"],
+                        tools: ["Notion", "Gumroad", "Midjourney", "Canva"],
+                        steps: [
+                            { title: "Identify popular use cases", desc: "What images do people struggle to create? Survey designers and creators" },
+                            { title: "Test and document", desc: "Create 100+ prompts and show example outputs for each" },
+                            { title: "Build community", desc: "Create a Discord or community for buyers to share results and get support" }
+                        ]
+                    },
+                    {
+                        title: "Figma + AI Template Library",
+                        tagline: "Design system templates with AI integration guides",
+                        concept: "Create Figma templates that include guides for using AI to populate designs, generate variations, and speed up the design process.",
+                        revenueModels: ["Template sales ($29-$99)", "Bundle deals", "Updates subscription"],
+                        tools: ["Figma", "Notion", "Midjourney", "Gumroad"],
+                        steps: [
+                            { title: "Identify high-demand templates", desc: "Research Figma Community for popular categories" },
+                            { title: "Add AI workflow guides", desc: "Document how to use AI tools alongside each template" },
+                            { title: "Launch on Figma Community", desc: "Free version for exposure, paid version with extras" }
+                        ]
+                    }
+                ],
+                content: [
+                    {
+                        title: "AI Design Tutorial Channel",
+                        tagline: "Teach designers to leverage AI tools",
+                        concept: "Create YouTube or TikTok content teaching designers how to use AI tools effectively. Cover workflows, prompts, and integration with traditional tools.",
+                        revenueModels: ["Ad revenue", "Sponsored content", "Course sales", "Template sales"],
+                        tools: ["Screen recording", "YouTube/TikTok", "Midjourney", "Figma"],
+                        steps: [
+                            { title: "Find your niche", desc: "Focus on a specific area: UI design, illustration, brand design, etc." },
+                            { title: "Create signature series", desc: "Develop a recurring format that showcases AI + design workflows" },
+                            { title: "Cross-promote", desc: "Post clips on TikTok/Instagram to drive YouTube subscribers" }
+                        ]
+                    }
+                ]
+            },
+            finance: {
+                services: [
+                    {
+                        title: "AI Financial Analysis Service",
+                        tagline: "Faster financial modeling and analysis",
+                        concept: "Offer financial analysis services using AI to speed up research, modeling, and report generation. Help startups with pitch decks, investors with due diligence, and businesses with forecasting.",
+                        revenueModels: ["Project-based ($500-$5,000)", "Monthly retainers", "Per-report pricing"],
+                        tools: ["ChatGPT/Claude", "Excel/Sheets", "Notion", "Financial APIs"],
+                        steps: [
+                            { title: "Define service packages", desc: "Create clear offerings: pitch deck review, financial model audit, investment memo" },
+                            { title: "Build templates", desc: "Create AI-enhanced templates for common financial analyses" },
+                            { title: "Target startup ecosystem", desc: "Connect with accelerators, VCs, and startup communities" }
+                        ]
+                    },
+                    {
+                        title: "AI Bookkeeping Service",
+                        tagline: "Automated bookkeeping for small businesses",
+                        concept: "Combine AI tools with your finance expertise to offer faster, more affordable bookkeeping. Use AI for categorization, reconciliation, and reporting.",
+                        revenueModels: ["Monthly subscriptions ($200-$1,000)", "Transaction-based pricing", "Tax prep add-ons"],
+                        tools: ["QuickBooks/Xero", "ChatGPT", "Zapier", "Google Sheets"],
+                        steps: [
+                            { title: "Systemize your workflow", desc: "Document every step and identify where AI can speed things up" },
+                            { title: "Start with 5 clients", desc: "Offer competitive rates to build testimonials and refine your process" },
+                            { title: "Create referral system", desc: "Partner with accountants who don't want to do bookkeeping" }
+                        ]
+                    }
+                ],
+                products: [
+                    {
+                        title: "Financial Model Templates",
+                        tagline: "AI-enhanced spreadsheet templates",
+                        concept: "Create comprehensive financial model templates with AI integration for forecasting, scenario planning, and analysis.",
+                        revenueModels: ["Template sales ($49-$199)", "Industry bundles", "Custom services"],
+                        tools: ["Google Sheets", "Notion", "ChatGPT", "Gumroad"],
+                        steps: [
+                            { title: "Research common needs", desc: "Survey founders about their financial modeling pain points" },
+                            { title: "Build core templates", desc: "Create SaaS, e-commerce, and service business models" },
+                            { title: "Add AI instructions", desc: "Include guides for using AI to customize and improve forecasts" }
+                        ]
+                    }
+                ],
+                content: [
+                    {
+                        title: "AI Finance Newsletter",
+                        tagline: "How AI is changing finance and investing",
+                        concept: "Write about the intersection of AI and finance: tools, automation, analysis techniques, and industry changes.",
+                        revenueModels: ["Sponsorships", "Premium content", "Consulting leads", "Affiliate income"],
+                        tools: ["Substack", "ChatGPT", "Twitter", "LinkedIn"],
+                        steps: [
+                            { title: "Define your angle", desc: "Focus on practical applications, not just news and trends" },
+                            { title: "Build credibility", desc: "Share your finance background and specific insights" },
+                            { title: "Grow on LinkedIn", desc: "Finance professionals are active on LinkedIn - post daily" }
+                        ]
+                    }
+                ]
+            },
+            education: {
+                services: [
+                    {
+                        title: "AI Tutoring Service",
+                        tagline: "Personalized learning with AI assistance",
+                        concept: "Offer tutoring services enhanced by AI. Use AI to create personalized study materials, practice problems, and explanations while you provide the human guidance and accountability.",
+                        revenueModels: ["Hourly tutoring ($50-$150/hr)", "Monthly packages", "Group sessions"],
+                        tools: ["ChatGPT/Claude", "Notion", "Zoom", "Loom"],
+                        steps: [
+                            { title: "Choose your subjects", desc: "Focus on 2-3 subjects where AI can significantly help with content creation" },
+                            { title: "Create your method", desc: "Document how you combine AI tools with personal instruction" },
+                            { title: "Start local", desc: "Offer services to local students first, then expand online" }
+                        ]
+                    },
+                    {
+                        title: "AI Curriculum Design Service",
+                        tagline: "Help educators integrate AI into teaching",
+                        concept: "Help schools and training companies update their curricula to include AI tools and prepare students for an AI-enabled workforce.",
+                        revenueModels: ["Consulting fees", "Curriculum packages", "Teacher training workshops"],
+                        tools: ["ChatGPT", "Notion", "Google Workspace", "Canva"],
+                        steps: [
+                            { title: "Audit current AI in education", desc: "Research how schools are currently using (or not using) AI" },
+                            { title: "Create sample curricula", desc: "Build example lesson plans showing AI integration" },
+                            { title: "Present to schools", desc: "Offer free workshops to demonstrate value and generate leads" }
+                        ]
+                    }
+                ],
+                products: [
+                    {
+                        title: "AI Learning Course",
+                        tagline: "Teach anyone to use AI effectively",
+                        concept: "Create a comprehensive course teaching non-technical people how to use AI tools for work and life. Focus on practical applications and build confidence.",
+                        revenueModels: ["Course sales ($49-$199)", "Corporate licenses", "Workshops"],
+                        tools: ["Teachable/Kajabi", "Loom", "ChatGPT", "Notion"],
+                        steps: [
+                            { title: "Identify your audience", desc: "Professionals, students, retirees - who needs this most?" },
+                            { title: "Create curriculum", desc: "Build a practical, hands-on course with real exercises" },
+                            { title: "Launch to warm audience", desc: "Start with your network and ask for testimonials" }
+                        ]
+                    },
+                    {
+                        title: "AI Prompt Workbooks",
+                        tagline: "Educational materials for AI learning",
+                        concept: "Create downloadable workbooks that teach prompt engineering through exercises and examples. Target students and educators.",
+                        revenueModels: ["Workbook sales ($19-$39)", "School licenses", "Bulk discounts"],
+                        tools: ["Canva", "Google Docs", "Gumroad", "ChatGPT"],
+                        steps: [
+                            { title: "Design learning progression", desc: "Create a clear path from beginner to advanced" },
+                            { title: "Include exercises", desc: "Hands-on practice is essential - include lots of activities" },
+                            { title: "Target teachers", desc: "Teachers share resources - make it easy for them to use" }
+                        ]
+                    }
+                ],
+                content: [
+                    {
+                        title: "AI for Educators Blog/Newsletter",
+                        tagline: "Help teachers integrate AI into classrooms",
+                        concept: "Create content specifically for educators about using AI responsibly and effectively in education.",
+                        revenueModels: ["Sponsorships", "Resource sales", "Consulting", "Speaking"],
+                        tools: ["Substack", "ChatGPT", "Canva", "Twitter"],
+                        steps: [
+                            { title: "Focus on practical tips", desc: "Teachers want actionable advice, not theory" },
+                            { title: "Address concerns", desc: "Tackle cheating, ethics, and policy head-on" },
+                            { title: "Build community", desc: "Create a space for educators to share and learn together" }
+                        ]
+                    }
+                ]
+            },
+            healthcare: {
+                services: [
+                    {
+                        title: "Healthcare Content Agency",
+                        tagline: "AI-assisted medical content creation",
+                        concept: "Create health and medical content for healthcare providers, health tech companies, and wellness brands. Use AI for research and drafting while ensuring medical accuracy.",
+                        revenueModels: ["Monthly retainers", "Per-article pricing", "Content strategy consulting"],
+                        tools: ["ChatGPT/Claude", "Medical databases", "Notion", "Grammarly"],
+                        steps: [
+                            { title: "Establish credibility", desc: "Highlight your healthcare background in all materials" },
+                            { title: "Create compliance process", desc: "Document your fact-checking and review workflow" },
+                            { title: "Target health tech startups", desc: "They need content but struggle to find qualified writers" }
+                        ]
+                    },
+                    {
+                        title: "Patient Communication Consulting",
+                        tagline: "Help practices communicate better with AI",
+                        concept: "Help healthcare practices improve patient communication using AI. Create templates for follow-ups, education materials, and FAQs.",
+                        revenueModels: ["Consulting packages", "Template sales", "Training workshops"],
+                        tools: ["ChatGPT", "Practice management systems", "Notion", "Canva"],
+                        steps: [
+                            { title: "Audit communication gaps", desc: "What patient communications could be improved?" },
+                            { title: "Create template library", desc: "Build customizable templates for common scenarios" },
+                            { title: "Pilot with one practice", desc: "Document results and use as case study" }
+                        ]
+                    }
+                ],
+                products: [
+                    {
+                        title: "Healthcare AI Prompt Templates",
+                        tagline: "Prompts designed for healthcare professionals",
+                        concept: "Create prompt templates specifically for healthcare use cases: patient education, documentation, research summaries, and communication.",
+                        revenueModels: ["Template pack sales", "Practice licenses", "Specialty bundles"],
+                        tools: ["Notion", "Gumroad", "ChatGPT", "Canva"],
+                        steps: [
+                            { title: "Identify high-impact use cases", desc: "Survey healthcare professionals about their biggest time sinks" },
+                            { title: "Ensure compliance", desc: "Include disclaimers and best practices for HIPAA awareness" },
+                            { title: "Get professional endorsements", desc: "Have respected practitioners review and endorse" }
+                        ]
+                    }
+                ],
+                content: [
+                    {
+                        title: "AI in Healthcare Newsletter",
+                        tagline: "Track AI developments in healthcare",
+                        concept: "Write about how AI is transforming healthcare: tools, research, ethics, and practical applications for providers.",
+                        revenueModels: ["Sponsorships from health tech", "Premium content", "Consulting leads"],
+                        tools: ["Substack", "ChatGPT", "PubMed", "LinkedIn"],
+                        steps: [
+                            { title: "Balance hype and reality", desc: "Be the trusted voice that cuts through AI hype" },
+                            { title: "Include practical tips", desc: "What can providers actually use today?" },
+                            { title: "Build on LinkedIn", desc: "Healthcare professionals are active there" }
+                        ]
+                    }
+                ]
+            },
+            legal: {
+                services: [
+                    {
+                        title: "Legal Document Automation Service",
+                        tagline: "AI-powered contract and document creation",
+                        concept: "Help small businesses and startups create legal documents using AI templates and your legal expertise for review. Focus on common documents like NDAs, service agreements, and terms of service.",
+                        revenueModels: ["Per-document pricing", "Monthly packages", "Annual subscriptions"],
+                        tools: ["ChatGPT/Claude", "Document automation tools", "Notion", "DocuSign"],
+                        steps: [
+                            { title: "Build template library", desc: "Create AI-enhanced templates for 10 most common documents" },
+                            { title: "Define your review process", desc: "Document how you ensure quality and compliance" },
+                            { title: "Target startup ecosystem", desc: "Partner with accelerators and startup communities" }
+                        ]
+                    },
+                    {
+                        title: "Contract Analysis Service",
+                        tagline: "AI-assisted contract review",
+                        concept: "Offer fast contract review services using AI for initial analysis and your expertise for recommendations. Help businesses understand contracts before signing.",
+                        revenueModels: ["Per-contract review", "Subscription packages", "Rush fees"],
+                        tools: ["ChatGPT/Claude", "Document tools", "Notion", "Loom"],
+                        steps: [
+                            { title: "Create analysis framework", desc: "Build a standardized review process for common contract types" },
+                            { title: "Offer trial reviews", desc: "Provide discounted first reviews to build testimonials" },
+                            { title: "Partner with accountants/advisors", desc: "Get referrals from professionals who work with businesses" }
+                        ]
+                    }
+                ],
+                products: [
+                    {
+                        title: "Legal Prompt Templates",
+                        tagline: "AI prompts for legal professionals",
+                        concept: "Create prompt templates for legal research, document drafting, and analysis. Help lawyers and legal teams work faster with AI.",
+                        revenueModels: ["Template sales", "Firm licenses", "Specialty bundles"],
+                        tools: ["Notion", "Gumroad", "ChatGPT/Claude", "Legal research tools"],
+                        steps: [
+                            { title: "Identify pain points", desc: "Survey legal professionals about repetitive tasks" },
+                            { title: "Test with practitioners", desc: "Get feedback from working lawyers on prompt effectiveness" },
+                            { title: "Include ethical guidance", desc: "Address AI ethics and limitations clearly" }
+                        ]
+                    }
+                ],
+                content: [
+                    {
+                        title: "AI Legal Tech Newsletter",
+                        tagline: "Covering AI in the legal industry",
+                        concept: "Write about how AI is changing legal practice: tools, ethics, regulations, and practical applications.",
+                        revenueModels: ["Legal tech sponsorships", "Consulting leads", "Speaking opportunities"],
+                        tools: ["Substack", "LinkedIn", "ChatGPT", "Legal databases"],
+                        steps: [
+                            { title: "Focus on practical applications", desc: "What can lawyers actually use today?" },
+                            { title: "Address ethics and risks", desc: "Be the trusted voice on responsible AI use in law" },
+                            { title: "Build authority on LinkedIn", desc: "Legal professionals are active and engaged there" }
+                        ]
+                    }
+                ]
+            },
+            trades: {
+                services: [
+                    {
+                        title: "AI Marketing for Local Services",
+                        tagline: "Help tradespeople get more customers",
+                        concept: "Use AI to create marketing content and systems for local service businesses: plumbers, electricians, contractors. They need marketing but don't have time.",
+                        revenueModels: ["Monthly marketing packages", "Website + content bundles", "Lead generation"],
+                        tools: ["ChatGPT", "Canva", "Google Business", "Social platforms"],
+                        steps: [
+                            { title: "Focus on one trade", desc: "Start with plumbers, HVAC, or electricians - pick one" },
+                            { title: "Create proof of concept", desc: "Help one business for free to build a case study" },
+                            { title: "Network locally", desc: "Attend trade association meetings and chamber events" }
+                        ]
+                    },
+                    {
+                        title: "Quote & Proposal Service",
+                        tagline: "Professional proposals for contractors",
+                        concept: "Help contractors create professional quotes and proposals using AI. Improve close rates with better-looking, more detailed proposals.",
+                        revenueModels: ["Per-proposal fees", "Monthly subscriptions", "Template sales"],
+                        tools: ["ChatGPT", "Canva", "Google Docs", "QuickBooks"],
+                        steps: [
+                            { title: "Study winning proposals", desc: "Research what makes proposals convert" },
+                            { title: "Create industry templates", desc: "Build templates for different trade types" },
+                            { title: "Demonstrate ROI", desc: "Track close rate improvements to prove value" }
+                        ]
+                    }
+                ],
+                products: [
+                    {
+                        title: "Service Business Templates",
+                        tagline: "AI-powered business templates for trades",
+                        concept: "Create template bundles for service businesses: proposals, contracts, follow-ups, and marketing materials.",
+                        revenueModels: ["Template bundle sales", "Industry-specific packs", "White-label licensing"],
+                        tools: ["Notion/Google", "Canva", "Gumroad", "ChatGPT"],
+                        steps: [
+                            { title: "Survey the market", desc: "What documents do service businesses struggle with?" },
+                            { title: "Make them easy to use", desc: "Service business owners aren't tech-savvy - simplify everything" },
+                            { title: "Sell through supply houses", desc: "Partner with industry suppliers for distribution" }
+                        ]
+                    }
+                ],
+                content: [
+                    {
+                        title: "Trade Business Success Channel",
+                        tagline: "Help tradespeople grow their businesses",
+                        concept: "Create YouTube/TikTok content teaching tradespeople how to use technology and AI to grow their businesses.",
+                        revenueModels: ["Ad revenue", "Course sales", "Tool affiliates", "Consulting"],
+                        tools: ["YouTube", "ChatGPT", "Canva", "Screen recording"],
+                        steps: [
+                            { title: "Speak their language", desc: "Avoid tech jargon - be practical and down-to-earth" },
+                            { title: "Show quick wins", desc: "Demonstrate immediate value they can use today" },
+                            { title: "Build trust", desc: "Share your background and be authentic" }
+                        ]
+                    }
+                ]
+            },
+            retail: {
+                services: [
+                    {
+                        title: "E-commerce AI Optimization Agency",
+                        tagline: "Help online stores sell more with AI",
+                        concept: "Use AI to optimize e-commerce stores: product descriptions, SEO, email marketing, and customer service. Help store owners increase conversions and average order value.",
+                        revenueModels: ["Monthly retainers", "Performance-based fees", "Project packages"],
+                        tools: ["ChatGPT", "Shopify apps", "Klaviyo", "Google Analytics"],
+                        steps: [
+                            { title: "Pick a platform", desc: "Start with Shopify or WooCommerce - specialize" },
+                            { title: "Offer free audits", desc: "Review stores for free to demonstrate your expertise" },
+                            { title: "Document results", desc: "Track and share conversion improvements" }
+                        ]
+                    },
+                    {
+                        title: "Product Description Writing Service",
+                        tagline: "AI-powered product copy at scale",
+                        concept: "Write product descriptions for e-commerce stores using AI. Help stores with large catalogs update their copy quickly and improve SEO.",
+                        revenueModels: ["Per-product pricing", "Bulk packages", "Monthly subscriptions"],
+                        tools: ["ChatGPT", "Shopify/WooCommerce", "SEO tools", "Google Sheets"],
+                        steps: [
+                            { title: "Create your process", desc: "Develop a consistent workflow for quality and speed" },
+                            { title: "Build samples", desc: "Create before/after examples showing improvements" },
+                            { title: "Target specific niches", desc: "Fashion, home goods, electronics - pick one to start" }
+                        ]
+                    }
+                ],
+                products: [
+                    {
+                        title: "E-commerce Prompt Templates",
+                        tagline: "Prompts for every e-commerce task",
+                        concept: "Create comprehensive prompt templates for e-commerce: product descriptions, email sequences, ad copy, customer service responses.",
+                        revenueModels: ["Template packs", "Platform-specific bundles", "Agency licenses"],
+                        tools: ["Notion", "Gumroad", "ChatGPT", "Canva"],
+                        steps: [
+                            { title: "Cover the full journey", desc: "From product listing to post-purchase" },
+                            { title: "Include examples", desc: "Show prompts in action with real outputs" },
+                            { title: "Partner with e-commerce communities", desc: "Reach out to Shopify groups and forums" }
+                        ]
+                    },
+                    {
+                        title: "Shopify AI App",
+                        tagline: "AI tools built into Shopify",
+                        concept: "Build a Shopify app that brings AI capabilities directly into the merchant dashboard. Start with one focused feature like product descriptions.",
+                        revenueModels: ["Monthly subscriptions", "Usage-based pricing", "Premium tiers"],
+                        tools: ["Shopify API", "OpenAI API", "Node.js", "React"],
+                        steps: [
+                            { title: "Validate demand", desc: "Survey Shopify merchants about their biggest pain points" },
+                            { title: "Build MVP", desc: "Create one feature that solves one problem really well" },
+                            { title: "Launch on App Store", desc: "Get early reviews and iterate based on feedback" }
+                        ]
+                    }
+                ],
+                content: [
+                    {
+                        title: "E-commerce AI Tips Channel",
+                        tagline: "Help online sellers leverage AI",
+                        concept: "Create content showing e-commerce sellers how to use AI tools to save time and increase sales.",
+                        revenueModels: ["Ad revenue", "Affiliate commissions", "Course sales", "Consulting"],
+                        tools: ["YouTube", "ChatGPT", "Shopify", "Screen recording"],
+                        steps: [
+                            { title: "Focus on quick wins", desc: "Show immediate value sellers can implement today" },
+                            { title: "Partner with tools", desc: "Review and demo e-commerce AI tools for affiliate income" },
+                            { title: "Build community", desc: "Create a Facebook group or Discord for engagement" }
+                        ]
+                    }
+                ]
+            },
+            other: {
+                services: [
+                    {
+                        title: "AI Virtual Assistant Agency",
+                        tagline: "Provide AI-enhanced VA services",
+                        concept: "Offer virtual assistant services supercharged with AI. Handle more tasks per hour by using AI for research, writing, data entry, and scheduling.",
+                        revenueModels: ["Hourly rates ($25-$75/hr)", "Monthly packages", "Task-based pricing"],
+                        tools: ["ChatGPT", "Notion", "Zapier", "Calendar tools"],
+                        steps: [
+                            { title: "Define your services", desc: "List specific tasks you can handle faster with AI" },
+                            { title: "Create systems", desc: "Document AI-enhanced workflows for consistency" },
+                            { title: "Start with busy professionals", desc: "Target consultants, coaches, and small business owners" }
+                        ]
+                    },
+                    {
+                        title: "AI Research Service",
+                        tagline: "Fast, thorough research on any topic",
+                        concept: "Offer research services using AI to gather, analyze, and synthesize information quickly. Help businesses, writers, and professionals with research-heavy tasks.",
+                        revenueModels: ["Per-project pricing", "Retainer packages", "Rush fees"],
+                        tools: ["ChatGPT/Claude", "Research databases", "Notion", "Google"],
+                        steps: [
+                            { title: "Define deliverables", desc: "Create clear output formats: reports, summaries, briefings" },
+                            { title: "Showcase expertise", desc: "Complete a few projects pro bono for portfolio pieces" },
+                            { title: "Target specific industries", desc: "Pick 2-3 industries to focus your marketing" }
+                        ]
+                    }
+                ],
+                products: [
+                    {
+                        title: "Universal AI Prompt Library",
+                        tagline: "Prompts for every professional",
+                        concept: "Create a comprehensive prompt library covering common tasks across all professions: writing, research, analysis, planning, and communication.",
+                        revenueModels: ["One-time sales", "Subscription updates", "Team licenses"],
+                        tools: ["Notion", "Gumroad", "ChatGPT", "Canva"],
+                        steps: [
+                            { title: "Survey diverse users", desc: "Learn what prompts different professionals need" },
+                            { title: "Create categories", desc: "Organize by task type for easy navigation" },
+                            { title: "Show versatility", desc: "Demonstrate how prompts work across industries" }
+                        ]
+                    },
+                    {
+                        title: "AI Productivity Course",
+                        tagline: "Master AI tools for any profession",
+                        concept: "Teach general AI productivity skills that apply to any profession. Cover tools, workflows, and mindsets for getting more done with AI.",
+                        revenueModels: ["Course sales", "Corporate training", "Community membership"],
+                        tools: ["Teachable", "Loom", "ChatGPT", "Notion"],
+                        steps: [
+                            { title: "Validate interest", desc: "Pre-sell or survey to confirm demand" },
+                            { title: "Create practical curriculum", desc: "Focus on hands-on skills, not theory" },
+                            { title: "Launch to your network", desc: "Start with people who know and trust you" }
+                        ]
+                    }
+                ],
+                content: [
+                    {
+                        title: "AI Productivity Newsletter",
+                        tagline: "Weekly tips for working smarter with AI",
+                        concept: "Write about practical AI productivity tips for any professional. Cover tools, workflows, and real examples.",
+                        revenueModels: ["Sponsorships", "Premium content", "Product sales", "Affiliates"],
+                        tools: ["Substack/Beehiiv", "ChatGPT", "Twitter", "LinkedIn"],
+                        steps: [
+                            { title: "Be specific and practical", desc: "Every issue should have actionable takeaways" },
+                            { title: "Build consistently", desc: "Commit to weekly publishing for at least 6 months" },
+                            { title: "Engage everywhere", desc: "Share snippets on all social platforms" }
+                        ]
+                    }
+                ]
+            }
+        };
+
+        // Skills-based business ideas
+        const skillsIdeas = {
+            writing: {
+                title: "AI Content Creation Studio",
+                tagline: "Create content faster without sacrificing quality",
+                concept: "Combine your writing skills with AI to offer high-volume content services. Use AI for research, outlines, and first drafts while you add the human touch that makes content connect.",
+                revenueModels: ["Per-piece pricing", "Monthly retainers", "Content strategy add-ons"],
+                tools: ["ChatGPT/Claude", "Grammarly", "Notion", "SEO tools"],
+                steps: [
+                    { title: "Define your content types", desc: "Blogs, emails, social posts - pick 2-3 to specialize in" },
+                    { title: "Document your workflow", desc: "Create a process that combines AI speed with your quality" },
+                    { title: "Build portfolio", desc: "Create sample content showing your AI-assisted quality" }
+                ]
+            },
+            coding: {
+                title: "AI Development Accelerator",
+                tagline: "Ship code faster with AI assistance",
+                concept: "Offer development services with AI-enhanced velocity. Help startups and businesses build MVPs and features faster by leveraging coding AI tools alongside your expertise.",
+                revenueModels: ["Project-based fees", "Hourly consulting", "Code review packages"],
+                tools: ["GitHub Copilot", "ChatGPT", "Claude", "VS Code"],
+                steps: [
+                    { title: "Identify speed advantages", desc: "What can you build 2-3x faster with AI?" },
+                    { title: "Create a demo project", desc: "Build something impressive quickly to showcase your process" },
+                    { title: "Target time-sensitive projects", desc: "MVPs, hackathons, urgent features" }
+                ]
+            },
+            video: {
+                title: "AI Video Production Service",
+                tagline: "Create videos faster with AI tools",
+                concept: "Offer video production services enhanced by AI: script writing, editing assistance, thumbnail generation, and SEO optimization.",
+                revenueModels: ["Per-video pricing", "Monthly packages", "Channel management"],
+                tools: ["ChatGPT", "Midjourney", "Premiere/Final Cut", "Descript"],
+                steps: [
+                    { title: "Streamline your workflow", desc: "Identify where AI can cut production time" },
+                    { title: "Offer a unique package", desc: "Full video production with AI-speed turnaround" },
+                    { title: "Target content creators", desc: "YouTubers and businesses who need regular videos" }
+                ]
+            },
+            design: {
+                title: "AI Design Sprint Agency",
+                tagline: "Rapid design iterations with AI",
+                concept: "Offer faster design services by using AI for ideation, mockups, and variations. Deliver more options in less time while maintaining quality.",
+                revenueModels: ["Design sprints", "Retainer packages", "Rapid prototyping services"],
+                tools: ["Midjourney", "Figma", "Canva", "Adobe Suite"],
+                steps: [
+                    { title: "Define your sprint process", desc: "How do you combine AI speed with design quality?" },
+                    { title: "Create comparison case studies", desc: "Show traditional vs AI-assisted timelines" },
+                    { title: "Target startups", desc: "They need speed and affordability" }
+                ]
+            },
+            social: {
+                title: "AI Social Media Agency",
+                tagline: "Scale social content with AI",
+                concept: "Manage social media accounts with AI-enhanced content creation. Produce more content, better optimized, at scale.",
+                revenueModels: ["Monthly management fees", "Content packages", "Strategy consulting"],
+                tools: ["ChatGPT", "Canva", "Buffer/Hootsuite", "Analytics tools"],
+                steps: [
+                    { title: "Build your content system", desc: "Create templates and workflows for consistent output" },
+                    { title: "Show results", desc: "Track engagement and growth metrics to prove value" },
+                    { title: "Start with 3-5 clients", desc: "Build case studies before scaling" }
+                ]
+            },
+            teaching: {
+                title: "AI-Enhanced Online Course Business",
+                tagline: "Create and sell courses faster",
+                concept: "Build online courses using AI for content creation, student support, and personalization. Teach faster and reach more students.",
+                revenueModels: ["Course sales", "Membership communities", "Corporate training"],
+                tools: ["ChatGPT", "Teachable/Kajabi", "Loom", "Notion"],
+                steps: [
+                    { title: "Pick your expertise", desc: "What can you teach that people will pay to learn?" },
+                    { title: "Use AI for content creation", desc: "Outlines, scripts, quizzes, and supplemental materials" },
+                    { title: "Launch with pre-sales", desc: "Validate demand before creating all content" }
+                ]
+            },
+            data: {
+                title: "AI Data Analysis Service",
+                tagline: "Faster insights from any data",
+                concept: "Offer data analysis services enhanced by AI. Help businesses understand their data, find patterns, and make better decisions.",
+                revenueModels: ["Project-based analysis", "Monthly reporting", "Dashboard creation"],
+                tools: ["ChatGPT/Claude", "Python", "Excel/Sheets", "Visualization tools"],
+                steps: [
+                    { title: "Define your analysis types", desc: "Marketing, sales, operations - pick your focus" },
+                    { title: "Create sample reports", desc: "Show the quality of insights you can deliver" },
+                    { title: "Target data-rich businesses", desc: "E-commerce, SaaS, and marketing agencies" }
+                ]
+            },
+            sales: {
+                title: "AI Sales Enablement Service",
+                tagline: "Help sales teams sell more with AI",
+                concept: "Help sales teams use AI for prospecting, outreach, proposals, and follow-ups. Train teams and build systems for AI-enhanced selling.",
+                revenueModels: ["Consulting fees", "Training workshops", "Ongoing coaching"],
+                tools: ["ChatGPT", "CRM systems", "LinkedIn", "Email tools"],
+                steps: [
+                    { title: "Document AI sales workflows", desc: "Create repeatable processes for common sales tasks" },
+                    { title: "Build training materials", desc: "Teach salespeople to use AI effectively" },
+                    { title: "Target sales-driven companies", desc: "B2B companies with sales teams" }
+                ]
+            },
+            automation: {
+                title: "AI Automation Consultant",
+                tagline: "Automate businesses with AI",
+                concept: "Help businesses identify and implement AI-powered automations. Reduce manual work, errors, and costs.",
+                revenueModels: ["Automation audits", "Implementation projects", "Maintenance retainers"],
+                tools: ["Zapier/Make", "ChatGPT API", "No-code tools", "APIs"],
+                steps: [
+                    { title: "Create automation audit process", desc: "How do you identify automation opportunities?" },
+                    { title: "Build case studies", desc: "Document time/money saved from your automations" },
+                    { title: "Offer free audits", desc: "Review businesses for free to generate leads" }
+                ]
+            },
+            audio: {
+                title: "AI Podcast Production Service",
+                tagline: "Launch and grow podcasts with AI",
+                concept: "Offer podcast production services enhanced by AI: show notes, transcripts, social clips, and content repurposing.",
+                revenueModels: ["Per-episode pricing", "Monthly packages", "Launch packages"],
+                tools: ["Descript", "ChatGPT", "Canva", "Riverside/Zencastr"],
+                steps: [
+                    { title: "Define your package", desc: "What's included in your podcast production service?" },
+                    { title: "Show your workflow", desc: "Demonstrate the quality and speed of your process" },
+                    { title: "Target busy professionals", desc: "People who want to podcast but don't have time to edit" }
+                ]
+            }
+        };
+
+        function getSelectedSkills() {
+            const selected = [];
+            document.querySelectorAll('.skill-tag input:checked').forEach(input => {
+                selected.push(input.value);
+            });
+            return selected;
+        }
+
+        function generateIdeas() {
+            const background = document.getElementById('background').value;
+            const budget = document.getElementById('budget').value;
+            const timeAvailable = document.getElementById('timeAvailable').value;
+            const modelPreference = document.getElementById('modelPreference').value;
+            const additionalContext = document.getElementById('additionalContext').value;
+            const selectedSkills = getSelectedSkills();
+
+            if (!background || !budget || !timeAvailable) {
+                alert('Please fill in your background, budget, and time available to generate ideas.');
+                return;
+            }
+
+            // Show loading state
+            const btn = document.getElementById('generateBtn');
+            const btnText = btn.querySelector('.btn-text');
+            const spinner = btn.querySelector('.loading-spinner');
+
+            btn.disabled = true;
+            btnText.textContent = 'Generating Ideas...';
+            spinner.style.display = 'inline-block';
+
+            // Simulate processing time for better UX
+            setTimeout(() => {
+                const ideas = selectIdeas(background, budget, timeAvailable, modelPreference, selectedSkills, additionalContext);
+                displayIdeas(ideas);
+
+                // Reset button
+                btn.disabled = false;
+                btnText.textContent = 'Generate New Ideas';
+                spinner.style.display = 'none';
+
+                // Show results
+                document.getElementById('resultsSection').classList.add('active');
+                document.getElementById('resultsSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 1500);
+        }
+
+        function selectIdeas(background, budget, timeAvailable, modelPreference, skills, context) {
+            const ideas = [];
+            const backgroundIdeas = ideaDatabase[background] || ideaDatabase.other;
+
+            // Get model preference or default to 'any'
+            const modelType = modelPreference === 'any' ? null : modelPreference;
+
+            // Helper to add idea if not duplicate
+            const addIdea = (idea) => {
+                if (!ideas.find(i => i.title === idea.title)) {
+                    ideas.push(idea);
+                }
+            };
+
+            // Add ideas based on business model preference
+            if (modelType && backgroundIdeas[modelType]) {
+                backgroundIdeas[modelType].forEach(idea => {
+                    if (ideas.length < 3) addIdea(idea);
+                });
+            }
+
+            // Add ideas based on skills
+            if (skills.length > 0) {
+                skills.forEach(skill => {
+                    if (skillsIdeas[skill] && ideas.length < 3) {
+                        addIdea(skillsIdeas[skill]);
+                    }
+                });
+            }
+
+            // Fill remaining slots with other model types
+            const modelTypes = ['services', 'products', 'saas', 'content'];
+            modelTypes.forEach(type => {
+                if (backgroundIdeas[type]) {
+                    backgroundIdeas[type].forEach(idea => {
+                        if (ideas.length < 3) addIdea(idea);
+                    });
+                }
+            });
+
+            // Adjust ideas based on budget and time
+            ideas.forEach(idea => {
+                // Add budget-appropriate note
+                if (budget === '0-100' || budget === '100-500') {
+                    idea.budgetNote = "Great for bootstrapping - start lean and reinvest profits";
+                } else if (budget === '500-2000') {
+                    idea.budgetNote = "Good budget for tools and initial marketing";
+                } else {
+                    idea.budgetNote = "Budget allows for faster scaling and better tools";
+                }
+
+                // Add time-appropriate note
+                if (timeAvailable === '5-10') {
+                    idea.timeNote = "Start as a side project, scale as it grows";
+                } else if (timeAvailable === '10-20') {
+                    idea.timeNote = "Part-time commitment can build real momentum";
+                } else {
+                    idea.timeNote = "Full focus will accelerate your growth significantly";
+                }
+            });
+
+            return ideas.slice(0, 3);
+        }
+
+        function displayIdeas(ideas) {
+            const container = document.getElementById('ideasContainer');
+            container.innerHTML = '';
+
+            ideas.forEach((idea, index) => {
+                const card = document.createElement('div');
+                card.className = 'idea-card';
+                card.innerHTML = `
+                    <span class="idea-number">${index + 1}</span>
+                    <h3 class="idea-title">${idea.title}</h3>
+                    <p class="idea-tagline">${idea.tagline}</p>
+
+                    <div class="idea-section">
+                        <h4 class="idea-section-title">
+                            <span>&#128161;</span> Business Concept
+                        </h4>
+                        <p class="idea-section-content">${idea.concept}</p>
+                    </div>
+
+                    <div class="idea-section">
+                        <h4 class="idea-section-title">
+                            <span>&#128176;</span> Revenue Models
+                        </h4>
+                        <div class="idea-section-content">
+                            ${idea.revenueModels.map(model => `<span class="revenue-tag">${model}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="idea-section">
+                        <h4 class="idea-section-title">
+                            <span>&#128295;</span> Tools You'll Need
+                        </h4>
+                        <div class="idea-section-content">
+                            ${idea.tools.map(tool => `<span class="tool-tag">${tool}</span>`).join('')}
+                        </div>
+                    </div>
+
+                    <div class="idea-section">
+                        <h4 class="idea-section-title">
+                            <span>&#127937;</span> First 3 Steps to Start
+                        </h4>
+                        <div class="idea-section-content">
+                            ${idea.steps.map((step, i) => `
+                                <div class="step-item">
+                                    <span class="step-number">${i + 1}</span>
+                                    <div class="step-content">
+                                        <div class="step-title">${step.title}</div>
+                                        <div class="step-desc">${step.desc}</div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        function handleEmailSubmit(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('emailInput').value;
+            const form = document.getElementById('emailForm');
+            const success = document.getElementById('emailSuccess');
+
+            // In a real implementation, you would send this to your email service
+            // For now, we'll simulate success and could integrate with ConvertKit, Mailchimp, etc.
+
+            // Store email in localStorage for demo purposes
+            localStorage.setItem('kaiprompts_email', email);
+
+            // Track conversion (if GA is available)
+            if (typeof gtag === 'function') {
+                gtag('event', 'email_capture', {
+                    'event_category': 'lead_generation',
+                    'event_label': 'business_generator'
+                });
+            }
+
+            // Show success message
+            form.style.display = 'none';
+            success.classList.add('active');
+        }
+    </script>
+</body>
+</html>
