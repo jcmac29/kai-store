@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Generator | Kai Empire</title>
+    <meta name="description" content="Generate customized AI prompts instantly. Select your role, task type, and output format to create perfect prompts for ChatGPT, Claude, and more.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        h1 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle { text-align: center; color: #888; margin-bottom: 40px; font-size: 1.1rem; }
+        .card {
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .form-group { margin-bottom: 24px; }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #00d4ff;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        select, input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background: #0a0a0a;
+            color: #fff;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            appearance: none;
+            cursor: pointer;
+        }
+        select {
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 20px;
+            padding-right: 44px;
+        }
+        select:focus, input:focus {
+            outline: none;
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+        }
+        select:hover, input:hover { border-color: #555; }
+        .btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3); }
+        .btn:active { transform: translateY(0); }
+        .btn-primary { background: linear-gradient(135deg, #7c3aed, #5b21b6); color: #fff; }
+        .btn-copy {
+            background: linear-gradient(135deg, #00d4ff, #0099cc);
+            color: #fff;
+            margin-top: 16px;
+        }
+        .btn-copy:hover { box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3); }
+        .output-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .output-area {
+            background: #0a0a0a;
+            border: 2px solid #333;
+            border-radius: 10px;
+            padding: 20px;
+            min-height: 160px;
+            white-space: pre-wrap;
+            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
+            font-size: 0.95rem;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+        .cta-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
+            border: 2px solid #7c3aed;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+        }
+        .cta-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        .cta-card p { color: #a0a0a0; margin-bottom: 24px; font-size: 1.05rem; }
+        .btn-cta {
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            display: inline-block;
+            padding: 16px 36px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+        }
+        .copied { background: linear-gradient(135deg, #22c55e, #16a34a) !important; }
+        footer { text-align: center; padding: 40px 20px; color: #666; }
+        footer a { color: #7c3aed; text-decoration: none; transition: color 0.3s; }
+        footer a:hover { color: #00d4ff; }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #00d4ff);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8rem; }
+            .container { padding: 20px 16px; }
+            .card, .cta-card { padding: 24px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <span class="badge">FREE TOOL</span>
+        <h1>AI Prompt Generator</h1>
+        <p class="subtitle">Build the perfect prompt in seconds. Select your options and copy.</p>
+
+        <div class="card">
+            <div class="form-group">
+                <label>Your Role</label>
+                <select id="role">
+                    <option value="">Select your role...</option>
+                    <option value="marketer">Marketer</option>
+                    <option value="developer">Developer</option>
+                    <option value="writer">Writer</option>
+                    <option value="entrepreneur">Entrepreneur</option>
+                    <option value="student">Student</option>
+                    <option value="manager">Manager</option>
+                    <option value="designer">Designer</option>
+                    <option value="freelancer">Freelancer</option>
+                    <option value="consultant">Consultant</option>
+                    <option value="creator">Content Creator</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Task Type</label>
+                <select id="task">
+                    <option value="">Select task type...</option>
+                    <option value="brainstorm">Brainstorm Ideas</option>
+                    <option value="analyze">Analyze Data/Content</option>
+                    <option value="create">Create Content</option>
+                    <option value="improve">Improve/Edit</option>
+                    <option value="summarize">Summarize</option>
+                    <option value="explain">Explain Concept</option>
+                    <option value="solve">Solve Problem</option>
+                    <option value="plan">Create Plan</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Output Format</label>
+                <select id="format">
+                    <option value="">Select output format...</option>
+                    <option value="list">Bullet List</option>
+                    <option value="paragraph">Paragraph</option>
+                    <option value="table">Table</option>
+                    <option value="step-by-step">Step-by-Step Guide</option>
+                    <option value="outline">Outline</option>
+                    <option value="comparison">Comparison</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Topic (Optional)</label>
+                <input type="text" id="topic" placeholder="e.g., email marketing, React hooks, product launch...">
+            </div>
+            <button class="btn btn-primary" onclick="generatePrompt()">Generate Prompt</button>
+        </div>
+
+        <div class="card" id="output-card" style="display:none;">
+            <div class="output-header">
+                <label style="margin-bottom: 0;">Your Generated Prompt</label>
+            </div>
+            <div class="output-area" id="output"></div>
+            <button class="btn btn-copy" id="copyBtn" onclick="copyPrompt()">Copy to Clipboard</button>
+        </div>
+
+        <div class="cta-card">
+            <h3>Want 375+ Expert Prompts?</h3>
+            <p>Get our complete prompt packs with battle-tested templates for marketers, developers, writers, and more.</p>
+            <a href="../" class="btn-cta">Browse Prompt Packs</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made by <a href="../">Kai Empire</a></p>
+    </footer>
+
+    <script>
+        const templates = {
+            marketer: {
+                brainstorm: "Act as a senior marketing strategist with 15+ years of experience.\n\nBrainstorm innovative marketing ideas for [TOPIC].\n\nContext:\n- Consider current market trends and consumer behavior\n- Focus on differentiation from competitors\n- Include both traditional and digital approaches\n\nProvide your ideas as [FORMAT].\n\nFor each idea, briefly explain why it would work.",
+                analyze: "Act as a marketing analyst specializing in data-driven insights.\n\nAnalyze [TOPIC] and provide actionable insights.\n\nFocus on:\n- Key metrics and KPIs\n- Patterns and trends\n- Opportunities for optimization\n- Potential risks or issues\n\nPresent your analysis as [FORMAT].",
+                create: "Act as a creative marketing director at a top agency.\n\nCreate compelling marketing content for [TOPIC].\n\nRequirements:\n- Hook the audience immediately\n- Clear value proposition\n- Strong call-to-action\n- Brand-appropriate tone\n\nFormat your response as [FORMAT].",
+                improve: "Act as a marketing optimization expert.\n\nReview and improve [TOPIC].\n\nEvaluate:\n- Messaging clarity and impact\n- Target audience alignment\n- Conversion potential\n- Brand consistency\n\nProvide specific, actionable recommendations as [FORMAT].",
+                summarize: "Act as a marketing communications specialist.\n\nSummarize [TOPIC] for a marketing team.\n\nInclude:\n- Key takeaways\n- Strategic implications\n- Action items\n- Next steps\n\nFormat as [FORMAT].",
+                explain: "Act as a marketing educator and thought leader.\n\nExplain [TOPIC] to someone new to marketing.\n\nInclude:\n- Core concepts\n- Real-world examples\n- Best practices\n- Common mistakes to avoid\n\nPresent as [FORMAT].",
+                solve: "Act as a marketing problem solver and consultant.\n\nHelp solve this marketing challenge: [TOPIC]\n\nApproach:\n- Identify root causes\n- Explore multiple solutions\n- Recommend the best approach\n- Outline implementation steps\n\nFormat your solution as [FORMAT].",
+                plan: "Act as a strategic marketing planner.\n\nCreate a comprehensive marketing plan for [TOPIC].\n\nInclude:\n- Goals and objectives\n- Target audience\n- Key strategies and tactics\n- Timeline and milestones\n- Success metrics\n\nStructure as [FORMAT]."
+            },
+            developer: {
+                brainstorm: "Act as a senior software architect with expertise in modern development.\n\nBrainstorm technical solutions for [TOPIC].\n\nConsider:\n- Scalability and performance\n- Maintainability\n- Security implications\n- Technology trade-offs\n\nPresent your ideas as [FORMAT].",
+                analyze: "Act as a code reviewer and technical analyst.\n\nAnalyze [TOPIC] from a technical perspective.\n\nEvaluate:\n- Code quality and patterns\n- Performance bottlenecks\n- Security vulnerabilities\n- Architectural concerns\n\nProvide your analysis as [FORMAT].",
+                create: "Act as an expert programmer following best practices.\n\nCreate [TOPIC] with clean, production-ready code.\n\nRequirements:\n- Well-documented code\n- Error handling\n- Edge case coverage\n- Following language conventions\n\nFormat your response as [FORMAT].",
+                improve: "Act as a refactoring specialist.\n\nImprove and optimize [TOPIC].\n\nFocus on:\n- Readability and clarity\n- Performance optimization\n- Modern patterns and practices\n- Reducing technical debt\n\nPresent improvements as [FORMAT].",
+                summarize: "Act as a technical writer and documentation expert.\n\nSummarize [TOPIC] for developers.\n\nInclude:\n- Key concepts\n- Important APIs or interfaces\n- Usage examples\n- Common pitfalls\n\nFormat as [FORMAT].",
+                explain: "Act as a patient programming mentor.\n\nExplain [TOPIC] clearly for developers.\n\nCover:\n- Fundamental concepts\n- How it works under the hood\n- Practical examples\n- When to use (and when not to)\n\nPresent as [FORMAT].",
+                solve: "Act as a debugging expert and problem solver.\n\nHelp solve this technical problem: [TOPIC]\n\nApproach:\n- Diagnose the issue\n- Identify possible causes\n- Provide solution(s)\n- Explain the fix\n\nFormat your solution as [FORMAT].",
+                plan: "Act as a technical project manager.\n\nCreate a development plan for [TOPIC].\n\nInclude:\n- Technical requirements\n- Architecture decisions\n- Implementation phases\n- Testing strategy\n- Deployment plan\n\nStructure as [FORMAT]."
+            },
+            writer: {
+                brainstorm: "Act as a creative writing mentor and published author.\n\nBrainstorm compelling ideas for [TOPIC].\n\nConsider:\n- Unique angles and perspectives\n- Emotional resonance\n- Audience engagement\n- Originality\n\nPresent your ideas as [FORMAT].",
+                analyze: "Act as a literary critic and editor.\n\nAnalyze [TOPIC] for writing quality.\n\nEvaluate:\n- Structure and flow\n- Voice and tone\n- Clarity and engagement\n- Areas for improvement\n\nProvide your analysis as [FORMAT].",
+                create: "Act as a professional writer with expertise in engaging content.\n\nCreate [TOPIC] that captivates readers.\n\nFocus on:\n- Strong opening hook\n- Clear narrative flow\n- Engaging language\n- Satisfying conclusion\n\nFormat as [FORMAT].",
+                improve: "Act as a senior editor at a major publication.\n\nReview and improve [TOPIC].\n\nFocus on:\n- Clarity and concision\n- Flow and transitions\n- Word choice\n- Impact and engagement\n\nPresent edits as [FORMAT].",
+                summarize: "Act as a skilled content curator.\n\nSummarize [TOPIC] while preserving its essence.\n\nCapture:\n- Main points\n- Key arguments\n- Important details\n- Overall message\n\nFormat as [FORMAT].",
+                explain: "Act as a writing coach and educator.\n\nExplain [TOPIC] to aspiring writers.\n\nInclude:\n- Core principles\n- Techniques and methods\n- Examples from great writing\n- Practice exercises\n\nPresent as [FORMAT].",
+                solve: "Act as a creative problem solver for writers.\n\nHelp overcome this writing challenge: [TOPIC]\n\nAddress:\n- The root of the problem\n- Multiple approaches\n- Practical solutions\n- Prevention strategies\n\nFormat your advice as [FORMAT].",
+                plan: "Act as a content strategist and writing planner.\n\nCreate a writing plan for [TOPIC].\n\nInclude:\n- Content outline\n- Key themes and messages\n- Research needs\n- Writing schedule\n- Revision process\n\nStructure as [FORMAT]."
+            },
+            entrepreneur: {
+                brainstorm: "Act as a successful startup advisor and investor.\n\nBrainstorm business ideas or strategies for [TOPIC].\n\nConsider:\n- Market opportunity\n- Competitive advantage\n- Revenue potential\n- Execution feasibility\n\nPresent as [FORMAT].",
+                analyze: "Act as a business analyst and consultant.\n\nAnalyze [TOPIC] from a business perspective.\n\nEvaluate:\n- Market dynamics\n- Financial implications\n- Risks and opportunities\n- Strategic fit\n\nProvide analysis as [FORMAT].",
+                create: "Act as a business development expert.\n\nCreate [TOPIC] for a growing business.\n\nFocus on:\n- Value creation\n- Scalability\n- Customer focus\n- Competitive positioning\n\nFormat as [FORMAT].",
+                improve: "Act as a business optimization consultant.\n\nImprove [TOPIC] for better results.\n\nFocus on:\n- Efficiency gains\n- Growth opportunities\n- Cost optimization\n- Process improvement\n\nPresent recommendations as [FORMAT].",
+                summarize: "Act as an executive advisor.\n\nSummarize [TOPIC] for a busy entrepreneur.\n\nHighlight:\n- Key decisions needed\n- Critical information\n- Action items\n- Bottom line impact\n\nFormat as [FORMAT].",
+                explain: "Act as a business mentor to entrepreneurs.\n\nExplain [TOPIC] in practical terms.\n\nCover:\n- Core concepts\n- Real-world applications\n- Success factors\n- Common mistakes\n\nPresent as [FORMAT].",
+                solve: "Act as a business problem solver.\n\nHelp solve this business challenge: [TOPIC]\n\nApproach:\n- Root cause analysis\n- Strategic options\n- Recommended solution\n- Implementation plan\n\nFormat as [FORMAT].",
+                plan: "Act as a strategic business planner.\n\nCreate a business plan for [TOPIC].\n\nInclude:\n- Vision and goals\n- Market strategy\n- Operations plan\n- Financial projections\n- Key milestones\n\nStructure as [FORMAT]."
+            },
+            student: {
+                brainstorm: "Act as an academic advisor and study coach.\n\nBrainstorm approaches for [TOPIC].\n\nConsider:\n- Different learning methods\n- Resource options\n- Time management\n- Retention strategies\n\nPresent as [FORMAT].",
+                analyze: "Act as a tutor and academic mentor.\n\nAnalyze [TOPIC] and provide feedback.\n\nEvaluate:\n- Understanding of concepts\n- Argument strength\n- Areas for improvement\n- Next steps for learning\n\nProvide analysis as [FORMAT].",
+                create: "Act as an academic writing tutor.\n\nHelp create [TOPIC] for academic purposes.\n\nFocus on:\n- Clear thesis/argument\n- Proper structure\n- Evidence and citations\n- Academic tone\n\nFormat as [FORMAT].",
+                improve: "Act as an essay editor and writing coach.\n\nImprove [TOPIC] for academic submission.\n\nFocus on:\n- Argument clarity\n- Evidence strength\n- Writing quality\n- Formatting\n\nPresent suggestions as [FORMAT].",
+                summarize: "Act as a study guide creator.\n\nSummarize [TOPIC] for exam preparation.\n\nInclude:\n- Key concepts\n- Important terms\n- Main takeaways\n- Likely exam topics\n\nFormat as [FORMAT].",
+                explain: "Act as a patient and clear tutor.\n\nExplain [TOPIC] in easy-to-understand terms.\n\nInclude:\n- Simple explanations\n- Helpful analogies\n- Step-by-step breakdowns\n- Practice examples\n\nPresent as [FORMAT].",
+                solve: "Act as a homework helper and tutor.\n\nHelp solve [TOPIC].\n\nProvide:\n- Clear solution steps\n- Explanation of reasoning\n- Related concepts\n- Similar practice problems\n\nFormat as [FORMAT].",
+                plan: "Act as an academic planner and study coach.\n\nCreate a study plan for [TOPIC].\n\nInclude:\n- Learning objectives\n- Study schedule\n- Resources needed\n- Review checkpoints\n- Practice activities\n\nStructure as [FORMAT]."
+            },
+            manager: {
+                brainstorm: "Act as a leadership coach and management consultant.\n\nBrainstorm strategies for [TOPIC].\n\nConsider:\n- Team dynamics\n- Organizational goals\n- Resource constraints\n- Change management\n\nPresent as [FORMAT].",
+                analyze: "Act as an organizational development expert.\n\nAnalyze [TOPIC] from a management perspective.\n\nEvaluate:\n- Team performance\n- Process efficiency\n- Leadership effectiveness\n- Improvement opportunities\n\nProvide analysis as [FORMAT].",
+                create: "Act as an HR and management specialist.\n\nCreate [TOPIC] for effective team management.\n\nFocus on:\n- Clarity and professionalism\n- Team alignment\n- Actionable outcomes\n- Positive culture\n\nFormat as [FORMAT].",
+                improve: "Act as a management consultant.\n\nImprove [TOPIC] for better team outcomes.\n\nFocus on:\n- Communication clarity\n- Process efficiency\n- Team engagement\n- Results orientation\n\nPresent recommendations as [FORMAT].",
+                summarize: "Act as an executive assistant.\n\nSummarize [TOPIC] for leadership review.\n\nHighlight:\n- Key decisions\n- Action items\n- Resource needs\n- Timeline\n\nFormat as [FORMAT].",
+                explain: "Act as a management trainer.\n\nExplain [TOPIC] to new managers.\n\nCover:\n- Core principles\n- Best practices\n- Common challenges\n- Success strategies\n\nPresent as [FORMAT].",
+                solve: "Act as a team problem solver.\n\nHelp resolve [TOPIC].\n\nAddress:\n- Root causes\n- Stakeholder perspectives\n- Solution options\n- Implementation approach\n\nFormat as [FORMAT].",
+                plan: "Act as a project and team planner.\n\nCreate a management plan for [TOPIC].\n\nInclude:\n- Goals and objectives\n- Team responsibilities\n- Timeline and milestones\n- Communication plan\n- Success metrics\n\nStructure as [FORMAT]."
+            },
+            designer: {
+                brainstorm: "Act as a creative director and design lead.\n\nBrainstorm design concepts for [TOPIC].\n\nConsider:\n- Visual aesthetics\n- User experience\n- Brand alignment\n- Innovation and trends\n\nPresent as [FORMAT].",
+                analyze: "Act as a UX researcher and design critic.\n\nAnalyze [TOPIC] from a design perspective.\n\nEvaluate:\n- Visual hierarchy\n- Usability\n- Accessibility\n- User experience\n\nProvide analysis as [FORMAT].",
+                create: "Act as a senior designer.\n\nCreate design specifications for [TOPIC].\n\nInclude:\n- Visual direction\n- Layout structure\n- Color and typography\n- Interaction patterns\n\nFormat as [FORMAT].",
+                improve: "Act as a design consultant.\n\nImprove [TOPIC] for better user experience.\n\nFocus on:\n- Visual refinement\n- Usability improvements\n- Consistency\n- Modern design patterns\n\nPresent suggestions as [FORMAT].",
+                summarize: "Act as a design strategist.\n\nSummarize [TOPIC] for stakeholders.\n\nHighlight:\n- Design decisions\n- Rationale\n- User impact\n- Next steps\n\nFormat as [FORMAT].",
+                explain: "Act as a design educator.\n\nExplain [TOPIC] to team members.\n\nCover:\n- Design principles\n- Best practices\n- Visual examples\n- Application tips\n\nPresent as [FORMAT].",
+                solve: "Act as a design thinking facilitator.\n\nHelp solve [TOPIC] using design methods.\n\nApproach:\n- User-centered analysis\n- Creative exploration\n- Solution prototyping\n- Validation approach\n\nFormat as [FORMAT].",
+                plan: "Act as a design project manager.\n\nCreate a design plan for [TOPIC].\n\nInclude:\n- Design phases\n- Deliverables\n- Review checkpoints\n- Timeline\n- Resources needed\n\nStructure as [FORMAT]."
+            },
+            freelancer: {
+                brainstorm: "Act as a successful freelance business coach.\n\nBrainstorm strategies for [TOPIC].\n\nConsider:\n- Client acquisition\n- Service positioning\n- Pricing optimization\n- Work-life balance\n\nPresent as [FORMAT].",
+                analyze: "Act as a freelance consultant and mentor.\n\nAnalyze [TOPIC] for freelance success.\n\nEvaluate:\n- Market positioning\n- Pricing strategy\n- Client fit\n- Growth potential\n\nProvide analysis as [FORMAT].",
+                create: "Act as a proposal and pitch specialist.\n\nCreate [TOPIC] to win freelance clients.\n\nFocus on:\n- Value proposition\n- Professional presentation\n- Clear deliverables\n- Compelling pricing\n\nFormat as [FORMAT].",
+                improve: "Act as a freelance business mentor.\n\nImprove [TOPIC] for better results.\n\nFocus on:\n- Client communication\n- Process efficiency\n- Value delivery\n- Professional growth\n\nPresent recommendations as [FORMAT].",
+                summarize: "Act as a business advisor for freelancers.\n\nSummarize [TOPIC] for quick reference.\n\nHighlight:\n- Key opportunities\n- Action items\n- Important deadlines\n- Priority tasks\n\nFormat as [FORMAT].",
+                explain: "Act as a freelance educator and coach.\n\nExplain [TOPIC] to new freelancers.\n\nCover:\n- Core concepts\n- Industry standards\n- Success strategies\n- Common pitfalls\n\nPresent as [FORMAT].",
+                solve: "Act as a freelance problem solver.\n\nHelp solve [TOPIC].\n\nAddress:\n- Client relationship issues\n- Business challenges\n- Practical solutions\n- Prevention strategies\n\nFormat as [FORMAT].",
+                plan: "Act as a freelance business strategist.\n\nCreate a plan for [TOPIC].\n\nInclude:\n- Business goals\n- Client acquisition strategy\n- Service offerings\n- Income targets\n- Growth milestones\n\nStructure as [FORMAT]."
+            },
+            consultant: {
+                brainstorm: "Act as a senior management consultant.\n\nBrainstorm solutions for [TOPIC].\n\nConsider:\n- Industry best practices\n- Innovative approaches\n- Implementation feasibility\n- Client value\n\nPresent as [FORMAT].",
+                analyze: "Act as a strategic analyst and consultant.\n\nAnalyze [TOPIC] comprehensively.\n\nEvaluate:\n- Current state\n- Root causes\n- Industry benchmarks\n- Improvement opportunities\n\nProvide analysis as [FORMAT].",
+                create: "Act as a consulting expert.\n\nCreate [TOPIC] for client delivery.\n\nFocus on:\n- Professional quality\n- Actionable insights\n- Clear recommendations\n- Executive presentation\n\nFormat as [FORMAT].",
+                improve: "Act as an optimization consultant.\n\nImprove [TOPIC] for better outcomes.\n\nFocus on:\n- Efficiency gains\n- Quality improvements\n- Cost optimization\n- Best practice alignment\n\nPresent recommendations as [FORMAT].",
+                summarize: "Act as an executive consultant.\n\nSummarize [TOPIC] for senior leadership.\n\nHighlight:\n- Key findings\n- Strategic implications\n- Recommended actions\n- Expected outcomes\n\nFormat as [FORMAT].",
+                explain: "Act as a consulting mentor.\n\nExplain [TOPIC] to clients or colleagues.\n\nCover:\n- Core concepts\n- Industry context\n- Practical applications\n- Success factors\n\nPresent as [FORMAT].",
+                solve: "Act as a problem-solving consultant.\n\nHelp solve [TOPIC] for a client.\n\nApproach:\n- Situation analysis\n- Options evaluation\n- Recommended solution\n- Implementation roadmap\n\nFormat as [FORMAT].",
+                plan: "Act as a strategic planning consultant.\n\nCreate a plan for [TOPIC].\n\nInclude:\n- Strategic objectives\n- Initiative roadmap\n- Resource requirements\n- Risk mitigation\n- Success metrics\n\nStructure as [FORMAT]."
+            },
+            creator: {
+                brainstorm: "Act as a successful content creator and strategist.\n\nBrainstorm content ideas for [TOPIC].\n\nConsider:\n- Audience engagement\n- Platform optimization\n- Trending formats\n- Unique angles\n\nPresent as [FORMAT].",
+                analyze: "Act as a content analyst and growth strategist.\n\nAnalyze [TOPIC] for content performance.\n\nEvaluate:\n- Engagement metrics\n- Audience response\n- Content patterns\n- Growth opportunities\n\nProvide analysis as [FORMAT].",
+                create: "Act as a professional content creator.\n\nCreate [TOPIC] that engages audiences.\n\nFocus on:\n- Attention-grabbing hooks\n- Value delivery\n- Platform best practices\n- Call-to-action\n\nFormat as [FORMAT].",
+                improve: "Act as a content optimization expert.\n\nImprove [TOPIC] for better performance.\n\nFocus on:\n- Hook strength\n- Engagement factors\n- Platform optimization\n- Audience resonance\n\nPresent suggestions as [FORMAT].",
+                summarize: "Act as a content strategist.\n\nSummarize [TOPIC] for content planning.\n\nHighlight:\n- Key themes\n- Content opportunities\n- Audience insights\n- Action items\n\nFormat as [FORMAT].",
+                explain: "Act as a content creation mentor.\n\nExplain [TOPIC] to aspiring creators.\n\nCover:\n- Core strategies\n- Platform specifics\n- Growth tactics\n- Monetization paths\n\nPresent as [FORMAT].",
+                solve: "Act as a creator economy consultant.\n\nHelp solve [TOPIC].\n\nAddress:\n- Growth challenges\n- Content blocks\n- Platform issues\n- Monetization problems\n\nFormat as [FORMAT].",
+                plan: "Act as a content planning strategist.\n\nCreate a content plan for [TOPIC].\n\nInclude:\n- Content pillars\n- Posting schedule\n- Platform strategy\n- Growth goals\n- Engagement tactics\n\nStructure as [FORMAT]."
+            }
+        };
+
+        const formatInstructions = {
+            list: "a clear, organized bullet-point list",
+            paragraph: "well-structured, flowing paragraphs",
+            table: "an organized table with clear columns",
+            "step-by-step": "a numbered step-by-step guide",
+            outline: "a hierarchical outline with main points and sub-points",
+            comparison: "a detailed comparison format showing pros/cons or alternatives"
+        };
+
+        function generatePrompt() {
+            const role = document.getElementById('role').value;
+            const task = document.getElementById('task').value;
+            const format = document.getElementById('format').value;
+            const topic = document.getElementById('topic').value.trim() || '[YOUR TOPIC HERE]';
+
+            if (!role || !task || !format) {
+                alert('Please select a role, task type, and output format.');
+                return;
+            }
+
+            let prompt = templates[role][task];
+            prompt = prompt.replace(/\[TOPIC\]/g, topic);
+            prompt = prompt.replace(/\[FORMAT\]/g, formatInstructions[format]);
+
+            document.getElementById('output').textContent = prompt;
+            document.getElementById('output-card').style.display = 'block';
+            document.getElementById('copyBtn').textContent = 'Copy to Clipboard';
+            document.getElementById('copyBtn').classList.remove('copied');
+
+            // Smooth scroll to output
+            document.getElementById('output-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        function copyPrompt() {
+            const text = document.getElementById('output').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = document.getElementById('copyBtn');
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.textContent = 'Copy to Clipboard';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI ROI Calculator | Kai Empire</title>
+    <meta name="description" content="Calculate your return on investment for AI tools. See how much time and money you can save by using AI in your workflow.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        header { text-align: center; margin-bottom: 40px; }
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #7c3aed, #00d4ff);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .subtitle { color: #888; font-size: 1.1rem; }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 28px;
+        }
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #00d4ff;
+        }
+        .card-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, #7c3aed, #5b21b6);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .form-group { margin-bottom: 20px; }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #fff;
+            font-weight: 500;
+        }
+        .label-hint {
+            font-weight: 400;
+            color: #888;
+            font-size: 0.85rem;
+            display: block;
+            margin-top: 2px;
+        }
+        .input-wrapper { position: relative; }
+        .input-prefix, .input-suffix {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            font-size: 1rem;
+            pointer-events: none;
+        }
+        .input-prefix { left: 14px; }
+        .input-suffix { right: 14px; }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 14px 16px;
+            background: #0a0a0a;
+            border: 2px solid #333;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1rem;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+        }
+        input[type="number"]:hover { border-color: #555; }
+        input.has-prefix { padding-left: 32px; }
+        input.has-suffix { padding-right: 50px; }
+
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] { -moz-appearance: textfield; }
+
+        .btn {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn:hover { transform: translateY(-2px); }
+        .btn:active { transform: translateY(0); }
+        .btn-primary {
+            background: linear-gradient(135deg, #7c3aed, #5b21b6);
+            color: #fff;
+        }
+        .btn-primary:hover { box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3); }
+
+        .results-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 2px solid #333;
+            transition: border-color 0.3s;
+        }
+        .results-card.active { border-color: #7c3aed; }
+
+        .results-placeholder {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 320px;
+            color: #666;
+            text-align: center;
+        }
+        .results-placeholder .icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        .results-content { display: none; }
+        .results-content.active { display: block; }
+
+        .result-item {
+            background: rgba(10, 10, 10, 0.5);
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 12px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .result-item:hover {
+            border-color: #7c3aed;
+            background: rgba(124, 58, 237, 0.05);
+        }
+        .result-item:last-child { margin-bottom: 0; }
+
+        .result-label {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .result-value {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+        .result-value.green { color: #22c55e; }
+        .result-value.cyan { color: #00d4ff; }
+        .result-value.purple { color: #7c3aed; }
+
+        .roi-indicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .roi-badge {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.75rem;
+        }
+        .roi-badge.excellent { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+        .roi-badge.good { background: rgba(0, 212, 255, 0.2); color: #00d4ff; }
+        .roi-badge.moderate { background: rgba(245, 158, 11, 0.2); color: #f59e0b; }
+        .roi-badge.negative { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        .roi-message { color: #888; font-size: 0.9rem; }
+
+        .visual-bar {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+        }
+        .bar-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+        .bar-container {
+            height: 24px;
+            background: #0a0a0a;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .bar-fill {
+            height: 100%;
+            border-radius: 12px;
+            transition: width 0.6s ease-out;
+            background: linear-gradient(90deg, #7c3aed, #00d4ff);
+        }
+        .bar-marker {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 3px;
+            background: #fff;
+            opacity: 0.7;
+        }
+
+        .cta-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
+            border: 2px solid #7c3aed;
+            border-radius: 16px;
+            padding: 35px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .cta-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        .cta-card p { color: #a0a0a0; margin-bottom: 24px; font-size: 1.05rem; }
+        .cta-card .price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #00d4ff;
+            margin-bottom: 16px;
+        }
+        .btn-cta {
+            background: linear-gradient(135deg, #00d4ff, #7c3aed);
+            display: inline-block;
+            padding: 16px 36px;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
+        }
+
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        .feature-tag {
+            background: rgba(124, 58, 237, 0.15);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: #ccc;
+        }
+
+        footer { text-align: center; padding: 40px 20px; color: #666; }
+        footer a { color: #7c3aed; text-decoration: none; transition: color 0.3s; }
+        footer a:hover { color: #00d4ff; }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 1.8rem; }
+            .calculator-grid { grid-template-columns: 1fr; }
+            .container { padding: 20px 16px; }
+            .card { padding: 24px 20px; }
+            .result-value { font-size: 1.6rem; }
+            .cta-card { padding: 28px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <span class="badge">FREE TOOL</span>
+            <h1>AI ROI Calculator</h1>
+            <p class="subtitle">See exactly how much AI tools can save you in time and money</p>
+        </header>
+
+        <div class="calculator-grid">
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">$</span>
+                    Enter Your Numbers
+                </h2>
+
+                <div class="form-group">
+                    <label>
+                        Hours Saved Per Week
+                        <span class="label-hint">Time saved by using AI tools</span>
+                    </label>
+                    <div class="input-wrapper">
+                        <input type="number" id="hoursSaved" placeholder="10" min="0" class="has-suffix">
+                        <span class="input-suffix">hrs</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Your Hourly Rate
+                        <span class="label-hint">What your time is worth</span>
+                    </label>
+                    <div class="input-wrapper">
+                        <span class="input-prefix">$</span>
+                        <input type="number" id="hourlyRate" placeholder="50" min="0" class="has-prefix">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Monthly AI Tool Cost
+                        <span class="label-hint">Total AI subscriptions per month</span>
+                    </label>
+                    <div class="input-wrapper">
+                        <span class="input-prefix">$</span>
+                        <input type="number" id="toolCost" placeholder="100" min="0" class="has-prefix">
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="calculateBtn">Calculate My ROI</button>
+            </div>
+
+            <div class="card results-card" id="resultsCard">
+                <h2 class="card-title">
+                    <span class="card-icon">%</span>
+                    Your Results
+                </h2>
+
+                <div class="results-placeholder" id="resultsPlaceholder">
+                    <div class="icon">&#128202;</div>
+                    <p>Enter your numbers and click<br>"Calculate My ROI" to see results</p>
+                </div>
+
+                <div class="results-content" id="resultsContent">
+                    <div class="result-item">
+                        <div class="result-label">Monthly Savings</div>
+                        <div class="result-value green" id="monthlySavings">$0</div>
+                    </div>
+
+                    <div class="result-item">
+                        <div class="result-label">Yearly Savings</div>
+                        <div class="result-value cyan" id="yearlySavings">$0</div>
+                    </div>
+
+                    <div class="result-item">
+                        <div class="result-label">ROI Percentage</div>
+                        <div class="result-value purple" id="roiPercent">0%</div>
+                        <div class="roi-indicator">
+                            <span id="roiBadge" class="roi-badge excellent">Excellent</span>
+                            <span id="roiMessage" class="roi-message">Great investment!</span>
+                        </div>
+                    </div>
+
+                    <div class="visual-bar">
+                        <div class="bar-label">
+                            <span>Cost: <strong id="costLabel">$0</strong></span>
+                            <span>Value: <strong id="valueLabel">$0</strong></span>
+                        </div>
+                        <div class="bar-container">
+                            <div class="bar-fill" id="valueBar" style="width: 0%"></div>
+                            <div class="bar-marker" id="costMarker" style="left: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-card">
+            <h3>Want to 10x Your AI Productivity?</h3>
+            <p>Learn the exact workflows, prompts, and automations that save 15+ hours per week.</p>
+            <div class="features-list">
+                <span class="feature-tag">Video Lessons</span>
+                <span class="feature-tag">50+ Prompts</span>
+                <span class="feature-tag">Workflow Templates</span>
+                <span class="feature-tag">Automation Scripts</span>
+            </div>
+            <div class="price">$49</div>
+            <a href="../" class="btn-cta">Get the AI Productivity Course</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>Made by <a href="../">Kai Empire</a></p>
+    </footer>
+
+    <script>
+        document.getElementById('calculateBtn').addEventListener('click', calculateROI);
+
+        // Allow Enter key to trigger calculation
+        document.querySelectorAll('input[type="number"]').forEach(input => {
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') calculateROI();
+            });
+        });
+
+        function calculateROI() {
+            const hoursSaved = parseFloat(document.getElementById('hoursSaved').value) || 0;
+            const hourlyRate = parseFloat(document.getElementById('hourlyRate').value) || 0;
+            const toolCost = parseFloat(document.getElementById('toolCost').value) || 0;
+
+            if (hoursSaved === 0 || hourlyRate === 0) {
+                alert('Please enter hours saved and hourly rate to calculate ROI.');
+                return;
+            }
+
+            // Calculate values
+            const weeksPerMonth = 4.33;
+            const monthsPerYear = 12;
+
+            const monthlyHoursSaved = hoursSaved * weeksPerMonth;
+            const monthlyValueSaved = monthlyHoursSaved * hourlyRate;
+            const monthlySavings = monthlyValueSaved - toolCost;
+            const yearlySavings = monthlySavings * monthsPerYear;
+
+            // Calculate ROI percentage
+            let roiPercent = 0;
+            if (toolCost > 0) {
+                roiPercent = ((monthlyValueSaved - toolCost) / toolCost) * 100;
+            } else {
+                roiPercent = monthlyValueSaved > 0 ? Infinity : 0;
+            }
+
+            // Update display
+            document.getElementById('monthlySavings').textContent = formatCurrency(monthlySavings);
+            document.getElementById('yearlySavings').textContent = formatCurrency(yearlySavings);
+
+            // Format ROI
+            if (roiPercent === Infinity) {
+                document.getElementById('roiPercent').textContent = 'Infinite';
+            } else {
+                document.getElementById('roiPercent').textContent = Math.round(roiPercent) + '%';
+            }
+
+            // Update visual bar
+            const maxValue = Math.max(monthlyValueSaved, toolCost) * 1.2;
+            const valuePercent = (monthlyValueSaved / maxValue) * 100;
+            const costPercent = (toolCost / maxValue) * 100;
+
+            document.getElementById('valueBar').style.width = valuePercent + '%';
+            document.getElementById('costMarker').style.left = costPercent + '%';
+            document.getElementById('costLabel').textContent = formatCurrency(toolCost);
+            document.getElementById('valueLabel').textContent = formatCurrency(monthlyValueSaved);
+
+            // Set ROI badge and message
+            const roiBadge = document.getElementById('roiBadge');
+            const roiMessage = document.getElementById('roiMessage');
+
+            if (roiPercent >= 500 || roiPercent === Infinity) {
+                roiBadge.textContent = 'Excellent';
+                roiBadge.className = 'roi-badge excellent';
+                roiMessage.textContent = 'Incredible return!';
+            } else if (roiPercent >= 200) {
+                roiBadge.textContent = 'Great';
+                roiBadge.className = 'roi-badge excellent';
+                roiMessage.textContent = 'Great investment!';
+            } else if (roiPercent >= 100) {
+                roiBadge.textContent = 'Good';
+                roiBadge.className = 'roi-badge good';
+                roiMessage.textContent = 'Solid return.';
+            } else if (roiPercent >= 0) {
+                roiBadge.textContent = 'Moderate';
+                roiBadge.className = 'roi-badge moderate';
+                roiMessage.textContent = 'Breaking even.';
+            } else {
+                roiBadge.textContent = 'Negative';
+                roiBadge.className = 'roi-badge negative';
+                roiMessage.textContent = 'Consider alternatives.';
+            }
+
+            // Show results
+            document.getElementById('resultsPlaceholder').style.display = 'none';
+            document.getElementById('resultsContent').classList.add('active');
+            document.getElementById('resultsCard').classList.add('active');
+        }
+
+        function formatCurrency(value) {
+            const absValue = Math.abs(value);
+            let formatted;
+            if (absValue >= 10000) {
+                formatted = '$' + (absValue / 1000).toFixed(1) + 'k';
+            } else if (absValue >= 1000) {
+                formatted = '$' + (absValue / 1000).toFixed(1) + 'k';
+            } else {
+                formatted = '$' + Math.round(absValue).toLocaleString();
+            }
+            return value < 0 ? '-' + formatted : formatted;
+        }
+    </script>
+</body>
+</html>
