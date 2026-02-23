@@ -3,157 +3,614 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Productivity Blog | Tips, Prompts & Guides</title>
-    <meta name="description" content="Learn how to use AI tools effectively. Free prompts, productivity tips, and guides for ChatGPT, Claude, and more.">
+    <title>AI Productivity Blog | Prompts, Guides & Tips | Kai Prompts</title>
+    <meta name="description" content="Learn how to use AI tools effectively. Free prompts, productivity tips, and comprehensive guides for ChatGPT, Claude, and more. Start getting better results from AI today.">
+    <meta name="keywords" content="AI blog, ChatGPT prompts, AI productivity, AI guides, ChatGPT tips, Claude tips, AI for business">
+    <link rel="canonical" href="https://kaiprompts.com/blog/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="AI Productivity Blog | Prompts, Guides & Tips" />
+    <meta property="og:description" content="Learn how to use AI tools effectively. Free prompts, productivity tips, and comprehensive guides." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kaiprompts.com/blog/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI Productivity Blog | Kai Prompts" />
+    <meta name="twitter:description" content="Free guides, prompts, and tips to 10x your productivity with AI." />
+
+    <!-- Schema.org Blog Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Kai Prompts AI Productivity Blog",
+        "description": "Learn how to use AI tools effectively. Free prompts, productivity tips, and comprehensive guides.",
+        "url": "https://kaiprompts.com/blog/",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Kai Prompts",
+            "url": "https://kaiprompts.com"
+        },
+        "blogPost": [
+            {
+                "@type": "BlogPosting",
+                "headline": "Best ChatGPT Prompts in 2026",
+                "url": "https://kaiprompts.com/blog/best-chatgpt-prompts-2026.html"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "How to Use AI for Work: The Complete Guide",
+                "url": "https://kaiprompts.com/blog/how-to-use-ai-for-work.html"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "ChatGPT vs Claude: The Definitive Comparison",
+                "url": "https://kaiprompts.com/blog/chatgpt-vs-claude-comparison.html"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "AI Tools for Small Business",
+                "url": "https://kaiprompts.com/blog/ai-tools-for-small-business.html"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Best Free AI Tools in 2026",
+                "url": "https://kaiprompts.com/blog/free-ai-tools-2026.html"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Best AI Prompts for Business",
+                "url": "https://kaiprompts.com/blog/best-ai-prompts-for-business.html"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "ChatGPT Prompts for Freelancers",
+                "url": "https://kaiprompts.com/blog/chatgpt-prompts-for-freelancers.html"
+            },
+            {
+                "@type": "BlogPosting",
+                "headline": "Best Notion Templates for Productivity",
+                "url": "https://kaiprompts.com/blog/notion-templates-for-productivity.html"
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #09090b;
+            --bg-secondary: #18181b;
+            --bg-card: #1c1c1f;
+            --bg-card-hover: #27272a;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --green: #22c55e;
+            --blue: #3b82f6;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --border: #27272a;
+            --border-light: #3f3f46;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #fff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
             line-height: 1.6;
         }
-        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
-        h1 {
-            font-size: 2.5rem;
+
+        /* Animated gradient background */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 24px;
+            background: rgba(9, 9, 11, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--blue));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent-light);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            padding: 140px 24px 60px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
             margin-bottom: 20px;
-            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-light));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .subtitle { color: #888; font-size: 1.2rem; margin-bottom: 40px; }
-        .blog-grid { display: grid; gap: 24px; }
-        .blog-card {
-            background: #1a1a2e;
-            border-radius: 12px;
-            padding: 28px;
-            transition: transform 0.2s;
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
         }
-        .blog-card:hover { transform: translateY(-3px); }
-        .blog-card h2 {
-            font-size: 1.4rem;
+
+        /* Blog Grid */
+        .blog-section {
+            padding: 40px 24px 100px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .blog-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .featured-post {
+            background: linear-gradient(135deg, var(--bg-card), #1e1b4b);
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            padding: 48px;
+            margin-bottom: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .featured-content h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .featured-content h2 a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .featured-content h2 a:hover {
+            color: var(--accent-light);
+        }
+
+        .featured-content p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .featured-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .featured-image {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .blog-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            transition: all 0.3s;
+        }
+
+        .blog-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .blog-card-image {
+            height: 160px;
+            background: var(--bg-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .blog-card-content {
+            padding: 24px;
+        }
+
+        .blog-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .blog-card h3 a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .blog-card h3 a:hover {
+            color: var(--accent-light);
+        }
+
+        .blog-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .blog-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .blog-tag {
+            background: var(--bg-secondary);
+            color: var(--text-muted);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
+            border: 2px solid var(--accent);
+            border-radius: 24px;
+            padding: 48px;
+            text-align: center;
+            margin-top: 64px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--blue), var(--accent));
+        }
+
+        .cta-box h2 {
+            font-size: 2rem;
+            font-weight: 800;
             margin-bottom: 12px;
         }
-        .blog-card h2 a {
-            color: #fff;
-            text-decoration: none;
+
+        .cta-box p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
         }
-        .blog-card h2 a:hover { color: #00d4ff; }
-        .blog-card p { color: #a0a0a0; margin-bottom: 16px; }
-        .tag {
-            display: inline-block;
-            background: #333;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            color: #888;
-            margin-right: 8px;
-        }
-        .back-link {
-            display: inline-block;
-            margin-bottom: 30px;
-            color: #7c3aed;
-            text-decoration: none;
-        }
-        .cta-box {
-            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
-            border: 1px solid #7c3aed;
-            border-radius: 12px;
-            padding: 30px;
-            margin-top: 40px;
-            text-align: center;
-        }
+
         .cta-btn {
-            background: linear-gradient(90deg, #7c3aed, #5b21b6);
-            color: white;
-            border: none;
-            padding: 14px 32px;
-            border-radius: 8px;
-            font-weight: 600;
-            text-decoration: none;
             display: inline-block;
-            margin-top: 15px;
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
+            color: white;
+            padding: 16px 36px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+            box-shadow: 0 0 40px rgba(139, 92, 246, 0.3);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 60px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 40px 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                padding: 120px 20px 40px;
+            }
+
+            .featured-post {
+                grid-template-columns: 1fr;
+                padding: 32px;
+            }
+
+            .featured-image {
+                height: 200px;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                padding: 32px;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="../" class="back-link">← Back to Store</a>
+    <div class="gradient-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="../" class="logo">
+                <div class="logo-icon">K</div>
+                Kai Prompts
+            </a>
+            <ul class="nav-links">
+                <li><a href="../#products">Products</a></li>
+                <li><a href="../#bundle">Bundle</a></li>
+                <li><a href="../free.html">Free Resources</a></li>
+                <li><a href="../tools/">Tools</a></li>
+            </ul>
+            <a href="../#bundle" class="nav-cta">Get Everything - $97</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
         <h1>AI Productivity Blog</h1>
-        <p class="subtitle">Free guides, prompts, and tips to 10x your productivity with AI</p>
+        <p>Free guides, prompts, and tips to 10x your productivity with ChatGPT, Claude, and other AI tools.</p>
+    </section>
 
-        <div class="blog-grid">
-            <article class="blog-card">
-                <h2><a href="best-ai-prompts-for-business.html">Best AI Prompts for Business in 2026</a></h2>
-                <p>15 battle-tested prompts for strategy, marketing, operations, and hiring. Copy-paste ready.</p>
-                <span class="tag">Business</span>
-                <span class="tag">Strategy</span>
-                <span class="tag">Prompts</span>
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="blog-inner">
+            <!-- Featured Post -->
+            <article class="featured-post">
+                <div class="featured-content">
+                    <span class="featured-badge">Featured Guide</span>
+                    <h2><a href="best-chatgpt-prompts-2026.html">Best ChatGPT Prompts in 2026: 75+ Prompts That Actually Work</a></h2>
+                    <p>The definitive collection of ChatGPT prompts for writing, business, coding, marketing, and productivity. Copy-paste ready templates that deliver real results.</p>
+                    <div class="blog-tags">
+                        <span class="blog-tag">ChatGPT</span>
+                        <span class="blog-tag">Prompts</span>
+                        <span class="blog-tag">Guide</span>
+                    </div>
+                </div>
+                <div class="featured-image">&#129302;</div>
             </article>
 
-            <article class="blog-card">
-                <h2><a href="chatgpt-prompts-for-freelancers.html">ChatGPT Prompts for Freelancers</a></h2>
-                <p>Win more clients, price confidently, and communicate professionally with these freelancer prompts.</p>
-                <span class="tag">Freelance</span>
-                <span class="tag">Proposals</span>
-                <span class="tag">Pricing</span>
-            </article>
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-card-image">&#128187;</div>
+                    <div class="blog-card-content">
+                        <h3><a href="how-to-use-ai-for-work.html">How to Use AI for Work: The Complete Beginner's Guide</a></h3>
+                        <p>Step-by-step guide to integrating AI into your daily workflow for maximum productivity. From first prompt to full workflow.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Guide</span>
+                            <span class="blog-tag">Workflow</span>
+                            <span class="blog-tag">Beginner</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="blog-card">
-                <h2><a href="notion-templates-for-productivity.html">Best Notion Templates for Productivity</a></h2>
-                <p>How to choose the right Notion template for life management, habits, projects, and knowledge.</p>
-                <span class="tag">Notion</span>
-                <span class="tag">Templates</span>
-                <span class="tag">Productivity</span>
-            </article>
+                <article class="blog-card">
+                    <div class="blog-card-image">&#9878;</div>
+                    <div class="blog-card-content">
+                        <h3><a href="chatgpt-vs-claude-comparison.html">ChatGPT vs Claude: The Definitive Comparison (2026)</a></h3>
+                        <p>In-depth comparison of the two leading AI assistants. Features, pricing, strengths, and when to use each.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Comparison</span>
+                            <span class="blog-tag">ChatGPT</span>
+                            <span class="blog-tag">Claude</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="blog-card">
-                <h2><a href="best-chatgpt-prompts-2026.html">Best ChatGPT Prompts in 2026</a></h2>
-                <p>The most effective prompts across all use cases. Updated for the latest models.</p>
-                <span class="tag">ChatGPT</span>
-                <span class="tag">Prompts</span>
-                <span class="tag">Guide</span>
-            </article>
+                <article class="blog-card">
+                    <div class="blog-card-image">&#128200;</div>
+                    <div class="blog-card-content">
+                        <h3><a href="best-ai-prompts-for-business.html">Best AI Prompts for Business: 30+ Prompts to Transform Your Operations</a></h3>
+                        <p>Battle-tested prompts for strategy, marketing, operations, and hiring. Built for founders and executives.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Business</span>
+                            <span class="blog-tag">Strategy</span>
+                            <span class="blog-tag">Prompts</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="blog-card">
-                <h2><a href="chatgpt-vs-claude-comparison.html">ChatGPT vs Claude: Which AI is Better?</a></h2>
-                <p>Detailed comparison of the two leading AI assistants. Pros, cons, and when to use each.</p>
-                <span class="tag">Comparison</span>
-                <span class="tag">ChatGPT</span>
-                <span class="tag">Claude</span>
-            </article>
+                <article class="blog-card">
+                    <div class="blog-card-image">&#128188;</div>
+                    <div class="blog-card-content">
+                        <h3><a href="chatgpt-prompts-for-freelancers.html">ChatGPT Prompts for Freelancers: Land Clients and Grow Your Business</a></h3>
+                        <p>Win more clients, price confidently, and communicate professionally with these freelancer-specific prompts.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Freelance</span>
+                            <span class="blog-tag">Proposals</span>
+                            <span class="blog-tag">Pricing</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="blog-card">
-                <h2><a href="ai-tools-for-small-business.html">Best AI Tools for Small Business</a></h2>
-                <p>Curated list of AI tools that actually help small business owners save time and money.</p>
-                <span class="tag">Tools</span>
-                <span class="tag">Small Business</span>
-                <span class="tag">Automation</span>
-            </article>
+                <article class="blog-card">
+                    <div class="blog-card-image">&#127968;</div>
+                    <div class="blog-card-content">
+                        <h3><a href="ai-tools-for-small-business.html">AI Tools for Small Business: The Complete Guide</a></h3>
+                        <p>Curated list of AI tools that actually help small business owners save time and money. Includes ROI analysis.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Tools</span>
+                            <span class="blog-tag">Small Business</span>
+                            <span class="blog-tag">Automation</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="blog-card">
-                <h2><a href="free-ai-tools-2026.html">Best Free AI Tools in 2026</a></h2>
-                <p>Powerful AI tools you can use without spending a dime. From writing to image generation.</p>
-                <span class="tag">Free</span>
-                <span class="tag">Tools</span>
-                <span class="tag">Resources</span>
-            </article>
+                <article class="blog-card">
+                    <div class="blog-card-image">&#127873;</div>
+                    <div class="blog-card-content">
+                        <h3><a href="free-ai-tools-2026.html">Best Free AI Tools in 2026: 50+ Tools That Cost Nothing</a></h3>
+                        <p>Powerful AI tools you can use without spending a dime. From writing to image generation to productivity.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Free</span>
+                            <span class="blog-tag">Tools</span>
+                            <span class="blog-tag">Resources</span>
+                        </div>
+                    </div>
+                </article>
 
-            <article class="blog-card">
-                <h2><a href="how-to-use-ai-for-work.html">How to Use AI for Work (Complete Guide)</a></h2>
-                <p>Step-by-step guide to integrating AI into your daily workflow for maximum productivity.</p>
-                <span class="tag">Guide</span>
-                <span class="tag">Workflow</span>
-                <span class="tag">Productivity</span>
-            </article>
+                <article class="blog-card">
+                    <div class="blog-card-image">&#128221;</div>
+                    <div class="blog-card-content">
+                        <h3><a href="notion-templates-for-productivity.html">Best Notion Templates for Productivity (2026)</a></h3>
+                        <p>How to choose the right Notion template for life management, habits, projects, and knowledge management.</p>
+                        <div class="blog-tags">
+                            <span class="blog-tag">Notion</span>
+                            <span class="blog-tag">Templates</span>
+                            <span class="blog-tag">Productivity</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="cta-box">
+                <h2>Want 375+ Ready-to-Use Prompts?</h2>
+                <p>Skip the trial and error. Our Complete Bundle includes 15 prompt packs, 6 Notion templates, guides, and more.</p>
+                <a href="../#bundle" class="cta-btn">Get the Complete Bundle - $97</a>
+            </div>
         </div>
+    </section>
 
-        <div class="cta-box">
-            <h3>Want 375+ Ready-to-Use Prompts?</h3>
-            <p style="color: #a0a0a0; margin-top: 10px;">Skip the trial and error. Get our complete prompt pack collection.</p>
-            <a href="../" class="cta-btn">Browse Prompt Packs</a>
-        </div>
-    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 Kai Prompts. All rights reserved. | <a href="../">Home</a> | <a href="../terms.html">Terms</a> | <a href="../privacy.html">Privacy</a></p>
+    </footer>
 </body>
 </html>
