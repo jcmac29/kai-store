@@ -1,8 +1,13 @@
-# robots.txt for Kai Store
-# https://kaiprompts.com/
-
 User-agent: *
 Allow: /
 
-# Sitemap location
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
 Sitemap: https://kaiprompts.com/sitemap.xml

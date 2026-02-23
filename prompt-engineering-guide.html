@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Complete Prompt Engineering Guide 2026 | How to Write AI Prompts</title>
+    <meta name="description" content="Master prompt engineering with our complete guide. Learn how to write AI prompts that get consistent results. Roles, context, constraints, and advanced techniques explained.">
+    <meta name="keywords" content="prompt engineering, how to write AI prompts, prompt engineering guide, ChatGPT prompt tips, Claude prompts, AI prompt techniques">
+    <meta name="author" content="Kai Prompts">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kaiprompts.com/prompt-engineering-guide.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Complete Prompt Engineering Guide 2026" />
+    <meta property="og:description" content="Master prompt engineering with our complete guide. Learn roles, context, constraints, and advanced techniques for ChatGPT and Claude." />
+    <meta property="og:url" content="https://kaiprompts.com/prompt-engineering-guide.html" />
+    <meta property="og:site_name" content="Kai Prompts" />
+    <meta property="og:image" content="https://kaiprompts.com/images/prompt-engineering-og.png" />
+    <meta property="article:published_time" content="2026-01-10T08:00:00+00:00" />
+    <meta property="article:modified_time" content="2026-02-18T10:00:00+00:00" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Complete Prompt Engineering Guide 2026" />
+    <meta name="twitter:description" content="Master prompt engineering with our complete guide to writing AI prompts." />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Complete Prompt Engineering Guide: How to Write AI Prompts That Actually Work",
+        "description": "Comprehensive guide to prompt engineering covering roles, context, constraints, output formats, and advanced techniques for ChatGPT, Claude, and other AI models.",
+        "image": "https://kaiprompts.com/images/prompt-engineering-og.png",
+        "author": {
+            "@type": "Organization",
+            "name": "Kai Prompts",
+            "url": "https://kaiprompts.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Kai Prompts",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://kaiprompts.com/logo.png"
+            }
+        },
+        "datePublished": "2026-01-10T08:00:00+00:00",
+        "dateModified": "2026-02-18T10:00:00+00:00",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://kaiprompts.com/prompt-engineering-guide.html"
+        },
+        "articleSection": "AI Education",
+        "keywords": ["prompt engineering", "AI prompts", "ChatGPT", "Claude", "how to write prompts"]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Write Effective AI Prompts",
+        "description": "Learn the step-by-step process for writing AI prompts that get consistent, high-quality results",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Define the Role",
+                "text": "Assign a specific persona or expertise to the AI by starting with 'Act as a...' followed by a relevant expert role."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Provide Context",
+                "text": "Give the AI all relevant background information it needs to understand your situation and requirements."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Set Constraints",
+                "text": "Define boundaries like word count, tone, format restrictions, and what to avoid."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Specify Output Format",
+                "text": "Tell the AI exactly how you want the response structured - list, table, code, narrative, etc."
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Include Examples",
+                "text": "When helpful, provide sample inputs and outputs to show the AI exactly what you want."
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is prompt engineering?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Prompt engineering is the practice of designing and optimizing prompts (instructions) for AI models to get specific, high-quality outputs. It involves understanding how AI models interpret language and structuring your requests to get the best possible results."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I write better AI prompts?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Write better AI prompts by: 1) Assigning a specific role or expertise, 2) Providing clear context and background, 3) Setting explicit constraints, 4) Specifying the output format, and 5) Including examples when helpful. Be specific rather than vague, and iterate on your prompts based on the results you get."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are the key prompt engineering techniques?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Key prompt engineering techniques include: Role prompting (assigning expertise), Chain of thought (encouraging step-by-step reasoning), Few-shot learning (providing examples), Constraint setting (defining boundaries), and Output formatting (specifying structure). Advanced techniques include tree of thought, self-consistency, and prompt chaining."
+                }
+            }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://kaiprompts.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Prompt Engineering Guide",
+                "item": "https://kaiprompts.com/prompt-engineering-guide.html"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XC558Y35N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4XC558Y35N');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #09090b;
+            --bg-secondary: #18181b;
+            --bg-card: #1c1c1f;
+            --bg-card-hover: #27272a;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --accent-glow: rgba(139, 92, 246, 0.3);
+            --green: #22c55e;
+            --blue: #3b82f6;
+            --orange: #f59e0b;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --border: #27272a;
+            --border-light: #3f3f46;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 24px;
+            background: rgba(9, 9, 11, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--blue));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent-light);
+            transform: translateY(-1px);
+        }
+
+        /* Article Content */
+        .article-container {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 120px 24px 80px;
+        }
+
+        .breadcrumb {
+            display: flex;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 32px;
+        }
+
+        .breadcrumb a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        .article-header {
+            margin-bottom: 48px;
+        }
+
+        .article-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--accent-light);
+            margin-bottom: 20px;
+        }
+
+        .article-header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -0.02em;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 24px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+        }
+
+        .article-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-content h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            margin: 48px 0 24px;
+            color: var(--text-primary);
+        }
+
+        .article-content h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin: 36px 0 16px;
+            color: var(--text-primary);
+        }
+
+        .article-content p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .article-content ul, .article-content ol {
+            color: var(--text-secondary);
+            margin: 0 0 24px 24px;
+        }
+
+        .article-content li {
+            margin-bottom: 12px;
+        }
+
+        .article-content strong {
+            color: var(--text-primary);
+        }
+
+        /* Technique Cards */
+        .technique-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            margin: 24px 0;
+        }
+
+        .technique-card.highlight {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, var(--bg-card), rgba(139, 92, 246, 0.05));
+        }
+
+        .technique-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .technique-number {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--accent), var(--blue));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            flex-shrink: 0;
+        }
+
+        .technique-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .technique-desc {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        /* Prompt Example Box */
+        .prompt-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+
+        .prompt-box-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .prompt-box-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--accent-light);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .prompt-box-type {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            background: var(--bg-secondary);
+            padding: 4px 12px;
+            border-radius: 100px;
+        }
+
+        .prompt-box pre {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 20px;
+            overflow-x: auto;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            color: var(--text-secondary);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        /* Comparison Box */
+        .comparison-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin: 24px 0;
+        }
+
+        .comparison-bad, .comparison-good {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .comparison-bad {
+            border: 1px solid #ef4444;
+        }
+
+        .comparison-good {
+            border: 1px solid var(--green);
+        }
+
+        .comparison-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .comparison-bad .comparison-label {
+            color: #ef4444;
+        }
+
+        .comparison-good .comparison-label {
+            color: var(--green);
+        }
+
+        .comparison-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            background: var(--bg-secondary);
+            padding: 12px;
+            border-radius: 8px;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 32px 0;
+        }
+
+        .toc h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 16px;
+        }
+
+        .toc ul {
+            list-style: none;
+            margin: 0;
+        }
+
+        .toc li {
+            margin-bottom: 10px;
+        }
+
+        .toc a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .toc a:hover {
+            color: var(--accent-light);
+        }
+
+        /* Tip Box */
+        .tip-box {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .tip-box-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--green);
+            margin-bottom: 8px;
+        }
+
+        .tip-box p {
+            color: var(--text-secondary);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Warning Box */
+        .warning-box {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        .warning-box-header {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            color: var(--orange);
+            margin-bottom: 8px;
+        }
+
+        .warning-box p {
+            color: var(--text-secondary);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* CTA Box */
+        .cta-box {
+            background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 48px 0;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .cta-box p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 50px var(--accent-glow);
+        }
+
+        .cta-secondary {
+            display: block;
+            margin-top: 16px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .cta-secondary a {
+            color: var(--accent-light);
+            text-decoration: none;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 16px 0;
+        }
+
+        .faq-item h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .faq-item p {
+            color: var(--text-secondary);
+            margin: 0;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 60px 24px 40px;
+            border-top: 1px solid var(--border);
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-light);
+        }
+
+        .footer-bottom {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .article-container {
+                padding: 100px 20px 60px;
+            }
+
+            .comparison-box {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-box {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gradient-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="logo">
+                <div class="logo-icon">K</div>
+                Kai Prompts
+            </a>
+            <ul class="nav-links">
+                <li><a href="/#products">Products</a></li>
+                <li><a href="/#bundle">Bundle</a></li>
+                <li><a href="free.html">Free Resources</a></li>
+                <li><a href="tools/">Tools</a></li>
+            </ul>
+            <a href="/#bundle" class="nav-cta">Get All Prompts - $97</a>
+        </div>
+    </nav>
+
+    <!-- Article Content -->
+    <article class="article-container">
+        <nav class="breadcrumb">
+            <a href="/">Home</a>
+            <span>/</span>
+            <span>Prompt Engineering Guide</span>
+        </nav>
+
+        <header class="article-header">
+            <div class="article-badge">Complete Guide</div>
+            <h1>Prompt Engineering Guide: How to Write AI Prompts That Actually Work</h1>
+            <div class="article-meta">
+                <span>By Kai Prompts Team</span>
+                <span>20 min read</span>
+                <span>Last updated: Feb 18, 2026</span>
+            </div>
+        </header>
+
+        <div class="article-content">
+            <p><strong>Prompt engineering is the skill that separates people who get mediocre AI outputs from those who get exceptional results.</strong> Whether you're using ChatGPT, Claude, Gemini, or any other AI model, the quality of your prompts directly determines the quality of your results.</p>
+
+            <p>This comprehensive guide teaches you everything you need to know about writing effective AI prompts - from fundamental techniques to advanced strategies used by professionals.</p>
+
+            <div class="toc">
+                <h4>What You'll Learn</h4>
+                <ul>
+                    <li><a href="#what-is-prompt-engineering">What is Prompt Engineering?</a></li>
+                    <li><a href="#core-techniques">The 5 Core Prompt Engineering Techniques</a></li>
+                    <li><a href="#role-prompting">Technique 1: Role Prompting</a></li>
+                    <li><a href="#context-setting">Technique 2: Context Setting</a></li>
+                    <li><a href="#constraints">Technique 3: Setting Constraints</a></li>
+                    <li><a href="#output-format">Technique 4: Output Formatting</a></li>
+                    <li><a href="#examples">Technique 5: Few-Shot Examples</a></li>
+                    <li><a href="#advanced">Advanced Techniques</a></li>
+                    <li><a href="#common-mistakes">Common Mistakes to Avoid</a></li>
+                    <li><a href="#faq">Frequently Asked Questions</a></li>
+                </ul>
+            </div>
+
+            <h2 id="what-is-prompt-engineering">What is Prompt Engineering?</h2>
+
+            <p>Prompt engineering is the practice of designing and optimizing the instructions (prompts) you give to AI models to get specific, high-quality outputs. Think of it as learning how to communicate effectively with AI - the better your instructions, the better the results.</p>
+
+            <p>Good prompt engineering isn't about finding "magic words" or tricks. It's about understanding how AI models interpret language and structuring your requests in ways that lead to consistent, useful outputs.</p>
+
+            <p><strong>Why does it matter?</strong> The same AI model can give you a generic, unhelpful response or a detailed, perfectly-tailored answer depending entirely on how you phrase your request. Mastering prompt engineering means:</p>
+
+            <ul>
+                <li>Getting useful outputs on the first try instead of back-and-forth iterations</li>
+                <li>Saving time by communicating exactly what you need</li>
+                <li>Unlocking capabilities you didn't know AI had</li>
+                <li>Creating reproducible prompts you can use repeatedly</li>
+            </ul>
+
+            <h2 id="core-techniques">The 5 Core Prompt Engineering Techniques</h2>
+
+            <p>After testing thousands of prompts, we've identified five fundamental techniques that form the foundation of effective prompt engineering. Master these, and you'll outperform 90% of AI users.</p>
+
+            <h2 id="role-prompting">Technique 1: Role Prompting</h2>
+
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <div class="technique-number">1</div>
+                    <span class="technique-title">Assign a Specific Role or Persona</span>
+                </div>
+                <p class="technique-desc">Tell the AI who it should be. This activates relevant knowledge and shapes the tone, vocabulary, and approach of the response.</p>
+            </div>
+
+            <p>Role prompting is the most powerful single technique in prompt engineering. When you tell an AI to "act as a senior software engineer," it doesn't just change words - it changes how the AI approaches problems, what it considers important, and what level of detail it provides.</p>
+
+            <div class="comparison-box">
+                <div class="comparison-bad">
+                    <div class="comparison-label">&#10060; Without Role</div>
+                    <div class="comparison-text">"Write code for a login system"</div>
+                </div>
+                <div class="comparison-good">
+                    <div class="comparison-label">&#10004; With Role</div>
+                    <div class="comparison-text">"Act as a senior security engineer with expertise in authentication systems. Write code for a login system that follows OWASP security best practices."</div>
+                </div>
+            </div>
+
+            <p>The second prompt will produce code that handles edge cases, includes security measures, and follows professional conventions - because you've told the AI to think like an expert.</p>
+
+            <h3>Role Prompting Best Practices</h3>
+
+            <ul>
+                <li><strong>Be specific about expertise level:</strong> "senior" vs "junior," "10+ years experience" vs "entry-level"</li>
+                <li><strong>Include relevant specializations:</strong> "marketing strategist who specializes in B2B SaaS" is better than just "marketer"</li>
+                <li><strong>Add context that shapes behavior:</strong> "Act as a patient teacher who explains concepts simply" vs "Act as a professor lecturing to PhD students"</li>
+            </ul>
+
+            <div class="prompt-box">
+                <div class="prompt-box-header">
+                    <span class="prompt-box-label">Role Prompt Example</span>
+                    <span class="prompt-box-type">Template</span>
+                </div>
+                <pre><code>Act as a [EXPERTISE LEVEL] [PROFESSION/ROLE] with [YEARS] years of experience specializing in [SPECIALIZATION].
+
+Your approach should be [CHARACTERISTICS - e.g., "practical and actionable" or "thorough and analytical"].
+
+[Your actual request here]</code></pre>
+            </div>
+
+            <h2 id="context-setting">Technique 2: Context Setting</h2>
+
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <div class="technique-number">2</div>
+                    <span class="technique-title">Provide Relevant Background Information</span>
+                </div>
+                <p class="technique-desc">Give the AI all the context it needs to understand your specific situation. The AI doesn't know anything about you unless you tell it.</p>
+            </div>
+
+            <p>Context is the information that helps the AI understand your specific situation. Without context, the AI makes assumptions that may not match your reality.</p>
+
+            <div class="comparison-box">
+                <div class="comparison-bad">
+                    <div class="comparison-label">&#10060; Missing Context</div>
+                    <div class="comparison-text">"Write an email to my client about the project delay"</div>
+                </div>
+                <div class="comparison-good">
+                    <div class="comparison-label">&#10004; Rich Context</div>
+                    <div class="comparison-text">"Write an email to my client about a project delay. Context: We're a web development agency. The client is a Fortune 500 company we've worked with for 3 years. The delay is 2 weeks due to a third-party API issue. They have a product launch depending on this."</div>
+                </div>
+            </div>
+
+            <p>The second prompt produces an email that acknowledges the relationship history, takes appropriate accountability, and addresses their business concerns.</p>
+
+            <h3>What Context to Include</h3>
+
+            <ul>
+                <li><strong>Who you are:</strong> Your role, company, industry</li>
+                <li><strong>Who it's for:</strong> Audience, their knowledge level, relationship to you</li>
+                <li><strong>What's already happened:</strong> Relevant history or previous attempts</li>
+                <li><strong>What's at stake:</strong> Why this matters, consequences of getting it wrong</li>
+                <li><strong>Constraints:</strong> Budget, timeline, resources, brand guidelines</li>
+            </ul>
+
+            <div class="tip-box">
+                <div class="tip-box-header">&#128161; Pro Tip</div>
+                <p>When in doubt, provide more context rather than less. The AI will use what's relevant and ignore what's not. But if context is missing, the AI can't guess correctly.</p>
+            </div>
+
+            <h2 id="constraints">Technique 3: Setting Constraints</h2>
+
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <div class="technique-number">3</div>
+                    <span class="technique-title">Define Clear Boundaries and Requirements</span>
+                </div>
+                <p class="technique-desc">Tell the AI what to do AND what not to do. Constraints prevent the AI from going off-track or including unwanted elements.</p>
+            </div>
+
+            <p>Constraints are the rules that keep the AI's output focused and appropriate. Without constraints, AI tends to be verbose, make assumptions, and include things you didn't want.</p>
+
+            <h3>Types of Constraints</h3>
+
+            <ul>
+                <li><strong>Length:</strong> "Keep your response under 200 words" or "Provide a detailed 1000-word analysis"</li>
+                <li><strong>Tone:</strong> "Use professional language" or "Keep it casual and friendly"</li>
+                <li><strong>Inclusions:</strong> "Include specific examples" or "Add citations for claims"</li>
+                <li><strong>Exclusions:</strong> "Don't use jargon" or "Avoid mentioning competitors"</li>
+                <li><strong>Structure:</strong> "Use bullet points" or "Present as a numbered list"</li>
+            </ul>
+
+            <div class="prompt-box">
+                <div class="prompt-box-header">
+                    <span class="prompt-box-label">Constraints Example</span>
+                    <span class="prompt-box-type">Template</span>
+                </div>
+                <pre><code>Requirements:
+- Length: [word count or page count]
+- Tone: [professional/casual/authoritative/friendly]
+- Must include: [specific elements]
+- Must avoid: [things to exclude]
+- Language level: [technical/simple/ELI5]
+
+Do NOT:
+- [Thing to avoid 1]
+- [Thing to avoid 2]</code></pre>
+            </div>
+
+            <div class="warning-box">
+                <div class="warning-box-header">&#9888; Common Mistake</div>
+                <p>Don't just say "be concise." This is vague. Instead, specify: "Keep your response under 150 words" or "Provide only the 3 most important points."</p>
+            </div>
+
+            <h2 id="output-format">Technique 4: Output Formatting</h2>
+
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <div class="technique-number">4</div>
+                    <span class="technique-title">Specify Exactly How You Want the Response</span>
+                </div>
+                <p class="technique-desc">Tell the AI what format to use - list, table, code block, JSON, markdown, etc. This ensures the output is immediately usable.</p>
+            </div>
+
+            <p>Output formatting tells the AI exactly how to structure its response. This is crucial when you need the output in a specific format for further use.</p>
+
+            <h3>Common Output Formats</h3>
+
+            <ul>
+                <li><strong>Lists:</strong> Bulleted or numbered, for scannable information</li>
+                <li><strong>Tables:</strong> For comparisons or structured data</li>
+                <li><strong>Code blocks:</strong> For any programming-related output</li>
+                <li><strong>JSON/YAML:</strong> For structured data that will be parsed</li>
+                <li><strong>Markdown:</strong> For formatted documents</li>
+                <li><strong>Step-by-step:</strong> For processes or instructions</li>
+            </ul>
+
+            <div class="prompt-box">
+                <div class="prompt-box-header">
+                    <span class="prompt-box-label">Format Specification Example</span>
+                    <span class="prompt-box-type">Template</span>
+                </div>
+                <pre><code>Format your response as follows:
+
+## Summary
+[2-3 sentence overview]
+
+## Key Points
+- Point 1
+- Point 2
+- Point 3
+
+## Detailed Analysis
+[Expanded discussion with subheadings]
+
+## Recommendations
+| Priority | Action | Timeline |
+|----------|--------|----------|
+| High     | ...    | ...      |
+
+## Next Steps
+1. First step
+2. Second step</code></pre>
+            </div>
+
+            <h2 id="examples">Technique 5: Few-Shot Examples</h2>
+
+            <div class="technique-card highlight">
+                <div class="technique-header">
+                    <div class="technique-number">5</div>
+                    <span class="technique-title">Show the AI What You Want</span>
+                </div>
+                <p class="technique-desc">Provide 1-3 examples of the input/output pattern you want. This is the most reliable way to get specific formatting or style.</p>
+            </div>
+
+            <p>Few-shot learning means showing the AI examples of what you want. This is incredibly powerful for getting consistent outputs in a specific style or format.</p>
+
+            <div class="prompt-box">
+                <div class="prompt-box-header">
+                    <span class="prompt-box-label">Few-Shot Example</span>
+                    <span class="prompt-box-type">Product Descriptions</span>
+                </div>
+                <pre><code>Write product descriptions following this exact format and style:
+
+Example 1:
+Product: Wireless Earbuds
+Description: "Escape the noise. These wireless earbuds deliver crystal-clear audio with active noise cancellation that blocks out distractions. 8-hour battery life means your music never stops. Sweat-resistant design perfect for workouts."
+
+Example 2:
+Product: Smart Water Bottle
+Description: "Never forget to hydrate. This smart bottle tracks your water intake and glows to remind you when it's time to drink. Syncs with your fitness apps. Keeps drinks cold for 24 hours."
+
+Now write a description for:
+Product: [YOUR PRODUCT]</code></pre>
+            </div>
+
+            <p>The AI will match the length, tone, structure, and style of your examples. This technique is especially useful for:</p>
+
+            <ul>
+                <li>Maintaining brand voice across content</li>
+                <li>Getting specific formatting that's hard to describe</li>
+                <li>Teaching the AI your preferred style</li>
+                <li>Creating consistent outputs for templates</li>
+            </ul>
+
+            <div class="cta-box">
+                <h3>Skip the Learning Curve</h3>
+                <p>We've already done the hard work of crafting and testing prompts for common use cases. Get 375+ professional prompts that use all these techniques.</p>
+                <a href="/#bundle" class="cta-btn">
+                    Get All Prompt Packs - $97
+                    <span>&#8594;</span>
+                </a>
+                <span class="cta-secondary">15 packs + Notion templates + guides included</span>
+            </div>
+
+            <h2 id="advanced">Advanced Prompt Engineering Techniques</h2>
+
+            <p>Once you've mastered the core techniques, these advanced strategies can help you tackle complex tasks.</p>
+
+            <h3>Chain of Thought Prompting</h3>
+
+            <p>Ask the AI to show its reasoning step-by-step. This improves accuracy for complex problems, especially in math, logic, and analysis.</p>
+
+            <div class="prompt-box">
+                <div class="prompt-box-header">
+                    <span class="prompt-box-label">Chain of Thought</span>
+                    <span class="prompt-box-type">Technique</span>
+                </div>
+                <pre><code>Analyze this business problem: [PROBLEM]
+
+Think through this step-by-step:
+1. First, identify the core issue
+2. Then, list the factors involved
+3. Consider the trade-offs of each option
+4. Evaluate the likely outcomes
+5. Finally, provide your recommendation
+
+Show your reasoning for each step before giving your final answer.</code></pre>
+            </div>
+
+            <h3>Prompt Chaining</h3>
+
+            <p>Break complex tasks into a series of simpler prompts, where each output feeds into the next. This is useful for multi-step processes.</p>
+
+            <ol>
+                <li>Prompt 1: "Analyze this data and identify the top 3 trends"</li>
+                <li>Prompt 2: "For each trend, explain the potential business impact"</li>
+                <li>Prompt 3: "Create an action plan to capitalize on the most impactful trend"</li>
+            </ol>
+
+            <h3>Self-Consistency</h3>
+
+            <p>Ask the AI to generate multiple solutions and then evaluate which is best. This helps avoid first-instinct answers that may not be optimal.</p>
+
+            <div class="prompt-box">
+                <div class="prompt-box-header">
+                    <span class="prompt-box-label">Self-Consistency</span>
+                    <span class="prompt-box-type">Technique</span>
+                </div>
+                <pre><code>Generate 3 different approaches to solve this problem: [PROBLEM]
+
+For each approach:
+- Describe the solution
+- List pros and cons
+- Rate difficulty (1-10) and effectiveness (1-10)
+
+Then recommend which approach is best and explain why.</code></pre>
+            </div>
+
+            <h2 id="common-mistakes">Common Prompt Engineering Mistakes</h2>
+
+            <p>Avoid these frequent errors that lead to poor AI outputs:</p>
+
+            <div class="technique-card">
+                <h3>Mistake 1: Being Too Vague</h3>
+                <p class="technique-desc">"Write something about marketing" gives the AI no direction. Instead: "Write a 500-word guide on email marketing best practices for e-commerce businesses, focusing on abandoned cart recovery."</p>
+            </div>
+
+            <div class="technique-card">
+                <h3>Mistake 2: Asking Multiple Questions at Once</h3>
+                <p class="technique-desc">Long prompts with multiple unrelated questions confuse the AI. Either ask one thing at a time, or explicitly number your questions and ask for structured responses.</p>
+            </div>
+
+            <div class="technique-card">
+                <h3>Mistake 3: Not Specifying the Audience</h3>
+                <p class="technique-desc">The AI doesn't know who will read the output. "Explain machine learning" will be different for a child, a business executive, and a computer science student. Always specify.</p>
+            </div>
+
+            <div class="technique-card">
+                <h3>Mistake 4: Forgetting to Iterate</h3>
+                <p class="technique-desc">Your first prompt is rarely perfect. Treat prompt engineering as an iterative process. Refine based on what works and what doesn't.</p>
+            </div>
+
+            <h2 id="faq">Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+                <h4>What is prompt engineering?</h4>
+                <p>Prompt engineering is the practice of designing and optimizing prompts (instructions) for AI models to get specific, high-quality outputs. It involves understanding how AI models interpret language and structuring your requests to get the best possible results consistently.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How do I write better AI prompts?</h4>
+                <p>Write better AI prompts by: 1) Assigning a specific role or expertise, 2) Providing clear context about your situation, 3) Setting explicit constraints on length/tone/format, 4) Specifying exactly how you want the output structured, and 5) Including examples when helpful. Be specific rather than vague.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do prompt engineering techniques work across different AI models?</h4>
+                <p>Yes, the core prompt engineering techniques (role prompting, context setting, constraints, output formatting, and few-shot examples) work across ChatGPT, Claude, Gemini, and other major AI models. While each model has subtle differences, these fundamentals are universal.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Is prompt engineering a real skill worth learning?</h4>
+                <p>Absolutely. As AI becomes more integrated into work, the ability to effectively communicate with AI tools is becoming essential. Good prompt engineering can 10x your productivity with AI tools and is increasingly valued by employers.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Where can I get pre-made professional prompts?</h4>
+                <p>We offer 15 professional prompt packs covering business, marketing, development, content creation, and more. Each pack contains 25-35 battle-tested prompts that incorporate all the techniques covered in this guide. <a href="/#products" style="color: var(--accent-light);">View our prompt packs</a>.</p>
+            </div>
+
+            <div class="cta-box">
+                <h3>Ready to Master AI Prompts?</h3>
+                <p>Get our complete collection of 375+ professional prompts plus our in-depth Prompt Formulas Guide that goes even deeper into advanced techniques.</p>
+                <a href="/#bundle" class="cta-btn">
+                    Get The Complete Bundle - $97
+                    <span>&#8594;</span>
+                </a>
+                <span class="cta-secondary">Includes all 15 prompt packs + Prompt Formulas Guide</span>
+            </div>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/#products">Products</a>
+                <a href="/#bundle">Bundle</a>
+                <a href="free.html">Free Resources</a>
+                <a href="best-ai-prompts.html">Best AI Prompts</a>
+                <a href="notion-templates-guide.html">Notion Templates</a>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kai Prompts. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
