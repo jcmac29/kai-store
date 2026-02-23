@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Packs & Templates | Get More Done with AI</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #a0a0a0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .products {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .product-card {
+            background: #1a1a2e;
+            border-radius: 16px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(124, 58, 237, 0.2);
+        }
+
+        .product-badge {
+            background: linear-gradient(90deg, #7c3aed, #00d4ff);
+            color: white;
+            padding: 8px 16px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-content {
+            padding: 24px;
+        }
+
+        .product-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .product-desc {
+            color: #a0a0a0;
+            margin-bottom: 16px;
+            font-size: 0.95rem;
+        }
+
+        .product-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .buy-btn {
+            background: linear-gradient(90deg, #7c3aed, #5b21b6);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .buy-btn:hover {
+            opacity: 0.9;
+        }
+
+        .features {
+            background: #111;
+            padding: 60px 20px;
+        }
+
+        .features-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .feature h3 {
+            margin-bottom: 10px;
+            color: #00d4ff;
+        }
+
+        .feature p {
+            color: #888;
+        }
+
+        .bundle {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .bundle-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
+            border: 2px solid #7c3aed;
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .bundle-card h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .bundle-price {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #00d4ff;
+            margin: 20px 0;
+        }
+
+        .bundle-price .original {
+            font-size: 1.5rem;
+            color: #666;
+            text-decoration: line-through;
+            margin-right: 10px;
+        }
+
+        .bundle-list {
+            text-align: left;
+            max-width: 400px;
+            margin: 20px auto;
+            color: #ccc;
+        }
+
+        .bundle-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .bundle-btn {
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            color: white;
+            border: none;
+            padding: 16px 48px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #333;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            color: #888;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <h1>AI Prompt Packs & Templates</h1>
+        <p>Stop staring at blank screens. These battle-tested prompts and templates help you get 10x more done with AI.</p>
+    </section>
+
+    <section class="products">
+        <h2 class="section-title">Prompt Packs</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-badge">30 PROMPTS</div>
+                <div class="product-content">
+                    <h3 class="product-title">Business Strategy Prompts</h3>
+                    <p class="product-desc">SWOT analysis, competitive research, revenue planning, and more. Built for founders and executives.</p>
+                    <span class="tag">Strategy</span>
+                    <span class="tag">Operations</span>
+                    <span class="tag">Growth</span>
+                    <div class="product-meta">
+                        <span class="product-price">$19</span>
+                        <button class="buy-btn" data-product="business-prompts">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">35 PROMPTS</div>
+                <div class="product-content">
+                    <h3 class="product-title">Content Creator Prompts</h3>
+                    <p class="product-desc">Video scripts, hooks, captions, and content calendars. Never run out of content ideas again.</p>
+                    <span class="tag">YouTube</span>
+                    <span class="tag">Social</span>
+                    <span class="tag">Scripts</span>
+                    <div class="product-meta">
+                        <span class="product-price">$15</span>
+                        <button class="buy-btn" data-product="creator-prompts">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">30 PROMPTS</div>
+                <div class="product-content">
+                    <h3 class="product-title">Developer Prompts</h3>
+                    <p class="product-desc">Code generation, debugging, architecture design. Ship faster and squash bugs.</p>
+                    <span class="tag">Coding</span>
+                    <span class="tag">Debug</span>
+                    <span class="tag">Architecture</span>
+                    <div class="product-meta">
+                        <span class="product-price">$19</span>
+                        <button class="buy-btn" data-product="dev-prompts">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">30 PROMPTS</div>
+                <div class="product-content">
+                    <h3 class="product-title">Marketing Prompts</h3>
+                    <p class="product-desc">Copy, ads, campaigns, and launch strategies. Turn AI into your marketing department.</p>
+                    <span class="tag">Copy</span>
+                    <span class="tag">Ads</span>
+                    <span class="tag">Strategy</span>
+                    <div class="product-meta">
+                        <span class="product-price">$19</span>
+                        <button class="buy-btn" data-product="marketing-prompts">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">25 PROMPTS</div>
+                <div class="product-content">
+                    <h3 class="product-title">Freelancer Prompts</h3>
+                    <p class="product-desc">Proposals, pricing, client management. Win more clients and get paid what you're worth.</p>
+                    <span class="tag">Proposals</span>
+                    <span class="tag">Pricing</span>
+                    <span class="tag">Clients</span>
+                    <div class="product-meta">
+                        <span class="product-price">$15</span>
+                        <button class="buy-btn" data-product="freelancer-prompts">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">35 PROMPTS</div>
+                <div class="product-content">
+                    <h3 class="product-title">Solopreneur Prompts</h3>
+                    <p class="product-desc">Systems, automation, and growth for one-person businesses. Build your empire solo.</p>
+                    <span class="tag">Systems</span>
+                    <span class="tag">Automation</span>
+                    <span class="tag">Growth</span>
+                    <div class="product-meta">
+                        <span class="product-price">$24</span>
+                        <button class="buy-btn" data-product="solo-prompts">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">25 PROMPTS</div>
+                <div class="product-content">
+                    <h3 class="product-title">Job Search Prompts</h3>
+                    <p class="product-desc">Resumes, interviews, negotiations. Land your dream job with AI in your corner.</p>
+                    <span class="tag">Resume</span>
+                    <span class="tag">Interview</span>
+                    <span class="tag">Negotiate</span>
+                    <div class="product-meta">
+                        <span class="product-price">$12</span>
+                        <button class="buy-btn" data-product="job-prompts">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">40 PROMPTS</div>
+                <div class="product-content">
+                    <h3 class="product-title">Social Media Prompts</h3>
+                    <p class="product-desc">Twitter, Instagram, LinkedIn, TikTok. Create a week of content in an hour.</p>
+                    <span class="tag">Twitter</span>
+                    <span class="tag">Instagram</span>
+                    <span class="tag">TikTok</span>
+                    <div class="product-meta">
+                        <span class="product-price">$17</span>
+                        <button class="buy-btn" data-product="social-prompts">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Notion Templates</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-badge">NOTION TEMPLATE</div>
+                <div class="product-content">
+                    <h3 class="product-title">Life OS Dashboard</h3>
+                    <p class="product-desc">All-in-one system for goals, habits, tasks, and projects. Your second brain, organized.</p>
+                    <div class="product-meta">
+                        <span class="product-price">$29</span>
+                        <button class="buy-btn" data-product="life-os">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">NOTION TEMPLATE</div>
+                <div class="product-content">
+                    <h3 class="product-title">Budget Tracker</h3>
+                    <p class="product-desc">Track income, expenses, and savings. Clear visual dashboards. Know where your money goes.</p>
+                    <div class="product-meta">
+                        <span class="product-price">$12</span>
+                        <button class="buy-btn" data-product="budget-tracker">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">NOTION TEMPLATE</div>
+                <div class="product-content">
+                    <h3 class="product-title">Second Brain</h3>
+                    <p class="product-desc">Capture, organize, and retrieve everything you learn. Based on the PARA method.</p>
+                    <div class="product-meta">
+                        <span class="product-price">$25</span>
+                        <button class="buy-btn" data-product="second-brain">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">NOTION TEMPLATE</div>
+                <div class="product-content">
+                    <h3 class="product-title">Habit Tracker</h3>
+                    <p class="product-desc">Build habits that stick. Daily tracking, streaks, and analytics.</p>
+                    <div class="product-meta">
+                        <span class="product-price">$9</span>
+                        <button class="buy-btn" data-product="habit-tracker">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">NOTION TEMPLATE</div>
+                <div class="product-content">
+                    <h3 class="product-title">Freelance Client Tracker</h3>
+                    <p class="product-desc">Manage clients, projects, invoices, and time. Run your freelance business like a pro.</p>
+                    <div class="product-meta">
+                        <span class="product-price">$15</span>
+                        <button class="buy-btn" data-product="client-tracker">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-badge">NOTION TEMPLATE</div>
+                <div class="product-content">
+                    <h3 class="product-title">Content Calendar</h3>
+                    <p class="product-desc">Plan, create, and track all your content. Never run out of ideas again.</p>
+                    <div class="product-meta">
+                        <span class="product-price">$19</span>
+                        <button class="buy-btn" data-product="content-calendar">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bundle">
+        <div class="bundle-card">
+            <h2>Complete Bundle - All 14 Products</h2>
+            <p style="color: #a0a0a0;">Get everything. 8 prompt packs + 6 Notion templates.</p>
+            <div class="bundle-price">
+                <span class="original">$251</span>
+                $97
+            </div>
+            <ul class="bundle-list">
+                <li>Business Strategy Prompts ($19)</li>
+                <li>Content Creator Prompts ($15)</li>
+                <li>Developer Prompts ($19)</li>
+                <li>Marketing Prompts ($19)</li>
+                <li>Freelancer Prompts ($15)</li>
+                <li>Solopreneur Prompts ($24)</li>
+                <li>Job Search Prompts ($12)</li>
+                <li>Social Media Prompts ($17)</li>
+                <li>Life OS Dashboard ($29)</li>
+                <li>Budget Tracker ($12)</li>
+                <li>Second Brain ($25)</li>
+                <li>Habit Tracker ($9)</li>
+                <li>Freelance Client Tracker ($15)</li>
+                <li>Content Calendar ($19)</li>
+            </ul>
+            <button class="bundle-btn" data-product="complete-bundle">Get The Complete Bundle</button>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature">
+                <h3>Instant Download</h3>
+                <p>Get access immediately after purchase. No waiting.</p>
+            </div>
+            <div class="feature">
+                <h3>Works Everywhere</h3>
+                <p>Use with ChatGPT, Claude, or any AI assistant.</p>
+            </div>
+            <div class="feature">
+                <h3>Copy & Paste</h3>
+                <p>Ready to use. Just fill in the blanks and go.</p>
+            </div>
+            <div class="feature">
+                <h3>Free Updates</h3>
+                <p>All future updates included. Buy once, benefit forever.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Kai Empire. All rights reserved.</p>
+        <p style="margin-top: 10px;"><a href="terms.html" style="color: #666;">Terms</a> | <a href="privacy.html" style="color: #666;">Privacy</a></p>
+    </footer>
+
+    <script>
+        // Stripe checkout will be integrated here
+        // For now, buttons show alert
+        document.querySelectorAll('.buy-btn, .bundle-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const product = this.dataset.product;
+                // Will redirect to Stripe checkout
+                alert('Checkout coming soon! Product: ' + product);
+            });
+        });
+    </script>
+</body>
+</html>
