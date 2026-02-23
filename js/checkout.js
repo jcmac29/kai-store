@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function initializeCheckoutButtons() {
-    document.querySelectorAll('.buy-btn, .bundle-btn').forEach(btn => {
+    document.querySelectorAll('.buy-btn, .bundle-btn, .product-btn').forEach(btn => {
         btn.addEventListener('click', async function() {
             const productKey = this.dataset.product;
             const priceId = STRIPE_PRODUCTS[productKey];
@@ -56,7 +56,7 @@ function initializeCheckoutButtons() {
 }
 
 function initializePlaceholderButtons() {
-    document.querySelectorAll('.buy-btn, .bundle-btn').forEach(btn => {
+    document.querySelectorAll('.buy-btn, .bundle-btn, .product-btn').forEach(btn => {
         btn.addEventListener('click', function() {
             alert('Payment processing coming soon! Check back shortly.');
         });
