@@ -1,0 +1,8 @@
+# robots.txt for Kai Store
+# https://jcmac29.github.io/kai-store/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jcmac29.github.io/kai-store/sitemap.xml

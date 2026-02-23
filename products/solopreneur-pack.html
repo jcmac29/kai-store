@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solopreneur Prompts - 35 AI Prompts to Scale Your One-Person Business | Kai Empire</title>
+    <meta name="description" content="35 battle-tested AI prompts for solopreneurs. Automate systems, scale growth, and run your empire solo. Copy, paste, and watch your business grow.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #7c3aed, #00d4ff);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-subhead {
+            font-size: 1.4rem;
+            color: #a0a0a0;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+
+        .hero-cta {
+            background: linear-gradient(90deg, #7c3aed, #5b21b6);
+            color: white;
+            border: none;
+            padding: 18px 48px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        .hero-price {
+            margin-top: 16px;
+            color: #00d4ff;
+            font-size: 1.1rem;
+        }
+
+        /* Pain Points Section */
+        .pain-points {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .pain-card {
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 30px;
+            border-left: 4px solid #ef4444;
+        }
+
+        .pain-card h3 {
+            color: #ef4444;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+
+        .pain-card p {
+            color: #a0a0a0;
+        }
+
+        /* What's Included Section */
+        .included {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #111 100%);
+        }
+
+        .included-intro {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+            color: #a0a0a0;
+            font-size: 1.1rem;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        .category-card h3 {
+            color: #00d4ff;
+            margin-bottom: 16px;
+            font-size: 1.3rem;
+        }
+
+        .category-card ul {
+            list-style: none;
+        }
+
+        .category-card li {
+            padding: 8px 0;
+            color: #ccc;
+            border-bottom: 1px solid #2a2a4e;
+        }
+
+        .category-card li:last-child {
+            border-bottom: none;
+        }
+
+        .category-card li::before {
+            content: "\2713";
+            color: #7c3aed;
+            margin-right: 10px;
+        }
+
+        /* Before/After Section */
+        .before-after {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .comparison-card {
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .comparison-card.before {
+            border-top: 4px solid #ef4444;
+        }
+
+        .comparison-card.after {
+            border-top: 4px solid #22c55e;
+        }
+
+        .comparison-card h3 {
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .comparison-card.before h3 {
+            color: #ef4444;
+        }
+
+        .comparison-card.after h3 {
+            color: #22c55e;
+        }
+
+        .comparison-card ul {
+            list-style: none;
+        }
+
+        .comparison-card li {
+            padding: 10px 0;
+            color: #ccc;
+        }
+
+        .comparison-card.before li::before {
+            content: "\2717";
+            color: #ef4444;
+            margin-right: 10px;
+        }
+
+        .comparison-card.after li::before {
+            content: "\2713";
+            color: #22c55e;
+            margin-right: 10px;
+        }
+
+        /* Social Proof Section */
+        .social-proof {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .testimonial-card p {
+            color: #ccc;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-author {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        .testimonial-role {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .faq-item h3 {
+            color: #00d4ff;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: #a0a0a0;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .price-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid #7c3aed;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .price-box .price {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .price-box .details {
+            color: #a0a0a0;
+            margin-top: 10px;
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #22c55e;
+            margin-top: 20px;
+        }
+
+        .guarantee-icon {
+            width: 24px;
+            height: 24px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            background: #0a0a0a;
+        }
+
+        footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">35 BATTLE-TESTED PROMPTS</span>
+            <h1>Run Your One-Person Business Like a Fortune 500 Company</h1>
+            <p class="hero-subhead">AI prompts that handle strategy, systems, and growth - so you can focus on what you do best. No team required.</p>
+            <button class="hero-cta" data-product="solo-prompts">Get Instant Access</button>
+            <p class="hero-price">Just $24 - Instant Download</p>
+        </div>
+    </section>
+
+    <!-- Pain Points Section -->
+    <section class="pain-points">
+        <div class="container">
+            <h2 class="section-title">Sound Familiar?</h2>
+            <div class="pain-grid">
+                <div class="pain-card">
+                    <h3>Wearing Too Many Hats</h3>
+                    <p>You're the CEO, marketer, accountant, and customer service rep. There's never enough time to do everything well.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>No Time for Strategy</h3>
+                    <p>You're so busy working IN your business that you never work ON it. Big-picture thinking? What's that?</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Analysis Paralysis</h3>
+                    <p>Every decision feels massive when you're doing it alone. Should you launch that product? Raise prices? You're stuck.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Inconsistent Revenue</h3>
+                    <p>Some months are great, others are scary. You need systems, but building them takes time you don't have.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>Content Burnout</h3>
+                    <p>You know you need to create content, but coming up with ideas and executing them is exhausting.</p>
+                </div>
+                <div class="pain-card">
+                    <h3>No One to Bounce Ideas Off</h3>
+                    <p>Being a solopreneur is lonely. You need a sounding board, but hiring consultants is expensive.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included Section -->
+    <section class="included">
+        <div class="container">
+            <h2 class="section-title">35 Prompts Across 5 Categories</h2>
+            <p class="included-intro">Each prompt is designed to replace hours of work or expensive consultant advice. Copy, paste, customize, and execute.</p>
+
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3>Business Strategy (7 Prompts)</h3>
+                    <ul>
+                        <li>90-Day Business Plan Generator</li>
+                        <li>Revenue Stream Analyzer</li>
+                        <li>Competitive Positioning Audit</li>
+                        <li>Pricing Strategy Optimizer</li>
+                        <li>Business Model Canvas Creator</li>
+                        <li>SWOT Analysis Deep Dive</li>
+                        <li>Goal Setting & OKR Framework</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <h3>Systems & Automation (8 Prompts)</h3>
+                    <ul>
+                        <li>SOP Creator for Any Process</li>
+                        <li>Workflow Automation Finder</li>
+                        <li>Time Audit & Optimization</li>
+                        <li>Tool Stack Analyzer</li>
+                        <li>Email Template Library Builder</li>
+                        <li>Delegation Decision Matrix</li>
+                        <li>Client Onboarding System</li>
+                        <li>Weekly Review Framework</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <h3>Marketing & Growth (8 Prompts)</h3>
+                    <ul>
+                        <li>Content Pillar Strategy</li>
+                        <li>Lead Magnet Generator</li>
+                        <li>Email Sequence Writer</li>
+                        <li>Social Media Content Calendar</li>
+                        <li>Sales Page Copy Framework</li>
+                        <li>Partnership Outreach Templates</li>
+                        <li>Referral Program Designer</li>
+                        <li>Launch Checklist Creator</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <h3>Finance & Operations (6 Prompts)</h3>
+                    <ul>
+                        <li>Profit Margin Calculator</li>
+                        <li>Cash Flow Projector</li>
+                        <li>Tax Deduction Finder</li>
+                        <li>Invoice & Contract Templates</li>
+                        <li>Expense Category Optimizer</li>
+                        <li>Financial Health Scorecard</li>
+                    </ul>
+                </div>
+
+                <div class="category-card">
+                    <h3>Mindset & Productivity (6 Prompts)</h3>
+                    <ul>
+                        <li>Decision-Making Framework</li>
+                        <li>Overwhelm Breakthrough</li>
+                        <li>Imposter Syndrome Crusher</li>
+                        <li>Energy Management System</li>
+                        <li>Boundary-Setting Scripts</li>
+                        <li>Vision & Mission Clarifier</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Before/After Section -->
+    <section class="before-after">
+        <div class="container">
+            <h2 class="section-title">The Transformation</h2>
+            <div class="comparison-grid">
+                <div class="comparison-card before">
+                    <h3>Before These Prompts</h3>
+                    <ul>
+                        <li>Spending hours on tasks that should take minutes</li>
+                        <li>Flying blind without real strategy</li>
+                        <li>Reinventing the wheel every time</li>
+                        <li>Burning out from doing everything yourself</li>
+                        <li>Second-guessing every decision</li>
+                        <li>Revenue that's unpredictable and stressful</li>
+                    </ul>
+                </div>
+                <div class="comparison-card after">
+                    <h3>After These Prompts</h3>
+                    <ul>
+                        <li>Getting strategic clarity in 15 minutes</li>
+                        <li>Making confident decisions with frameworks</li>
+                        <li>Using proven systems you can repeat</li>
+                        <li>Working smarter, not harder</li>
+                        <li>Having an AI strategist in your pocket</li>
+                        <li>Building predictable, scalable revenue</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title">What Solopreneurs Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"The 90-day business plan prompt saved me 20 hours and gave me more clarity than my last 3 business coaches combined."</p>
+                    <span class="testimonial-author">Sarah M.</span>
+                    <span class="testimonial-role">E-commerce Store Owner</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"I finally have SOPs for my business. The automation finder prompt helped me save 10+ hours per week."</p>
+                    <span class="testimonial-author">Marcus T.</span>
+                    <span class="testimonial-role">Freelance Designer</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Worth every penny. These prompts are like having a business strategist, marketer, and operations manager on speed dial."</p>
+                    <span class="testimonial-author">Jennifer L.</span>
+                    <span class="testimonial-role">Online Course Creator</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>What AI tools do these prompts work with?</h3>
+                    <p>These prompts work with ChatGPT (GPT-4), Claude, Gemini, and any other major AI assistant. They're designed to be platform-agnostic.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I need to be tech-savvy to use these?</h3>
+                    <p>Not at all. Each prompt is copy-paste ready with clear instructions. Just fill in the blanks with your specific details and you're good to go.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What kind of business is this for?</h3>
+                    <p>Any one-person business: freelancers, consultants, coaches, creators, e-commerce owners, SaaS founders, and service providers. If you're doing it solo, these are for you.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How is this different from free prompts online?</h3>
+                    <p>These aren't generic prompts. Each one is engineered for solopreneur-specific challenges, battle-tested with real business owners, and designed to produce actionable output - not just information.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a refund policy?</h3>
+                    <p>Yes! If you don't find value in the first 30 days, email us for a full refund. No questions asked.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I get updates?</h3>
+                    <p>Absolutely. When AI models evolve and we update the prompts, you get access to the new versions at no extra cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Run Your Business Like a Pro?</h2>
+            <p>Stop doing everything the hard way. Get 35 prompts that make AI your strategic partner.</p>
+
+            <div class="price-box">
+                <div class="price">$24</div>
+                <div class="details">One-time payment - Lifetime access - Free updates</div>
+            </div>
+
+            <button class="hero-cta" data-product="solo-prompts">Get Instant Access Now</button>
+
+            <div class="guarantee">
+                <span class="guarantee-icon">&#10003;</span>
+                <span>30-Day Money-Back Guarantee</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Kai Empire. All rights reserved.</p>
+        <p style="margin-top: 10px;"><a href="../terms.html">Terms</a> | <a href="../privacy.html">Privacy</a> | <a href="../index.html">Back to Store</a></p>
+    </footer>
+
+    <!-- Stripe Integration -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="../js/stripe-config.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

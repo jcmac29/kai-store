@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life OS Dashboard - All-in-One Notion Template | Kai Empire</title>
+    <meta name="description" content="Stop juggling 10 different apps. The Life OS Dashboard brings goals, habits, tasks, projects, and notes into one powerful Notion system.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, #7c3aed, #00d4ff);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-subhead {
+            font-size: 1.4rem;
+            color: #a0a0a0;
+            max-width: 650px;
+            margin: 0 auto 40px;
+        }
+
+        /* Dashboard Preview */
+        .dashboard-preview {
+            background: #1a1a2e;
+            border: 2px solid rgba(124, 58, 237, 0.3);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            margin: 40px auto;
+            text-align: left;
+        }
+
+        .preview-header {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .preview-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .preview-dot.red { background: #ef4444; }
+        .preview-dot.yellow { background: #eab308; }
+        .preview-dot.green { background: #22c55e; }
+
+        .preview-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .preview-widget {
+            background: rgba(124, 58, 237, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .preview-widget h4 {
+            color: #00d4ff;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+        }
+
+        .preview-widget .stat {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .preview-widget.wide {
+            grid-column: span 2;
+        }
+
+        .preview-bar {
+            height: 8px;
+            background: #333;
+            border-radius: 4px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .preview-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #7c3aed, #00d4ff);
+            border-radius: 4px;
+        }
+
+        .hero-cta {
+            background: linear-gradient(90deg, #7c3aed, #5b21b6);
+            color: white;
+            border: none;
+            padding: 18px 48px;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 30px;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        .hero-price {
+            margin-top: 16px;
+            color: #00d4ff;
+            font-size: 1.1rem;
+        }
+
+        /* Problem Section */
+        .problem {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .problem-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+            align-items: center;
+        }
+
+        .chaos-visual {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .app-icon {
+            background: #1a1a2e;
+            border: 2px dashed #ef4444;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #888;
+        }
+
+        .problem-text h3 {
+            color: #ef4444;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .problem-text ul {
+            list-style: none;
+        }
+
+        .problem-text li {
+            padding: 12px 0;
+            color: #a0a0a0;
+            border-bottom: 1px solid #2a2a4e;
+        }
+
+        .problem-text li::before {
+            content: "\2717";
+            color: #ef4444;
+            margin-right: 12px;
+        }
+
+        /* Solution Section */
+        .solution {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .solution-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .solution-content h3 {
+            color: #22c55e;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .solution-content p {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .unified-visual {
+            background: #1a1a2e;
+            border: 3px solid #22c55e;
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .unified-center {
+            background: linear-gradient(135deg, #7c3aed, #00d4ff);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+
+        .unified-center h4 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .unified-center p {
+            margin: 0;
+            opacity: 0.8;
+        }
+
+        .unified-modules {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .unified-module {
+            background: rgba(124, 58, 237, 0.2);
+            border-radius: 10px;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: #1a1a2e;
+            border-radius: 16px;
+            padding: 35px;
+            border-left: 4px solid #7c3aed;
+        }
+
+        .feature-card h3 {
+            color: #00d4ff;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .feature-card p {
+            color: #a0a0a0;
+            margin-bottom: 15px;
+        }
+
+        .feature-card ul {
+            list-style: none;
+        }
+
+        .feature-card li {
+            padding: 6px 0;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .feature-card li::before {
+            content: "\2022";
+            color: #7c3aed;
+            margin-right: 10px;
+        }
+
+        /* How It Works Section */
+        .how-it-works {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #7c3aed, #00d4ff);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin: 0 auto 20px;
+        }
+
+        .step h3 {
+            color: #00d4ff;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        .step p {
+            color: #a0a0a0;
+        }
+
+        .step-arrow {
+            position: absolute;
+            top: 30px;
+            right: -30px;
+            color: #7c3aed;
+            font-size: 2rem;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+        }
+
+        .testimonial-card p {
+            color: #ccc;
+            font-style: italic;
+            margin-bottom: 16px;
+        }
+
+        .testimonial-author {
+            color: #00d4ff;
+            font-weight: 600;
+        }
+
+        .testimonial-role {
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .faq-item h3 {
+            color: #00d4ff;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: #a0a0a0;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .final-cta p {
+            color: #a0a0a0;
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .price-box {
+            background: rgba(0, 0, 0, 0.3);
+            border: 2px solid #7c3aed;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto 30px;
+        }
+
+        .price-box .price {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .price-box .details {
+            color: #a0a0a0;
+            margin-top: 10px;
+        }
+
+        .includes-list {
+            text-align: left;
+            max-width: 400px;
+            margin: 20px auto 0;
+        }
+
+        .includes-list li {
+            padding: 8px 0;
+            color: #ccc;
+            list-style: none;
+        }
+
+        .includes-list li::before {
+            content: "\2713";
+            color: #22c55e;
+            margin-right: 10px;
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #22c55e;
+            margin-top: 20px;
+        }
+
+        .guarantee-icon {
+            width: 24px;
+            height: 24px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            background: #0a0a0a;
+        }
+
+        footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .problem-content {
+                grid-template-columns: 1fr;
+            }
+
+            .steps {
+                grid-template-columns: 1fr;
+            }
+
+            .step-arrow {
+                display: none;
+            }
+
+            .preview-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .preview-widget.wide {
+                grid-column: span 1;
+            }
+
+            .unified-modules {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <span class="hero-badge">NOTION TEMPLATE</span>
+            <h1>Your Entire Life. One Dashboard.</h1>
+            <p class="hero-subhead">Stop juggling 10 different apps. The Life OS Dashboard brings goals, habits, tasks, projects, and notes into one powerful system.</p>
+
+            <!-- Dashboard Preview -->
+            <div class="dashboard-preview">
+                <div class="preview-header">
+                    <div class="preview-dot red"></div>
+                    <div class="preview-dot yellow"></div>
+                    <div class="preview-dot green"></div>
+                </div>
+                <div class="preview-grid">
+                    <div class="preview-widget">
+                        <h4>WEEKLY GOALS</h4>
+                        <div class="stat">4/5</div>
+                        <div class="preview-bar"><div class="preview-bar-fill" style="width: 80%"></div></div>
+                    </div>
+                    <div class="preview-widget">
+                        <h4>HABITS TODAY</h4>
+                        <div class="stat">6/7</div>
+                        <div class="preview-bar"><div class="preview-bar-fill" style="width: 86%"></div></div>
+                    </div>
+                    <div class="preview-widget">
+                        <h4>FOCUS SCORE</h4>
+                        <div class="stat">92</div>
+                        <div class="preview-bar"><div class="preview-bar-fill" style="width: 92%"></div></div>
+                    </div>
+                    <div class="preview-widget wide">
+                        <h4>ACTIVE PROJECTS</h4>
+                        <div style="color: #ccc; font-size: 0.9rem; margin-top: 10px;">Launch new product &bull; Website redesign &bull; Content calendar</div>
+                    </div>
+                    <div class="preview-widget">
+                        <h4>TASKS DUE</h4>
+                        <div class="stat">3</div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="hero-cta" data-product="life-os">Get Life OS Now</button>
+            <p class="hero-price">Just $29 - Instant Access</p>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem">
+        <div class="container">
+            <h2 class="section-title">The Problem: Digital Chaos</h2>
+            <div class="problem-content">
+                <div class="chaos-visual">
+                    <div class="app-icon">Calendar App</div>
+                    <div class="app-icon">Todo List</div>
+                    <div class="app-icon">Notes App</div>
+                    <div class="app-icon">Habit Tracker</div>
+                    <div class="app-icon">Project Tool</div>
+                    <div class="app-icon">Goal Tracker</div>
+                    <div class="app-icon">Journal</div>
+                    <div class="app-icon">Reminders</div>
+                    <div class="app-icon">Spreadsheets</div>
+                </div>
+                <div class="problem-text">
+                    <h3>Sound Familiar?</h3>
+                    <ul>
+                        <li>Your goals are in one app, tasks in another, notes scattered everywhere</li>
+                        <li>You spend more time organizing systems than actually doing work</li>
+                        <li>Nothing talks to each other - zero visibility across your life</li>
+                        <li>You've tried "the next big app" a dozen times and always fall off</li>
+                        <li>You know what you should do but can't see the full picture</li>
+                        <li>Important things slip through the cracks constantly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="solution">
+        <div class="container">
+            <div class="solution-content">
+                <h3>The Solution: One System to Rule Them All</h3>
+                <p>Life OS brings everything into one interconnected dashboard. Your goals inform your projects. Your projects break down into tasks. Your habits build toward your goals. Everything is connected.</p>
+
+                <div class="unified-visual">
+                    <div class="unified-center">
+                        <h4>Life OS Dashboard</h4>
+                        <p>Your command center for life</p>
+                    </div>
+                    <div class="unified-modules">
+                        <div class="unified-module">Goals</div>
+                        <div class="unified-module">Projects</div>
+                        <div class="unified-module">Tasks</div>
+                        <div class="unified-module">Habits</div>
+                        <div class="unified-module">Notes</div>
+                        <div class="unified-module">Journal</div>
+                        <div class="unified-module">Reviews</div>
+                        <div class="unified-module">Archive</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Everything You Need</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Goals Dashboard</h3>
+                    <p>Set quarterly and yearly goals with visual progress tracking.</p>
+                    <ul>
+                        <li>OKR-style goal setting</li>
+                        <li>Progress visualization</li>
+                        <li>Goal-to-project linking</li>
+                        <li>Milestone tracking</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Project Hub</h3>
+                    <p>Manage all your projects with kanban boards and timelines.</p>
+                    <ul>
+                        <li>Kanban + List + Calendar views</li>
+                        <li>Project templates</li>
+                        <li>Deadline tracking</li>
+                        <li>Resource linking</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Task Manager</h3>
+                    <p>A powerful GTD-inspired system that actually works.</p>
+                    <ul>
+                        <li>Inbox capture</li>
+                        <li>Priority matrix</li>
+                        <li>Context tags</li>
+                        <li>Recurring tasks</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Habit Tracker</h3>
+                    <p>Build habits that stick with streaks and analytics.</p>
+                    <ul>
+                        <li>Daily habit check-ins</li>
+                        <li>Streak tracking</li>
+                        <li>Weekly/monthly analytics</li>
+                        <li>Habit stacking support</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Notes & Knowledge Base</h3>
+                    <p>Your second brain using the PARA method.</p>
+                    <ul>
+                        <li>Projects, Areas, Resources, Archive</li>
+                        <li>Bi-directional linking</li>
+                        <li>Quick capture</li>
+                        <li>Tag system</li>
+                    </ul>
+                </div>
+
+                <div class="feature-card">
+                    <h3>Weekly Reviews</h3>
+                    <p>Built-in reflection system to stay on track.</p>
+                    <ul>
+                        <li>Weekly review template</li>
+                        <li>Monthly retrospectives</li>
+                        <li>Quarterly planning</li>
+                        <li>Energy tracking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Get Started in 3 Steps</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Duplicate to Your Notion</h3>
+                    <p>One click to copy the entire Life OS system to your Notion workspace. Takes 10 seconds.</p>
+                    <span class="step-arrow">&rarr;</span>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Set Up Your Goals</h3>
+                    <p>Follow the quick-start guide to add your goals, current projects, and habits. 15 minutes max.</p>
+                    <span class="step-arrow">&rarr;</span>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Run Your Life from One Place</h3>
+                    <p>Open your dashboard each morning. See everything. Know exactly what to focus on.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Section -->
+    <section class="social-proof">
+        <div class="container">
+            <h2 class="section-title">What Users Are Saying</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"I've tried Todoist, Things, Asana, and a dozen other tools. Life OS is the first system that actually stuck. Everything in one place, finally."</p>
+                    <span class="testimonial-author">David K.</span>
+                    <span class="testimonial-role">Software Engineer</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"The weekly review feature alone is worth the price. I now have clarity on my goals and can see exactly how my daily tasks connect to the bigger picture."</p>
+                    <span class="testimonial-author">Amanda R.</span>
+                    <span class="testimonial-role">Marketing Manager</span>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Setup took me 20 minutes. I've been using it every single day for 3 months now. This is the system I'll use for life."</p>
+                    <span class="testimonial-author">Chris M.</span>
+                    <span class="testimonial-role">Freelance Designer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>Do I need Notion Pro to use this?</h3>
+                    <p>No! Life OS works perfectly on the free Notion plan. No paid subscription required.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do I get the template?</h3>
+                    <p>After purchase, you'll get instant access to a Notion link. Click it, then click "Duplicate" to copy the entire system to your workspace.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I customize it?</h3>
+                    <p>Absolutely. It's your template. Add properties, change layouts, delete what you don't need, add new databases. Make it yours.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is there a tutorial?</h3>
+                    <p>Yes! Life OS includes a built-in quick-start guide and video walkthrough to get you up and running in under 20 minutes.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I already have Notion databases?</h3>
+                    <p>You can use Life OS alongside your existing setup, or gradually migrate your data over. The template includes migration tips.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I get updates?</h3>
+                    <p>Yes. When we improve Life OS, you'll get access to the updated template at no extra cost.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>Ready to Get Your Life Organized?</h2>
+            <p>Stop letting things slip through the cracks. Get one system for your entire life.</p>
+
+            <div class="price-box">
+                <div class="price">$29</div>
+                <div class="details">One-time payment - Lifetime access</div>
+                <ul class="includes-list">
+                    <li>Complete Life OS Dashboard</li>
+                    <li>6 interconnected modules</li>
+                    <li>Quick-start guide + video</li>
+                    <li>Free template updates</li>
+                    <li>Works on free Notion plan</li>
+                </ul>
+            </div>
+
+            <button class="hero-cta" data-product="life-os">Get Life OS Now</button>
+
+            <div class="guarantee">
+                <span class="guarantee-icon">&#10003;</span>
+                <span>30-Day Money-Back Guarantee</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Kai Empire. All rights reserved.</p>
+        <p style="margin-top: 10px;"><a href="../terms.html">Terms</a> | <a href="../privacy.html">Privacy</a> | <a href="../index.html">Back to Store</a></p>
+    </footer>
+
+    <!-- Stripe Integration -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="../js/stripe-config.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>

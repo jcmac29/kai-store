@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Bundle - All 24 Products for $97 (Save $284) | Kai Empire</title>
+    <meta name="description" content="Get every AI prompt pack, Notion template, guide, and course in one bundle. $381 value for just $97. 375+ prompts, 6 templates, and more.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 50%, #16213e 100%);
+            padding: 100px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%237c3aed' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .urgency-banner {
+            display: inline-block;
+            background: linear-gradient(90deg, #ef4444, #f97316);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed, #00d4ff);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .hero-subhead {
+            font-size: 1.5rem;
+            color: #a0a0a0;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .price-display {
+            margin: 40px 0;
+        }
+
+        .original-price {
+            font-size: 2rem;
+            color: #666;
+            text-decoration: line-through;
+            margin-right: 15px;
+        }
+
+        .sale-price {
+            font-size: 4rem;
+            font-weight: bold;
+            color: #00d4ff;
+        }
+
+        .savings-badge {
+            display: inline-block;
+            background: #22c55e;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        .hero-cta {
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            color: white;
+            border: none;
+            padding: 22px 60px;
+            border-radius: 14px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 30px;
+        }
+
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.5);
+        }
+
+        /* Everything Included Section */
+        .included {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .product-categories {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .category {
+            margin-bottom: 50px;
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .category-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #7c3aed, #00d4ff);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .category-header h3 {
+            font-size: 1.5rem;
+            color: #00d4ff;
+        }
+
+        .products-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 16px;
+        }
+
+        .product-item {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            transition: border-color 0.3s;
+        }
+
+        .product-item:hover {
+            border-color: rgba(124, 58, 237, 0.5);
+        }
+
+        .product-item .name {
+            font-weight: 500;
+        }
+
+        .product-item .price {
+            color: #888;
+            font-size: 0.95rem;
+        }
+
+        .product-item .checkmark {
+            color: #22c55e;
+            font-size: 1.2rem;
+        }
+
+        /* Who It's For Section */
+        .who-for {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .persona-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .persona-card {
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .persona-card h3 {
+            color: #00d4ff;
+            margin-bottom: 12px;
+        }
+
+        .persona-card p {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+
+        /* Comparison Section */
+        .comparison {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .comparison-table {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1a1a2e;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .comparison-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            background: #2d1b69;
+            padding: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .comparison-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 20px;
+            border-bottom: 1px solid #2a2a4e;
+            align-items: center;
+        }
+
+        .comparison-row:last-child {
+            border-bottom: none;
+        }
+
+        .comparison-row .label {
+            color: #ccc;
+        }
+
+        .comparison-row .separate {
+            text-align: center;
+            color: #888;
+        }
+
+        .comparison-row .bundle {
+            text-align: center;
+            color: #22c55e;
+            font-weight: 600;
+        }
+
+        .total-row {
+            background: rgba(34, 197, 94, 0.1);
+            font-size: 1.2rem;
+        }
+
+        .total-row .separate {
+            color: #ef4444;
+            font-weight: 700;
+        }
+
+        .total-row .bundle {
+            color: #22c55e;
+            font-weight: 700;
+        }
+
+        /* Guarantee Section */
+        .guarantee {
+            padding: 80px 20px;
+            background: linear-gradient(180deg, #0a0a0a 0%, #1a1a2e 100%);
+        }
+
+        .guarantee-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(34, 197, 94, 0.1);
+            border: 2px solid #22c55e;
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .guarantee-icon {
+            width: 80px;
+            height: 80px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            font-size: 40px;
+        }
+
+        .guarantee-box h2 {
+            color: #22c55e;
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+        }
+
+        .guarantee-box p {
+            color: #ccc;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 80px 20px;
+            background: #0a0a0a;
+        }
+
+        .faq-list {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #1a1a2e;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .faq-item h3 {
+            color: #00d4ff;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .faq-item p {
+            color: #a0a0a0;
+        }
+
+        /* Final CTA Section */
+        .final-cta {
+            padding: 100px 20px;
+            background: linear-gradient(135deg, #2d1b69 0%, #1a1a2e 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .countdown-bar {
+            background: linear-gradient(90deg, #ef4444, #f97316);
+            padding: 15px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .final-cta h2 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+
+        .final-price-box {
+            background: rgba(0, 0, 0, 0.4);
+            border: 3px solid #7c3aed;
+            border-radius: 24px;
+            padding: 50px;
+            max-width: 550px;
+            margin: 40px auto;
+        }
+
+        .final-price-box .value {
+            color: #888;
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .final-price-box .original {
+            font-size: 2.5rem;
+            color: #666;
+            text-decoration: line-through;
+        }
+
+        .final-price-box .price {
+            font-size: 5rem;
+            font-weight: bold;
+            color: #00d4ff;
+            margin: 10px 0;
+        }
+
+        .final-price-box .savings {
+            background: #22c55e;
+            display: inline-block;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-top: 15px;
+        }
+
+        .buy-btn {
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            color: white;
+            border: none;
+            padding: 24px 70px;
+            border-radius: 16px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 30px;
+        }
+
+        .buy-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 20px 50px rgba(0, 212, 255, 0.4);
+        }
+
+        .trust-badges {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 30px;
+            flex-wrap: wrap;
+        }
+
+        .trust-badge {
+            color: #888;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            background: #0a0a0a;
+        }
+
+        footer a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: #888;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .sale-price {
+                font-size: 3rem;
+            }
+
+            .comparison-header,
+            .comparison-row {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 10px;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .final-price-box .price {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content container">
+            <div class="urgency-banner">LIMITED TIME OFFER - 75% OFF</div>
+            <h1>Get Everything. Pay Once.</h1>
+            <p class="hero-subhead">All 24 products - 375+ prompts, 6 Notion templates, 2 guides, and our complete course. One bundle. One price.</p>
+
+            <div class="price-display">
+                <span class="original-price">$381</span>
+                <span class="sale-price">$97</span>
+            </div>
+            <div class="savings-badge">You Save $284 (75% OFF)</div>
+
+            <button class="hero-cta" data-product="complete-bundle">Get The Complete Bundle</button>
+        </div>
+    </section>
+
+    <!-- Everything Included Section -->
+    <section class="included">
+        <div class="container">
+            <h2 class="section-title">Everything That's Included</h2>
+
+            <div class="product-categories">
+                <!-- Prompt Packs -->
+                <div class="category">
+                    <div class="category-header">
+                        <div class="category-icon">&#128172;</div>
+                        <h3>15 AI Prompt Packs (375+ Prompts)</h3>
+                    </div>
+                    <div class="products-list">
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Business Strategy Prompts</div>
+                                <div class="price">30 prompts - $19 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Content Creator Prompts</div>
+                                <div class="price">35 prompts - $15 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Developer Prompts</div>
+                                <div class="price">30 prompts - $19 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Marketing Prompts</div>
+                                <div class="price">30 prompts - $19 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Freelancer Prompts</div>
+                                <div class="price">25 prompts - $15 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Solopreneur Prompts</div>
+                                <div class="price">35 prompts - $24 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Job Search Prompts</div>
+                                <div class="price">25 prompts - $12 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Social Media Prompts</div>
+                                <div class="price">40 prompts - $17 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Real Estate Prompts</div>
+                                <div class="price">25 prompts - $19 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Student Prompts</div>
+                                <div class="price">25 prompts - $12 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Personal Finance Prompts</div>
+                                <div class="price">25 prompts - $15 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Startup Founder Prompts</div>
+                                <div class="price">25 prompts - $19 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Writer Prompts</div>
+                                <div class="price">25 prompts - $15 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">E-Commerce Prompts</div>
+                                <div class="price">25 prompts - $19 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Manager Prompts</div>
+                                <div class="price">25 prompts - $17 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Notion Templates -->
+                <div class="category">
+                    <div class="category-header">
+                        <div class="category-icon">&#128196;</div>
+                        <h3>6 Notion Templates</h3>
+                    </div>
+                    <div class="products-list">
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Life OS Dashboard</div>
+                                <div class="price">$29 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Budget Tracker</div>
+                                <div class="price">$12 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Second Brain</div>
+                                <div class="price">$25 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Habit Tracker</div>
+                                <div class="price">$9 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Freelance Client Tracker</div>
+                                <div class="price">$15 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Content Calendar</div>
+                                <div class="price">$19 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guides & Course -->
+                <div class="category">
+                    <div class="category-header">
+                        <div class="category-icon">&#127891;</div>
+                        <h3>Guides & Course</h3>
+                    </div>
+                    <div class="products-list">
+                        <div class="product-item">
+                            <div>
+                                <div class="name">AI Keyboard Shortcuts Cheatsheet</div>
+                                <div class="price">$9 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">Prompt Formulas Guide</div>
+                                <div class="price">$12 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                        <div class="product-item">
+                            <div>
+                                <div class="name">AI Productivity Mastery Course</div>
+                                <div class="price">$49 value</div>
+                            </div>
+                            <span class="checkmark">&#10003;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For Section -->
+    <section class="who-for">
+        <div class="container">
+            <h2 class="section-title">Who This Bundle Is Perfect For</h2>
+            <div class="persona-grid">
+                <div class="persona-card">
+                    <h3>Solopreneurs</h3>
+                    <p>Run your one-person business like a Fortune 500 company with AI as your team.</p>
+                </div>
+                <div class="persona-card">
+                    <h3>Freelancers</h3>
+                    <p>Win more clients, manage projects, and scale your income without burning out.</p>
+                </div>
+                <div class="persona-card">
+                    <h3>Content Creators</h3>
+                    <p>Never run out of ideas. Create a week of content in an hour.</p>
+                </div>
+                <div class="persona-card">
+                    <h3>Startup Founders</h3>
+                    <p>Move fast with AI-powered strategy, marketing, and operations.</p>
+                </div>
+                <div class="persona-card">
+                    <h3>Marketers</h3>
+                    <p>10x your output. Better copy, faster campaigns, more conversions.</p>
+                </div>
+                <div class="persona-card">
+                    <h3>Developers</h3>
+                    <p>Ship faster, debug quicker, and architect better systems.</p>
+                </div>
+                <div class="persona-card">
+                    <h3>Students</h3>
+                    <p>Better grades, faster research, and study systems that work.</p>
+                </div>
+                <div class="persona-card">
+                    <h3>Anyone Using AI</h3>
+                    <p>Stop staring at blank prompts. Get results from day one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison">
+        <div class="container">
+            <h2 class="section-title">Buy Separately vs. The Bundle</h2>
+            <div class="comparison-table">
+                <div class="comparison-header">
+                    <span>What You Get</span>
+                    <span>Buy Separately</span>
+                    <span>Complete Bundle</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="label">15 Prompt Packs (375+ prompts)</span>
+                    <span class="separate">$256</span>
+                    <span class="bundle">&#10003; Included</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="label">6 Notion Templates</span>
+                    <span class="separate">$109</span>
+                    <span class="bundle">&#10003; Included</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="label">AI Keyboard Shortcuts</span>
+                    <span class="separate">$9</span>
+                    <span class="bundle">&#10003; Included</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="label">Prompt Formulas Guide</span>
+                    <span class="separate">$12</span>
+                    <span class="bundle">&#10003; Included</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="label">AI Productivity Course</span>
+                    <span class="separate">$49</span>
+                    <span class="bundle">&#10003; Included</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="label">Free Lifetime Updates</span>
+                    <span class="separate">Per product</span>
+                    <span class="bundle">&#10003; All products</span>
+                </div>
+                <div class="comparison-row total-row">
+                    <span class="label"><strong>TOTAL</strong></span>
+                    <span class="separate">$381</span>
+                    <span class="bundle">$97</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-box">
+                <div class="guarantee-icon">&#128170;</div>
+                <h2>30-Day No-Questions-Asked Guarantee</h2>
+                <p>Try the complete bundle risk-free. If you don't absolutely love it, if it doesn't transform how you work with AI, simply email us within 30 days and we'll refund every penny. No hoops, no hassle.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <h3>How do I access everything after purchase?</h3>
+                    <p>You'll get instant access to a download page with all 24 products. Everything is organized by category and ready to use immediately. You'll also receive an email with backup links.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What AI tools do the prompts work with?</h3>
+                    <p>All prompts are designed to work with ChatGPT (GPT-4), Claude, Gemini, and any major AI assistant. They're platform-agnostic and optimized for best results across all tools.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do I really get lifetime updates?</h3>
+                    <p>Yes! As AI models evolve and we improve our prompts and templates, you'll get all updates at no extra cost. Buy once, benefit forever.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is this really worth $381?</h3>
+                    <p>Each product is priced based on the value it delivers. The prompts alone can save you dozens of hours. The templates organize your life. The course transforms how you work. At $97, you're getting everything for less than a single consulting call.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What if I only need a few products?</h3>
+                    <p>You can buy products individually from our main store. But if you think you'll use even 3-4 products, the bundle is already a better deal - and you get to explore everything else at no extra cost.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How long will this price last?</h3>
+                    <p>This 75% discount is a special offer that won't last forever. Once we add more products to the bundle, the price will increase. Lock in your access now at the current price.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="countdown-bar">
+                <strong>This 75% discount won't last forever. Lock in your price today.</strong>
+            </div>
+
+            <h2>Ready to Transform How You Work?</h2>
+
+            <div class="final-price-box">
+                <div class="value">Total Value: $381</div>
+                <div class="original">$381</div>
+                <div class="price">$97</div>
+                <div class="savings">SAVE $284 (75% OFF)</div>
+            </div>
+
+            <button class="buy-btn" data-product="complete-bundle">Get The Complete Bundle Now</button>
+
+            <div class="trust-badges">
+                <div class="trust-badge">
+                    <span>&#128274;</span>
+                    <span>Secure Checkout</span>
+                </div>
+                <div class="trust-badge">
+                    <span>&#9889;</span>
+                    <span>Instant Access</span>
+                </div>
+                <div class="trust-badge">
+                    <span>&#128176;</span>
+                    <span>30-Day Guarantee</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Kai Empire. All rights reserved.</p>
+        <p style="margin-top: 10px;"><a href="../terms.html">Terms</a> | <a href="../privacy.html">Privacy</a> | <a href="../index.html">Back to Store</a></p>
+    </footer>
+
+    <!-- Stripe Integration -->
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="../js/stripe-config.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>
