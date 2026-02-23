@@ -1399,12 +1399,14 @@
     };
 
     function buyProduct(productKey) {
-        alert('Starting checkout for: ' + productKey);
         var priceId = PRICES[productKey];
+        console.log('Product:', productKey, 'Price ID:', priceId);
+
         if (!priceId) {
             alert('Product not found');
             return;
         }
+
         stripe.redirectToCheckout({
             lineItems: [{price: priceId, quantity: 1}],
             mode: 'payment',
@@ -1412,8 +1414,12 @@
             cancelUrl: 'https://kaiprompts.com/'
         }).then(function(result) {
             if (result.error) {
-                alert('Error: ' + result.error.message);
+                alert('Stripe Error: ' + result.error.message);
+                console.error('Stripe error:', result.error);
             }
+        }).catch(function(err) {
+            alert('Checkout Error: ' + err.message + '\n\nThis usually means the Stripe products need "Client-only checkout" enabled in the Stripe Dashboard.');
+            console.error('Full error:', err);
         });
     }
     </script>
