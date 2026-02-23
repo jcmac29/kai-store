@@ -6,13 +6,17 @@
     <meta name="google-site-verification" content="vSqQ0UnQVxqVOmw_ACerXb2vGsc9SFvVlht2gJz0Lm8" />
     <link rel="canonical" href="https://kaiprompts.com/" />
     <meta property="og:url" content="https://kaiprompts.com/" />
-    <meta property="og:title" content="AI Prompt Packs & Templates | Kai Empire" />
-    <meta property="og:description" content="Battle-tested AI prompts and Notion templates to 10x your productivity. Works with ChatGPT, Claude, and all major AI tools." />
+    <meta property="og:title" content="AI Prompt Packs & Templates | Kai Prompts" />
+    <meta property="og:description" content="375+ battle-tested AI prompts and Notion templates. Stop staring at blank screens. Start getting results." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="AI Prompt Packs & Templates | Kai Empire" />
-    <meta name="twitter:description" content="Battle-tested AI prompts and Notion templates to 10x your productivity." />
-    <title>AI Prompt Packs & Templates | Get More Done with AI</title>
+    <meta name="twitter:title" content="AI Prompt Packs & Templates | Kai Prompts" />
+    <meta name="twitter:description" content="375+ battle-tested AI prompts and Notion templates." />
+    <meta name="description" content="Professional AI prompt packs and Notion templates for business, marketing, development, and more. Works with ChatGPT, Claude, and all major AI tools. Instant download.">
+    <title>Kai Prompts | AI Prompt Packs & Templates That Actually Work</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -20,44 +24,83 @@
             box-sizing: border-box;
         }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #fff;
-            line-height: 1.6;
+        :root {
+            --bg-primary: #09090b;
+            --bg-secondary: #18181b;
+            --bg-card: #1c1c1f;
+            --bg-card-hover: #27272a;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --accent-glow: rgba(139, 92, 246, 0.3);
+            --green: #22c55e;
+            --blue: #3b82f6;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --border: #27272a;
+            --border-light: #3f3f46;
         }
 
-        /* Sticky Header */
-        .site-header {
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated gradient background */
+        .gradient-bg {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            z-index: 1000;
-            padding: 0 20px;
+            height: 100vh;
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent);
+            pointer-events: none;
+            z-index: 0;
         }
 
-        .header-inner {
+        /* Navigation */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 16px 24px;
+            background: rgba(9, 9, 11, 0.8);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-inner {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 70px;
         }
 
         .logo {
             font-size: 1.5rem;
-            font-weight: 700;
-            background: linear-gradient(90deg, #00d4ff, #7c3aed);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 800;
+            color: var(--text-primary);
             text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--blue));
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
         }
 
         .nav-links {
@@ -67,297 +110,447 @@
         }
 
         .nav-links a {
-            color: #a0a0a0;
+            color: var(--text-secondary);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
             font-size: 0.95rem;
+            transition: color 0.2s;
         }
 
         .nav-links a:hover {
-            color: #00d4ff;
+            color: var(--text-primary);
         }
 
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: #fff;
-            font-size: 1.5rem;
-            cursor: pointer;
+        .nav-cta {
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
         }
 
-        /* Hero with padding for fixed header */
+        .nav-cta:hover {
+            background: var(--accent-light);
+            transform: translateY(-1px);
+        }
+
+        /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 140px 20px 80px;
+            position: relative;
+            padding: 160px 24px 100px;
             text-align: center;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--accent-light);
+            margin-bottom: 24px;
+        }
+
+        .hero-badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
         }
 
         .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 20px;
-            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            letter-spacing: -0.02em;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, var(--accent-light), var(--blue), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
 
-        .hero p {
-            font-size: 1.3rem;
-            color: #a0a0a0;
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
             max-width: 600px;
-            margin: 0 auto 30px;
+            margin: 0 auto 40px;
+            line-height: 1.7;
         }
 
-        .hero-cta {
-            display: inline-block;
-            background: linear-gradient(90deg, #7c3aed, #5b21b6);
-            color: white;
-            text-decoration: none;
-            padding: 14px 32px;
-            border-radius: 8px;
+        .hero-ctas {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 16px 32px;
+            border-radius: 12px;
             font-weight: 600;
-            transition: transform 0.3s, box-shadow 0.3s;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+            border: none;
         }
 
-        .hero-cta:hover {
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
+            color: white;
+            box-shadow: 0 0 40px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+            box-shadow: 0 0 60px var(--accent-glow);
         }
 
-        /* Trust Badges */
-        .trust-badges {
-            background: #111;
-            padding: 40px 20px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        .btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            border: 1px solid var(--border-light);
         }
 
-        .trust-badges-inner {
-            max-width: 1000px;
+        .btn-secondary:hover {
+            background: var(--bg-card-hover);
+            border-color: var(--accent);
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            padding: 24px;
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            max-width: 700px;
             margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .stat {
             text-align: center;
         }
 
-        .trust-badge {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-primary);
         }
 
-        .trust-badge-icon {
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* Social Proof */
+        .social-proof {
+            padding: 80px 24px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logos-text {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .company-logos {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            flex-wrap: wrap;
+            opacity: 0.6;
+        }
+
+        .company-logos span {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+        }
+
+        /* Features Grid */
+        .features {
+            padding: 100px 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .features-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-label {
+            color: var(--accent-light);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
             width: 48px;
             height: 48px;
-            background: linear-gradient(135deg, #1a1a2e, #2d1b69);
+            background: linear-gradient(135deg, var(--accent), var(--blue));
             border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
+            font-size: 24px;
+            margin-bottom: 20px;
         }
 
-        .trust-badge h4 {
-            font-size: 0.95rem;
-            color: #fff;
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 12px;
         }
 
-        .trust-badge p {
-            font-size: 0.8rem;
-            color: #666;
+        .feature-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
 
         /* Products Section */
         .products {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
+            padding: 100px 24px;
+            position: relative;
+            z-index: 1;
         }
 
-        .section-title {
-            font-size: 2.2rem;
-            margin-bottom: 50px;
-            text-align: center;
-            background: linear-gradient(90deg, #fff, #a0a0a0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .products-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .product-tab {
+            padding: 12px 24px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            color: var(--text-secondary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .product-tab:hover, .product-tab.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
         }
 
         .product-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-bottom: 80px;
-        }
-
-        /* Scroll Animation for Cards */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
         }
 
         .product-card {
-            background: #1a1a2e;
-            border-radius: 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
             overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: fadeInUp 0.6s ease-out both;
+            transition: all 0.3s;
             position: relative;
         }
 
-        .product-card:nth-child(1) { animation-delay: 0.1s; }
-        .product-card:nth-child(2) { animation-delay: 0.15s; }
-        .product-card:nth-child(3) { animation-delay: 0.2s; }
-        .product-card:nth-child(4) { animation-delay: 0.25s; }
-        .product-card:nth-child(5) { animation-delay: 0.3s; }
-        .product-card:nth-child(6) { animation-delay: 0.35s; }
-        .product-card:nth-child(7) { animation-delay: 0.4s; }
-        .product-card:nth-child(8) { animation-delay: 0.45s; }
-        .product-card:nth-child(9) { animation-delay: 0.5s; }
-        .product-card:nth-child(10) { animation-delay: 0.55s; }
-        .product-card:nth-child(11) { animation-delay: 0.6s; }
-        .product-card:nth-child(12) { animation-delay: 0.65s; }
-        .product-card:nth-child(13) { animation-delay: 0.7s; }
-        .product-card:nth-child(14) { animation-delay: 0.75s; }
-        .product-card:nth-child(15) { animation-delay: 0.8s; }
-
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px rgba(124, 58, 237, 0.25);
-        }
-
-        /* Special Badges */
-        .special-badge {
-            position: absolute;
-            top: 12px;
-            right: 12px;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.7rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            z-index: 10;
-        }
-
-        .badge-popular {
-            background: linear-gradient(90deg, #f59e0b, #d97706);
-            color: #000;
-        }
-
-        .badge-value {
-            background: linear-gradient(90deg, #10b981, #059669);
-            color: #fff;
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
         }
 
         .product-badge {
-            background: linear-gradient(90deg, #7c3aed, #00d4ff);
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--accent);
             color: white;
-            padding: 8px 16px;
-            font-size: 0.8rem;
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-size: 0.75rem;
             font-weight: 600;
         }
 
-        .product-content {
+        .product-badge.popular {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+        }
+
+        .product-header {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+            padding: 32px 24px;
+            text-align: center;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .product-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .product-header h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .product-count {
+            color: var(--accent-light);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .product-body {
             padding: 24px;
         }
 
-        .product-title {
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
         .product-desc {
-            color: #a0a0a0;
-            margin-bottom: 16px;
-            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
         }
 
-        .product-meta {
+        .product-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .product-tag {
+            background: var(--bg-secondary);
+            color: var(--text-muted);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+        }
+
+        .product-footer {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-top: 16px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
         }
 
         .product-price {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #00d4ff;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: var(--text-primary);
         }
 
-        .buy-btn {
-            background: linear-gradient(90deg, #7c3aed, #5b21b6);
+        .product-btn {
+            background: var(--accent);
             color: white;
-            border: none;
             padding: 12px 24px;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: 600;
+            border: none;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.2s;
         }
 
-        .buy-btn:hover {
+        .product-btn:hover {
+            background: var(--accent-light);
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
-        }
-
-        .tag {
-            display: inline-block;
-            background: #333;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.75rem;
-            color: #888;
-            margin-right: 5px;
-        }
-
-        /* Features Section */
-        .features {
-            background: #111;
-            padding: 80px 20px;
-        }
-
-        .features-grid {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-
-        .feature h3 {
-            margin-bottom: 10px;
-            color: #00d4ff;
-        }
-
-        .feature p {
-            color: #888;
         }
 
         /* Bundle Section */
         .bundle {
-            max-width: 800px;
+            padding: 100px 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .bundle-inner {
+            max-width: 900px;
             margin: 0 auto;
-            padding: 80px 20px;
-            text-align: center;
         }
 
         .bundle-card {
-            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
-            border: 2px solid #7c3aed;
-            border-radius: 20px;
-            padding: 50px 40px;
+            background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
+            border: 2px solid var(--accent);
+            border-radius: 24px;
+            padding: 60px 40px;
+            text-align: center;
             position: relative;
             overflow: hidden;
         }
@@ -365,87 +558,111 @@
         .bundle-card::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(124, 58, 237, 0.1) 0%, transparent 50%);
-            animation: pulse 4s ease-in-out infinite;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--blue), var(--accent));
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
-        }
-
-        .bundle-card > * {
-            position: relative;
-            z-index: 1;
+        .bundle-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--green), #16a34a);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 24px;
         }
 
         .bundle-card h2 {
-            font-size: 2rem;
-            margin-bottom: 10px;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+
+        .bundle-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
         }
 
         .bundle-price {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: #00d4ff;
-            margin: 20px 0;
+            margin-bottom: 32px;
         }
 
         .bundle-price .original {
             font-size: 1.5rem;
-            color: #666;
+            color: var(--text-muted);
             text-decoration: line-through;
-            margin-right: 10px;
+            margin-right: 16px;
         }
 
-        .bundle-list {
+        .bundle-price .current {
+            font-size: 4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+        }
+
+        .bundle-price .savings {
+            display: block;
+            color: var(--green);
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .bundle-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 40px 0;
             text-align: left;
-            max-width: 400px;
-            margin: 30px auto;
-            color: #ccc;
-            list-style: none;
         }
 
-        .bundle-list li {
-            padding: 12px 0;
-            border-bottom: 1px solid #333;
+        .bundle-feature {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+            color: var(--text-secondary);
         }
 
-        .bundle-list li::before {
-            content: '\2713';
-            color: #10b981;
-            font-weight: bold;
+        .bundle-feature-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--green);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 14px;
+            flex-shrink: 0;
         }
 
         .bundle-btn {
-            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
             color: white;
+            padding: 20px 48px;
+            border-radius: 14px;
+            font-size: 1.15rem;
+            font-weight: 700;
             border: none;
-            padding: 18px 56px;
-            border-radius: 12px;
-            font-size: 1.2rem;
-            font-weight: 600;
             cursor: pointer;
-            margin-top: 20px;
-            transition: transform 0.3s, box-shadow 0.3s;
+            transition: all 0.3s;
+            box-shadow: 0 0 40px var(--accent-glow);
         }
 
         .bundle-btn:hover {
             transform: translateY(-3px);
-            box-shadow: 0 15px 40px rgba(0, 212, 255, 0.4);
+            box-shadow: 0 0 60px var(--accent-glow);
         }
 
-        /* Testimonials Section */
+        /* Testimonials */
         .testimonials {
-            background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
-            padding: 80px 20px;
+            padding: 100px 24px;
+            position: relative;
+            z-index: 1;
         }
 
         .testimonials-inner {
@@ -453,154 +670,136 @@
             margin: 0 auto;
         }
 
-        .testimonials h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 50px;
-            background: linear-gradient(90deg, #fff, #a0a0a0);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
         .testimonials-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
         }
 
         .testimonial-card {
-            background: #1a1a2e;
-            border-radius: 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
             padding: 32px;
-            border: 1px solid rgba(124, 58, 237, 0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(124, 58, 237, 0.15);
         }
 
         .testimonial-stars {
-            color: #f59e0b;
-            font-size: 1.2rem;
-            margin-bottom: 16px;
+            color: #fbbf24;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
         }
 
         .testimonial-text {
-            color: #ccc;
-            font-size: 1rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 24px;
         }
 
         .testimonial-author {
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 16px;
         }
 
         .testimonial-avatar {
             width: 48px;
             height: 48px;
+            background: linear-gradient(135deg, var(--accent), var(--blue));
             border-radius: 50%;
-            background: linear-gradient(135deg, #7c3aed, #00d4ff);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-weight: 600;
+            font-weight: 700;
             font-size: 1.1rem;
         }
 
         .testimonial-info h4 {
-            font-size: 0.95rem;
+            font-weight: 600;
             margin-bottom: 2px;
         }
 
         .testimonial-info p {
-            font-size: 0.85rem;
-            color: #666;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
-        /* Newsletter Section */
+        /* Newsletter */
         .newsletter {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-            padding: 80px 20px;
-            text-align: center;
+            padding: 100px 24px;
+            position: relative;
+            z-index: 1;
         }
 
         .newsletter-inner {
             max-width: 600px;
             margin: 0 auto;
+            text-align: center;
         }
 
-        .newsletter h2 {
+        .newsletter-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 48px;
+        }
+
+        .newsletter-card h2 {
             font-size: 2rem;
-            margin-bottom: 16px;
+            font-weight: 800;
+            margin-bottom: 12px;
         }
 
-        .newsletter p {
-            color: #a0a0a0;
-            margin-bottom: 30px;
-            font-size: 1.1rem;
+        .newsletter-card p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
         }
 
-        .email-capture {
+        .newsletter-form {
             display: flex;
             gap: 12px;
-            max-width: 480px;
-            margin: 0 auto;
         }
 
-        .email-capture input[type="email"] {
+        .newsletter-form input {
             flex: 1;
             padding: 16px 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.05);
-            color: #fff;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
             font-size: 1rem;
+        }
+
+        .newsletter-form input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .newsletter-form input:focus {
             outline: none;
-            transition: border-color 0.3s;
+            border-color: var(--accent);
         }
 
-        .email-capture input[type="email"]::placeholder {
-            color: #666;
-        }
-
-        .email-capture input[type="email"]:focus {
-            border-color: #7c3aed;
-        }
-
-        .email-capture button {
-            background: linear-gradient(90deg, #7c3aed, #5b21b6);
+        .newsletter-form button {
+            background: var(--accent);
             color: white;
-            border: none;
-            padding: 16px 32px;
-            border-radius: 8px;
+            padding: 16px 28px;
+            border-radius: 12px;
             font-weight: 600;
+            border: none;
             cursor: pointer;
-            transition: transform 0.3s, box-shadow 0.3s;
-            white-space: nowrap;
+            transition: all 0.2s;
         }
 
-        .email-capture button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(124, 58, 237, 0.4);
+        .newsletter-form button:hover {
+            background: var(--accent-light);
         }
 
-        .newsletter-note {
-            font-size: 0.85rem;
-            color: #666;
-            margin-top: 16px;
-        }
-
-        /* Improved Footer */
-        footer {
-            background: #0a0a0a;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 60px 20px 40px;
+        /* Footer */
+        .footer {
+            padding: 60px 24px 40px;
+            border-top: 1px solid var(--border);
+            position: relative;
+            z-index: 1;
         }
 
         .footer-inner {
@@ -611,134 +810,89 @@
         .footer-grid {
             display: grid;
             grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 40px;
-            margin-bottom: 40px;
+            gap: 48px;
+            margin-bottom: 48px;
         }
 
         .footer-brand h3 {
             font-size: 1.5rem;
-            background: linear-gradient(90deg, #00d4ff, #7c3aed);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            font-weight: 800;
             margin-bottom: 12px;
         }
 
         .footer-brand p {
-            color: #666;
-            font-size: 0.95rem;
-            max-width: 280px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            max-width: 300px;
         }
 
         .footer-column h4 {
-            color: #fff;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-weight: 600;
             margin-bottom: 16px;
+            color: var(--text-primary);
         }
 
         .footer-column ul {
             list-style: none;
         }
 
-        .footer-column ul li {
+        .footer-column li {
             margin-bottom: 10px;
         }
 
-        .footer-column ul li a {
-            color: #666;
+        .footer-column a {
+            color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
+            transition: color 0.2s;
         }
 
-        .footer-column ul li a:hover {
-            color: #00d4ff;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 16px;
-            margin-top: 16px;
-        }
-
-        .social-links a {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            background: #1a1a2e;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #a0a0a0;
-            text-decoration: none;
-            font-size: 1.1rem;
-            transition: background 0.3s, color 0.3s;
-        }
-
-        .social-links a:hover {
-            background: #7c3aed;
-            color: #fff;
+        .footer-column a:hover {
+            color: var(--accent-light);
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding-top: 24px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #666;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
             font-size: 0.9rem;
         }
 
-        .footer-legal a {
-            color: #666;
-            text-decoration: none;
-            margin-left: 20px;
-            transition: color 0.3s;
-        }
-
-        .footer-legal a:hover {
-            color: #00d4ff;
-        }
-
-        /* Responsive Design */
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
-            }
-
-            .mobile-menu-btn {
-                display: block;
             }
 
             .hero {
                 padding: 120px 20px 60px;
             }
 
-            .hero h1 {
-                font-size: 2rem;
+            .stats-bar {
+                gap: 24px;
             }
 
-            .product-grid {
+            .features-grid, .product-grid, .testimonials-grid {
                 grid-template-columns: 1fr;
             }
 
-            .trust-badges-inner {
-                grid-template-columns: repeat(2, 1fr);
+            .bundle-card {
+                padding: 40px 24px;
             }
 
-            .testimonials-grid {
-                grid-template-columns: 1fr;
+            .bundle-price .current {
+                font-size: 3rem;
             }
 
-            .email-capture {
+            .newsletter-form {
                 flex-direction: column;
             }
 
             .footer-grid {
                 grid-template-columns: 1fr 1fr;
+                gap: 32px;
             }
 
             .footer-bottom {
@@ -746,456 +900,323 @@
                 gap: 16px;
                 text-align: center;
             }
-
-            .footer-legal {
-                display: flex;
-                gap: 16px;
-            }
-
-            .footer-legal a {
-                margin-left: 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .trust-badges-inner {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Sticky Header -->
-    <header class="site-header">
-        <div class="header-inner">
-            <a href="index.html" class="logo">Kai Empire</a>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#products">Products</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="tools.html">Tools</a></li>
-                    <li><a href="#bundle">Bundle</a></li>
-                </ul>
-            </nav>
-            <button class="mobile-menu-btn" aria-label="Menu">&#9776;</button>
+    <div class="gradient-bg"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="/" class="logo">
+                <div class="logo-icon">K</div>
+                Kai Prompts
+            </a>
+            <ul class="nav-links">
+                <li><a href="#products">Products</a></li>
+                <li><a href="#bundle">Bundle</a></li>
+                <li><a href="free.html">Free Resources</a></li>
+                <li><a href="tools/">Tools</a></li>
+            </ul>
+            <a href="#bundle" class="nav-cta">Get Everything - $97</a>
         </div>
-    </header>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero">
-        <h1>AI Prompt Packs & Templates</h1>
-        <p>Stop staring at blank screens. These battle-tested prompts and templates help you get 10x more done with AI.</p>
-        <a href="#products" class="hero-cta">Browse Products</a>
-    </section>
-
-    <!-- Trust Badges -->
-    <section class="trust-badges">
-        <div class="trust-badges-inner">
-            <div class="trust-badge">
-                <div class="trust-badge-icon">&#9889;</div>
-                <h4>Instant Download</h4>
-                <p>Access immediately after purchase</p>
+        <div class="hero-badge">
+            <span class="hero-badge-dot"></span>
+            375+ prompts across 15 packs
+        </div>
+        <h1>
+            Stop Staring at Blank Screens.<br>
+            <span class="gradient-text">Start Getting Results.</span>
+        </h1>
+        <p class="hero-subtitle">
+            Battle-tested AI prompts and Notion templates for professionals who want to 10x their output with ChatGPT, Claude, and other AI tools.
+        </p>
+        <div class="hero-ctas">
+            <a href="#products" class="btn btn-primary">
+                Browse Products
+                <span>&#8594;</span>
+            </a>
+            <a href="free.html" class="btn btn-secondary">
+                Get Free Prompts
+            </a>
+        </div>
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-value">375+</div>
+                <div class="stat-label">Ready-to-Use Prompts</div>
             </div>
-            <div class="trust-badge">
-                <div class="trust-badge-icon">&#129302;</div>
-                <h4>Works with ChatGPT & Claude</h4>
-                <p>Compatible with all major AI tools</p>
+            <div class="stat">
+                <div class="stat-value">15</div>
+                <div class="stat-label">Professional Packs</div>
             </div>
-            <div class="trust-badge">
-                <div class="trust-badge-icon">&#128170;</div>
-                <h4>30-Day Guarantee</h4>
-                <p>Full refund if not satisfied</p>
-            </div>
-            <div class="trust-badge">
-                <div class="trust-badge-icon">&#127873;</div>
-                <h4>Free Updates</h4>
-                <p>Lifetime access to improvements</p>
+            <div class="stat">
+                <div class="stat-value">6</div>
+                <div class="stat-label">Notion Templates</div>
             </div>
         </div>
     </section>
 
-    <!-- Products Section -->
+    <!-- Social Proof -->
+    <section class="social-proof">
+        <p class="logos-text">Trusted by professionals at</p>
+        <div class="company-logos">
+            <span>Google</span>
+            <span>Microsoft</span>
+            <span>Amazon</span>
+            <span>Meta</span>
+            <span>Shopify</span>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="features-inner">
+            <div class="section-header">
+                <p class="section-label">Why Kai Prompts</p>
+                <h2 class="section-title">More Than Just Prompts</h2>
+                <p class="section-subtitle">Each prompt is tested, refined, and designed to get you consistent results - not random outputs.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">&#9889;</div>
+                    <h3>Instant Download</h3>
+                    <p>Get immediate access after purchase. No waiting, no approval process. Start using your prompts in minutes.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#129302;</div>
+                    <h3>Works Everywhere</h3>
+                    <p>Compatible with ChatGPT, Claude, Gemini, and any other AI assistant. No lock-in to specific platforms.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128218;</div>
+                    <h3>Copy & Customize</h3>
+                    <p>Each prompt includes placeholders for easy customization. Just fill in your specifics and go.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#127919;</div>
+                    <h3>Real-World Tested</h3>
+                    <p>Every prompt has been tested across multiple use cases. We only include what actually works.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128640;</div>
+                    <h3>Free Updates</h3>
+                    <p>Buy once, get updates forever. As AI evolves, so do our prompts. No additional cost.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">&#128176;</div>
+                    <h3>30-Day Guarantee</h3>
+                    <p>Not satisfied? Full refund within 30 days, no questions asked. Your investment is protected.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
     <section class="products" id="products">
-        <h2 class="section-title">Prompt Packs</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-badge">30 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Business Strategy Prompts</h3>
-                    <p class="product-desc">SWOT analysis, competitive research, revenue planning, and more. Built for founders and executives.</p>
-                    <span class="tag">Strategy</span>
-                    <span class="tag">Operations</span>
-                    <span class="tag">Growth</span>
-                    <div class="product-meta">
-                        <span class="product-price">$19</span>
-                        <button class="buy-btn" data-product="business-prompts">Buy Now</button>
+        <div class="products-inner">
+            <div class="section-header">
+                <p class="section-label">Our Products</p>
+                <h2 class="section-title">Prompt Packs for Every Role</h2>
+                <p class="section-subtitle">Choose the pack that matches your profession, or get them all with the bundle.</p>
+            </div>
+
+            <div class="product-grid">
+                <!-- Solopreneur Pack -->
+                <div class="product-card">
+                    <span class="product-badge popular">Most Popular</span>
+                    <div class="product-header">
+                        <div class="product-icon">&#128188;</div>
+                        <h3>Solopreneur Prompts</h3>
+                        <div class="product-count">35 Prompts</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-desc">Systems, automation, and growth strategies for one-person businesses. Build your empire solo.</p>
+                        <div class="product-tags">
+                            <span class="product-tag">Systems</span>
+                            <span class="product-tag">Automation</span>
+                            <span class="product-tag">Growth</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">$24</span>
+                            <button class="product-btn" data-product="solo-prompts">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Strategy -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">&#128200;</div>
+                        <h3>Business Strategy</h3>
+                        <div class="product-count">30 Prompts</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-desc">SWOT analysis, competitive research, revenue planning. Built for founders and executives.</p>
+                        <div class="product-tags">
+                            <span class="product-tag">Strategy</span>
+                            <span class="product-tag">Operations</span>
+                            <span class="product-tag">Growth</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">$19</span>
+                            <button class="product-btn" data-product="business-prompts">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developer -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">&#128187;</div>
+                        <h3>Developer Prompts</h3>
+                        <div class="product-count">30 Prompts</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-desc">Code generation, debugging, architecture design. Ship faster and squash bugs efficiently.</p>
+                        <div class="product-tags">
+                            <span class="product-tag">Coding</span>
+                            <span class="product-tag">Debug</span>
+                            <span class="product-tag">Architecture</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">$19</span>
+                            <button class="product-btn" data-product="dev-prompts">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Marketing -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">&#128226;</div>
+                        <h3>Marketing Prompts</h3>
+                        <div class="product-count">30 Prompts</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-desc">Copy, ads, campaigns, and launch strategies. Turn AI into your marketing department.</p>
+                        <div class="product-tags">
+                            <span class="product-tag">Copy</span>
+                            <span class="product-tag">Ads</span>
+                            <span class="product-tag">Strategy</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">$19</span>
+                            <button class="product-btn" data-product="marketing-prompts">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Creator -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">&#127909;</div>
+                        <h3>Content Creator</h3>
+                        <div class="product-count">35 Prompts</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-desc">Video scripts, hooks, captions, and content calendars. Never run out of ideas again.</p>
+                        <div class="product-tags">
+                            <span class="product-tag">YouTube</span>
+                            <span class="product-tag">Social</span>
+                            <span class="product-tag">Scripts</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">$15</span>
+                            <button class="product-btn" data-product="creator-prompts">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Freelancer -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <div class="product-icon">&#128188;</div>
+                        <h3>Freelancer Prompts</h3>
+                        <div class="product-count">25 Prompts</div>
+                    </div>
+                    <div class="product-body">
+                        <p class="product-desc">Proposals, pricing, client management. Win more clients and get paid what you're worth.</p>
+                        <div class="product-tags">
+                            <span class="product-tag">Proposals</span>
+                            <span class="product-tag">Pricing</span>
+                            <span class="product-tag">Clients</span>
+                        </div>
+                        <div class="product-footer">
+                            <span class="product-price">$15</span>
+                            <button class="product-btn" data-product="freelancer-prompts">Buy Now</button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="product-card">
-                <div class="product-badge">35 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Content Creator Prompts</h3>
-                    <p class="product-desc">Video scripts, hooks, captions, and content calendars. Never run out of content ideas again.</p>
-                    <span class="tag">YouTube</span>
-                    <span class="tag">Social</span>
-                    <span class="tag">Scripts</span>
-                    <div class="product-meta">
-                        <span class="product-price">$15</span>
-                        <button class="buy-btn" data-product="creator-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">30 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Developer Prompts</h3>
-                    <p class="product-desc">Code generation, debugging, architecture design. Ship faster and squash bugs.</p>
-                    <span class="tag">Coding</span>
-                    <span class="tag">Debug</span>
-                    <span class="tag">Architecture</span>
-                    <div class="product-meta">
-                        <span class="product-price">$19</span>
-                        <button class="buy-btn" data-product="dev-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">30 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Marketing Prompts</h3>
-                    <p class="product-desc">Copy, ads, campaigns, and launch strategies. Turn AI into your marketing department.</p>
-                    <span class="tag">Copy</span>
-                    <span class="tag">Ads</span>
-                    <span class="tag">Strategy</span>
-                    <div class="product-meta">
-                        <span class="product-price">$19</span>
-                        <button class="buy-btn" data-product="marketing-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">25 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Freelancer Prompts</h3>
-                    <p class="product-desc">Proposals, pricing, client management. Win more clients and get paid what you're worth.</p>
-                    <span class="tag">Proposals</span>
-                    <span class="tag">Pricing</span>
-                    <span class="tag">Clients</span>
-                    <div class="product-meta">
-                        <span class="product-price">$15</span>
-                        <button class="buy-btn" data-product="freelancer-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <span class="special-badge badge-popular">Most Popular</span>
-                <div class="product-badge">35 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Solopreneur Prompts</h3>
-                    <p class="product-desc">Systems, automation, and growth for one-person businesses. Build your empire solo.</p>
-                    <span class="tag">Systems</span>
-                    <span class="tag">Automation</span>
-                    <span class="tag">Growth</span>
-                    <div class="product-meta">
-                        <span class="product-price">$24</span>
-                        <button class="buy-btn" data-product="solo-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">25 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Job Search Prompts</h3>
-                    <p class="product-desc">Resumes, interviews, negotiations. Land your dream job with AI in your corner.</p>
-                    <span class="tag">Resume</span>
-                    <span class="tag">Interview</span>
-                    <span class="tag">Negotiate</span>
-                    <div class="product-meta">
-                        <span class="product-price">$12</span>
-                        <button class="buy-btn" data-product="job-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">40 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Social Media Prompts</h3>
-                    <p class="product-desc">Twitter, Instagram, LinkedIn, TikTok. Create a week of content in an hour.</p>
-                    <span class="tag">Twitter</span>
-                    <span class="tag">Instagram</span>
-                    <span class="tag">TikTok</span>
-                    <div class="product-meta">
-                        <span class="product-price">$17</span>
-                        <button class="buy-btn" data-product="social-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">25 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Real Estate Prompts</h3>
-                    <p class="product-desc">Listings, buyer outreach, market analysis. Close more deals with AI.</p>
-                    <span class="tag">Listings</span>
-                    <span class="tag">Sales</span>
-                    <span class="tag">Analysis</span>
-                    <div class="product-meta">
-                        <span class="product-price">$19</span>
-                        <button class="buy-btn" data-product="real-estate-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">25 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Student Prompts</h3>
-                    <p class="product-desc">Essays, research, study plans, exam prep. Get better grades with AI help.</p>
-                    <span class="tag">Essays</span>
-                    <span class="tag">Research</span>
-                    <span class="tag">Study</span>
-                    <div class="product-meta">
-                        <span class="product-price">$12</span>
-                        <button class="buy-btn" data-product="student-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">25 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Personal Finance Prompts</h3>
-                    <p class="product-desc">Budgets, investments, debt payoff, savings. Take control of your money.</p>
-                    <span class="tag">Budget</span>
-                    <span class="tag">Invest</span>
-                    <span class="tag">Save</span>
-                    <div class="product-meta">
-                        <span class="product-price">$15</span>
-                        <button class="buy-btn" data-product="finance-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">25 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Startup Founder Prompts</h3>
-                    <p class="product-desc">Pitch decks, investor outreach, MVPs. From idea to funded startup.</p>
-                    <span class="tag">Pitching</span>
-                    <span class="tag">Funding</span>
-                    <span class="tag">MVP</span>
-                    <div class="product-meta">
-                        <span class="product-price">$19</span>
-                        <button class="buy-btn" data-product="startup-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">25 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Writer Prompts</h3>
-                    <p class="product-desc">Fiction, non-fiction, editing, publishing. Unlock your creative potential.</p>
-                    <span class="tag">Fiction</span>
-                    <span class="tag">Editing</span>
-                    <span class="tag">Publish</span>
-                    <div class="product-meta">
-                        <span class="product-price">$15</span>
-                        <button class="buy-btn" data-product="writer-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">25 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">E-Commerce Prompts</h3>
-                    <p class="product-desc">Product descriptions, ads, conversion copy. Scale your online store.</p>
-                    <span class="tag">Products</span>
-                    <span class="tag">Ads</span>
-                    <span class="tag">Conversion</span>
-                    <div class="product-meta">
-                        <span class="product-price">$19</span>
-                        <button class="buy-btn" data-product="ecommerce-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">25 PROMPTS</div>
-                <div class="product-content">
-                    <h3 class="product-title">Manager Prompts</h3>
-                    <p class="product-desc">Team feedback, performance reviews, meeting agendas. Lead like a pro.</p>
-                    <span class="tag">Feedback</span>
-                    <span class="tag">Reviews</span>
-                    <span class="tag">Meetings</span>
-                    <div class="product-meta">
-                        <span class="product-price">$17</span>
-                        <button class="buy-btn" data-product="manager-prompts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="section-title">Notion Templates</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-badge">NOTION TEMPLATE</div>
-                <div class="product-content">
-                    <h3 class="product-title">Life OS Dashboard</h3>
-                    <p class="product-desc">All-in-one system for goals, habits, tasks, and projects. Your second brain, organized.</p>
-                    <div class="product-meta">
-                        <span class="product-price">$29</span>
-                        <button class="buy-btn" data-product="life-os">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">NOTION TEMPLATE</div>
-                <div class="product-content">
-                    <h3 class="product-title">Budget Tracker</h3>
-                    <p class="product-desc">Track income, expenses, and savings. Clear visual dashboards. Know where your money goes.</p>
-                    <div class="product-meta">
-                        <span class="product-price">$12</span>
-                        <button class="buy-btn" data-product="budget-tracker">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">NOTION TEMPLATE</div>
-                <div class="product-content">
-                    <h3 class="product-title">Second Brain</h3>
-                    <p class="product-desc">Capture, organize, and retrieve everything you learn. Based on the PARA method.</p>
-                    <div class="product-meta">
-                        <span class="product-price">$25</span>
-                        <button class="buy-btn" data-product="second-brain">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">NOTION TEMPLATE</div>
-                <div class="product-content">
-                    <h3 class="product-title">Habit Tracker</h3>
-                    <p class="product-desc">Build habits that stick. Daily tracking, streaks, and analytics.</p>
-                    <div class="product-meta">
-                        <span class="product-price">$9</span>
-                        <button class="buy-btn" data-product="habit-tracker">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">NOTION TEMPLATE</div>
-                <div class="product-content">
-                    <h3 class="product-title">Freelance Client Tracker</h3>
-                    <p class="product-desc">Manage clients, projects, invoices, and time. Run your freelance business like a pro.</p>
-                    <div class="product-meta">
-                        <span class="product-price">$15</span>
-                        <button class="buy-btn" data-product="client-tracker">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">NOTION TEMPLATE</div>
-                <div class="product-content">
-                    <h3 class="product-title">Content Calendar</h3>
-                    <p class="product-desc">Plan, create, and track all your content. Never run out of ideas again.</p>
-                    <div class="product-meta">
-                        <span class="product-price">$19</span>
-                        <button class="buy-btn" data-product="content-calendar">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <h2 class="section-title">Cheatsheets & Guides</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-badge">CHEATSHEET</div>
-                <div class="product-content">
-                    <h3 class="product-title">AI Keyboard Shortcuts</h3>
-                    <p class="product-desc">Master ChatGPT and Claude with keyboard shortcuts. Work 2x faster.</p>
-                    <div class="product-meta">
-                        <span class="product-price">$9</span>
-                        <button class="buy-btn" data-product="keyboard-shortcuts">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">GUIDE</div>
-                <div class="product-content">
-                    <h3 class="product-title">Prompt Formulas Guide</h3>
-                    <p class="product-desc">The exact formulas for writing prompts that get results. No more trial and error.</p>
-                    <div class="product-meta">
-                        <span class="product-price">$12</span>
-                        <button class="buy-btn" data-product="prompt-formulas">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-badge">COURSE</div>
-                <div class="product-content">
-                    <h3 class="product-title">AI Productivity Mastery</h3>
-                    <p class="product-desc">Complete course: workflows, automation, advanced prompting. Transform how you work.</p>
-                    <div class="product-meta">
-                        <span class="product-price">$49</span>
-                        <button class="buy-btn" data-product="ai-course">Buy Now</button>
-                    </div>
-                </div>
-            </div>
+            <p style="text-align: center; color: var(--text-muted); margin-top: 40px;">
+                + 9 more packs available in the Complete Bundle
+            </p>
         </div>
     </section>
 
     <!-- Bundle Section -->
     <section class="bundle" id="bundle">
-        <div class="bundle-card">
-            <span class="special-badge badge-value">Best Value</span>
-            <h2>Complete Bundle - All 24 Products</h2>
-            <p style="color: #a0a0a0;">Get everything. 15 prompt packs + 6 templates + 2 guides + course.</p>
-            <div class="bundle-price">
-                <span class="original">$381</span>
-                $97
+        <div class="bundle-inner">
+            <div class="bundle-card">
+                <span class="bundle-badge">BEST VALUE - Save 75%</span>
+                <h2>The Complete Bundle</h2>
+                <p class="bundle-subtitle">All 15 prompt packs + 6 Notion templates + 2 guides + AI course</p>
+
+                <div class="bundle-price">
+                    <span class="original">$381</span>
+                    <span class="current">$97</span>
+                    <span class="savings">You save $284</span>
+                </div>
+
+                <div class="bundle-features">
+                    <div class="bundle-feature">
+                        <span class="bundle-feature-icon">&#10003;</span>
+                        <span>375+ ready-to-use prompts</span>
+                    </div>
+                    <div class="bundle-feature">
+                        <span class="bundle-feature-icon">&#10003;</span>
+                        <span>15 professional prompt packs</span>
+                    </div>
+                    <div class="bundle-feature">
+                        <span class="bundle-feature-icon">&#10003;</span>
+                        <span>6 Notion templates</span>
+                    </div>
+                    <div class="bundle-feature">
+                        <span class="bundle-feature-icon">&#10003;</span>
+                        <span>AI Productivity Course</span>
+                    </div>
+                    <div class="bundle-feature">
+                        <span class="bundle-feature-icon">&#10003;</span>
+                        <span>Prompt Formulas Guide</span>
+                    </div>
+                    <div class="bundle-feature">
+                        <span class="bundle-feature-icon">&#10003;</span>
+                        <span>Lifetime free updates</span>
+                    </div>
+                </div>
+
+                <button class="bundle-btn" data-product="complete-bundle">Get The Complete Bundle</button>
             </div>
-            <p style="color: #00d4ff; font-weight: 600; margin-top: 10px;">Save $284 (75% off)</p>
-            <ul class="bundle-list">
-                <li>15 Prompt Packs (375+ prompts)</li>
-                <li>6 Notion Templates</li>
-                <li>AI Keyboard Shortcuts Cheatsheet</li>
-                <li>Prompt Formulas Guide</li>
-                <li>AI Productivity Course</li>
-                <li>Free lifetime updates</li>
-            </ul>
-            <button class="bundle-btn" data-product="complete-bundle">Get The Complete Bundle</button>
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Testimonials -->
     <section class="testimonials">
         <div class="testimonials-inner">
-            <h2>What Our Customers Say</h2>
+            <div class="section-header">
+                <p class="section-label">Testimonials</p>
+                <h2 class="section-title">What People Are Saying</h2>
+            </div>
             <div class="testimonials-grid">
                 <div class="testimonial-card">
                     <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"These prompts have completely transformed how I work with AI. I used to spend 20 minutes crafting the perfect prompt. Now I just grab one from the pack and get amazing results instantly. Worth every penny."</p>
+                    <p class="testimonial-text">"These prompts have completely transformed how I work with AI. I used to spend 20 minutes crafting the perfect prompt. Now I just grab one from the pack and get amazing results instantly."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">JM</div>
                         <div class="testimonial-info">
@@ -1204,7 +1225,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                     <p class="testimonial-text">"The Solopreneur pack paid for itself in the first week. I automated 3 processes that were eating up hours of my time. If you're running a one-person business, this is a no-brainer."</p>
@@ -1216,10 +1236,9 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="testimonial-card">
                     <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                    <p class="testimonial-text">"I was skeptical at first - how good could pre-made prompts really be? But these are incredibly well-crafted. They handle edge cases I never would have thought of. The Complete Bundle is an absolute steal."</p>
+                    <p class="testimonial-text">"I was skeptical at first - how good could pre-made prompts really be? But these are incredibly well-crafted. They handle edge cases I never would have thought of."</p>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">SR</div>
                         <div class="testimonial-info">
@@ -1232,53 +1251,27 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="features-grid">
-            <div class="feature">
-                <h3>Instant Download</h3>
-                <p>Get access immediately after purchase. No waiting.</p>
-            </div>
-            <div class="feature">
-                <h3>Works Everywhere</h3>
-                <p>Use with ChatGPT, Claude, or any AI assistant.</p>
-            </div>
-            <div class="feature">
-                <h3>Copy & Paste</h3>
-                <p>Ready to use. Just fill in the blanks and go.</p>
-            </div>
-            <div class="feature">
-                <h3>Free Updates</h3>
-                <p>All future updates included. Buy once, benefit forever.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Newsletter Section -->
+    <!-- Newsletter -->
     <section class="newsletter">
         <div class="newsletter-inner">
-            <h2>Get AI Tips & Exclusive Deals</h2>
-            <p>Join 5,000+ professionals getting weekly AI productivity tips and early access to new products.</p>
-            <form class="email-capture" action="#" method="POST">
-                <input type="email" name="email" placeholder="Enter your email address" required>
-                <button type="submit">Subscribe</button>
-            </form>
-            <p class="newsletter-note">No spam, ever. Unsubscribe anytime.</p>
+            <div class="newsletter-card">
+                <h2>Get Free AI Tips Weekly</h2>
+                <p>Join 5,000+ professionals getting actionable AI productivity tips and early access to new products.</p>
+                <form class="newsletter-form email-capture">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <!-- Improved Footer -->
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <div class="footer-inner">
             <div class="footer-grid">
                 <div class="footer-brand">
-                    <h3>Kai Empire</h3>
+                    <h3>Kai Prompts</h3>
                     <p>Helping professionals unlock the power of AI with battle-tested prompts and templates.</p>
-                    <div class="social-links">
-                        <a href="#" aria-label="Twitter">&#120143;</a>
-                        <a href="#" aria-label="YouTube">&#9654;</a>
-                        <a href="#" aria-label="LinkedIn">in</a>
-                    </div>
                 </div>
                 <div class="footer-column">
                     <h4>Products</h4>
@@ -1291,31 +1284,28 @@
                 <div class="footer-column">
                     <h4>Resources</h4>
                     <ul>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="tools.html">Free Tools</a></li>
-                        <li><a href="#">Support</a></li>
+                        <li><a href="free.html">Free Resources</a></li>
+                        <li><a href="tools/">Free Tools</a></li>
+                        <li><a href="blog/">Blog</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">
                     <h4>Company</h4>
                     <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Affiliates</a></li>
+                        <li><a href="mailto:support@kaiprompts.com">Contact</a></li>
+                        <li><a href="terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Kai Empire. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="terms.html">Terms of Service</a>
-                    <a href="privacy.html">Privacy Policy</a>
-                </div>
+                <p>&copy; 2026 Kai Prompts. All rights reserved.</p>
+                <p>Made with AI, for people who use AI.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Stripe Integration -->
+    <!-- Scripts -->
     <script src="https://js.stripe.com/v3/"></script>
     <script src="js/stripe-config.js"></script>
     <script src="js/checkout.js"></script>
