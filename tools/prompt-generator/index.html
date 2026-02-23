@@ -3,376 +3,1303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Prompt Generator | Kai Empire</title>
-    <meta name="description" content="Generate customized AI prompts instantly. Select your role, task type, and output format to create perfect prompts for ChatGPT, Claude, and more.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #fff;
-            min-height: 100vh;
-            line-height: 1.6;
+    <title>Free AI Prompt Generator | Create Custom Prompts for ChatGPT & Claude</title>
+    <meta name="description" content="Generate powerful, customized AI prompts instantly. Choose your use case, tone, and format to create basic, advanced, and expert-level prompts. Works with ChatGPT, Claude, and all AI tools.">
+    <link rel="canonical" href="https://kaiprompts.com/tools/prompt-generator/" />
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4XC558Y35N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-4XC558Y35N');
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:url" content="https://kaiprompts.com/tools/prompt-generator/" />
+    <meta property="og:title" content="Free AI Prompt Generator | Kai Prompts" />
+    <meta property="og:description" content="Generate 3 powerful prompt variations instantly. Basic, Advanced with role-playing, and Expert with chain-of-thought." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AI Prompt Generator",
+        "description": "Free tool to generate customized AI prompts for any use case",
+        "url": "https://kaiprompts.com/tools/prompt-generator/",
+        "applicationCategory": "ProductivityApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "Kai Prompts"
         }
-        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
-        h1 {
-            font-size: 2.5rem;
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #09090b;
+            --bg-secondary: #18181b;
+            --bg-card: #1c1c1f;
+            --bg-card-hover: #27272a;
+            --accent: #8b5cf6;
+            --accent-light: #a78bfa;
+            --accent-glow: rgba(139, 92, 246, 0.3);
+            --green: #22c55e;
+            --blue: #3b82f6;
+            --orange: #f59e0b;
+            --text-primary: #fafafa;
+            --text-secondary: #a1a1aa;
+            --text-muted: #71717a;
+            --border: #27272a;
+            --border-light: #3f3f46;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Animated gradient background */
+        .gradient-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 100vh;
+            background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15), transparent);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Header */
+        header {
             text-align: center;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 24px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--accent-light);
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--accent-light);
+            margin-bottom: 20px;
+        }
+
+        .badge-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--green);
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            font-weight: 800;
+            margin-bottom: 12px;
+            background: linear-gradient(135deg, var(--accent-light), var(--blue), var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .subtitle { text-align: center; color: #888; margin-bottom: 40px; font-size: 1.1rem; }
-        .card {
-            background: #1a1a2e;
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 30px;
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
-        .form-group { margin-bottom: 24px; }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, var(--accent), var(--blue));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
         label {
             display: block;
             margin-bottom: 8px;
-            color: #00d4ff;
-            font-weight: 600;
-            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-primary);
         }
-        select, input {
+
+        .label-hint {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            display: block;
+            margin-top: 2px;
+        }
+
+        select {
             width: 100%;
             padding: 14px 16px;
-            border: 2px solid #333;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
             border-radius: 10px;
-            background: #0a0a0a;
-            color: #fff;
+            color: var(--text-primary);
             font-size: 1rem;
+            font-family: inherit;
+            cursor: pointer;
             transition: border-color 0.3s, box-shadow 0.3s;
             appearance: none;
-            cursor: pointer;
-        }
-        select {
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%2371717a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
             background-repeat: no-repeat;
             background-position: right 12px center;
             background-size: 20px;
-            padding-right: 44px;
         }
-        select:focus, input:focus {
+
+        select:focus {
             outline: none;
-            border-color: #7c3aed;
-            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-glow);
         }
-        select:hover, input:hover { border-color: #555; }
-        .btn {
+
+        select:hover {
+            border-color: var(--border-light);
+        }
+
+        textarea {
             width: 100%;
-            padding: 16px;
-            border: none;
+            padding: 14px 16px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
             border-radius: 10px;
-            font-size: 1.1rem;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 120px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-glow);
+        }
+
+        textarea::placeholder {
+            color: var(--text-muted);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 24px;
+            border-radius: 10px;
             font-weight: 600;
+            font-size: 1rem;
             cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), #7c3aed);
+            color: white;
+            box-shadow: 0 0 30px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 50px var(--accent-glow);
+        }
+
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        /* Results Section */
+        .results-section {
+            margin-bottom: 40px;
+        }
+
+        .results-placeholder {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .results-placeholder-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        .results-placeholder p {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .results-grid {
+            display: none;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .results-grid.active {
+            display: grid;
+        }
+
+        .prompt-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
             transition: all 0.3s;
         }
-        .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(124, 58, 237, 0.3); }
-        .btn:active { transform: translateY(0); }
-        .btn-primary { background: linear-gradient(135deg, #7c3aed, #5b21b6); color: #fff; }
-        .btn-copy {
-            background: linear-gradient(135deg, #00d4ff, #0099cc);
-            color: #fff;
-            margin-top: 16px;
+
+        .prompt-card:hover {
+            border-color: var(--accent);
         }
-        .btn-copy:hover { box-shadow: 0 8px 20px rgba(0, 212, 255, 0.3); }
-        .output-header {
+
+        .prompt-header {
+            background: var(--bg-secondary);
+            padding: 16px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 12px;
+            border-bottom: 1px solid var(--border);
         }
-        .output-area {
-            background: #0a0a0a;
-            border: 2px solid #333;
-            border-radius: 10px;
-            padding: 20px;
-            min-height: 160px;
-            white-space: pre-wrap;
-            font-family: 'SF Mono', Monaco, 'Courier New', monospace;
-            font-size: 0.95rem;
-            color: #e0e0e0;
-            line-height: 1.8;
+
+        .prompt-type {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
-        .cta-card {
-            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b69 100%);
-            border: 2px solid #7c3aed;
-            border-radius: 16px;
-            padding: 35px;
-            text-align: center;
-        }
-        .cta-card h3 {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-bottom: 12px;
-        }
-        .cta-card p { color: #a0a0a0; margin-bottom: 24px; font-size: 1.05rem; }
-        .btn-cta {
-            background: linear-gradient(135deg, #00d4ff, #7c3aed);
-            display: inline-block;
-            padding: 16px 36px;
-            text-decoration: none;
-            color: #fff;
-            border-radius: 10px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-        }
-        .btn-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 212, 255, 0.4);
-        }
-        .copied { background: linear-gradient(135deg, #22c55e, #16a34a) !important; }
-        footer { text-align: center; padding: 40px 20px; color: #666; }
-        footer a { color: #7c3aed; text-decoration: none; transition: color 0.3s; }
-        footer a:hover { color: #00d4ff; }
-        .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #7c3aed, #00d4ff);
+
+        .prompt-type-badge {
             padding: 4px 12px;
-            border-radius: 20px;
+            border-radius: 100px;
             font-size: 0.75rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
-        @media (max-width: 600px) {
-            h1 { font-size: 1.8rem; }
-            .container { padding: 20px 16px; }
-            .card, .cta-card { padding: 24px 20px; }
+
+        .prompt-type-badge.basic {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--green);
+        }
+
+        .prompt-type-badge.advanced {
+            background: rgba(59, 130, 246, 0.15);
+            color: var(--blue);
+        }
+
+        .prompt-type-badge.expert {
+            background: rgba(139, 92, 246, 0.15);
+            color: var(--accent-light);
+        }
+
+        .prompt-type-label {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .copy-btn {
+            background: var(--bg-card-hover);
+            border: 1px solid var(--border-light);
+            color: var(--text-secondary);
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .copy-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+
+        .copy-btn.copied {
+            background: var(--green);
+            border-color: var(--green);
+            color: white;
+        }
+
+        .prompt-body {
+            padding: 20px;
+        }
+
+        .prompt-text {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+            white-space: pre-wrap;
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .prompt-text::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .prompt-text::-webkit-scrollbar-track {
+            background: var(--bg-secondary);
+            border-radius: 4px;
+        }
+
+        .prompt-text::-webkit-scrollbar-thumb {
+            background: var(--border-light);
+            border-radius: 4px;
+        }
+
+        /* Email Capture Section */
+        .email-section {
+            background: linear-gradient(135deg, var(--bg-card), var(--bg-secondary));
+            border: 2px solid var(--accent);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .email-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--blue), var(--accent));
+        }
+
+        .email-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+        }
+
+        .email-section h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .email-section p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .email-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .email-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(34, 197, 94, 0.1);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .email-feature-check {
+            color: var(--green);
+            font-weight: bold;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 12px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        .email-form input {
+            flex: 1;
+            padding: 16px 20px;
+            border-radius: 12px;
+            border: 2px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .email-form input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .email-form input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .email-form button {
+            background: linear-gradient(135deg, var(--green), #16a34a);
+            color: white;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .email-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(34, 197, 94, 0.3);
+        }
+
+        .email-success {
+            display: none;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .email-success.active {
+            display: block;
+        }
+
+        .email-success-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        .email-success h3 {
+            color: var(--green);
+            margin-bottom: 8px;
+        }
+
+        /* Upsell Section */
+        .upsell-section {
+            margin-bottom: 40px;
+        }
+
+        .upsell-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .upsell-header h2 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .upsell-header p {
+            color: var(--text-secondary);
+        }
+
+        .upsell-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .upsell-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .upsell-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .upsell-card.featured {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, var(--bg-card), rgba(139, 92, 246, 0.05));
+        }
+
+        .upsell-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--orange), #d97706);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+        }
+
+        .upsell-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+        }
+
+        .upsell-card h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .upsell-card .prompt-count {
+            color: var(--accent-light);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .upsell-card p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .upsell-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .upsell-price {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .upsell-btn {
+            background: var(--accent);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .upsell-card:hover .upsell-btn {
+            background: var(--accent-light);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--accent-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: var(--text-primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-section {
+                padding: 30px 20px;
+            }
+
+            .container {
+                padding: 24px 16px;
+            }
+
+            .upsell-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
+    <div class="gradient-bg"></div>
+
     <div class="container">
-        <span class="badge">FREE TOOL</span>
-        <h1>AI Prompt Generator</h1>
-        <p class="subtitle">Build the perfect prompt in seconds. Select your options and copy.</p>
+        <!-- Header -->
+        <header>
+            <a href="../" class="back-link">
+                <span>&larr;</span> Back to Tools
+            </a>
+            <div class="badge">
+                <span class="badge-dot"></span>
+                Free AI Tool
+            </div>
+            <h1>AI Prompt Generator</h1>
+            <p class="subtitle">Generate powerful, customized prompts in seconds. Get 3 variations: basic, advanced with role-playing, and expert with chain-of-thought.</p>
+        </header>
 
-        <div class="card">
-            <div class="form-group">
-                <label>Your Role</label>
-                <select id="role">
-                    <option value="">Select your role...</option>
-                    <option value="marketer">Marketer</option>
-                    <option value="developer">Developer</option>
-                    <option value="writer">Writer</option>
-                    <option value="entrepreneur">Entrepreneur</option>
-                    <option value="student">Student</option>
-                    <option value="manager">Manager</option>
-                    <option value="designer">Designer</option>
-                    <option value="freelancer">Freelancer</option>
-                    <option value="consultant">Consultant</option>
-                    <option value="creator">Content Creator</option>
-                </select>
+        <!-- Main Input Grid -->
+        <div class="main-grid">
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">&#9881;</span>
+                    Configure Your Prompt
+                </h2>
+
+                <div class="form-group">
+                    <label>
+                        Use Case
+                        <span class="label-hint">What type of task are you working on?</span>
+                    </label>
+                    <select id="useCase">
+                        <option value="writing">Writing</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="coding">Coding</option>
+                        <option value="business">Business</option>
+                        <option value="creative">Creative</option>
+                        <option value="research">Research</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Tone
+                        <span class="label-hint">How should the AI communicate?</span>
+                    </label>
+                    <select id="tone">
+                        <option value="professional">Professional</option>
+                        <option value="casual">Casual</option>
+                        <option value="persuasive">Persuasive</option>
+                        <option value="educational">Educational</option>
+                        <option value="friendly">Friendly</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Output Format
+                        <span class="label-hint">How should the response be structured?</span>
+                    </label>
+                    <select id="outputFormat">
+                        <option value="email">Email</option>
+                        <option value="blog">Blog Post</option>
+                        <option value="code">Code</option>
+                        <option value="list">List</option>
+                        <option value="analysis">Analysis</option>
+                        <option value="script">Script</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>
+                        Length
+                        <span class="label-hint">How detailed should the response be?</span>
+                    </label>
+                    <select id="length">
+                        <option value="brief">Brief (Quick & concise)</option>
+                        <option value="standard" selected>Standard (Balanced)</option>
+                        <option value="detailed">Detailed (Comprehensive)</option>
+                    </select>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Task Type</label>
-                <select id="task">
-                    <option value="">Select task type...</option>
-                    <option value="brainstorm">Brainstorm Ideas</option>
-                    <option value="analyze">Analyze Data/Content</option>
-                    <option value="create">Create Content</option>
-                    <option value="improve">Improve/Edit</option>
-                    <option value="summarize">Summarize</option>
-                    <option value="explain">Explain Concept</option>
-                    <option value="solve">Solve Problem</option>
-                    <option value="plan">Create Plan</option>
-                </select>
+
+            <div class="card">
+                <h2 class="card-title">
+                    <span class="card-icon">&#9997;</span>
+                    Your Task
+                </h2>
+
+                <div class="form-group">
+                    <label>
+                        Describe Your Task
+                        <span class="label-hint">Be specific about what you want to accomplish</span>
+                    </label>
+                    <textarea id="taskInput" placeholder="Example: Write a welcome email for new subscribers to my fitness newsletter, highlighting the benefits of staying subscribed and what content they can expect..."></textarea>
+                </div>
+
+                <button class="btn btn-primary" id="generateBtn">
+                    <span>&#10024;</span>
+                    Generate 3 Prompts
+                </button>
             </div>
-            <div class="form-group">
-                <label>Output Format</label>
-                <select id="format">
-                    <option value="">Select output format...</option>
-                    <option value="list">Bullet List</option>
-                    <option value="paragraph">Paragraph</option>
-                    <option value="table">Table</option>
-                    <option value="step-by-step">Step-by-Step Guide</option>
-                    <option value="outline">Outline</option>
-                    <option value="comparison">Comparison</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label>Topic (Optional)</label>
-                <input type="text" id="topic" placeholder="e.g., email marketing, React hooks, product launch...">
-            </div>
-            <button class="btn btn-primary" onclick="generatePrompt()">Generate Prompt</button>
         </div>
 
-        <div class="card" id="output-card" style="display:none;">
-            <div class="output-header">
-                <label style="margin-bottom: 0;">Your Generated Prompt</label>
+        <!-- Results Section -->
+        <div class="results-section">
+            <div class="results-placeholder" id="resultsPlaceholder">
+                <div class="results-placeholder-icon">&#128173;</div>
+                <p>Configure your settings and describe your task above,<br>then click "Generate 3 Prompts" to create custom prompts.</p>
             </div>
-            <div class="output-area" id="output"></div>
-            <button class="btn btn-copy" id="copyBtn" onclick="copyPrompt()">Copy to Clipboard</button>
+
+            <div class="results-grid" id="resultsGrid">
+                <!-- Basic Prompt -->
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <div class="prompt-type">
+                            <span class="prompt-type-badge basic">Basic</span>
+                            <span class="prompt-type-label">Direct Prompt</span>
+                        </div>
+                        <button class="copy-btn" data-prompt="basic">
+                            <span>&#128203;</span> Copy
+                        </button>
+                    </div>
+                    <div class="prompt-body">
+                        <div class="prompt-text" id="basicPrompt"></div>
+                    </div>
+                </div>
+
+                <!-- Advanced Prompt -->
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <div class="prompt-type">
+                            <span class="prompt-type-badge advanced">Advanced</span>
+                            <span class="prompt-type-label">Role-Playing Prompt</span>
+                        </div>
+                        <button class="copy-btn" data-prompt="advanced">
+                            <span>&#128203;</span> Copy
+                        </button>
+                    </div>
+                    <div class="prompt-body">
+                        <div class="prompt-text" id="advancedPrompt"></div>
+                    </div>
+                </div>
+
+                <!-- Expert Prompt -->
+                <div class="prompt-card">
+                    <div class="prompt-header">
+                        <div class="prompt-type">
+                            <span class="prompt-type-badge expert">Expert</span>
+                            <span class="prompt-type-label">Chain-of-Thought Prompt</span>
+                        </div>
+                        <button class="copy-btn" data-prompt="expert">
+                            <span>&#128203;</span> Copy
+                        </button>
+                    </div>
+                    <div class="prompt-body">
+                        <div class="prompt-text" id="expertPrompt"></div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="cta-card">
-            <h3>Want 375+ Expert Prompts?</h3>
-            <p>Get our complete prompt packs with battle-tested templates for marketers, developers, writers, and more.</p>
-            <a href="../" class="btn-cta">Browse Prompt Packs</a>
+        <!-- Email Capture Section -->
+        <div class="email-section">
+            <div id="emailFormContainer">
+                <div class="email-icon">&#127873;</div>
+                <h2>Get 50 More Advanced Prompts Free</h2>
+                <p>Join 5,000+ professionals and get our curated collection of battle-tested prompts delivered to your inbox.</p>
+
+                <div class="email-features">
+                    <div class="email-feature">
+                        <span class="email-feature-check">&#10003;</span>
+                        50 Pro Prompts
+                    </div>
+                    <div class="email-feature">
+                        <span class="email-feature-check">&#10003;</span>
+                        Prompt Formulas Guide
+                    </div>
+                    <div class="email-feature">
+                        <span class="email-feature-check">&#10003;</span>
+                        Weekly AI Tips
+                    </div>
+                </div>
+
+                <form class="email-form" id="emailForm">
+                    <input type="email" id="emailInput" placeholder="Enter your email" required>
+                    <button type="submit">Get Free Prompts</button>
+                </form>
+            </div>
+
+            <div class="email-success" id="emailSuccess">
+                <div class="email-success-icon">&#127881;</div>
+                <h3>You're In!</h3>
+                <p>Check your inbox for your free prompts.</p>
+            </div>
+        </div>
+
+        <!-- Upsell Section -->
+        <div class="upsell-section">
+            <div class="upsell-header">
+                <h2>Want Even More Prompts?</h2>
+                <p>Get professionally crafted prompt packs for specific use cases</p>
+            </div>
+
+            <div class="upsell-grid">
+                <a href="../../#bundle" class="upsell-card featured">
+                    <span class="upsell-badge">Best Value</span>
+                    <div class="upsell-icon">&#128293;</div>
+                    <h3>The Complete Bundle</h3>
+                    <div class="prompt-count">375+ Prompts</div>
+                    <p>All 15 prompt packs, 6 Notion templates, guides, and AI course. Everything you need.</p>
+                    <div class="upsell-footer">
+                        <span class="upsell-price">$97</span>
+                        <span class="upsell-btn">Get Bundle</span>
+                    </div>
+                </a>
+
+                <a href="../../products/solopreneur-pack.html" class="upsell-card">
+                    <div class="upsell-icon">&#128188;</div>
+                    <h3>Solopreneur Pack</h3>
+                    <div class="prompt-count">35 Prompts</div>
+                    <p>Systems, automation, and growth strategies for one-person businesses.</p>
+                    <div class="upsell-footer">
+                        <span class="upsell-price">$24</span>
+                        <span class="upsell-btn">View Pack</span>
+                    </div>
+                </a>
+
+                <a href="../../products/developer-pack.html" class="upsell-card">
+                    <div class="upsell-icon">&#128187;</div>
+                    <h3>Developer Pack</h3>
+                    <div class="prompt-count">30 Prompts</div>
+                    <p>Code generation, debugging, and architecture design prompts.</p>
+                    <div class="upsell-footer">
+                        <span class="upsell-price">$19</span>
+                        <span class="upsell-btn">View Pack</span>
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>Made by <a href="../">Kai Empire</a></p>
+        <p>Made by <a href="../../">Kai Prompts</a> | <a href="../">More Free Tools</a></p>
     </footer>
 
     <script>
-        const templates = {
-            marketer: {
-                brainstorm: "Act as a senior marketing strategist with 15+ years of experience.\n\nBrainstorm innovative marketing ideas for [TOPIC].\n\nContext:\n- Consider current market trends and consumer behavior\n- Focus on differentiation from competitors\n- Include both traditional and digital approaches\n\nProvide your ideas as [FORMAT].\n\nFor each idea, briefly explain why it would work.",
-                analyze: "Act as a marketing analyst specializing in data-driven insights.\n\nAnalyze [TOPIC] and provide actionable insights.\n\nFocus on:\n- Key metrics and KPIs\n- Patterns and trends\n- Opportunities for optimization\n- Potential risks or issues\n\nPresent your analysis as [FORMAT].",
-                create: "Act as a creative marketing director at a top agency.\n\nCreate compelling marketing content for [TOPIC].\n\nRequirements:\n- Hook the audience immediately\n- Clear value proposition\n- Strong call-to-action\n- Brand-appropriate tone\n\nFormat your response as [FORMAT].",
-                improve: "Act as a marketing optimization expert.\n\nReview and improve [TOPIC].\n\nEvaluate:\n- Messaging clarity and impact\n- Target audience alignment\n- Conversion potential\n- Brand consistency\n\nProvide specific, actionable recommendations as [FORMAT].",
-                summarize: "Act as a marketing communications specialist.\n\nSummarize [TOPIC] for a marketing team.\n\nInclude:\n- Key takeaways\n- Strategic implications\n- Action items\n- Next steps\n\nFormat as [FORMAT].",
-                explain: "Act as a marketing educator and thought leader.\n\nExplain [TOPIC] to someone new to marketing.\n\nInclude:\n- Core concepts\n- Real-world examples\n- Best practices\n- Common mistakes to avoid\n\nPresent as [FORMAT].",
-                solve: "Act as a marketing problem solver and consultant.\n\nHelp solve this marketing challenge: [TOPIC]\n\nApproach:\n- Identify root causes\n- Explore multiple solutions\n- Recommend the best approach\n- Outline implementation steps\n\nFormat your solution as [FORMAT].",
-                plan: "Act as a strategic marketing planner.\n\nCreate a comprehensive marketing plan for [TOPIC].\n\nInclude:\n- Goals and objectives\n- Target audience\n- Key strategies and tactics\n- Timeline and milestones\n- Success metrics\n\nStructure as [FORMAT]."
+        // Configuration data for prompt generation
+        const config = {
+            useCases: {
+                writing: {
+                    label: 'Writing',
+                    roles: ['expert writer', 'professional copywriter', 'content strategist', 'senior editor'],
+                    context: 'content creation and written communication',
+                    expertise: ['writing best practices', 'audience engagement', 'clear communication', 'storytelling']
+                },
+                marketing: {
+                    label: 'Marketing',
+                    roles: ['senior marketing strategist', 'growth marketing expert', 'digital marketing specialist', 'brand consultant'],
+                    context: 'marketing strategy and customer acquisition',
+                    expertise: ['marketing psychology', 'conversion optimization', 'brand positioning', 'audience targeting']
+                },
+                coding: {
+                    label: 'Coding',
+                    roles: ['senior software engineer', 'solutions architect', 'full-stack developer', 'tech lead'],
+                    context: 'software development and technical implementation',
+                    expertise: ['clean code principles', 'design patterns', 'performance optimization', 'debugging']
+                },
+                business: {
+                    label: 'Business',
+                    roles: ['business strategist', 'management consultant', 'operations expert', 'executive advisor'],
+                    context: 'business strategy and operations',
+                    expertise: ['business analysis', 'strategic planning', 'operational efficiency', 'growth strategy']
+                },
+                creative: {
+                    label: 'Creative',
+                    roles: ['creative director', 'innovation consultant', 'design thinking expert', 'ideation specialist'],
+                    context: 'creative ideation and innovative solutions',
+                    expertise: ['creative thinking', 'ideation techniques', 'visual storytelling', 'concept development']
+                },
+                research: {
+                    label: 'Research',
+                    roles: ['research analyst', 'data scientist', 'industry researcher', 'market analyst'],
+                    context: 'research and analysis',
+                    expertise: ['research methodology', 'data analysis', 'insight synthesis', 'trend identification']
+                }
             },
-            developer: {
-                brainstorm: "Act as a senior software architect with expertise in modern development.\n\nBrainstorm technical solutions for [TOPIC].\n\nConsider:\n- Scalability and performance\n- Maintainability\n- Security implications\n- Technology trade-offs\n\nPresent your ideas as [FORMAT].",
-                analyze: "Act as a code reviewer and technical analyst.\n\nAnalyze [TOPIC] from a technical perspective.\n\nEvaluate:\n- Code quality and patterns\n- Performance bottlenecks\n- Security vulnerabilities\n- Architectural concerns\n\nProvide your analysis as [FORMAT].",
-                create: "Act as an expert programmer following best practices.\n\nCreate [TOPIC] with clean, production-ready code.\n\nRequirements:\n- Well-documented code\n- Error handling\n- Edge case coverage\n- Following language conventions\n\nFormat your response as [FORMAT].",
-                improve: "Act as a refactoring specialist.\n\nImprove and optimize [TOPIC].\n\nFocus on:\n- Readability and clarity\n- Performance optimization\n- Modern patterns and practices\n- Reducing technical debt\n\nPresent improvements as [FORMAT].",
-                summarize: "Act as a technical writer and documentation expert.\n\nSummarize [TOPIC] for developers.\n\nInclude:\n- Key concepts\n- Important APIs or interfaces\n- Usage examples\n- Common pitfalls\n\nFormat as [FORMAT].",
-                explain: "Act as a patient programming mentor.\n\nExplain [TOPIC] clearly for developers.\n\nCover:\n- Fundamental concepts\n- How it works under the hood\n- Practical examples\n- When to use (and when not to)\n\nPresent as [FORMAT].",
-                solve: "Act as a debugging expert and problem solver.\n\nHelp solve this technical problem: [TOPIC]\n\nApproach:\n- Diagnose the issue\n- Identify possible causes\n- Provide solution(s)\n- Explain the fix\n\nFormat your solution as [FORMAT].",
-                plan: "Act as a technical project manager.\n\nCreate a development plan for [TOPIC].\n\nInclude:\n- Technical requirements\n- Architecture decisions\n- Implementation phases\n- Testing strategy\n- Deployment plan\n\nStructure as [FORMAT]."
+            tones: {
+                professional: {
+                    label: 'Professional',
+                    instruction: 'Use a professional, business-appropriate tone. Be clear, concise, and authoritative.',
+                    qualities: ['clear', 'authoritative', 'polished']
+                },
+                casual: {
+                    label: 'Casual',
+                    instruction: 'Use a relaxed, conversational tone. Be approachable and easy to understand.',
+                    qualities: ['relaxed', 'conversational', 'approachable']
+                },
+                persuasive: {
+                    label: 'Persuasive',
+                    instruction: 'Use a compelling, persuasive tone. Focus on benefits and create urgency where appropriate.',
+                    qualities: ['compelling', 'benefit-focused', 'action-oriented']
+                },
+                educational: {
+                    label: 'Educational',
+                    instruction: 'Use an informative, teaching-focused tone. Explain concepts clearly and provide examples.',
+                    qualities: ['informative', 'clear', 'example-rich']
+                },
+                friendly: {
+                    label: 'Friendly',
+                    instruction: 'Use a warm, friendly tone. Be personable and build rapport with the reader.',
+                    qualities: ['warm', 'personable', 'engaging']
+                }
             },
-            writer: {
-                brainstorm: "Act as a creative writing mentor and published author.\n\nBrainstorm compelling ideas for [TOPIC].\n\nConsider:\n- Unique angles and perspectives\n- Emotional resonance\n- Audience engagement\n- Originality\n\nPresent your ideas as [FORMAT].",
-                analyze: "Act as a literary critic and editor.\n\nAnalyze [TOPIC] for writing quality.\n\nEvaluate:\n- Structure and flow\n- Voice and tone\n- Clarity and engagement\n- Areas for improvement\n\nProvide your analysis as [FORMAT].",
-                create: "Act as a professional writer with expertise in engaging content.\n\nCreate [TOPIC] that captivates readers.\n\nFocus on:\n- Strong opening hook\n- Clear narrative flow\n- Engaging language\n- Satisfying conclusion\n\nFormat as [FORMAT].",
-                improve: "Act as a senior editor at a major publication.\n\nReview and improve [TOPIC].\n\nFocus on:\n- Clarity and concision\n- Flow and transitions\n- Word choice\n- Impact and engagement\n\nPresent edits as [FORMAT].",
-                summarize: "Act as a skilled content curator.\n\nSummarize [TOPIC] while preserving its essence.\n\nCapture:\n- Main points\n- Key arguments\n- Important details\n- Overall message\n\nFormat as [FORMAT].",
-                explain: "Act as a writing coach and educator.\n\nExplain [TOPIC] to aspiring writers.\n\nInclude:\n- Core principles\n- Techniques and methods\n- Examples from great writing\n- Practice exercises\n\nPresent as [FORMAT].",
-                solve: "Act as a creative problem solver for writers.\n\nHelp overcome this writing challenge: [TOPIC]\n\nAddress:\n- The root of the problem\n- Multiple approaches\n- Practical solutions\n- Prevention strategies\n\nFormat your advice as [FORMAT].",
-                plan: "Act as a content strategist and writing planner.\n\nCreate a writing plan for [TOPIC].\n\nInclude:\n- Content outline\n- Key themes and messages\n- Research needs\n- Writing schedule\n- Revision process\n\nStructure as [FORMAT]."
+            formats: {
+                email: {
+                    label: 'Email',
+                    instruction: 'Format as a professional email with subject line, greeting, body, and sign-off.',
+                    structure: 'Include: Subject line, greeting, main message (2-3 paragraphs), call-to-action, sign-off'
+                },
+                blog: {
+                    label: 'Blog Post',
+                    instruction: 'Format as a blog post with headline, introduction, body sections with subheadings, and conclusion.',
+                    structure: 'Include: Compelling headline, hook introduction, body with H2/H3 subheadings, conclusion with CTA'
+                },
+                code: {
+                    label: 'Code',
+                    instruction: 'Provide well-commented code with explanations. Include any necessary imports and usage examples.',
+                    structure: 'Include: Code comments, imports, main code, usage example, error handling notes'
+                },
+                list: {
+                    label: 'List',
+                    instruction: 'Format as a well-organized list with clear categories or numbered steps.',
+                    structure: 'Include: Brief introduction, numbered/bulleted items with descriptions, summary if needed'
+                },
+                analysis: {
+                    label: 'Analysis',
+                    instruction: 'Provide a structured analysis with key findings, supporting evidence, and recommendations.',
+                    structure: 'Include: Executive summary, key findings, detailed analysis, recommendations, next steps'
+                },
+                script: {
+                    label: 'Script',
+                    instruction: 'Format as a script with clear dialogue, stage directions, and scene descriptions.',
+                    structure: 'Include: Scene descriptions, character dialogue, timing notes, visual/audio cues'
+                }
             },
-            entrepreneur: {
-                brainstorm: "Act as a successful startup advisor and investor.\n\nBrainstorm business ideas or strategies for [TOPIC].\n\nConsider:\n- Market opportunity\n- Competitive advantage\n- Revenue potential\n- Execution feasibility\n\nPresent as [FORMAT].",
-                analyze: "Act as a business analyst and consultant.\n\nAnalyze [TOPIC] from a business perspective.\n\nEvaluate:\n- Market dynamics\n- Financial implications\n- Risks and opportunities\n- Strategic fit\n\nProvide analysis as [FORMAT].",
-                create: "Act as a business development expert.\n\nCreate [TOPIC] for a growing business.\n\nFocus on:\n- Value creation\n- Scalability\n- Customer focus\n- Competitive positioning\n\nFormat as [FORMAT].",
-                improve: "Act as a business optimization consultant.\n\nImprove [TOPIC] for better results.\n\nFocus on:\n- Efficiency gains\n- Growth opportunities\n- Cost optimization\n- Process improvement\n\nPresent recommendations as [FORMAT].",
-                summarize: "Act as an executive advisor.\n\nSummarize [TOPIC] for a busy entrepreneur.\n\nHighlight:\n- Key decisions needed\n- Critical information\n- Action items\n- Bottom line impact\n\nFormat as [FORMAT].",
-                explain: "Act as a business mentor to entrepreneurs.\n\nExplain [TOPIC] in practical terms.\n\nCover:\n- Core concepts\n- Real-world applications\n- Success factors\n- Common mistakes\n\nPresent as [FORMAT].",
-                solve: "Act as a business problem solver.\n\nHelp solve this business challenge: [TOPIC]\n\nApproach:\n- Root cause analysis\n- Strategic options\n- Recommended solution\n- Implementation plan\n\nFormat as [FORMAT].",
-                plan: "Act as a strategic business planner.\n\nCreate a business plan for [TOPIC].\n\nInclude:\n- Vision and goals\n- Market strategy\n- Operations plan\n- Financial projections\n- Key milestones\n\nStructure as [FORMAT]."
-            },
-            student: {
-                brainstorm: "Act as an academic advisor and study coach.\n\nBrainstorm approaches for [TOPIC].\n\nConsider:\n- Different learning methods\n- Resource options\n- Time management\n- Retention strategies\n\nPresent as [FORMAT].",
-                analyze: "Act as a tutor and academic mentor.\n\nAnalyze [TOPIC] and provide feedback.\n\nEvaluate:\n- Understanding of concepts\n- Argument strength\n- Areas for improvement\n- Next steps for learning\n\nProvide analysis as [FORMAT].",
-                create: "Act as an academic writing tutor.\n\nHelp create [TOPIC] for academic purposes.\n\nFocus on:\n- Clear thesis/argument\n- Proper structure\n- Evidence and citations\n- Academic tone\n\nFormat as [FORMAT].",
-                improve: "Act as an essay editor and writing coach.\n\nImprove [TOPIC] for academic submission.\n\nFocus on:\n- Argument clarity\n- Evidence strength\n- Writing quality\n- Formatting\n\nPresent suggestions as [FORMAT].",
-                summarize: "Act as a study guide creator.\n\nSummarize [TOPIC] for exam preparation.\n\nInclude:\n- Key concepts\n- Important terms\n- Main takeaways\n- Likely exam topics\n\nFormat as [FORMAT].",
-                explain: "Act as a patient and clear tutor.\n\nExplain [TOPIC] in easy-to-understand terms.\n\nInclude:\n- Simple explanations\n- Helpful analogies\n- Step-by-step breakdowns\n- Practice examples\n\nPresent as [FORMAT].",
-                solve: "Act as a homework helper and tutor.\n\nHelp solve [TOPIC].\n\nProvide:\n- Clear solution steps\n- Explanation of reasoning\n- Related concepts\n- Similar practice problems\n\nFormat as [FORMAT].",
-                plan: "Act as an academic planner and study coach.\n\nCreate a study plan for [TOPIC].\n\nInclude:\n- Learning objectives\n- Study schedule\n- Resources needed\n- Review checkpoints\n- Practice activities\n\nStructure as [FORMAT]."
-            },
-            manager: {
-                brainstorm: "Act as a leadership coach and management consultant.\n\nBrainstorm strategies for [TOPIC].\n\nConsider:\n- Team dynamics\n- Organizational goals\n- Resource constraints\n- Change management\n\nPresent as [FORMAT].",
-                analyze: "Act as an organizational development expert.\n\nAnalyze [TOPIC] from a management perspective.\n\nEvaluate:\n- Team performance\n- Process efficiency\n- Leadership effectiveness\n- Improvement opportunities\n\nProvide analysis as [FORMAT].",
-                create: "Act as an HR and management specialist.\n\nCreate [TOPIC] for effective team management.\n\nFocus on:\n- Clarity and professionalism\n- Team alignment\n- Actionable outcomes\n- Positive culture\n\nFormat as [FORMAT].",
-                improve: "Act as a management consultant.\n\nImprove [TOPIC] for better team outcomes.\n\nFocus on:\n- Communication clarity\n- Process efficiency\n- Team engagement\n- Results orientation\n\nPresent recommendations as [FORMAT].",
-                summarize: "Act as an executive assistant.\n\nSummarize [TOPIC] for leadership review.\n\nHighlight:\n- Key decisions\n- Action items\n- Resource needs\n- Timeline\n\nFormat as [FORMAT].",
-                explain: "Act as a management trainer.\n\nExplain [TOPIC] to new managers.\n\nCover:\n- Core principles\n- Best practices\n- Common challenges\n- Success strategies\n\nPresent as [FORMAT].",
-                solve: "Act as a team problem solver.\n\nHelp resolve [TOPIC].\n\nAddress:\n- Root causes\n- Stakeholder perspectives\n- Solution options\n- Implementation approach\n\nFormat as [FORMAT].",
-                plan: "Act as a project and team planner.\n\nCreate a management plan for [TOPIC].\n\nInclude:\n- Goals and objectives\n- Team responsibilities\n- Timeline and milestones\n- Communication plan\n- Success metrics\n\nStructure as [FORMAT]."
-            },
-            designer: {
-                brainstorm: "Act as a creative director and design lead.\n\nBrainstorm design concepts for [TOPIC].\n\nConsider:\n- Visual aesthetics\n- User experience\n- Brand alignment\n- Innovation and trends\n\nPresent as [FORMAT].",
-                analyze: "Act as a UX researcher and design critic.\n\nAnalyze [TOPIC] from a design perspective.\n\nEvaluate:\n- Visual hierarchy\n- Usability\n- Accessibility\n- User experience\n\nProvide analysis as [FORMAT].",
-                create: "Act as a senior designer.\n\nCreate design specifications for [TOPIC].\n\nInclude:\n- Visual direction\n- Layout structure\n- Color and typography\n- Interaction patterns\n\nFormat as [FORMAT].",
-                improve: "Act as a design consultant.\n\nImprove [TOPIC] for better user experience.\n\nFocus on:\n- Visual refinement\n- Usability improvements\n- Consistency\n- Modern design patterns\n\nPresent suggestions as [FORMAT].",
-                summarize: "Act as a design strategist.\n\nSummarize [TOPIC] for stakeholders.\n\nHighlight:\n- Design decisions\n- Rationale\n- User impact\n- Next steps\n\nFormat as [FORMAT].",
-                explain: "Act as a design educator.\n\nExplain [TOPIC] to team members.\n\nCover:\n- Design principles\n- Best practices\n- Visual examples\n- Application tips\n\nPresent as [FORMAT].",
-                solve: "Act as a design thinking facilitator.\n\nHelp solve [TOPIC] using design methods.\n\nApproach:\n- User-centered analysis\n- Creative exploration\n- Solution prototyping\n- Validation approach\n\nFormat as [FORMAT].",
-                plan: "Act as a design project manager.\n\nCreate a design plan for [TOPIC].\n\nInclude:\n- Design phases\n- Deliverables\n- Review checkpoints\n- Timeline\n- Resources needed\n\nStructure as [FORMAT]."
-            },
-            freelancer: {
-                brainstorm: "Act as a successful freelance business coach.\n\nBrainstorm strategies for [TOPIC].\n\nConsider:\n- Client acquisition\n- Service positioning\n- Pricing optimization\n- Work-life balance\n\nPresent as [FORMAT].",
-                analyze: "Act as a freelance consultant and mentor.\n\nAnalyze [TOPIC] for freelance success.\n\nEvaluate:\n- Market positioning\n- Pricing strategy\n- Client fit\n- Growth potential\n\nProvide analysis as [FORMAT].",
-                create: "Act as a proposal and pitch specialist.\n\nCreate [TOPIC] to win freelance clients.\n\nFocus on:\n- Value proposition\n- Professional presentation\n- Clear deliverables\n- Compelling pricing\n\nFormat as [FORMAT].",
-                improve: "Act as a freelance business mentor.\n\nImprove [TOPIC] for better results.\n\nFocus on:\n- Client communication\n- Process efficiency\n- Value delivery\n- Professional growth\n\nPresent recommendations as [FORMAT].",
-                summarize: "Act as a business advisor for freelancers.\n\nSummarize [TOPIC] for quick reference.\n\nHighlight:\n- Key opportunities\n- Action items\n- Important deadlines\n- Priority tasks\n\nFormat as [FORMAT].",
-                explain: "Act as a freelance educator and coach.\n\nExplain [TOPIC] to new freelancers.\n\nCover:\n- Core concepts\n- Industry standards\n- Success strategies\n- Common pitfalls\n\nPresent as [FORMAT].",
-                solve: "Act as a freelance problem solver.\n\nHelp solve [TOPIC].\n\nAddress:\n- Client relationship issues\n- Business challenges\n- Practical solutions\n- Prevention strategies\n\nFormat as [FORMAT].",
-                plan: "Act as a freelance business strategist.\n\nCreate a plan for [TOPIC].\n\nInclude:\n- Business goals\n- Client acquisition strategy\n- Service offerings\n- Income targets\n- Growth milestones\n\nStructure as [FORMAT]."
-            },
-            consultant: {
-                brainstorm: "Act as a senior management consultant.\n\nBrainstorm solutions for [TOPIC].\n\nConsider:\n- Industry best practices\n- Innovative approaches\n- Implementation feasibility\n- Client value\n\nPresent as [FORMAT].",
-                analyze: "Act as a strategic analyst and consultant.\n\nAnalyze [TOPIC] comprehensively.\n\nEvaluate:\n- Current state\n- Root causes\n- Industry benchmarks\n- Improvement opportunities\n\nProvide analysis as [FORMAT].",
-                create: "Act as a consulting expert.\n\nCreate [TOPIC] for client delivery.\n\nFocus on:\n- Professional quality\n- Actionable insights\n- Clear recommendations\n- Executive presentation\n\nFormat as [FORMAT].",
-                improve: "Act as an optimization consultant.\n\nImprove [TOPIC] for better outcomes.\n\nFocus on:\n- Efficiency gains\n- Quality improvements\n- Cost optimization\n- Best practice alignment\n\nPresent recommendations as [FORMAT].",
-                summarize: "Act as an executive consultant.\n\nSummarize [TOPIC] for senior leadership.\n\nHighlight:\n- Key findings\n- Strategic implications\n- Recommended actions\n- Expected outcomes\n\nFormat as [FORMAT].",
-                explain: "Act as a consulting mentor.\n\nExplain [TOPIC] to clients or colleagues.\n\nCover:\n- Core concepts\n- Industry context\n- Practical applications\n- Success factors\n\nPresent as [FORMAT].",
-                solve: "Act as a problem-solving consultant.\n\nHelp solve [TOPIC] for a client.\n\nApproach:\n- Situation analysis\n- Options evaluation\n- Recommended solution\n- Implementation roadmap\n\nFormat as [FORMAT].",
-                plan: "Act as a strategic planning consultant.\n\nCreate a plan for [TOPIC].\n\nInclude:\n- Strategic objectives\n- Initiative roadmap\n- Resource requirements\n- Risk mitigation\n- Success metrics\n\nStructure as [FORMAT]."
-            },
-            creator: {
-                brainstorm: "Act as a successful content creator and strategist.\n\nBrainstorm content ideas for [TOPIC].\n\nConsider:\n- Audience engagement\n- Platform optimization\n- Trending formats\n- Unique angles\n\nPresent as [FORMAT].",
-                analyze: "Act as a content analyst and growth strategist.\n\nAnalyze [TOPIC] for content performance.\n\nEvaluate:\n- Engagement metrics\n- Audience response\n- Content patterns\n- Growth opportunities\n\nProvide analysis as [FORMAT].",
-                create: "Act as a professional content creator.\n\nCreate [TOPIC] that engages audiences.\n\nFocus on:\n- Attention-grabbing hooks\n- Value delivery\n- Platform best practices\n- Call-to-action\n\nFormat as [FORMAT].",
-                improve: "Act as a content optimization expert.\n\nImprove [TOPIC] for better performance.\n\nFocus on:\n- Hook strength\n- Engagement factors\n- Platform optimization\n- Audience resonance\n\nPresent suggestions as [FORMAT].",
-                summarize: "Act as a content strategist.\n\nSummarize [TOPIC] for content planning.\n\nHighlight:\n- Key themes\n- Content opportunities\n- Audience insights\n- Action items\n\nFormat as [FORMAT].",
-                explain: "Act as a content creation mentor.\n\nExplain [TOPIC] to aspiring creators.\n\nCover:\n- Core strategies\n- Platform specifics\n- Growth tactics\n- Monetization paths\n\nPresent as [FORMAT].",
-                solve: "Act as a creator economy consultant.\n\nHelp solve [TOPIC].\n\nAddress:\n- Growth challenges\n- Content blocks\n- Platform issues\n- Monetization problems\n\nFormat as [FORMAT].",
-                plan: "Act as a content planning strategist.\n\nCreate a content plan for [TOPIC].\n\nInclude:\n- Content pillars\n- Posting schedule\n- Platform strategy\n- Growth goals\n- Engagement tactics\n\nStructure as [FORMAT]."
+            lengths: {
+                brief: {
+                    label: 'Brief',
+                    instruction: 'Keep the response concise and to the point. Focus on essential information only.',
+                    wordRange: '100-200 words'
+                },
+                standard: {
+                    label: 'Standard',
+                    instruction: 'Provide a balanced response with adequate detail and examples.',
+                    wordRange: '300-500 words'
+                },
+                detailed: {
+                    label: 'Detailed',
+                    instruction: 'Provide a comprehensive response with thorough explanations, multiple examples, and nuanced details.',
+                    wordRange: '600-1000+ words'
+                }
             }
         };
 
-        const formatInstructions = {
-            list: "a clear, organized bullet-point list",
-            paragraph: "well-structured, flowing paragraphs",
-            table: "an organized table with clear columns",
-            "step-by-step": "a numbered step-by-step guide",
-            outline: "a hierarchical outline with main points and sub-points",
-            comparison: "a detailed comparison format showing pros/cons or alternatives"
-        };
+        // DOM Elements
+        const generateBtn = document.getElementById('generateBtn');
+        const resultsPlaceholder = document.getElementById('resultsPlaceholder');
+        const resultsGrid = document.getElementById('resultsGrid');
+        const emailForm = document.getElementById('emailForm');
+        const emailFormContainer = document.getElementById('emailFormContainer');
+        const emailSuccess = document.getElementById('emailSuccess');
 
-        function generatePrompt() {
-            const role = document.getElementById('role').value;
-            const task = document.getElementById('task').value;
-            const format = document.getElementById('format').value;
-            const topic = document.getElementById('topic').value.trim() || '[YOUR TOPIC HERE]';
+        // Generate prompts
+        generateBtn.addEventListener('click', generatePrompts);
 
-            if (!role || !task || !format) {
-                alert('Please select a role, task type, and output format.');
+        function generatePrompts() {
+            const useCase = document.getElementById('useCase').value;
+            const tone = document.getElementById('tone').value;
+            const format = document.getElementById('outputFormat').value;
+            const length = document.getElementById('length').value;
+            const task = document.getElementById('taskInput').value.trim();
+
+            if (!task) {
+                alert('Please describe your task before generating prompts.');
                 return;
             }
 
-            let prompt = templates[role][task];
-            prompt = prompt.replace(/\[TOPIC\]/g, topic);
-            prompt = prompt.replace(/\[FORMAT\]/g, formatInstructions[format]);
+            // Track event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_prompts', {
+                    'use_case': useCase,
+                    'tone': tone,
+                    'format': format,
+                    'length': length
+                });
+            }
 
-            document.getElementById('output').textContent = prompt;
-            document.getElementById('output-card').style.display = 'block';
-            document.getElementById('copyBtn').textContent = 'Copy to Clipboard';
-            document.getElementById('copyBtn').classList.remove('copied');
+            const useCaseData = config.useCases[useCase];
+            const toneData = config.tones[tone];
+            const formatData = config.formats[format];
+            const lengthData = config.lengths[length];
 
-            // Smooth scroll to output
-            document.getElementById('output-card').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Generate Basic Prompt
+            const basicPrompt = generateBasicPrompt(task, toneData, formatData, lengthData);
+
+            // Generate Advanced Prompt (with role-playing)
+            const advancedPrompt = generateAdvancedPrompt(task, useCaseData, toneData, formatData, lengthData);
+
+            // Generate Expert Prompt (with chain-of-thought)
+            const expertPrompt = generateExpertPrompt(task, useCaseData, toneData, formatData, lengthData);
+
+            // Display results
+            document.getElementById('basicPrompt').textContent = basicPrompt;
+            document.getElementById('advancedPrompt').textContent = advancedPrompt;
+            document.getElementById('expertPrompt').textContent = expertPrompt;
+
+            // Show results
+            resultsPlaceholder.style.display = 'none';
+            resultsGrid.classList.add('active');
+
+            // Scroll to results
+            resultsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
-        function copyPrompt() {
-            const text = document.getElementById('output').textContent;
-            navigator.clipboard.writeText(text).then(() => {
-                const btn = document.getElementById('copyBtn');
-                btn.textContent = 'Copied!';
-                btn.classList.add('copied');
-                setTimeout(() => {
-                    btn.textContent = 'Copy to Clipboard';
-                    btn.classList.remove('copied');
-                }, 2000);
+        function generateBasicPrompt(task, tone, format, length) {
+            return `${task}
+
+Requirements:
+- Tone: ${tone.instruction}
+- Format: ${format.instruction}
+- Length: ${length.instruction} (approximately ${length.wordRange})
+
+${format.structure}`;
+        }
+
+        function generateAdvancedPrompt(task, useCase, tone, format, length) {
+            const role = useCase.roles[Math.floor(Math.random() * useCase.roles.length)];
+            const expertise = useCase.expertise.join(', ');
+
+            return `You are a ${role} with deep expertise in ${expertise}. Your specialty is ${useCase.context}.
+
+Task: ${task}
+
+Instructions:
+1. ${tone.instruction}
+2. ${format.instruction}
+3. ${length.instruction} (target: ${length.wordRange})
+
+Output Structure:
+${format.structure}
+
+Additional Guidelines:
+- Draw on your expertise in ${useCase.context} to provide actionable insights
+- Include specific examples or recommendations where relevant
+- Ensure the output is immediately usable and practical`;
+        }
+
+        function generateExpertPrompt(task, useCase, tone, format, length) {
+            const role = useCase.roles[0];
+            const expertise = useCase.expertise;
+
+            return `You are a ${role} with 15+ years of experience. Before providing your response, think through this task systematically.
+
+Task: ${task}
+
+Step 1 - Understand the Context:
+First, consider:
+- What is the primary goal of this task?
+- Who is the target audience?
+- What constraints or requirements exist?
+
+Step 2 - Plan Your Approach:
+Think about:
+- What key elements must be included?
+- What structure will be most effective?
+- What expertise from ${expertise.join(', ')} applies here?
+
+Step 3 - Execute with Expertise:
+Now create your response following these specifications:
+
+Tone: ${tone.instruction}
+The output should feel ${tone.qualities.join(', ')}.
+
+Format: ${format.instruction}
+${format.structure}
+
+Length: ${length.instruction}
+Target approximately ${length.wordRange}.
+
+Step 4 - Quality Check:
+Before finalizing, verify:
+- Does this fully address the task?
+- Is the tone consistent throughout?
+- Is the format clear and easy to follow?
+- Have you provided actionable value?
+
+Now provide your expertly crafted response:`;
+        }
+
+        // Copy functionality
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const promptType = this.dataset.prompt;
+                const promptText = document.getElementById(promptType + 'Prompt').textContent;
+
+                navigator.clipboard.writeText(promptText).then(() => {
+                    // Track event
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'copy_prompt', {
+                            'prompt_type': promptType
+                        });
+                    }
+
+                    // Update button state
+                    const originalHTML = this.innerHTML;
+                    this.innerHTML = '<span>&#10003;</span> Copied!';
+                    this.classList.add('copied');
+
+                    setTimeout(() => {
+                        this.innerHTML = originalHTML;
+                        this.classList.remove('copied');
+                    }, 2000);
+                }).catch(err => {
+                    console.error('Failed to copy:', err);
+                    alert('Failed to copy. Please select and copy manually.');
+                });
             });
-        }
+        });
+
+        // Email form submission
+        emailForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const email = document.getElementById('emailInput').value;
+
+            // Track event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'email_signup', {
+                    'source': 'prompt_generator'
+                });
+            }
+
+            // Store email (in real implementation, send to backend/email service)
+            console.log('Email captured:', email);
+
+            // For demo purposes, store in localStorage
+            const emails = JSON.parse(localStorage.getItem('kaiprompts_emails') || '[]');
+            emails.push({ email, source: 'prompt_generator', date: new Date().toISOString() });
+            localStorage.setItem('kaiprompts_emails', JSON.stringify(emails));
+
+            // Show success message
+            emailFormContainer.style.display = 'none';
+            emailSuccess.classList.add('active');
+        });
+
+        // Allow Enter key in textarea to not submit
+        document.getElementById('taskInput').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter' && !e.shiftKey) {
+                // Allow natural enter behavior in textarea
+            }
+        });
     </script>
 </body>
 </html>
