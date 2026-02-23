@@ -158,42 +158,50 @@
         const urlParams = new URLSearchParams(window.location.search);
         const product = urlParams.get('product');
 
-        const productNames = {
-            'business-prompts': 'Business Strategy Prompts',
-            'creator-prompts': 'Content Creator Prompts',
-            'dev-prompts': 'Developer Prompts',
-            'marketing-prompts': 'Marketing Prompts',
-            'freelancer-prompts': 'Freelancer Prompts',
-            'solo-prompts': 'Solopreneur Prompts',
-            'job-prompts': 'Job Search Prompts',
-            'social-prompts': 'Social Media Prompts',
-            'real-estate-prompts': 'Real Estate Prompts',
-            'student-prompts': 'Student Prompts',
-            'finance-prompts': 'Personal Finance Prompts',
-            'startup-prompts': 'Startup Founder Prompts',
-            'writer-prompts': 'Writer Prompts',
-            'ecommerce-prompts': 'E-Commerce Prompts',
-            'manager-prompts': 'Manager Prompts',
-            'life-os': 'Life OS Dashboard',
-            'budget-tracker': 'Budget Tracker',
-            'second-brain': 'Second Brain',
-            'habit-tracker': 'Habit Tracker',
-            'client-tracker': 'Freelance Client Tracker',
-            'content-calendar': 'Content Calendar',
-            'keyboard-shortcuts': 'AI Keyboard Shortcuts',
-            'prompt-formulas': 'Prompt Formulas Guide',
-            'ai-course': 'AI Productivity Course',
-            'complete-bundle': 'Complete Bundle - All Products'
+        const productInfo = {
+            'business-prompts': { name: 'Business Strategy Prompts', download: 'deliverables/prompt-packs/business-prompts.md' },
+            'creator-prompts': { name: 'Content Creator Prompts', download: 'deliverables/prompt-packs/content-creator-prompts.md' },
+            'dev-prompts': { name: 'Developer Prompts', download: 'deliverables/prompt-packs/developer-prompts.md' },
+            'marketing-prompts': { name: 'Marketing Prompts', download: 'deliverables/prompt-packs/marketing-prompts.md' },
+            'freelancer-prompts': { name: 'Freelancer Prompts', download: 'deliverables/prompt-packs/freelancer-prompts.md' },
+            'solo-prompts': { name: 'Solopreneur Prompts', download: 'deliverables/prompt-packs/solopreneur-prompts.md' },
+            'job-prompts': { name: 'Job Search Prompts', download: 'deliverables/prompt-packs/job-search-prompts.md' },
+            'social-prompts': { name: 'Social Media Prompts', download: 'deliverables/prompt-packs/social-media-prompts.md' },
+            'real-estate-prompts': { name: 'Real Estate Prompts', download: 'deliverables/prompt-packs/real-estate-prompts.md' },
+            'student-prompts': { name: 'Student Prompts', download: 'deliverables/prompt-packs/student-prompts.md' },
+            'finance-prompts': { name: 'Personal Finance Prompts', download: 'deliverables/prompt-packs/personal-finance-prompts.md' },
+            'startup-prompts': { name: 'Startup Founder Prompts', download: 'deliverables/prompt-packs/startup-prompts.md' },
+            'writer-prompts': { name: 'Writer Prompts', download: 'deliverables/prompt-packs/writer-prompts.md' },
+            'ecommerce-prompts': { name: 'E-Commerce Prompts', download: 'deliverables/prompt-packs/ecommerce-prompts.md' },
+            'manager-prompts': { name: 'Manager Prompts', download: 'deliverables/prompt-packs/manager-prompts.md' },
+            'life-os': { name: 'Life OS Dashboard', download: 'deliverables/notion-templates/life-os-template.md' },
+            'budget-tracker': { name: 'Budget Tracker', download: 'deliverables/notion-templates/budget-tracker.md' },
+            'second-brain': { name: 'Second Brain', download: 'deliverables/notion-templates/second-brain.md' },
+            'habit-tracker': { name: 'Habit Tracker', download: 'deliverables/notion-templates/habit-tracker.md' },
+            'client-tracker': { name: 'Freelance Client Tracker', download: 'deliverables/notion-templates/client-tracker.md' },
+            'content-calendar': { name: 'Content Calendar', download: 'deliverables/notion-templates/content-calendar.md' },
+            'keyboard-shortcuts': { name: 'AI Keyboard Shortcuts', download: 'deliverables/cheatsheets/keyboard-shortcuts.md' },
+            'prompt-formulas': { name: 'Prompt Formulas Guide', download: 'deliverables/cheatsheets/prompt-formulas.md' },
+            'ai-course': { name: 'AI Productivity Course', download: 'deliverables/courses/ai-productivity-course.md' },
+            'complete-bundle': { name: 'Complete Bundle - All Products', download: 'downloads/complete-bundle.html' }
         };
 
-        if (product && productNames[product]) {
-            document.getElementById('product-name').textContent = productNames[product];
+        if (product && productInfo[product]) {
+            document.getElementById('product-name').textContent = productInfo[product].name;
+            var downloadLink = document.getElementById('download-link');
+            downloadLink.href = productInfo[product].download;
+            downloadLink.setAttribute('download', '');
+        } else {
+            // No product specified - show all downloads link
+            document.getElementById('product-name').textContent = 'Your products are ready!';
+            document.getElementById('download-link').href = 'downloads/';
+            document.getElementById('download-link').textContent = 'Go to Downloads';
         }
 
         // Track purchase in analytics
         if (typeof gtag !== 'undefined') {
             gtag('event', 'purchase_complete', {
-                'product': product
+                'product': product || 'unknown'
             });
         }
     </script>
