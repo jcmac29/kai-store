@@ -1,296 +1,320 @@
-# Job Search Prompts Pack
-## 25 AI Prompts for Resumes, Interviews & Offers
+# Job Search AI Prompt Pack
+## 30 Strategic Prompts to Land Your Dream Job Faster
 
 ---
 
-## Resume & Applications (8 Prompts)
+### Quick Start Guide
 
-### 1. Resume Tailor
+These prompts are designed to give you an unfair advantage in your job search. From crafting compelling applications to acing interviews, each prompt is battle-tested.
+
+**How to use:**
+- Copy any prompt and paste it into ChatGPT, Claude, or your preferred AI tool
+- Replace all [BRACKETED TEXT] with your specific information
+- Be as detailed as possible for better results
+- Use multiple prompts together for comprehensive preparation
+
+**Important:** Always review and personalize AI-generated content. Authenticity matters to employers.
+
+---
+
+## Resume & Applications (10 Prompts)
+
+### 1. Resume Achievement Transformer
 ```
-Tailor my resume to this job posting.
+Transform these job responsibilities into powerful achievement statements for my resume.
 
-Job posting:
-[Paste the full job description]
+My role: [JOB TITLE] at [COMPANY TYPE]
+Responsibilities:
+[LIST YOUR DAILY TASKS AND RESPONSIBILITIES]
 
-My current resume:
-[Paste your resume content]
+For each item, rewrite as an achievement using:
+- Strong action verbs
+- Quantifiable results (ask me for numbers if needed)
+- The STAR format (Situation, Task, Action, Result)
+- Industry-relevant keywords
 
-Instructions:
-1. Mirror their exact language and keywords
-2. Highlight relevant experience
-3. Quantify achievements where possible
-4. Keep to 1-2 pages
-5. Make it ATS-friendly
-6. Maintain truthfulness
-7. Prioritize most relevant experience
-8. Update summary/objective
-
-Provide: Complete rewritten resume ready to use.
-```
-
-### 2. Achievement Bullet Writer
-```
-Write achievement-focused bullet points.
-
-Job title: [your role]
-Company: [where you worked]
-Responsibilities: [what you did]
-Results: [outcomes if you have them]
-
-For each responsibility, create:
-- Result-focused bullet (started with impact)
-- Action verb version
-- Quantified version (add numbers)
-
-Format: Action verb + Task + Result
-
-Turn vague into specific. Turn duties into achievements.
+Also flag any responsibilities that might be better left off.
 ```
 
-### 3. Resume Summary Generator
+### 2. Resume Tailoring for Specific Job
 ```
-Write a professional summary for my resume.
+Tailor my resume for this specific job posting.
 
-Target role: [job you want]
-Years of experience: [number]
-Key skills: [top 5 skills]
-Biggest achievements: [1-2 highlights]
-Industry: [your field]
+JOB POSTING:
+[PASTE THE FULL JOB DESCRIPTION]
+
+MY CURRENT RESUME:
+[PASTE YOUR RESUME TEXT]
+
+Provide:
+1. Keywords from the job posting I should incorporate
+2. Which of my experiences to emphasize/de-emphasize
+3. Specific bullet points to add or modify
+4. How to adjust my summary/objective
+5. Skills to highlight or add
+6. Red flags or gaps I need to address
+7. Complete rewritten resume ready to use
+```
+
+### 3. ATS Optimization Audit
+```
+Audit my resume for Applicant Tracking System (ATS) compatibility.
+
+MY RESUME:
+[PASTE YOUR RESUME]
+
+TARGET ROLE: [JOB TITLE]
+INDUSTRY: [INDUSTRY]
+
+Check for:
+- Keyword optimization (suggest missing keywords)
+- Formatting issues that could cause parsing errors
+- Section headings that ATS systems recognize
+- File format recommendations
+- Any content that might get filtered out
+- Score estimate (1-10) with specific improvements
+```
+
+### 4. Career Pivot Resume Strategy
+```
+I'm pivoting from [CURRENT FIELD] to [TARGET FIELD].
+
+My current experience:
+[DESCRIBE YOUR BACKGROUND]
+
+Target role: [JOB TITLE]
+
+Help me:
+1. Identify transferable skills that are relevant
+2. Reframe my experience using target industry language
+3. Suggest what to emphasize vs. minimize
+4. Recommend any quick certifications or courses to add credibility
+5. Write a compelling summary that addresses the pivot directly
+6. Anticipate and prepare for interviewer concerns about my background
+```
+
+### 5. Executive Summary Writer
+```
+Write a compelling professional summary for the top of my resume.
+
+My details:
+- Years of experience: [NUMBER]
+- Primary expertise: [AREAS]
+- Industries worked in: [INDUSTRIES]
+- Notable achievements: [TOP 2-3]
+- Target role: [JOB TITLE]
+- What makes me unique: [YOUR DIFFERENTIATOR]
 
 Create 3 versions:
-1. Career summary (3-4 sentences)
-2. Branding statement (2 sentences)
-3. Objective statement (for career changers)
+1. Confident and results-focused
+2. Collaborative and team-oriented
+3. Innovative and forward-thinking
 
-Make it specific, not generic. No "results-oriented professional" clichés.
+Each should be 3-4 sentences and immediately capture attention.
 ```
 
-### 4. ATS Keyword Optimizer
+### 6. Cover Letter Writer
 ```
-Optimize my resume for ATS.
+Write a compelling cover letter for this position.
 
-Job posting:
-[Paste job description]
+JOB POSTING:
+[PASTE JOB DESCRIPTION]
 
-My resume:
-[Paste resume]
+About me:
+- Current/most recent role: [ROLE]
+- Relevant experience: [KEY POINTS]
+- Why I want THIS job at THIS company: [YOUR REASONS]
+- A specific achievement relevant to this role: [ACHIEVEMENT]
+- Something unique about me: [INTERESTING FACT OR PERSPECTIVE]
 
-Provide:
-1. Keywords in job posting I'm missing
-2. Where to naturally add them
-3. Hard skills to include
-4. Soft skills to include
-5. Exact titles/terms to match
-6. Format changes for ATS
-7. Optimized version of resume
-```
-
-### 5. Cover Letter Writer
-```
-Write a cover letter for this position.
-
-Job posting:
-[Paste job description]
-
-Company: [company name]
-What I know about them: [research]
-Why I want this job: [genuine reasons]
-My relevant experience: [key qualifications]
-Connection: [referral, event, etc.]
-
-Write a cover letter that:
-1. Opens with a hook (not "I am writing to apply")
-2. Shows I understand their needs
-3. Proves I can deliver
-4. Tells a relevant story
-5. Shows enthusiasm
-6. Closes with confidence
-
-Length: Under one page. No fluff.
+Make it:
+- Specific to this company (not generic)
+- Conversational but professional
+- Show personality while demonstrating competence
+- Under 400 words
+- Include a compelling opening that's not "I am writing to apply for..."
 ```
 
-### 6. LinkedIn Profile Optimizer
+### 7. Cover Letter Hook Generator
 ```
-Optimize my LinkedIn for job search.
+I'm applying for [JOB TITLE] at [COMPANY].
 
-Target role: [what I want]
-Current profile: [paste headline, about, experience]
-Industry: [your field]
-Unique value: [what makes you stand out]
+Generate 10 compelling opening lines for my cover letter that:
+- Avoid clichés like "I am writing to express my interest"
+- Immediately demonstrate value or relevance
+- Show I've researched the company
+- Create curiosity to keep reading
+
+My relevant background: [BRIEF SUMMARY]
+Something specific about the company I admire: [DETAIL]
+A relevant achievement: [ACHIEVEMENT]
+```
+
+### 8. LinkedIn Profile Optimizer
+```
+Optimize my LinkedIn profile for my job search.
+
+Target role: [WHAT I WANT]
+Current profile headline: [YOUR HEADLINE]
+Current about section: [PASTE IT]
+Industry: [YOUR FIELD]
+Unique value: [WHAT MAKES YOU STAND OUT]
 
 Optimize:
-1. Headline (keyword-rich, compelling)
-2. About section (story-driven, searchable)
-3. Experience descriptions
-4. Skills to feature
+1. Headline (keyword-rich, compelling, under 120 characters)
+2. About section (story-driven, searchable, first-person)
+3. Experience descriptions (achievement-focused)
+4. Skills to feature prominently
 5. Recommendations to request
-6. Content to post
-7. Profile settings for recruiters
-8. Keywords to include throughout
+6. Profile settings for recruiters
+7. Keywords to include throughout
+8. Content strategy to increase visibility
 ```
 
-### 7. Application Follow-Up
+### 9. Application Follow-Up Emails
 ```
-Write application follow-up emails.
+Write application follow-up emails for my job search.
 
-Position: [job title]
-Company: [company name]
-Applied: [when]
-Contact: [hiring manager if known]
-Status: [no response / after interview]
+Position: [JOB TITLE]
+Company: [COMPANY NAME]
+Applied: [DATE]
+Contact: [HIRING MANAGER IF KNOWN]
+Status: [NO RESPONSE / AFTER INTERVIEW / AFTER REJECTION]
 
 Write:
-1. Initial follow-up (1 week after apply)
+1. Initial follow-up (1 week after applying)
 2. Second follow-up (2 weeks, no response)
-3. Post-interview thank you
+3. Post-interview thank you (same day)
 4. Post-interview follow-up (1 week later)
-5. Checking in (after extended silence)
+5. Response to rejection (leave door open)
 
-Professional, not desperate. Short, not wordy.
+Professional, not desperate. Short, not wordy. Include clear next step requests.
 ```
 
-### 8. Career Pivot Translator
+### 10. Employment Gap Explainer
 ```
-Help me translate my experience for a career change.
+Help me address this gap in my employment history.
 
-Current career: [what you do now]
-Target career: [what you want to do]
-Transferable skills: [what carries over]
-Relevant experience: [anything connected]
-Gap: [what you're missing]
+Gap period: [START DATE] to [END DATE]
+What I was doing: [HONEST EXPLANATION]
+Skills developed during this time: [IF ANY]
+Target role: [JOB TITLE]
+Concern level: [HIGH/MEDIUM/LOW]
 
 Provide:
-1. How to frame current experience
-2. Skills translation table
-3. Resume summary for pivoters
-4. Story to tell about the change
-5. How to address "why the change"
-6. Experience gaps and how to address
-7. Quick credentials to add
+1. How to address on resume (formatting options)
+2. How to address in cover letter (if needed)
+3. Interview response script (various versions)
+4. How to reframe the gap positively
+5. Follow-up talking points if they probe further
+6. What NOT to say
 ```
 
 ---
 
-## Interview Prep (10 Prompts)
+## Interview Preparation (10 Prompts)
 
-### 9. Interview Question Prep
+### 11. Behavioral Interview Story Bank
 ```
-Prepare me for common interview questions.
+Help me prepare stories for behavioral interviews using the STAR method.
 
-Role: [job I'm interviewing for]
-Company: [company name]
-My background: [brief summary]
-My concerns: [what I'm worried about]
+My background:
+[DESCRIBE YOUR EXPERIENCE, ROLES, AND NOTABLE PROJECTS]
 
-Prepare answers for:
-1. Tell me about yourself
-2. Why do you want this job?
-3. Why are you leaving your current job?
-4. What are your strengths?
-5. What are your weaknesses?
-6. Where do you see yourself in 5 years?
-7. Why should we hire you?
-8. Tell me about a challenge you faced
-9. What's your greatest achievement?
-10. Do you have any questions for us?
+Create 6 versatile STAR stories I can adapt to common questions like:
+1. "Tell me about a challenge you overcame"
+2. "Describe a time you showed leadership"
+3. "When did you fail and what did you learn?"
+4. "How do you handle conflict with colleagues?"
+5. "Tell me about a time you exceeded expectations"
+6. "Describe a time you had to learn something quickly"
 
-Make answers specific to me, not generic.
+For each story, show me how to pivot it for different question variations.
 ```
 
-### 10. STAR Story Builder
+### 12. Company Research Deep Dive
 ```
-Build STAR stories for my interviews.
+I have an interview with [COMPANY NAME] for [POSITION].
 
-Target role: [job title]
-Key competencies: [what they want]
-
-My experiences:
-[List 5-7 relevant situations from your career]
-
-For each competency, create a STAR story:
-- Situation: Context and challenge (2-3 sentences)
-- Task: My specific responsibility (1-2 sentences)
-- Action: What I did (3-4 sentences, be specific)
-- Result: Quantified outcome (2 sentences)
-
-Keep each story to 90 seconds when spoken.
-Include follow-up questions they might ask.
+Research and provide:
+1. Company mission/values and how to reference them naturally
+2. Recent news or developments I should mention
+3. Key competitors and market position
+4. Company culture indicators
+5. Likely challenges they're facing that I could help with
+6. Questions to ask that show strategic thinking
+7. Potential red flags to watch for
+8. Key people I might interview with (typical roles for this stage)
 ```
 
-### 11. Behavioral Interview Coach
+### 13. Interview Question Generator
 ```
-Coach me on behavioral questions.
+Generate likely interview questions for my upcoming interview.
 
-Role: [position]
-Likely behavioral questions: [if known]
-My experience: [relevant background]
-My concern: [where I struggle]
+Position: [JOB TITLE]
+Company type: [STARTUP/CORPORATE/AGENCY/ETC.]
+Industry: [INDUSTRY]
+Experience level: [JUNIOR/MID/SENIOR/EXECUTIVE]
+Interview stage: [PHONE SCREEN/FIRST ROUND/FINAL]
 
-For these behavioral question types:
-1. Leadership
-2. Conflict resolution
-3. Problem-solving
-4. Teamwork
-5. Failure/mistake
-6. Initiative
-7. Communication
-8. Adaptability
+Generate 25 questions across:
+- Behavioral questions (8)
+- Technical/skill-based questions (8)
+- Culture fit questions (5)
+- Curveball questions (4)
+
+For the 10 most likely questions, provide bullet points I should hit in my answer.
+```
+
+### 14. Technical Interview Prep
+```
+Prepare me for a technical interview for [ROLE] in [INDUSTRY/TECHNOLOGY].
+
+My skill level:
+- Strong in: [AREAS]
+- Moderate in: [AREAS]
+- Learning: [AREAS]
 
 Provide:
-- How to structure answers
-- Story from my experience
-- What they're really asking
-- Red flag answers to avoid
+1. 15 likely technical questions with strong answers
+2. How to handle questions in my weaker areas honestly
+3. Technical concepts to review before the interview
+4. How to think out loud effectively during problem-solving
+5. Questions to ask that demonstrate technical depth
 ```
 
-### 12. Technical Interview Prep
+### 15. Salary Discussion Prep
 ```
-Prepare me for technical interview.
+Prepare me for salary negotiation for this role.
 
-Role: [position]
-Technical areas: [what they'll test]
-My level: [beginner/intermediate/senior]
-Interview format: [whiteboard/coding/discussion]
+Position: [JOB TITLE]
+Location: [CITY/REMOTE]
+My current salary: $[AMOUNT]
+My target salary: $[AMOUNT]
+Industry: [INDUSTRY]
+My years of experience: [NUMBER]
+Special qualifications: [CERTIFICATIONS, SKILLS, ETC.]
+Competing offers: [IF ANY]
 
-Prepare:
-1. Likely technical questions
-2. How to approach each
-3. Key concepts to review
-4. Common mistakes
-5. How to handle "I don't know"
-6. Questions to ask them
-7. Resources to review before
-```
-
-### 13. Company Research Synthesizer
-```
-Synthesize company research for my interview.
-
-Company: [name]
-Role: [position]
-What I've found:
-[Paste articles, about page, news, etc.]
-
-Create:
-1. Company overview (1 paragraph)
-2. Recent news/developments
-3. Company culture insights
-4. Challenges they might face
-5. How my role fits in
-6. Questions to ask about company
-7. How to reference research naturally
-8. Red flags (if any)
+Provide:
+1. Market rate research talking points
+2. How to deflect early salary questions
+3. Scripts for different negotiation scenarios
+4. Non-salary items to negotiate if salary is firm
+5. How to respond to lowball offers
+6. Phrases to use and avoid
+7. When to walk away
 ```
 
-### 14. Weakness Answer Crafter
+### 16. Weakness Answer Crafter
 ```
-Help me answer "What's your weakness?"
+Help me answer "What's your greatest weakness?"
 
 My actual weaknesses:
-[Be honest - list 2-3]
+[BE HONEST - LIST 2-3]
 
 Role requirements:
-[What the job needs]
+[WHAT THE JOB NEEDS]
 
 Craft answers that:
 1. Are genuine (not "I work too hard")
@@ -299,273 +323,348 @@ Craft answers that:
 4. Include what I'm doing about it
 5. End positively
 
-Provide 3 options to choose from.
+Provide 3 different weakness answers I can choose from based on the interviewer's style.
 ```
 
-### 15. Question-to-Ask Generator
+### 17. Questions-to-Ask Generator
 ```
-Generate questions for me to ask.
+Generate impressive questions for me to ask at my interview.
 
-Role: [position]
-Company: [company name]
-Interview stage: [phone/first round/final]
-Interviewer: [role of who I'm meeting]
-What I want to know: [genuine questions]
+Role: [POSITION]
+Company: [COMPANY NAME]
+Interview stage: [PHONE/FIRST ROUND/FINAL/WITH TEAM]
+Interviewer role: [HR/HIRING MANAGER/PEER/EXECUTIVE]
+What I genuinely want to know: [YOUR REAL QUESTIONS]
 
 Generate questions by category:
-1. About the role
-2. About the team
-3. About growth/development
-4. About company culture
-5. About success metrics
-6. About challenges
-7. About next steps
+1. About the role and expectations (4)
+2. About the team and culture (4)
+3. About growth and development (3)
+4. About company direction (3)
+5. About immediate priorities (3)
 
-10-15 questions total. Smart, not basic.
-Mark which are best for which interviewer type.
+Mark which are best for which interviewer type. Avoid questions easily answered on the website.
 ```
 
-### 16. Salary Expectation Script
+### 18. Interview Debrief Analyzer
 ```
-Prepare me for salary questions.
+Help me debrief and prepare for next rounds after my interview.
 
-Role: [position]
-Location: [city/remote]
-My current salary: [if employed]
-My target salary: [what I want]
-Market research: [what I've found]
-My leverage: [strengths in negotiation]
-
-Scripts for:
-1. "What are your salary expectations?"
-2. "What are you currently making?"
-3. "That's above our budget"
-4. "We can offer [lower number]"
-5. Turning it back to them
-
-Include: timing, phrasing, confidence tips.
-```
-
-### 17. Interview Debrief
-```
-Help me debrief after my interview.
-
-Role: [position]
-Company: [company name]
-How it went: [your sense of it]
+Role: [POSITION]
+Company: [COMPANY NAME]
+Interview stage: [WHICH ROUND]
+How I felt it went: [YOUR ASSESSMENT]
 
 Questions I was asked:
-[List them]
+[LIST THEM]
 
-My answers:
-[Summarize how you answered]
+My answers (summarized):
+[HOW YOU ANSWERED]
 
 Analyze:
-1. What went well
-2. What could improve
-3. Answers to refine
-4. Follow-up actions
-5. Thank you note draft
-6. Questions to ask next round
-7. Concerns to address proactively
+1. What went well (strengths to build on)
+2. What could have been stronger
+3. Better answers for weak spots (for next round)
+4. What they seemed most interested in
+5. Concerns they might have based on questions
+6. Thank you note draft
+7. How to address weak areas proactively in follow-up
+8. Questions to ask in next round based on this conversation
 ```
 
-### 18. Case Interview Prep
+### 19. "Tell Me About Yourself" Script
 ```
-Prepare me for a case interview.
+Help me craft the perfect "Tell me about yourself" answer.
 
-Role: [position]
-Company type: [consulting/tech/other]
-Case type: [market sizing/strategy/operations]
-My background: [experience level with cases]
+My background:
+- Current/recent role: [ROLE]
+- Years of experience: [NUMBER]
+- Key achievements: [TOP 2-3]
+- Career progression: [BRIEF PATH]
+- Education: [RELEVANT EDUCATION]
 
-Provide:
-1. Case interview framework overview
-2. 3 practice cases with answers
-3. Common structures to use
-4. Math tips and tricks
-5. How to buy time
-6. Questions to ask
-7. Presentation tips
-8. Practice routine
+Target role: [JOB TITLE]
+What makes me unique for this role: [DIFFERENTIATOR]
+What I'm most excited about: [GENUINE INTEREST]
+
+Create 3 versions:
+1. 30-second version (elevator pitch)
+2. 60-second version (phone screens)
+3. 2-minute version (in-person interviews)
+
+Each should be conversational, highlight relevant experience, and end with why I want THIS role.
+```
+
+### 20. Mock Interview Simulator
+```
+Conduct a mock interview with me for [POSITION] at [COMPANY TYPE].
+
+Interview style: [BEHAVIORAL/TECHNICAL/CASE/MIXED]
+Difficulty level: [CHALLENGING]
+My experience level: [JUNIOR/MID/SENIOR]
+
+Instructions:
+1. Ask me one question at a time
+2. After I respond, provide feedback on:
+   - Strengths of my answer
+   - What was missing
+   - How to improve
+   - A model answer for comparison
+3. Then ask the next question
+4. After 5-7 questions, give overall feedback
+
+Start with your first question.
 ```
 
 ---
 
-## Offers & Negotiation (7 Prompts)
+## Offers & Negotiation (10 Prompts)
 
-### 19. Offer Evaluation Framework
+### 21. Offer Evaluation Framework
 ```
-Help me evaluate this job offer.
+Help me evaluate this job offer comprehensively.
 
 The offer:
-- Base salary: [amount]
-- Bonus: [amount/structure]
-- Equity: [if any]
-- Benefits: [health, 401k, etc.]
-- PTO: [days]
-- Other perks: [list]
-- Location/remote: [setup]
-- Start date: [when]
-- Title: [what]
+- Base salary: $[AMOUNT]
+- Bonus: [STRUCTURE]
+- Equity: [DETAILS]
+- Benefits: [HEALTH, 401K, ETC.]
+- PTO: [DAYS]
+- Other perks: [LIST]
+- Location/remote: [SETUP]
+- Title: [TITLE]
+- Start date: [DATE]
 
-My priorities:
-[What matters most to me]
+My priorities (ranked):
+[WHAT MATTERS MOST TO YOU]
 
 My alternatives:
-[Other offers, current job]
+[OTHER OFFERS, CURRENT JOB]
 
 Evaluate:
-1. Total compensation breakdown
-2. How it compares to market
-3. Hidden value/costs
-4. Growth potential
-5. Risk factors
-6. What to negotiate
-7. Decision framework
+1. Total compensation breakdown (annual value)
+2. Market comparison for this role/location
+3. Hidden value (benefits worth $X)
+4. Hidden costs (commute, relocation, etc.)
+5. Growth potential at this company
+6. Risk factors
+7. What to negotiate (prioritized)
+8. Decision framework and recommendation
 ```
 
-### 20. Negotiation Script Builder
+### 22. Negotiation Script Builder
 ```
-Build negotiation scripts for my offer.
+Build negotiation scripts for my job offer.
 
-Offer details:
-[Base, bonus, equity, benefits, title, start date]
+Current offer:
+[PASTE OFFER DETAILS]
 
 What I want:
-[List asks in priority order]
+[LIST YOUR ASKS IN PRIORITY ORDER]
 
 My leverage:
-[Why they should meet my asks]
+[OTHER OFFERS, UNIQUE SKILLS, MARKET DATA]
+
+Relationship: [WARM/PROFESSIONAL/COLD]
 
 Build scripts for:
-1. Opening negotiation conversation
-2. Asking for higher base
-3. Asking for sign-on bonus
+1. Opening the negotiation conversation
+2. Asking for higher base salary
+3. Asking for signing bonus
 4. Asking for more equity
 5. Asking for better title
-6. Asking for flexible start
-7. Countering their counter
+6. Requesting remote/flexible work
+7. Countering their counter-offer
 8. Accepting gracefully
-9. Walking away gracefully
+9. Walking away gracefully while leaving door open
 
-Confident, not aggressive. Clear, not rambling.
+Confident but not aggressive. Clear but flexible.
 ```
 
-### 21. Counter Offer Response
+### 23. Counter Offer Response
 ```
-Help me respond to my current employer's counter.
+Help me decide: stay with counter-offer or take the new job?
 
-New offer: [what new company offered]
-Counter offer: [what current employer offered]
-Why I was leaving: [original reasons]
-What would make me stay: [if anything]
-Relationship with current: [good/bad]
+New offer from [COMPANY]:
+[OFFER DETAILS]
+
+Counter offer from current employer:
+[COUNTER DETAILS]
+
+Why I was leaving originally: [YOUR REASONS]
+What would make me genuinely want to stay: [IF ANYTHING]
+My relationship with current employer: [GOOD/COMPLICATED]
+Career trajectory concerns: [ANY WORRIES ABOUT STAYING]
 
 Analyze:
-1. Is counter genuine or retention play?
-2. Will original issues be solved?
-3. Career impact of staying vs going
+1. Is the counter genuine or a retention play?
+2. Will my original concerns be addressed?
+3. Career impact of each choice
 4. How to evaluate objectively
-5. Response scripts (accepting/declining)
-6. How to maintain relationships either way
+5. Response scripts for either decision
+6. How to maintain relationships regardless of choice
+7. Recommendation based on what you've told me
 ```
 
-### 22. Multiple Offer Manager
+### 24. Multiple Offer Manager
 ```
-Help me manage multiple offers.
+Help me manage multiple job offers strategically.
 
-Offer 1: [details]
-Offer 2: [details]
-Offer 3: [if applicable]
+Offer 1: [COMPANY, ROLE, COMP, DETAILS]
+Offer 2: [COMPANY, ROLE, COMP, DETAILS]
+Offer 3 (if applicable): [DETAILS]
 
-Timeline: [deadlines for each]
-My priorities: [what matters most]
-Dream scenario: [ideal outcome]
+Decision deadline for each: [DATES]
+My priorities: [RANKED LIST]
+Dream scenario: [IDEAL OUTCOME]
 
 Provide:
-1. Comparison matrix
-2. Scoring system
-3. How to buy time ethically
-4. How to use leverage appropriately
-5. Communication templates
+1. Side-by-side comparison matrix
+2. Weighted scoring system based on my priorities
+3. How to ethically buy time with faster deadlines
+4. How to use leverage appropriately (without burning bridges)
+5. Communication templates for each company
 6. Decision framework
 7. How to decline gracefully
+8. What to do if my #1 needs more time
 ```
 
-### 23. Benefits Negotiation Guide
+### 25. Non-Salary Negotiation Guide
 ```
-Help me negotiate non-salary benefits.
+The salary is fixed at $[AMOUNT]. Help me negotiate everything else.
 
-Offer: [base salary - assume fixed]
-Current benefits: [what they offered]
-What I want: [benefits priorities]
-My situation: [why these matter]
+Role: [POSITION]
+Company: [COMPANY]
+Current offer terms: [ALL NON-SALARY TERMS]
+What matters most to me: [YOUR PRIORITIES]
+My leverage: [WHAT YOU BRING]
 
-Negotiate:
-1. Signing bonus justification
-2. Relocation assistance
-3. Remote work arrangement
-4. Additional PTO
+Create negotiation strategy for:
+1. Signing bonus (justification script)
+2. Start date flexibility
+3. Remote/hybrid work arrangement
+4. Additional PTO days
 5. Professional development budget
-6. Better title
-7. Earlier review/raise
-8. Flexible hours
-9. Equipment/setup budget
+6. Title upgrade
+7. Earlier performance review/raise eligibility
+8. Equipment and home office budget
+9. Relocation assistance
 
-Scripts for each. Which are easiest wins.
+For each: how to ask, what to expect, and fallback positions.
 ```
 
-### 24. Start Date Negotiation
+### 26. Start Date Negotiation
 ```
-Help me negotiate my start date.
+Help me negotiate my start date professionally.
 
-Their preferred start: [when]
-My preferred start: [when]
-Reason for my timeline: [why]
-Current notice period: [if applicable]
-
-Craft:
-1. Professional request for later start
-2. Justification that doesn't burn bridges
-3. Compromise options
-4. What to offer in return
-5. How to handle pushback
-```
-
-### 25. Resignation Letter & Exit
-```
-Help me resign professionally.
-
-Current company: [where you work]
-Current role: [your position]
-Manager: [who to tell first]
-Notice period: [standard/requested]
-Relationship: [with company/manager]
-New opportunity: [brief description]
+Their preferred start: [DATE]
+My preferred start: [DATE]
+Reason I need more time: [YOUR SITUATION]
+Current notice period required: [IF APPLICABLE]
+Flexibility: [HOW FLEXIBLE ARE YOU]
 
 Create:
-1. Resignation conversation script
+1. Professional request email/script
+2. Justification that doesn't concern them
+3. Compromise options to offer
+4. What to offer in return for later start
+5. How to handle pushback
+6. When to accept their date vs. push back
+```
+
+### 27. Resignation Letter & Exit Strategy
+```
+Help me resign professionally from my current job.
+
+Current company: [COMPANY]
+Current role: [YOUR POSITION]
+Time at company: [DURATION]
+Manager relationship: [DESCRIBE]
+Notice period: [STANDARD/WHAT YOU'LL GIVE]
+New opportunity: [BRIEF DESCRIPTION]
+How I want to be remembered: [YOUR GOAL]
+
+Create:
+1. Verbal resignation conversation script
 2. Formal resignation letter
-3. Transition plan outline
+3. Transition plan outline to offer
 4. What to say to coworkers
-5. What NOT to say (anywhere)
+5. What NOT to say (anywhere, to anyone)
 6. Exit interview approach
-7. LinkedIn update timing
-8. Reference relationship protection
+7. LinkedIn update strategy
+8. How to protect references
+9. Last day and handoff checklist
+```
+
+### 28. Offer Acceptance Letter
+```
+Write a professional offer acceptance letter.
+
+Company: [COMPANY NAME]
+Position: [ROLE]
+Hiring manager: [NAME]
+Negotiated terms to confirm: [LIST FINAL TERMS]
+Start date: [DATE]
+Anything still pending: [BACKGROUND CHECK, ETC.]
+
+The letter should:
+1. Express genuine enthusiasm
+2. Confirm all negotiated terms in writing
+3. Confirm the start date
+4. Ask about next steps
+5. Thank them for the opportunity
+6. Be professional but warm
+7. Set the right tone for my tenure
+```
+
+### 29. Declining an Offer Gracefully
+```
+Help me decline this job offer while maintaining the relationship.
+
+Company: [COMPANY]
+Position: [ROLE]
+Why I'm declining: [YOUR REAL REASON - BE HONEST WITH ME]
+Relationship value: [DO I WANT TO STAY CONNECTED]
+Future interest: [MIGHT I WANT TO WORK HERE LATER]
+
+Create:
+1. Decline email (professional, appreciative)
+2. Explanation that's honest but diplomatic
+3. How to leave door open for future
+4. What NOT to say
+5. Whether/how to stay connected with hiring manager
+6. LinkedIn strategy post-decline
+```
+
+### 30. Networking Thank You & Relationship Maintenance
+```
+Help me maintain relationships with people who helped in my job search.
+
+People who helped me:
+[LIST WITH HOW THEY HELPED - REFERRAL, ADVICE, INTRO, ETC.]
+
+My outcome: [WHERE I'M LANDING]
+
+Create:
+1. Thank you message for each person (personalized)
+2. Update announcement for my network
+3. How to pay it forward
+4. Relationship maintenance plan for key contacts
+5. LinkedIn post announcing new role
+6. How to help them in return
 ```
 
 ---
 
 ## How to Use This Pack
 
-1. **Start with resume** - Tailor before applying
-2. **Research deep** - Use company synthesis prompt
-3. **Practice stories** - STAR method for everything
-4. **Prepare questions** - Shows genuine interest
-5. **Negotiate smart** - Always ask for more
+1. **Start with resume** - Tailor before every application
+2. **Research deeply** - Use company research prompts before interviews
+3. **Practice stories** - STAR method is your friend
+4. **Prepare questions** - They're evaluating your curiosity
+5. **Negotiate smart** - Always ask for more, professionally
 
-**Pro tip:** Keep a "wins document" - every achievement, metric, compliment. Feed it into these prompts for better output.
+**Pro tip:** Keep a "wins document" - every achievement, metric, compliment, solved problem. Feed it into these prompts for better, more specific output.
 
 ---
 

@@ -722,6 +722,146 @@ Create:
 
 ---
 
+### 26. Expired Listing Outreach
+```
+Create outreach materials for expired listings in my area.
+
+My value proposition: [what makes you different]
+My recent success: [relevant sales/stats]
+Common reasons listings expire in my market: [pricing, marketing, condition, etc.]
+
+Create:
+1. Initial outreach letter (mailed or emailed)
+2. Phone script for cold calling expired listings
+3. Door-knocking script
+4. Objection responses for:
+   - "I'm taking a break from selling"
+   - "I'm relisting with my agent"
+   - "What would you do differently?"
+   - "Your commission is too high"
+5. Follow-up sequence (if no response)
+6. What to research before making contact
+7. Value-add offer to stand out
+```
+**What it does:** Creates a complete expired listing outreach system with scripts for multiple channels.
+
+---
+
+### 27. Social Media Content Calendar
+```
+Create a month of real estate social media content.
+
+My focus area: [city/neighborhood]
+My specialty: [first-time buyers, luxury, investment, etc.]
+My platforms: [Instagram, Facebook, LinkedIn, TikTok]
+My personal brand: [describe your style]
+Time available for content: [hours per week]
+
+Create 20 content ideas including:
+- Market updates and statistics
+- Home tips and maintenance
+- Listing promotions
+- Behind-the-scenes content
+- Client success stories
+- Local community highlights
+- Personal brand building
+
+For each idea:
+- Platform recommendation
+- Post format (image, video, carousel, etc.)
+- Caption with hooks
+- Hashtag suggestions
+- Best posting time
+```
+**What it does:** Generates a complete month of varied, engaging real estate social media content.
+
+---
+
+### 28. Client Appreciation Event Planner
+```
+Help me plan a client appreciation event.
+
+Budget: $[amount]
+Estimated attendance: [number]
+Event type preference: [casual/formal, indoor/outdoor]
+Goal: [generate referrals, build relationships, both]
+My past client base: [description of typical clients]
+
+Create:
+1. Event concept ideas (3 options at different price points)
+2. Invitation copy (email and print)
+3. RSVP tracking system
+4. Day-of talking points
+5. How to naturally ask for referrals during the event
+6. Follow-up sequence after the event
+7. How to leverage the event on social media
+8. ROI tracking for future events
+```
+**What it does:** Plans client appreciation events that strengthen relationships and generate referrals.
+
+---
+
+### 29. Real Estate Newsletter Template
+```
+Create a monthly newsletter template for my sphere of influence.
+
+My market: [location]
+My audience: [past clients, leads, sphere]
+Newsletter frequency: [monthly]
+Length preference: [short/medium/comprehensive]
+
+Create a reusable template including:
+1. Compelling subject line formulas
+2. Opening section (market update or hook)
+3. Main content section options:
+   - Market statistics explained simply
+   - Featured listing spotlight
+   - Home maintenance tip
+   - Neighborhood highlight
+   - Recent success story
+4. Personal touch section
+5. Call-to-action that isn't pushy
+6. Sign-off that encourages responses
+
+Also create 6 months of specific content ideas using this template.
+```
+**What it does:** Creates a newsletter system that keeps you top-of-mind without being salesy.
+
+---
+
+### 30. Annual Business Review
+```
+Help me conduct my annual real estate business review.
+
+This year's numbers:
+- Closed transactions: [number]
+- Total volume: $[amount]
+- Gross commission: $[amount]
+- Expenses: $[amount]
+- Lead sources: [breakdown by source]
+- Average sale price: $[amount]
+- Average days on market: [my listings]
+- List-to-sale ratio: [my listings]
+
+Goals I set: [what you planned]
+What happened: [reality]
+
+Analyze:
+1. What worked well (double down)
+2. What didn't work (stop or fix)
+3. Lead source ROI analysis
+4. Time audit (where did my time go)
+5. Client satisfaction assessment
+6. Market share in my area
+7. Gaps in my business
+8. SWOT analysis
+9. Three big goals for next year
+10. 90-day action plan to start strong
+```
+**What it does:** Provides a comprehensive business analysis to inform next year's strategy.
+
+---
+
 ## How to Use This Pack
 
 1. **Copy the prompt** - Select the prompt that matches your need

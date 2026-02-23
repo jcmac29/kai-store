@@ -1,1303 +1,936 @@
-# Prompt Formula Mastery Guide
-## Fill-in-the-Blank Templates for Perfect AI Outputs Every Time
-
-**Price: $12**
+# Prompt Formulas Guide
+## 25 Proven Frameworks for AI Mastery
 
 ---
 
 ## Table of Contents
-1. [The Foundation: How Prompt Formulas Work](#the-foundation)
-2. [Universal Prompt Framework](#universal-framework)
-3. [Writing & Content Formulas](#writing-formulas)
-4. [Business & Marketing Formulas](#business-formulas)
-5. [Creative & Image Generation Formulas](#creative-formulas)
-6. [Code & Technical Formulas](#code-formulas)
-7. [Analysis & Research Formulas](#analysis-formulas)
-8. [Education & Learning Formulas](#education-formulas)
-9. [Productivity & Workflow Formulas](#productivity-formulas)
-10. [Advanced Combination Techniques](#advanced-techniques)
+
+1. [Quick Reference Matrix](#quick-reference-matrix)
+2. [Foundation Formulas](#foundation-formulas)
+3. [Advanced Frameworks](#advanced-frameworks)
+4. [Specialized Formulas](#specialized-formulas)
+5. [Chaining Techniques](#chaining-techniques)
+6. [Formula Selection Guide](#formula-selection-guide)
 
 ---
 
-## The Foundation: How Prompt Formulas Work {#the-foundation}
+# Quick Reference Matrix
 
-### Why Formulas Beat Random Prompting
-
-| Random Prompt | Formula-Based Prompt |
-|---------------|---------------------|
-| "Write me an email" | "Write a [TONE] email to [AUDIENCE] about [TOPIC] that [GOAL]. Include [ELEMENTS]." |
-| "Make a logo" | "Create a [STYLE] logo for [BUSINESS] that conveys [VALUES] using [COLORS] and [IMAGERY]." |
-| "Help me code" | "Write [LANGUAGE] code that [FUNCTION]. Follow [STANDARDS]. Include [FEATURES]." |
-
-### The 6 Components of Perfect Prompts
-
-```
-+-------------------------------------------------------------------+
-|                    THE PROMPT FORMULA STACK                        |
-+-------------------------------------------------------------------+
-|  1. ROLE      | Who should the AI be?                             |
-|  2. CONTEXT   | What background does it need?                     |
-|  3. TASK      | What exactly should it do?                        |
-|  4. FORMAT    | How should output be structured?                  |
-|  5. TONE      | What voice/style?                                 |
-|  6. CONSTRAINTS | What rules/limitations?                         |
-+-------------------------------------------------------------------+
-```
-
-### Formula Notation Key
-
-Throughout this guide:
-- `[BRACKETS]` = Required fill-in field
-- `{BRACES}` = Optional enhancement
-- `|PIPES|` = Choose one option
-- `...` = Add more as needed
+| Formula | Best For | Complexity | Speed |
+|---------|----------|------------|-------|
+| RISEN | Complex tasks | High | Medium |
+| RACE | Quick tasks | Low | Fast |
+| RTF | Role-based | Medium | Fast |
+| CARE | Creative work | Medium | Medium |
+| COAST | Technical | Medium | Medium |
+| APE | Iteration | Low | Fast |
+| TRACE | Research | High | Slow |
+| CRISP | Business | Medium | Fast |
 
 ---
 
-## Universal Prompt Framework {#universal-framework}
+# Section 1: Foundation Formulas
 
-### The Master Formula
+## 1. RISEN Framework
 
+**R**ole - **I**nstructions - **S**teps - **E**nd Goal - **N**arrowing
+
+The most comprehensive framework for complex tasks requiring structured output.
+
+### Structure:
 ```
-Act as a [ROLE] with expertise in [DOMAIN].
-
-I need you to [TASK] for [AUDIENCE/PURPOSE].
-
-Context: [RELEVANT BACKGROUND]
-
-Requirements:
-- [REQUIREMENT 1]
-- [REQUIREMENT 2]
-- [REQUIREMENT 3]
-
-Format: [OUTPUT FORMAT]
-
-Tone: [DESIRED TONE]
-
-{Constraints: [LIMITATIONS]}
-
-{Examples of what I'm looking for: [EXAMPLES]}
+ROLE: Define who the AI should be
+INSTRUCTIONS: What needs to be accomplished
+STEPS: Break down the process
+END GOAL: Define success criteria
+NARROWING: Constraints and specifications
 ```
 
-### Quick-Start Templates
+### Example:
+```
+ROLE: You are a senior marketing strategist with 15 years of
+experience in B2B SaaS companies.
 
-#### **Basic Task**
-```
-[TASK] about [TOPIC] for [AUDIENCE]. Make it [TONE] and [LENGTH].
+INSTRUCTIONS: Develop a content marketing strategy for a new
+AI-powered project management tool targeting mid-size tech companies.
+
+STEPS:
+1. Analyze the target audience and their pain points
+2. Identify 5 key content pillars
+3. Create a 3-month content calendar
+4. Define KPIs for measuring success
+5. Recommend distribution channels
+
+END GOAL: A comprehensive, actionable content strategy document
+that can be immediately implemented by a 3-person marketing team.
+
+NARROWING:
+- Budget: $10,000/month
+- Focus on organic growth
+- Primary platform: LinkedIn
+- Existing audience: 5,000 email subscribers
+- Timeline: Results expected within 90 days
 ```
 
-#### **Expert Consultation**
-```
-You are an expert [PROFESSION] with [X] years of experience.
-I need advice on [SITUATION]. My goal is [OUTCOME].
-What would you recommend?
-```
-
-#### **Content Creation**
-```
-Write a [CONTENT TYPE] about [TOPIC] that [GOAL].
-Target audience: [AUDIENCE].
-Tone: [TONE].
-Length: [WORD COUNT].
-Include: [ELEMENTS].
-```
-
-#### **Problem Solving**
-```
-I'm facing [PROBLEM] in [CONTEXT].
-I've tried [PREVIOUS ATTEMPTS].
-My constraints are [LIMITATIONS].
-Help me [DESIRED OUTCOME].
-```
+### When to Use:
+- Strategic planning documents
+- Complex multi-step projects
+- When you need comprehensive, structured outputs
+- Business proposals and strategy development
 
 ---
 
-## Writing & Content Formulas {#writing-formulas}
+## 2. RACE Framework
 
-### Blog Post Formula
+**R**ole - **A**ction - **C**ontext - **E**xpectation
 
+A streamlined formula for quick, focused tasks.
+
+### Structure:
 ```
-Write a blog post about [TOPIC].
-
-Angle: [UNIQUE PERSPECTIVE]
-Target reader: [AUDIENCE DESCRIPTION]
-Goal: [INFORM | PERSUADE | ENTERTAIN | EDUCATE]
-Tone: [CONVERSATIONAL | PROFESSIONAL | HUMOROUS | AUTHORITATIVE]
-Length: [WORD COUNT]
-
-Structure:
-- Hook opening that [GRABS ATTENTION BY...]
-- [NUMBER] main sections with subheadings
-- Practical takeaways/action items
-- Call to action: [DESIRED READER ACTION]
-
-Include: [STATISTICS | EXAMPLES | QUOTES | ANALOGIES]
-SEO keywords to incorporate: [KEYWORD 1], [KEYWORD 2], [KEYWORD 3]
+ROLE: Who should the AI be?
+ACTION: What specific action is needed?
+CONTEXT: What background is relevant?
+EXPECTATION: What should the output look like?
 ```
 
-**Example Filled In:**
+### Example:
 ```
-Write a blog post about remote work productivity.
+ROLE: You are a professional copywriter specializing in email marketing.
 
-Angle: Why traditional time management fails for remote workers
-Target reader: New remote employees struggling with focus
-Goal: EDUCATE
-Tone: CONVERSATIONAL
-Length: 1,500 words
+ACTION: Write a re-engagement email for subscribers who haven't
+opened emails in 60 days.
 
-Structure:
-- Hook opening that shares a relatable work-from-home fail
-- 5 main sections with subheadings
-- Practical takeaways/action items
-- Call to action: Download our free time-blocking template
+CONTEXT: We're an online fitness coaching platform. Our most
+popular offering is 12-week transformation programs. These
+subscribers previously showed interest but never purchased.
 
-Include: STATISTICS, EXAMPLES
-SEO keywords: remote work tips, work from home productivity, remote employee focus
+EXPECTATION: A 150-word email with a compelling subject line,
+emotional hook, clear value proposition, and single CTA.
+Tone should be friendly and motivational, not salesy.
 ```
+
+### When to Use:
+- Marketing copy
+- Quick content creation
+- When you have clear, specific needs
+- Single-output tasks
 
 ---
 
-### Email Writing Formulas
+## 3. RTF Framework
 
-#### **Cold Outreach**
+**R**ole - **T**ask - **F**ormat
+
+The simplest effective framework for straightforward requests.
+
+### Structure:
 ```
-Write a cold [EMAIL TYPE] to [RECIPIENT ROLE] at [COMPANY TYPE].
-
-Purpose: [GOAL]
-My offer/value: [WHAT I PROVIDE]
-Their pain point: [PROBLEM I SOLVE]
-Desired action: [CTA]
-
-Constraints:
-- Under [NUMBER] words
-- [NUMBER] short paragraphs max
-- No salesy language
-- Include [PERSONALIZATION ELEMENT]
+ROLE: Define the expert persona
+TASK: Specify exactly what you need
+FORMAT: Describe the desired output format
 ```
 
-#### **Follow-Up Sequence**
+### Example:
 ```
-Write a [NUMBER]-email follow-up sequence for [SITUATION].
+ROLE: You are a data analyst expert in visualization best practices.
 
-Email 1: [INITIAL APPROACH]
-Email 2: [VALUE ADD]
-Email 3: [SOCIAL PROOF]
-Email 4: [URGENCY/SCARCITY]
-Email 5: [BREAKUP]
+TASK: Recommend the best chart types for displaying:
+1. Revenue trends over 24 months
+2. Market share by competitor
+3. Customer satisfaction scores by department
+4. Sales funnel conversion rates
 
-Spacing: [DAYS BETWEEN]
-Tone: [PERSISTENT BUT RESPECTFUL]
-Each email under: [WORD COUNT]
+FORMAT: Provide your recommendations as a table with columns for:
+Data Type | Recommended Chart | Why | Alternative Option
 ```
 
-#### **Internal Communication**
-```
-Write a [ANNOUNCEMENT | REQUEST | UPDATE] email to [TEAM/DEPARTMENT].
-
-Subject line: [CLEAR AND SPECIFIC]
-Key message: [MAIN POINT]
-Context needed: [BACKGROUND]
-Action required: [WHAT RECIPIENTS SHOULD DO]
-Deadline: [IF APPLICABLE]
-Tone: [PROFESSIONAL | CASUAL | URGENT]
-```
+### When to Use:
+- Quick analysis requests
+- When format matters more than process
+- Simple transformations
+- Data organization tasks
 
 ---
 
-### Social Media Formulas
+## 4. CARE Framework
 
-#### **LinkedIn Post**
+**C**ontext - **A**ction - **R**esult - **E**xample
+
+Perfect for creative work where examples guide quality.
+
+### Structure:
 ```
-Write a LinkedIn post about [TOPIC].
-
-Hook style: |BOLD STATEMENT | QUESTION | STATISTIC | STORY OPENER|
-Structure:
-- Attention-grabbing first line (under 10 words)
-- [STORY | INSIGHT | LESSON]
-- Key takeaway
-- Engagement question or CTA
-
-Format: Short paragraphs, line breaks, [WITH | WITHOUT] emojis
-Hashtags: [NUMBER] relevant hashtags
-Character count: Under [NUMBER]
+CONTEXT: Background and situation
+ACTION: What needs to be created
+RESULT: Desired outcome characteristics
+EXAMPLE: Reference for style/quality
 ```
 
-#### **Twitter/X Thread**
+### Example:
 ```
-Write a [NUMBER]-tweet thread about [TOPIC].
+CONTEXT: I run a boutique coffee roastery in Portland. Our brand
+voice is warm, knowledgeable, and slightly irreverent. We target
+coffee enthusiasts aged 28-45 who appreciate craft and sustainability.
 
-Tweet 1: Hook that [PROMISES VALUE | CREATES CURIOSITY]
-Tweets 2-[N-1]: [STEPS | INSIGHTS | EXAMPLES | STATS]
-Final tweet: [CTA | SUMMARY | RETWEET REQUEST]
+ACTION: Write product descriptions for three new single-origin coffees.
 
-Each tweet: Under 280 characters
-Include: [LISTS | SINGLE IDEAS | ANALOGIES]
-End each with: [TRANSITION | NUMBER INDICATOR]
+RESULT: Each description should be 50-75 words, evoke the flavor
+profile through sensory language, mention origin story briefly,
+and create desire without being pretentious.
+
+EXAMPLE: Here's a description that matches our tone:
+"Ethiopian Yirgacheffe - Like a jazz improvisation in a cup.
+Bright blueberry notes dance with jasmine florals while a
+honey sweetness keeps everything grounded. Small-lot sourced
+from the Kochere cooperative where coffee cultivation is a
+three-generation art form. Best enjoyed slow, preferably
+while judging other people's coffee choices."
 ```
 
-#### **Instagram Caption**
-```
-Write an Instagram caption for [POST TYPE].
-
-Image/video description: [WHAT'S SHOWN]
-Caption structure:
-- First line hook (shows before "...more")
-- [STORY | VALUE | ENTERTAINMENT]
-- Call to action: [COMMENT | SAVE | SHARE | LINK IN BIO]
-
-Tone: [AUTHENTIC | INSPIRING | EDUCATIONAL | FUN]
-Hashtag strategy: [NUMBER] hashtags, mix of [SIZES]
-Include: [LINE BREAKS | EMOJIS | BOTH | NEITHER]
-```
+### When to Use:
+- Brand copywriting
+- Creative content
+- When tone and style are critical
+- Products and marketing materials
 
 ---
 
-### Copywriting Formulas
+## 5. COAST Framework
 
-#### **Sales Page (AIDA)**
+**C**ontext - **O**bjective - **A**ctions - **S**cenario - **T**ask
+
+Ideal for technical and problem-solving scenarios.
+
+### Structure:
 ```
-Write [SECTION] of a sales page using AIDA framework.
-
-Product/Service: [WHAT YOU'RE SELLING]
-Target customer: [WHO BUYS THIS]
-Main pain point: [PROBLEM]
-Transformation: [BEFORE → AFTER]
-
-A - Attention: [BOLD CLAIM | QUESTION | STORY]
-I - Interest: [PROBLEM AGITATION | UNIQUE MECHANISM]
-D - Desire: [BENEFITS | PROOF | IMAGINATION]
-A - Action: [CLEAR CTA | URGENCY]
-
-Tone: [URGENT | ASPIRATIONAL | CONVERSATIONAL]
-Include: [TESTIMONIALS | GUARANTEES | BONUSES]
+CONTEXT: Technical environment and constraints
+OBJECTIVE: What problem needs solving
+ACTIONS: What has been tried or is possible
+SCENARIO: Current state and conditions
+TASK: Specific deliverable needed
 ```
 
-#### **Product Description**
+### Example:
 ```
-Write a product description for [PRODUCT NAME].
+CONTEXT: Python 3.11 web application using FastAPI, PostgreSQL
+database, deployed on AWS ECS. Current daily active users: ~50,000.
 
-Category: [PRODUCT TYPE]
-Target buyer: [CUSTOMER AVATAR]
-Key features: [FEATURE 1], [FEATURE 2], [FEATURE 3]
-Main benefit: [TRANSFORMATION/OUTCOME]
-Price point perception: [PREMIUM | MID-RANGE | VALUE]
+OBJECTIVE: Reduce API response times which have degraded from
+avg 120ms to 450ms over the past month.
 
-Structure:
-- Headline: [BENEFIT-FOCUSED]
-- Subhead: [SUPPORTING BENEFIT]
-- Body: Features → Benefits
-- Bullet points: [NUMBER]
-- CTA: [ADD TO CART | BUY NOW | LEARN MORE]
+ACTIONS TAKEN:
+- Upgraded database instance (no improvement)
+- Added basic caching with Redis (20% improvement)
+- Reviewed recent code changes (no obvious issues)
 
-Tone: [LUXURIOUS | PRACTICAL | EXCITING | TRUSTWORTHY]
+SCENARIO: Degradation correlates with a feature launch that added
+user activity feeds. The feed endpoint queries multiple tables
+with joins across user_activities, posts, and comments tables.
+
+TASK: Provide a systematic debugging approach and potential
+optimization strategies, prioritized by likely impact and
+implementation effort.
 ```
 
-#### **PAS Framework (Problem-Agitate-Solve)**
-```
-Write copy using PAS framework for [PRODUCT/SERVICE].
-
-PROBLEM:
-- Surface problem: [OBVIOUS ISSUE]
-- Deeper problem: [UNDERLYING FRUSTRATION]
-
-AGITATE:
-- Consequences of inaction: [WHAT HAPPENS IF IGNORED]
-- Emotional impact: [HOW IT FEELS]
-- Time/money waste: [COST OF STATUS QUO]
-
-SOLVE:
-- Your solution: [PRODUCT/SERVICE]
-- Why it works: [MECHANISM]
-- Proof: [EVIDENCE]
-- Next step: [CTA]
-```
+### When to Use:
+- Technical troubleshooting
+- System optimization
+- Debugging assistance
+- Architecture decisions
 
 ---
 
-## Business & Marketing Formulas {#business-formulas}
+# Section 2: Advanced Frameworks
 
-### Strategy Development
+## 6. TRACE Framework
 
-#### **Business Plan Section**
+**T**ask - **R**equirements - **A**udience - **C**onstraints - **E**valuation
+
+For research and analysis requiring rigorous methodology.
+
+### Structure:
 ```
-Write the [SECTION NAME] section of a business plan for [BUSINESS TYPE].
-
-Business: [COMPANY DESCRIPTION]
-Industry: [MARKET/SECTOR]
-Stage: [STARTUP | GROWTH | ESTABLISHED]
-
-Section requirements:
-- [SPECIFIC REQUIREMENT 1]
-- [SPECIFIC REQUIREMENT 2]
-- [SPECIFIC REQUIREMENT 3]
-
-Include:
-- Data/projections: [TYPE OF DATA]
-- Competitive analysis: [YES/NO]
-- Risk assessment: [YES/NO]
-
-Format: [PROFESSIONAL | INVESTOR-READY | INTERNAL]
-Length: [WORD COUNT] words
+TASK: Research question or analysis needed
+REQUIREMENTS: Depth, sources, methodology
+AUDIENCE: Who will use this information
+CONSTRAINTS: Limitations to work within
+EVALUATION: How quality will be assessed
 ```
 
-#### **SWOT Analysis**
+### Example:
 ```
-Create a SWOT analysis for [COMPANY/PRODUCT/IDEA].
+TASK: Analyze the competitive landscape for AI writing assistants
+in the enterprise market.
 
-Context: [BUSINESS SITUATION]
-Industry: [MARKET]
-Competitors: [MAIN COMPETITORS]
-Goals: [WHAT YOU'RE TRYING TO ACHIEVE]
+REQUIREMENTS:
+- Cover top 10 competitors by market share
+- Include pricing models, key features, integration capabilities
+- Assess strengths and weaknesses
+- Identify market gaps and opportunities
 
-For each quadrant, provide:
-- [NUMBER] specific, actionable points
-- Real-world examples where applicable
-- Priority ranking
+AUDIENCE: Executive leadership team evaluating market entry;
+they need strategic insights, not technical details.
 
-Format as: |TABLE | BULLET POINTS | DETAILED PARAGRAPHS|
-Include strategic recommendations based on findings.
+CONSTRAINTS:
+- Focus on enterprise segment ($50K+ annual contracts)
+- US and European markets only
+- Data should be current (2024)
+- Exclude consumer-focused tools
+
+EVALUATION CRITERIA:
+- Actionable strategic recommendations
+- Clear competitive positioning options
+- Quantified market opportunity where possible
+- Risk assessment for market entry
 ```
 
-#### **Competitive Analysis**
-```
-Analyze [COMPETITOR] compared to [YOUR COMPANY].
-
-Comparison areas:
-- Product/service offering
-- Pricing strategy
-- Target audience
-- Marketing channels
-- Unique value proposition
-- Strengths/weaknesses
-
-Output format:
-- Side-by-side comparison table
-- Key differentiators
-- Opportunities to exploit
-- Threats to address
-- Recommended strategic response
-```
+### When to Use:
+- Market research
+- Competitive analysis
+- Academic-style research
+- Strategic assessments
 
 ---
 
-### Marketing Campaign Formulas
+## 7. CRISP Framework
 
-#### **Campaign Brief**
+**C**ontext - **R**ole - **I**nput - **S**teps - **P**arameters
+
+Business-focused formula for operational tasks.
+
+### Structure:
 ```
-Create a marketing campaign brief for [CAMPAIGN NAME].
-
-Objective: [AWARENESS | LEADS | SALES | ENGAGEMENT]
-Target audience:
-- Demographics: [AGE, GENDER, LOCATION]
-- Psychographics: [INTERESTS, VALUES, BEHAVIORS]
-- Pain points: [PROBLEMS]
-- Desires: [GOALS]
-
-Campaign message: [CORE MESSAGE]
-Channels: [PLATFORMS]
-Budget: [AMOUNT]
-Timeline: [DURATION]
-Success metrics: [KPIs]
-
-Deliverables needed:
-- [ASSET 1]
-- [ASSET 2]
-- [ASSET 3]
+CONTEXT: Business situation
+ROLE: Expert perspective needed
+INPUT: Data or information being provided
+STEPS: Process to follow
+PARAMETERS: Business rules and constraints
 ```
 
-#### **Ad Copy Variants**
+### Example:
 ```
-Write [NUMBER] ad copy variants for [PLATFORM] advertising [PRODUCT/SERVICE].
+CONTEXT: Q4 budget planning for a 50-person SaaS startup.
+We're pre-Series B with 18 months runway.
 
-Target action: [CLICK | PURCHASE | SIGN UP | DOWNLOAD]
-Audience: [TARGET DESCRIPTION]
-Unique selling point: [KEY DIFFERENTIATOR]
-Offer: [DISCOUNT | FREE TRIAL | BONUS | NONE]
+ROLE: Act as a startup CFO with experience scaling companies
+from $2M to $20M ARR.
 
-For each variant, include:
-- Headline: [CHARACTER LIMIT]
-- Primary text: [CHARACTER LIMIT]
-- CTA button text
-- Angle: |FEAR | ASPIRATION | CURIOSITY | SOCIAL PROOF | URGENCY|
+INPUT: I'll provide our current P&L, headcount plan, and
+growth targets. [Attach relevant data]
 
-A/B test variables: [WHAT TO TEST]
+STEPS:
+1. Review current spend allocation
+2. Benchmark against industry standards
+3. Identify areas of over/under-investment
+4. Recommend Q4 budget by department
+5. Flag risks and dependencies
+
+PARAMETERS:
+- Maintain 15+ months runway
+- Sales headcount cannot decrease
+- Engineering budget can flex +/- 15%
+- Must fund at least one new product initiative
 ```
 
-#### **Launch Sequence**
-```
-Create a [NUMBER]-day launch sequence for [PRODUCT/SERVICE].
-
-Pre-launch phase:
-- Day -[X]: [TEASE/AWARENESS]
-- Day -[Y]: [EDUCATION/VALUE]
-- Day -[Z]: [ANTICIPATION]
-
-Launch phase:
-- Day 0: [LAUNCH ANNOUNCEMENT]
-- Day 1-3: [EARLY BIRD/URGENCY]
-
-Post-launch:
-- Day 4-7: [SOCIAL PROOF/OBJECTION HANDLING]
-- Final day: [LAST CHANCE]
-
-For each day provide:
-- Email subject line
-- Key message
-- CTA
-- Supporting content (social, ads)
-```
+### When to Use:
+- Financial planning
+- Operational decisions
+- Resource allocation
+- Business process design
 
 ---
 
-### Customer Communication
+## 8. SCOPE Framework
 
-#### **FAQ Generation**
+**S**ituation - **C**omplication - **O**utcome - **P**rocess - **E**xecution
+
+For problem-solving with clear before/after states.
+
+### Structure:
 ```
-Generate [NUMBER] FAQs for [PRODUCT/SERVICE/TOPIC].
-
-Customer segments: [WHO ASKS]
-Sales stage: [PRE-PURCHASE | PURCHASE | POST-PURCHASE]
-Common objections: [HESITATIONS]
-Common confusions: [MISUNDERSTANDINGS]
-
-For each FAQ:
-- Question (how a customer would actually ask)
-- Answer (clear, concise, helpful)
-- Related questions to link to
-
-Tone: [FRIENDLY | PROFESSIONAL | TECHNICAL]
-Include: [LINKS | CONTACT INFO | NEXT STEPS]
+SITUATION: Current state
+COMPLICATION: What's wrong or changing
+OUTCOME: Desired end state
+PROCESS: Method to get there
+EXECUTION: Specific deliverables needed
 ```
 
-#### **Customer Persona**
+### Example:
 ```
-Create a detailed customer persona for [PRODUCT/SERVICE].
-
-Basic info:
-- Name: [FICTIONAL NAME]
-- Age range: [RANGE]
-- Occupation: [JOB TITLE/INDUSTRY]
-- Income level: [RANGE]
-- Location: [URBAN/SUBURBAN/RURAL, REGION]
-
-Psychographics:
-- Goals (related to your product): [ASPIRATIONS]
-- Challenges: [OBSTACLES]
-- Fears: [ANXIETIES]
-- Values: [PRIORITIES]
-- Information sources: [WHERE THEY LEARN]
-- Buying triggers: [WHAT PROMPTS PURCHASE]
-- Objections: [HESITATIONS]
-
-Behavioral:
-- A day in their life
-- How they'd find your product
-- Decision-making process
-- Preferred communication channels
-```
-
----
-
-## Creative & Image Generation Formulas {#creative-formulas}
-
-### Photography/Realistic Images
-
-#### **Portrait Formula**
-```
-[SHOT TYPE] portrait of [SUBJECT DESCRIPTION],
-[LIGHTING TYPE] lighting,
-[BACKGROUND],
-[CAMERA/LENS SPECS],
-[MOOD/ATMOSPHERE],
-[STYLE REFERENCE]
-
---ar [ASPECT RATIO] --v 6 --style raw
-```
-
-**Example:**
-```
-Close-up portrait of a weathered fisherman in his 60s with deep blue eyes,
-golden hour side lighting,
-blurred coastal village background,
-shot on Canon 5D Mark IV with 85mm f/1.4,
-contemplative and serene mood,
-style of Steve McCurry
-
---ar 3:4 --v 6 --style raw
-```
-
-#### **Product Photography**
-```
-[PRODUCT] on [SURFACE/SETTING],
-[LIGHTING SETUP],
-[BACKGROUND COLOR/STYLE],
-[PROPS/CONTEXT],
-[ANGLE/PERSPECTIVE],
-professional product photography,
-[BRAND MOOD]
-
---ar [RATIO] --v 6 --style raw
-```
-
-#### **Landscape/Architecture**
-```
-[LOCATION TYPE] [TIME OF DAY],
-[WEATHER CONDITIONS],
-[FOCAL ELEMENTS],
-[ATMOSPHERIC EFFECTS],
-shot on [CAMERA],
-[PHOTOGRAPHY STYLE]
-
---ar 16:9 --v 6
-```
-
----
-
-### Artistic/Illustration Styles
-
-#### **Digital Art Formula**
-```
-[SUBJECT/SCENE] in the style of [ARTIST/MOVEMENT],
-[COLOR PALETTE],
-[MOOD/EMOTION],
-[DETAIL LEVEL],
-[MEDIUM SIMULATION]
-
-Additional elements: [EFFECTS/TEXTURES]
-
---ar [RATIO] --v 6 --s [STYLIZE 0-1000]
-```
-
-#### **Logo/Brand Design**
-```
-[LOGO TYPE] logo for [BRAND NAME/INDUSTRY],
-featuring [IMAGERY/SYMBOLS],
-[DESIGN STYLE] aesthetic,
-[COLOR SCHEME],
-[MOOD/PERSONALITY],
-clean vector style,
-professional branding
-
---ar 1:1 --v 6
-```
-
-Logo Types: Wordmark | Lettermark | Icon | Combination | Emblem | Abstract
-
-#### **Character Design**
-```
-Character design of [CHARACTER DESCRIPTION],
-[POSE/ACTION],
-[COSTUME/OUTFIT DETAILS],
-[ART STYLE],
-[EXPRESSION/EMOTION],
-[BACKGROUND TYPE],
-full body | bust | headshot
-
---ar [RATIO] --v 6 --s [STYLIZE]
-```
-
----
-
-### Style Modifiers Reference
-
-#### **Lighting Options**
-```
-[NATURAL]: golden hour, blue hour, overcast, harsh midday, backlit, silhouette
-[STUDIO]: Rembrandt, butterfly, split, rim light, high key, low key, three-point
-[DRAMATIC]: chiaroscuro, noir, volumetric, neon, bioluminescent
-[SOFT]: diffused, ambient, window light, candlelit, twilight
-```
-
-#### **Camera/Technical**
-```
-[SHOT TYPE]: wide shot, medium shot, close-up, extreme close-up, aerial, POV
-[LENS EFFECT]: bokeh, tilt-shift, fisheye, telephoto compression, macro
-[CAMERAS]: Hasselblad, Leica, Canon 5D, Sony A7, RED, ARRI
-[FILM]: Kodak Portra, Fujifilm, Cinestill, expired film, cross-processed
-```
-
-#### **Art Styles**
-```
-[TRADITIONAL]: oil painting, watercolor, charcoal, ink wash, fresco, gouache
-[DIGITAL]: concept art, matte painting, cel-shaded, vaporwave, cyberpunk
-[ILLUSTRATION]: editorial, children's book, scientific, vintage, art nouveau
-[3D]: isometric, low poly, hyperrealistic render, clay render, Pixar style
-```
-
----
-
-## Code & Technical Formulas {#code-formulas}
-
-### Code Generation
-
-#### **Function/Component**
-```
-Write a [LANGUAGE] [FUNCTION/CLASS/COMPONENT] that [FUNCTIONALITY].
-
-Requirements:
-- Input: [INPUT PARAMETERS WITH TYPES]
-- Output: [RETURN VALUE WITH TYPE]
-- Behavior: [DETAILED BEHAVIOR]
-- Edge cases to handle: [EDGE CASES]
-
-Standards:
-- Follow [STYLE GUIDE/CONVENTIONS]
-- Include [ERROR HANDLING | LOGGING | VALIDATION]
-- Optimize for [PERFORMANCE | READABILITY | MAINTAINABILITY]
-
-Include:
-- [COMMENTS | JSDoc | TYPE HINTS]
-- [UNIT TESTS | EXAMPLES]
-- [USAGE DOCUMENTATION]
-```
-
-#### **API Endpoint**
-```
-Create a [REST/GraphQL] API endpoint for [RESOURCE].
-
-Method: [GET/POST/PUT/DELETE]
-Route: [PATH]
-Authentication: [TYPE]
-
-Request:
-- Headers: [REQUIRED HEADERS]
-- Body: [SCHEMA]
-- Parameters: [QUERY/PATH PARAMS]
-
-Response:
-- Success: [STATUS CODE] with [RESPONSE SCHEMA]
-- Errors: [ERROR CODES AND FORMATS]
-
-Include:
-- Input validation
-- Error handling
-- [RATE LIMITING | CACHING | LOGGING]
-- Example request/response
-```
-
-#### **Database Schema**
-```
-Design a database schema for [SYSTEM/FEATURE].
-
-Database: [POSTGRESQL | MYSQL | MONGODB | etc.]
-
-Entities:
-- [ENTITY 1]: [DESCRIPTION]
-- [ENTITY 2]: [DESCRIPTION]
-- [ENTITY 3]: [DESCRIPTION]
-
-Requirements:
-- Relationships: [ONE-TO-MANY, etc.]
-- Constraints: [UNIQUE, NOT NULL, etc.]
-- Indexes: [QUERY PATTERNS TO OPTIMIZE]
-- Scalability considerations: [EXPECTED SIZE]
-
-Include:
-- Table/collection definitions
-- Migration scripts
-- Sample queries for common operations
-```
-
----
-
-### Code Review & Debugging
-
-#### **Code Review**
-```
-Review this [LANGUAGE] code for [CONTEXT]:
-
-[PASTE CODE HERE]
-
-Evaluate for:
-- [ ] Correctness: Does it work as intended?
-- [ ] Performance: Any inefficiencies?
-- [ ] Security: Any vulnerabilities?
-- [ ] Readability: Is it clear and maintainable?
-- [ ] Best practices: Does it follow [STANDARDS]?
-
-Provide:
-- Specific issues with line numbers
-- Severity rating for each issue
-- Suggested fixes with code examples
-- Overall quality score (1-10)
-```
-
-#### **Debug Assistance**
-```
-Help me debug this [LANGUAGE] code:
-
-[PASTE CODE HERE]
-
-Error message: [ERROR]
-
-Expected behavior: [WHAT SHOULD HAPPEN]
-Actual behavior: [WHAT HAPPENS INSTEAD]
-
-Environment:
-- [LANGUAGE] version: [VERSION]
-- [FRAMEWORK] version: [VERSION]
-- OS: [OPERATING SYSTEM]
-
-I've already tried: [PREVIOUS ATTEMPTS]
-```
-
-#### **Code Explanation**
-```
-Explain this [LANGUAGE] code in detail:
-
-[PASTE CODE HERE]
-
-Explain:
-- What each section does
-- Why it's written this way
-- Any patterns or techniques used
-- Potential improvements
-- How to modify it to [ALTERNATIVE USE CASE]
-
-Audience: [BEGINNER | INTERMEDIATE | ADVANCED]
-```
-
----
-
-### Technical Documentation
-
-#### **README Template**
-```
-Write a README.md for [PROJECT NAME].
-
-Project type: [LIBRARY | APPLICATION | TOOL | API]
-Language/Framework: [TECH STACK]
-Target users: [WHO USES THIS]
-
-Include sections:
-- Project description and purpose
-- Features/capabilities
-- Installation instructions for [PLATFORMS]
-- Quick start guide
-- Configuration options
-- Usage examples
-- API reference (if applicable)
-- Contributing guidelines
-- License information
-
-Tone: [PROFESSIONAL | FRIENDLY | MINIMAL]
-```
-
-#### **API Documentation**
-```
-Write API documentation for [ENDPOINT/SERVICE].
-
-Format: [OPENAPI | MARKDOWN | SLATE STYLE]
-
-For each endpoint include:
-- Method and path
-- Description
-- Authentication requirements
-- Request parameters (path, query, body)
-- Request/response examples
-- Error codes and meanings
-- Rate limits
-- Version information
-
-Include: [CODE SAMPLES IN [LANGUAGES]]
-```
-
----
-
-## Analysis & Research Formulas {#analysis-formulas}
-
-### Data Analysis
-
-#### **Data Interpretation**
-```
-Analyze this data and provide insights:
-
-[DATA OR DESCRIPTION OF DATA]
-
-Analysis objectives:
-- [QUESTION 1]
-- [QUESTION 2]
-- [QUESTION 3]
-
-Consider:
-- Trends and patterns
-- Anomalies and outliers
-- Correlations
-- Statistical significance
-
-Output format:
-- Executive summary
-- Key findings (ranked by importance)
-- Visualizations recommended
-- Actionable recommendations
-- Limitations/caveats
-```
-
-#### **Report Generation**
-```
-Generate a [REPORT TYPE] report on [TOPIC].
-
-Data sources: [SOURCES]
-Time period: [DATE RANGE]
-Audience: [WHO READS THIS]
-Purpose: [DECISION TO BE MADE]
-
-Sections needed:
-- Executive summary
-- [SECTION 1]
-- [SECTION 2]
-- [SECTION 3]
-- Conclusions
-- Recommendations
-- Appendices
-
-Include:
-- Charts/graphs: [TYPES NEEDED]
-- Tables: [DATA TO TABULATE]
-- Comparisons: [BENCHMARKS]
-
-Format: [FORMAL | EXECUTIVE | DETAILED]
-Length: [PAGE/WORD COUNT]
-```
-
----
-
-### Research & Summarization
-
-#### **Literature Review**
-```
-Synthesize information on [TOPIC].
-
-Scope: [NARROW/BROAD]
-Time frame: [RECENT | HISTORICAL | SPECIFIC PERIOD]
-Perspective: [ACADEMIC | INDUSTRY | BALANCED]
-
-Questions to address:
-- [RESEARCH QUESTION 1]
-- [RESEARCH QUESTION 2]
-- [RESEARCH QUESTION 3]
-
-Output:
-- Overview of major themes
-- Key findings and consensus
-- Areas of debate/disagreement
-- Gaps in current understanding
-- Implications for [APPLICATION]
-- Suggestions for further research
-
-Citation style: [APA | MLA | CHICAGO | NONE]
-```
-
-#### **Document Summarization**
-```
-Summarize [DOCUMENT TYPE] in [LENGTH].
-
-Document: [PASTE OR DESCRIBE]
-
-Focus on:
-- Main argument/thesis
-- Key supporting points
-- Important data/evidence
-- Conclusions
-- Action items/recommendations
-
-Audience: [WHO NEEDS THIS SUMMARY]
-Purpose: [WHY THEY NEED IT]
-
-Format: |BULLET POINTS | PARAGRAPH | EXECUTIVE BRIEF|
-Include: [QUOTES | STATISTICS | BOTH | NEITHER]
-```
-
-#### **Comparison Analysis**
-```
-Compare and contrast [OPTION A] vs [OPTION B] {vs [OPTION C]}.
-
-Context: [DECISION/SITUATION]
-Evaluation criteria:
-- [CRITERION 1]: Weight [X]%
-- [CRITERION 2]: Weight [X]%
-- [CRITERION 3]: Weight [X]%
-- [CRITERION 4]: Weight [X]%
-
-For each option analyze:
-- Strengths
-- Weaknesses
-- Best use cases
-- Risks/considerations
-- Cost/benefit
-
-Output:
-- Comparison table
-- Detailed analysis
-- Recommendation with reasoning
-- Implementation considerations
-```
-
----
-
-## Education & Learning Formulas {#education-formulas}
-
-### Lesson & Course Design
-
-#### **Lesson Plan**
-```
-Create a lesson plan for teaching [TOPIC].
-
-Audience: [GRADE LEVEL | SKILL LEVEL]
-Duration: [TIME]
-Learning objectives:
-- Students will be able to [OBJECTIVE 1]
-- Students will be able to [OBJECTIVE 2]
-- Students will be able to [OBJECTIVE 3]
-
-Structure:
-- Hook/Introduction: [MINUTES]
-- Direct instruction: [MINUTES]
-- Guided practice: [MINUTES]
-- Independent practice: [MINUTES]
-- Assessment/Closure: [MINUTES]
-
-Include:
-- Materials needed
-- Key vocabulary
-- Discussion questions
-- Differentiation strategies
-- Assessment rubric
-```
-
-#### **Course Outline**
-```
-Design a course outline for [COURSE TITLE].
-
-Target student: [WHO IS THIS FOR]
-Prerequisites: [REQUIRED KNOWLEDGE]
-Course duration: [WEEKS/HOURS]
-Format: [ONLINE | IN-PERSON | HYBRID]
-
-Learning outcomes:
-- [OUTCOME 1]
-- [OUTCOME 2]
-- [OUTCOME 3]
-
-For each module provide:
-- Module title
-- Learning objectives
-- Topics covered
-- Activities/exercises
-- Assessments
-- Time allocation
-
-Include overall:
-- Course schedule
-- Required materials
-- Grading breakdown
-- Project descriptions
-```
-
-#### **Assessment Creation**
-```
-Create [ASSESSMENT TYPE] for [TOPIC/COURSE].
-
-Assessment type: |QUIZ | EXAM | PROJECT | RUBRIC | PORTFOLIO|
-Number of questions: [NUMBER]
-Difficulty distribution: [EASY/MEDIUM/HARD %]
-Time limit: [MINUTES]
-
-Question types:
-- Multiple choice: [NUMBER]
-- Short answer: [NUMBER]
-- Essay/Long form: [NUMBER]
-- Practical/Applied: [NUMBER]
-
-Include:
-- Answer key
-- Grading rubric
-- Bloom's taxonomy alignment
-- Learning objective mapping
-```
-
----
-
-### Study & Explanation
-
-#### **Concept Explanation**
-```
-Explain [CONCEPT] for [AUDIENCE].
-
-Complexity level: |5-YEAR-OLD | BEGINNER | INTERMEDIATE | EXPERT|
-
-Structure:
-- Simple definition/analogy
-- Core components
-- How it works
-- Real-world examples
-- Common misconceptions
-- Related concepts
-- Practice questions
-
-Include:
-- Visual diagram suggestion
-- Memory aids/mnemonics
-- Progressive complexity
-```
-
-#### **Study Guide**
-```
-Create a study guide for [SUBJECT/EXAM].
-
-Coverage: [TOPICS TO INCLUDE]
-Exam format: [FORMAT DETAILS]
-Time available: [STUDY TIME]
-
-Include:
-- Key concepts summary
-- Important terms and definitions
-- Formulas/rules to memorize
-- Practice problems with solutions
-- Common exam questions
-- Study schedule recommendation
-- Test-taking strategies
-- Resources for further study
-```
-
----
-
-## Productivity & Workflow Formulas {#productivity-formulas}
-
-### Planning & Organization
-
-#### **Project Plan**
-```
-Create a project plan for [PROJECT NAME].
-
-Objective: [WHAT WE'RE ACHIEVING]
-Timeline: [START] to [END]
-Team: [TEAM SIZE/ROLES]
-Budget: [IF APPLICABLE]
-
-Deliverables:
-- [DELIVERABLE 1]
-- [DELIVERABLE 2]
-- [DELIVERABLE 3]
-
-Break down into:
-- Phases with milestones
-- Tasks with owners and deadlines
-- Dependencies
+SITUATION: Our customer support team of 12 handles 500 tickets/day
+with average resolution time of 4 hours and CSAT of 78%.
+
+COMPLICATION: We're launching in 3 new markets which will increase
+volume by 200% but we can only hire 4 more agents. Leadership
+wants CSAT above 85%.
+
+OUTCOME: A support operation that handles 1,500 tickets/day with
+16 agents, maintaining <4 hour resolution and >85% CSAT.
+
+PROCESS: Need a multi-pronged approach including AI assistance,
+process optimization, self-service improvements, and smart routing.
+
+EXECUTION: Provide a detailed 90-day implementation plan with:
+- Week-by-week milestones
+- Technology recommendations
+- Training requirements
+- Success metrics by phase
 - Risk mitigation strategies
-- Communication plan
-- Success metrics
-
-Format: [GANTT | KANBAN | TIMELINE | DETAILED LIST]
 ```
 
-#### **Meeting Agenda**
+### When to Use:
+- Change management
+- Scaling operations
+- Process improvement
+- Transformation projects
+
+---
+
+## 9. SPARK Framework
+
+**S**ituation - **P**roblem - **A**spiration - **R**esults - **K**nowledge
+
+For coaching and advisory scenarios.
+
+### Structure:
 ```
-Create an agenda for [MEETING TYPE] meeting.
-
-Duration: [TIME]
-Attendees: [WHO]
-Purpose: [OBJECTIVE]
-
-Include:
-- Welcome/check-in: [MINUTES]
-- [TOPIC 1]: [MINUTES] - [OWNER]
-- [TOPIC 2]: [MINUTES] - [OWNER]
-- [TOPIC 3]: [MINUTES] - [OWNER]
-- Action items review: [MINUTES]
-- Next steps: [MINUTES]
-
-For each topic:
-- Discussion points
-- Decisions needed
-- Pre-work required
-- Expected outcome
+SITUATION: Where you are now
+PROBLEM: Specific challenges faced
+ASPIRATION: Where you want to be
+RESULTS: Measurable goals
+KNOWLEDGE: What guidance is needed
 ```
 
-#### **Standard Operating Procedure (SOP)**
+### Example:
 ```
-Create an SOP for [PROCESS NAME].
+SITUATION: I'm a mid-level product manager at a Fortune 500 tech
+company, 5 years experience, managing a team of 3.
 
-Process owner: [ROLE]
-Frequency: [HOW OFTEN]
-Time required: [DURATION]
-Tools needed: [TOOLS/SOFTWARE]
+PROBLEM: I've been passed over for senior PM twice. Feedback
+mentions "strategic thinking" needs improvement, but I don't
+know specifically what to work on.
 
-Document:
-- Purpose and scope
-- Prerequisites/preparation
-- Step-by-step instructions
-- Screenshots/visuals needed
-- Quality checkpoints
-- Troubleshooting common issues
-- Escalation procedures
-- Version history
+ASPIRATION: I want to be promoted to Senior PM within 12 months
+and eventually become a Director of Product.
 
-Format: [CHECKLIST | FLOWCHART | DETAILED GUIDE]
+RESULTS:
+- Lead a major product initiative end-to-end
+- Build executive presence in leadership meetings
+- Develop a reputation as strategic thinker
+
+KNOWLEDGE NEEDED:
+1. What does "strategic thinking" look like in practice for PMs?
+2. How do I demonstrate it visibly to leadership?
+3. What specific skills should I develop?
+4. What projects should I volunteer for?
+```
+
+### When to Use:
+- Career coaching
+- Personal development
+- Mentorship conversations
+- Self-improvement planning
+
+---
+
+## 10. PAINT Framework
+
+**P**urpose - **A**udience - **I**nformation - **N**arrowing - **T**one
+
+Optimized for content and communication tasks.
+
+### Structure:
+```
+PURPOSE: Why this content exists
+AUDIENCE: Who will consume it
+INFORMATION: Key messages to convey
+NARROWING: Specific requirements
+TONE: Voice and style guidelines
+```
+
+### Example:
+```
+PURPOSE: Announce a 20% price increase to existing customers
+while maintaining goodwill and minimizing churn.
+
+AUDIENCE: 2,400 paying subscribers, mostly small business owners
+who have been customers for 1-3 years. Price-sensitive but loyal.
+
+INFORMATION TO CONVEY:
+- Price increase takes effect in 60 days
+- Grandfather existing annual subscribers for one more year
+- New features being added that justify increase
+- Appreciation for their loyalty
+
+NARROWING:
+- Email format, 200-300 words
+- Include FAQ link
+- Don't apologize (confident, not defensive)
+- Include early renewal incentive
+
+TONE: Professional but warm, confident but humble. Like a trusted
+business partner sharing news, not a corporation issuing an announcement.
+```
+
+### When to Use:
+- Customer communications
+- Internal announcements
+- Marketing content
+- Public relations messages
+
+---
+
+# Section 3: Specialized Formulas
+
+## 11. CODE Framework (For Programming)
+
+**C**ontext - **O**bjective - **D**etails - **E**xamples
+
+### Example:
+```
+CONTEXT: Node.js Express API, TypeScript, MongoDB with Mongoose ODM.
+
+OBJECTIVE: Create a rate limiting middleware that:
+- Limits by IP address
+- Allows 100 requests per 15-minute window
+- Returns appropriate 429 responses
+- Integrates with our existing error handling
+
+DETAILS:
+- Should use Redis for distributed rate limiting
+- Must work with our load balancer (X-Forwarded-For)
+- Needs to be configurable per route
+- Should log rate limit violations
+
+EXAMPLES:
+// Current middleware pattern we use:
+export const authMiddleware = (req, res, next) => {
+  // ... validation logic
+  next();
+};
+
+// Desired usage:
+app.use('/api/public', rateLimit({ window: 15, max: 100 }));
 ```
 
 ---
 
-### Communication Templates
+## 12. TEACH Framework (For Learning)
 
-#### **Status Update**
+**T**opic - **E**xpertise Level - **A**pplication - **C**ognitive Style - **H**ooks
+
+### Example:
 ```
-Write a [FREQUENCY] status update for [PROJECT/TEAM].
+TOPIC: Kubernetes container orchestration
 
-Period: [DATE RANGE]
+EXPERTISE LEVEL: I understand Docker and have deployed apps
+manually to VMs, but never used container orchestration.
 
-Structure:
-- Executive summary (2-3 sentences)
-- Accomplishments: [KEY WINS]
-- In progress: [CURRENT WORK]
-- Blockers: [ISSUES]
-- Help needed: [REQUESTS]
-- Next period priorities: [UPCOMING]
-- Metrics: [KPIs]
+APPLICATION: I need to deploy and manage a microservices
+architecture (5 services) for a startup with 10,000 daily users.
 
-Audience: [LEADERSHIP | STAKEHOLDERS | TEAM]
-Tone: [FORMAL | CASUAL | BRIEF]
-```
+COGNITIVE STYLE: I learn best through:
+- Analogies to familiar concepts
+- Hands-on examples I can try immediately
+- Understanding "why" before "how"
+- Visual diagrams for complex relationships
 
-#### **Proposal/Pitch**
-```
-Write a [PROPOSAL TYPE] for [PURPOSE].
-
-Problem: [ISSUE TO ADDRESS]
-Solution: [PROPOSED APPROACH]
-Benefits: [VALUE DELIVERED]
-Investment: [COST/RESOURCES]
-Timeline: [IMPLEMENTATION SCHEDULE]
-Risks: [POTENTIAL ISSUES + MITIGATIONS]
-
-Include:
-- Executive summary
-- Background/context
-- Detailed approach
-- Success metrics
-- Budget breakdown
-- Team/resources
-- Next steps/CTA
-
-Format: [FORMAL DOCUMENT | PRESENTATION | BRIEF]
+HOOKS: Specifically interested in:
+- How it compares to manual Docker deployment
+- The minimum I need to know to be productive
+- Common mistakes to avoid
+- When it's overkill vs. necessary
 ```
 
 ---
 
-## Advanced Combination Techniques {#advanced-techniques}
+## 13. STORY Framework (For Narratives)
 
-### Chain Prompting
+**S**etting - **T**ension - **O**utcome - **R**eflection - **Y**ou (Reader)
 
-#### **Multi-Step Analysis**
+### Example:
 ```
-Step 1: "Analyze [TOPIC] and identify the top 5 key factors."
-Step 2: "For each factor, provide 3 supporting data points."
-Step 3: "Create an action plan addressing each factor."
-Step 4: "Generate an executive summary of the analysis and plan."
-```
+SETTING: A tech blog for startup founders. Post about our
+journey from nearly running out of money to profitability.
 
-#### **Iterative Refinement**
-```
-Round 1: "Write [CONTENT] - first draft, focus on ideas."
-Round 2: "Improve the structure and flow."
-Round 3: "Enhance the language and tone."
-Round 4: "Polish and optimize for [GOAL]."
-```
+TENSION: We had 6 weeks of runway, had to lay off half the team,
+and our biggest customer was about to churn. Build genuine
+suspense around the pivotal decisions.
 
-### Role Stacking
+OUTCOME: We pivoted our product focus, landed 3 enterprise clients
+in 4 weeks, and hit profitability within 6 months.
 
-```
-Act as both a [ROLE 1] and [ROLE 2].
+REFLECTION: Key lessons about focus, customer development, and
+the psychology of scarcity. Be vulnerable about mistakes.
 
-As [ROLE 1], analyze [ASPECT 1].
-As [ROLE 2], analyze [ASPECT 2].
-
-Then synthesize both perspectives into [OUTPUT].
-```
-
-### Constraint Creativity
-
-```
-Write [CONTENT] with these creative constraints:
-- Must include [REQUIRED ELEMENT]
-- Cannot use [FORBIDDEN ELEMENT]
-- Each [UNIT] must [RULE]
-- Total length exactly [NUMBER] [UNITS]
-```
-
-### Perspective Shifting
-
-```
-Analyze [TOPIC] from multiple perspectives:
-
-1. [STAKEHOLDER 1]'s perspective: [FOCUS]
-2. [STAKEHOLDER 2]'s perspective: [FOCUS]
-3. [STAKEHOLDER 3]'s perspective: [FOCUS]
-
-Then identify common ground and conflicting interests.
-Finally, recommend a balanced approach.
-```
-
-### Output Format Transformations
-
-```
-Take this [INPUT TYPE]:
-[INPUT]
-
-Transform it into:
-- [FORMAT 1]
-- [FORMAT 2]
-- [FORMAT 3]
-
-Maintain [PRESERVED ELEMENTS] across all formats.
+YOU (READER): Other founders who might be in similar situations.
+They should feel hope but also get tactical takeaways. Don't
+make it feel like humble-bragging survivorship bias.
 ```
 
 ---
 
-## Quick Formula Cheat Sheet
+## 14. DEBUG Framework (For Troubleshooting)
 
-### Content Creation
-`Write [TYPE] about [TOPIC] for [AUDIENCE]. Tone: [TONE]. Length: [LENGTH]. Include: [ELEMENTS].`
+**D**escribe - **E**nvironment - **B**ehavior - **U**nderlying - **G**oal
 
-### Problem Solving
-`I have [PROBLEM] in [CONTEXT]. Goal: [OUTCOME]. Constraints: [LIMITS]. Options tried: [ATTEMPTS].`
-
-### Role-Play Expert
-`You are [ROLE] with [EXPERIENCE]. I need [HELP] with [SITUATION]. What's your advice?`
-
-### Image Generation
-`[SUBJECT], [STYLE], [LIGHTING], [MOOD], [CAMERA], [TECHNICAL SPECS]`
-
-### Code Generation
-`Write [LANGUAGE] [COMPONENT] that [FUNCTION]. Handle [EDGE CASES]. Follow [STANDARDS].`
-
-### Analysis
-`Analyze [SUBJECT] for [CRITERIA]. Consider [FACTORS]. Output: [FORMAT].`
-
----
-
-## Your Formula Templates (Workspace)
-
-Use this section to create and save your own custom formulas:
-
-### My Formula 1: ________________
+### Example:
 ```
-[Your template here]
-```
+DESCRIBE: React application crashes when navigating from
+ProductList to ProductDetail component.
 
-### My Formula 2: ________________
-```
-[Your template here]
-```
+ENVIRONMENT:
+- React 18.2, React Router 6.4
+- Node 18, Vite bundler
+- Chrome 120, also reproduced in Firefox
+- Development and production builds
 
-### My Formula 3: ________________
-```
-[Your template here]
+BEHAVIOR:
+- Expected: Smooth navigation with product data loading
+- Actual: White screen, console error "Cannot read properties
+  of undefined (reading 'map')"
+- Reproduces 100% of the time
+- Started after adding Redux Toolkit
+
+UNDERLYING:
+- Suspect state not persisting during navigation
+- Or async data fetch completing after unmount
+- Error points to ProductDetail line 47
+
+GOAL: Understand root cause and implement proper fix, not just
+a workaround. Want to prevent similar issues.
 ```
 
 ---
 
-**Version**: 1.0
-**License**: Personal use only. Do not redistribute.
-**Support**: questions@[yourdomain].com
-**Updates**: Lifetime access to all future versions included.
+## 15. PITCH Framework (For Persuasion)
+
+**P**roblem - **I**mpact - **T**ension - **C**hange - **H**ook
+
+### Example:
+```
+PROBLEM: Write a pitch for a browser extension that blocks
+AI-generated content on social media feeds.
+
+IMPACT: Users are spending 30% more time scrolling but feeling
+more anxious and less informed. AI slop is degrading discourse.
+
+TENSION: People know AI content is a problem but can't identify
+it reliably. They feel helpless and manipulated.
+
+CHANGE: Our extension uses detection algorithms to flag or hide
+AI-generated posts, giving users control over their information diet.
+
+HOOK: Target techno-optimists who love AI but hate seeing it
+weaponized for engagement farming. Position as pro-AI, anti-slop.
+Not Luddite positioning.
+```
+
+---
+
+# Section 4: Additional Power Formulas
+
+## 16. QUEST Framework
+
+**Q**uestion - **U**nderstanding - **E**xploration - **S**ynthesis - **T**akeaway
+
+For deep research and analysis.
+
+### Example:
+```
+QUESTION: Why do most digital transformations fail, and what
+distinguishes successful ones?
+
+UNDERSTANDING CONTEXT: I'm a CTO about to lead a transformation
+at a 500-person manufacturing company. Traditional culture,
+skeptical middle management, limited tech literacy.
+
+EXPLORATION NEEDED:
+- Academic research on transformation failure rates
+- Case studies (both failures and successes)
+- Common patterns and anti-patterns
+- Role of leadership and culture
+
+SYNTHESIS: Need a framework I can use to assess our readiness
+and design our approach.
+
+TAKEAWAY: Practical checklist of success factors I can apply
+immediately to planning our initiative.
+```
+
+---
+
+## 17. ADAPT Framework
+
+**A**udience - **D**elivery - **A**im - **P**roof - **T**one
+
+For presentations and public speaking.
+
+### Example:
+```
+AUDIENCE: 50 sales representatives at annual kickoff. Mix of
+veterans (skeptical) and new hires (eager). They've heard
+AI hype before.
+
+DELIVERY: 20-minute presentation with slides. Q&A follows.
+Will be recorded for those who can't attend.
+
+AIM: Get them excited about new AI sales tools without
+overwhelming them. Primary CTA: complete training module
+within 2 weeks.
+
+PROOF: Need concrete examples of how top performers used
+beta version to close deals faster. Include skeptic-to-believer
+testimonial from respected team member.
+
+TONE: High energy but grounded. Acknowledge their concerns
+about AI replacing them. Emphasize augmentation not replacement.
+"You with AI > You without AI > AI without you"
+```
+
+---
+
+## 18. MIRROR Framework
+
+**M**odel - **I**mitate - **R**efine - **R**eflect - **O**wn - **R**epeat
+
+For learning through imitation and iteration.
+
+### Example:
+```
+MODEL: I want to write blog posts like Paul Graham. I admire
+his clarity, insight density, and conversational authority.
+
+IMITATE: Here's a topic I want to write about: "Why most
+startup advice is wrong." Write an outline in his style.
+
+REFINE: After you provide the outline, I'll share what feels
+authentic vs. forced. Then adjust.
+
+REFLECT: Include notes on what makes his style work and how
+you're applying those principles.
+
+OWN: Help me identify where I should diverge to maintain my
+authentic voice while learning from his techniques.
+
+REPEAT: We'll iterate on this for 3 essays until I internalize
+the patterns.
+```
+
+---
+
+## 19. LAYER Framework
+
+**L**evel - **A**ngles - **Y**our Take - **E**vidence - **R**ecommendation
+
+For analysis requiring multiple perspectives.
+
+### Example:
+```
+LEVEL OF ANALYSIS: Strategic (not tactical) evaluation of
+whether we should build or buy a CRM system.
+
+ANGLES TO CONSIDER:
+- Financial (TCO over 5 years)
+- Technical (integration complexity, maintenance burden)
+- Strategic (competitive advantage, customization needs)
+- Organizational (change management, training)
+- Risk (vendor lock-in, security, continuity)
+
+YOUR TAKE: After analysis, provide your recommendation, not
+just neutral presentation of options.
+
+EVIDENCE: Support with industry benchmarks, case studies, or
+data wherever possible.
+
+RECOMMENDATION: Conclude with clear action steps and a
+decision framework we can use with stakeholders.
+```
+
+---
+
+## 20. EVOLVE Framework
+
+**E**valuate - **V**ision - **O**bstacles - **L**everage - **V**ictories - **E**xecute
+
+For planning and strategy execution.
+
+### Example:
+```
+EVALUATE: Current state of our email marketing:
+- List: 45,000 subscribers
+- Open rate: 22% (industry avg)
+- Click rate: 2.1% (below avg)
+- Revenue attribution: $50K/month
+
+VISION: Become a "must-open" newsletter generating $150K/month
+with 35%+ open rates within 12 months.
+
+OBSTACLES:
+- Generic content that doesn't stand out
+- Inconsistent send schedule
+- Poor segmentation
+- Weak CTAs
+
+LEVERAGE:
+- Strong brand voice in other channels
+- Active customer community for content
+- Product updates people want
+
+VICTORIES (Quick wins):
+- What can we improve this week?
+- What needs no resources but creates impact?
+
+EXECUTE: Provide a prioritized roadmap with owners and deadlines.
+```
+
+---
+
+# Section 5: Advanced Chaining Techniques
+
+## Chain Type 1: Funnel Chain
+
+Start broad, then narrow progressively.
+
+```
+PROMPT 1: "List all possible marketing channels for a B2B SaaS product."
+
+PROMPT 2: "From those channels, which are most effective for
+products with deal sizes of $10K-50K annual contracts?"
+
+PROMPT 3: "For [selected channels], what specific tactics work
+best in 2024 with a $20K monthly budget?"
+
+PROMPT 4: "Create a detailed implementation plan for [top 2 tactics]."
+```
+
+## Chain Type 2: Expert Panel Chain
+
+Get multiple perspectives, then synthesize.
+
+```
+PROMPT 1: "As a growth marketer, evaluate this landing page."
+
+PROMPT 2: "As a UX researcher, evaluate this landing page."
+
+PROMPT 3: "As a conversion copywriter, evaluate this landing page."
+
+PROMPT 4: "Synthesize these three expert perspectives into a
+prioritized list of improvements with highest impact first."
+```
+
+## Chain Type 3: Devil's Advocate Chain
+
+Build an argument, then stress-test it.
+
+```
+PROMPT 1: "Make the strongest case for [position/strategy]."
+
+PROMPT 2: "Now argue against that position. What are the
+strongest counterarguments?"
+
+PROMPT 3: "What evidence or conditions would you need to see
+to determine which position is correct?"
+
+PROMPT 4: "Given this analysis, what's the most defensible
+position and what are its caveats?"
+```
+
+## Chain Type 4: Translation Chain
+
+Move ideas across contexts.
+
+```
+PROMPT 1: "Explain how Netflix's recommendation algorithm works."
+
+PROMPT 2: "What principles from Netflix's approach could apply
+to a B2B sales process?"
+
+PROMPT 3: "Design a lead scoring system for [my company] that
+applies these principles."
+```
+
+## Chain Type 5: Iterative Refinement Chain
+
+Build and improve systematically.
+
+```
+PROMPT 1: "Write a first draft of [content]."
+
+PROMPT 2: "Review this draft. What are its weaknesses?"
+
+PROMPT 3: "Rewrite addressing those weaknesses."
+
+PROMPT 4: "Now optimize for [specific metric: engagement,
+clarity, emotional impact, etc.]"
+
+PROMPT 5: "Final polish: check for flow, cut unnecessary words,
+strengthen the opening and closing."
+```
+
+## Chain Type 6: Context Building Chain
+
+Layer context for complex tasks.
+
+```
+PROMPT 1: "Here's information about my company: [details].
+Summarize my company's positioning and target market."
+
+PROMPT 2: "Here's information about my competitors: [details].
+Analyze our competitive position."
+
+PROMPT 3: "Here's our current challenge: [details]. With all
+this context, what are our strategic options?"
+```
+
+---
+
+# Section 6: Formula Selection Guide
+
+## By Task Type
+
+| Task | Primary Formula | Backup Formula |
+|------|----------------|----------------|
+| Strategy document | RISEN | TRACE |
+| Quick copy | RACE | RTF |
+| Technical problem | COAST | DEBUG |
+| Creative content | CARE | STORY |
+| Research | TRACE | QUEST |
+| Presentation | ADAPT | PAINT |
+| Learning | TEACH | MIRROR |
+| Planning | EVOLVE | SCOPE |
+| Persuasion | PITCH | PAINT |
+| Analysis | LAYER | CRISP |
+
+## By Time Available
+
+| Time | Best Formulas |
+|------|---------------|
+| < 2 minutes | RTF, RACE, APE |
+| 2-10 minutes | CARE, PAINT, CODE |
+| 10-30 minutes | RISEN, CRISP, COAST |
+| 30+ minutes | TRACE, EVOLVE + Chains |
+
+## By Output Quality Need
+
+| Quality Need | Approach |
+|--------------|----------|
+| Draft | Single formula, any |
+| Professional | RISEN or CRISP + one refinement pass |
+| Publication-ready | Expert Panel Chain + Iterative Refinement |
+| Strategic | TRACE + Devil's Advocate Chain |
+
+---
+
+## Pro Tips
+
+1. **Start Simple**: Use RTF until you need more structure
+2. **Layer Formulas**: Combine formulas for complex tasks
+3. **Save Templates**: Build your own variants for repeated tasks
+4. **Context is King**: More context usually beats clever formulas
+5. **Iterate**: First response is rarely final response
+
+---
+
+*Mastering these formulas is like learning grammar rules: eventually, they become unconscious. Start with 3-4 that match your most common tasks, practice until automatic, then expand your toolkit.*
