@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Prompts | 30 AI Prompts for Coding & Architecture</title>
+    <meta name="description" content="Ship faster code with 30 battle-tested AI prompts for developers. Code generation, debugging, architecture design, code review, and more.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0a0a0a;
+            --card: #1a1a2e;
+            --accent: #00d4ff;
+            --accent2: #7c3aed;
+            --green: #22c55e;
+            --text: #fff;
+            --muted: #a0a0a0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 20px;
+            color: var(--accent2);
+            text-decoration: none;
+        }
+
+        .hero {
+            padding: 60px 20px 80px;
+            text-align: center;
+            background: linear-gradient(135deg, var(--card) 0%, #16213e 100%);
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--accent2), var(--accent));
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--accent), var(--accent2));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        .price-box {
+            display: inline-block;
+            background: var(--card);
+            border: 2px solid var(--accent2);
+            border-radius: 12px;
+            padding: 20px 40px;
+        }
+
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .price-note {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .buy-btn {
+            display: block;
+            background: linear-gradient(90deg, var(--accent2), #5b21b6);
+            color: white;
+            border: none;
+            padding: 16px 48px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+        }
+
+        .container { max-width: 900px; margin: 0 auto; padding: 60px 20px; }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* Pain Points */
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .pain-card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 24px;
+            border-left: 4px solid #ef4444;
+        }
+
+        .pain-card h3 {
+            color: #ef4444;
+            margin-bottom: 10px;
+        }
+
+        .pain-card p { color: var(--muted); }
+
+        /* Prompts List */
+        .prompts-section {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .prompt-category {
+            margin-bottom: 30px;
+        }
+
+        .prompt-category h3 {
+            color: var(--accent);
+            margin-bottom: 16px;
+            font-size: 1.2rem;
+        }
+
+        .prompt-list {
+            list-style: none;
+        }
+
+        .prompt-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .prompt-list li::before {
+            content: "→";
+            color: var(--accent2);
+        }
+
+        /* Code Example */
+        .code-example {
+            background: #000;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 40px 0;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+        }
+
+        .code-comment { color: #6a9955; }
+        .code-string { color: #ce9178; }
+        .code-keyword { color: #569cd6; }
+
+        /* Benefits */
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 60px;
+        }
+
+        .benefit {
+            text-align: center;
+            padding: 30px 20px;
+            background: var(--card);
+            border-radius: 12px;
+        }
+
+        .benefit-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .benefit h3 { margin-bottom: 8px; }
+        .benefit p { color: var(--muted); font-size: 0.9rem; }
+
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--card) 0%, #2d1b69 100%);
+            border: 2px solid var(--accent2);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+
+        .guarantee {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            color: var(--green);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--muted);
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .hero { padding: 40px 20px; }
+        }
+    </style>
+</head>
+<body>
+    <a href="../" class="back-link">← Back to Store</a>
+
+    <section class="hero">
+        <span class="badge">30 PROMPTS</span>
+        <h1>Developer Prompts</h1>
+        <p>Stop context-switching between AI and IDE. These prompts are designed for real developer workflows - from greenfield to legacy.</p>
+
+        <div class="price-box">
+            <div class="price">$19</div>
+            <div class="price-note">One-time purchase • Instant download</div>
+            <button class="buy-btn" data-product="dev-prompts">Get Developer Prompts</button>
+        </div>
+    </section>
+
+    <div class="container">
+        <h2 class="section-title">Sound Familiar?</h2>
+        <div class="pain-grid">
+            <div class="pain-card">
+                <h3>Vague AI Output</h3>
+                <p>You ask for code and get generic examples that don't match your stack or patterns.</p>
+            </div>
+            <div class="pain-card">
+                <h3>Debug Nightmares</h3>
+                <p>Spending hours on bugs when AI could help - if you knew how to ask.</p>
+            </div>
+            <div class="pain-card">
+                <h3>Architecture Paralysis</h3>
+                <p>Not sure how to structure a feature? AI can help, but most prompts don't get architectural thinking.</p>
+            </div>
+            <div class="pain-card">
+                <h3>Review Fatigue</h3>
+                <p>Code reviews pile up. You need a second pair of eyes but your team is swamped.</p>
+            </div>
+        </div>
+
+        <h2 class="section-title">What's Inside</h2>
+        <div class="prompts-section">
+            <div class="prompt-category">
+                <h3>Code Generation (8 prompts)</h3>
+                <ul class="prompt-list">
+                    <li>Full-stack feature implementation with tests</li>
+                    <li>API endpoint generator with validation</li>
+                    <li>Database schema designer</li>
+                    <li>React component with TypeScript props</li>
+                    <li>CLI tool builder</li>
+                    <li>Middleware creator</li>
+                    <li>Migration script generator</li>
+                    <li>Config file generator</li>
+                </ul>
+            </div>
+
+            <div class="prompt-category">
+                <h3>Debugging & Fixing (7 prompts)</h3>
+                <ul class="prompt-list">
+                    <li>Error message analyzer</li>
+                    <li>Stack trace decoder</li>
+                    <li>Performance profiler</li>
+                    <li>Memory leak finder</li>
+                    <li>Race condition detector</li>
+                    <li>Edge case generator</li>
+                    <li>Root cause analyst</li>
+                </ul>
+            </div>
+
+            <div class="prompt-category">
+                <h3>Architecture & Design (8 prompts)</h3>
+                <ul class="prompt-list">
+                    <li>System design interviewer</li>
+                    <li>Microservices architect</li>
+                    <li>Database schema optimizer</li>
+                    <li>API design reviewer</li>
+                    <li>Dependency analyzer</li>
+                    <li>Scalability planner</li>
+                    <li>Security auditor</li>
+                    <li>Tech debt assessor</li>
+                </ul>
+            </div>
+
+            <div class="prompt-category">
+                <h3>Code Review & Quality (7 prompts)</h3>
+                <ul class="prompt-list">
+                    <li>PR reviewer (catches what you miss)</li>
+                    <li>Refactoring suggester</li>
+                    <li>Test coverage analyzer</li>
+                    <li>Documentation generator</li>
+                    <li>Code smell detector</li>
+                    <li>Best practices enforcer</li>
+                    <li>Complexity reducer</li>
+                </ul>
+            </div>
+        </div>
+
+        <h2 class="section-title">Example Prompt</h2>
+        <div class="code-example">
+            <span class="code-comment">// Debug Prompt - Root Cause Analyst</span><br><br>
+            <span class="code-keyword">You are a senior debugger.</span><br><br>
+            <span class="code-string">I have this error: [PASTE ERROR]</span><br>
+            <span class="code-string">In this code: [PASTE CODE]</span><br>
+            <span class="code-string">Stack: [YOUR STACK]</span><br><br>
+            <span class="code-keyword">Analyze:</span><br>
+            1. What is the immediate cause?<br>
+            2. What is the root cause?<br>
+            3. What other bugs might this indicate?<br>
+            4. Give me the fix with explanation.<br>
+            5. How do I prevent this in the future?
+        </div>
+
+        <h2 class="section-title">Why Developers Love This</h2>
+        <div class="benefits">
+            <div class="benefit">
+                <div class="benefit-icon">⚡</div>
+                <h3>Ship Faster</h3>
+                <p>Generate boilerplate, tests, and docs in seconds</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">🐛</div>
+                <h3>Debug Smarter</h3>
+                <p>Find root causes, not just symptoms</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">🏗️</div>
+                <h3>Better Architecture</h3>
+                <p>Design systems that scale from day one</p>
+            </div>
+            <div class="benefit">
+                <div class="benefit-icon">✅</div>
+                <h3>Cleaner Code</h3>
+                <p>Catch issues before they hit production</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Start Shipping Better Code Today</h2>
+            <p style="color: var(--muted); margin-bottom: 20px;">30 prompts. Instant download. Works with ChatGPT, Claude, Copilot Chat.</p>
+            <button class="buy-btn" data-product="dev-prompts">Get Developer Prompts - $19</button>
+            <div class="guarantee">
+                <span>✓</span> 30-Day Money-Back Guarantee
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Kai Empire. All rights reserved.</p>
+    </footer>
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="../js/stripe-config.js"></script>
+    <script src="../js/checkout.js"></script>
+</body>
+</html>
