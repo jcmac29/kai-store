@@ -38,5 +38,5 @@ const STRIPE_PRODUCTS = {
 };
 
 // Success and Cancel URLs
-const SUCCESS_URL = 'https://jcmac29.github.io/kai-store/success.html';
-const CANCEL_URL = 'https://jcmac29.github.io/kai-store/';
+const SUCCESS_URL = 'https://kaiprompts.com/success.html';
+const CANCEL_URL = 'https://kaiprompts.com/';
